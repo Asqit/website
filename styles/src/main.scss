@@ -2,6 +2,11 @@
 @import './base/reset';
 @import './base/animations';
 
+@import './components/noscript';
+@import './components/navbar';
+@import './components/footer';
+
 @import './sections/hero';
 @import './sections/about';
-@import './sections/footer';
+@import './sections/projects';
+@import './sections/contact';

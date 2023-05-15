@@ -1,23 +1,71 @@
-#blink {
-	animation: blinker 1s step-start infinite;
-}
-
 .hero {
-	@include section;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	animation: fadeIn 3s;
+
+	// Radial gradient (kinda looks like green sun)
+	background: rgb(10, 21, 31);
+	background: linear-gradient(
+		36deg,
+		rgba(10, 21, 31, 1) 0%,
+		rgba(27, 153, 139, 1) 56%,
+		rgba(11, 30, 38, 1) 87%,
+		rgba(10, 21, 31, 1) 100%
+	);
+
 	&__container {
-		@include container();
-		&__article > h2 {
-			margin: 1rem 0;
+		max-width: 768px;
+
+		span {
+			animation: fadeIn 5s;
+			color: $clr-primary-10;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+			font-weight: 900;
+		}
+		h2 {
+			color: $clr-white-10;
+			margin-top: 0.5rem;
+			font-weight: 900;
+			margin-bottom: 0.5rem;
+		}
+		h3 {
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+			color: $clr-white-0;
+		}
+		p {
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+			color: $clr-white-0;
 		}
 
-		&__article > p {
-			margin: 1rem 0;
+		.btn {
+			width: 120px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.25rem;
 		}
+	}
 
-		&__image {
-			margin: 2rem 0;
-			border-radius: 100%;
-			width: 4rem;
+	@media screen and (min-width: 768px) {
+		// Glowing sphere effect on bigger screen
+		background: rgb(10, 21, 31);
+		background: radial-gradient(
+			circle,
+			rgba(10, 21, 31, 1) 0%,
+			rgba(27, 153, 139, 1) 56%,
+			rgba(11, 30, 38, 1) 87%,
+			rgba(10, 21, 31, 1) 100%
+		);
+
+		&__container {
+			margin: 0;
+			margin-right: 15%;
 		}
 	}
 }

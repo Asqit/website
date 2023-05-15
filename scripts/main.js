@@ -1,27 +1,38 @@
 'use strict';
-import { Effect } from './effect.js';
 
-let isEffectOn = false;
+function tagScrollEffect(e) {
+	let pageTop = document.documentElement.scrollTop || document.body.scrollTop;
+	let tags = document.querySelectorAll('.tag');
+	const LENGTH = tags.length;
 
-function main(e) {
-	const button = document.createElement('button');
-	button.id = 'play';
-	button.innerHTML = '[ cool! js effect ]';
+	for (let i = 0; i < LENGTH; i++) {
+		const current = tags[i];
 
-	if (innerWidth >= 768) {
-		document.body.appendChild(button);
-		button.onclick = (e) => {
-			const FRAME = document.querySelector('.frame');
-
-			if (!isEffectOn) {
-				Effect.init(FRAME);
-				isEffectOn = true;
-			} else {
-				Effect.stop();
-				isEffectOn = false;
-			}
-		};
+		if (current.getBoundingClientRect().top <= pageTop) {
+			current.classList.add('visible');
+		} else {
+			current.classList.remove('visible');
+		}
 	}
 }
 
-window.addEventListener('load', main, false);
+/**
+ * **Description:** This function will prepare every element with class of .tag
+ * this way, we can achieve the scrolling effect with javascript and not lose content
+ * when no javascript.
+ */
+function prepareAllTags() {
+	/** @type {HTMLElement[]} */
+	const tags = document.querySelectorAll('.tag');
+
+	tags.forEach((tag) => {
+		tag.classList.add('tagEffect');
+	});
+}
+
+function main(e) {
+	prepareAllTags();
+	window.addEventListener('scroll', tagScrollEffect);
+}
+
+window.addEventListener('load', main);

@@ -1,49 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700;800&display=swap');
+// Sans-serif
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-$ff-primary: 'Source Code Pro', monospace;
+// Monospace
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;500;700&display=swap');
 
-$clr-gray-0: #2e3436;
-$clr-red-0: #cc0000;
-$clr-green-0: #4e9a06;
-$clr-yellow-0: #c4a000;
-$clr-blue-0: #3465a4;
-$clr-magenta-0: #75507b;
-$clr-cyan-0: #06989a;
-$clr-white-0: #d3d7cf;
+// Font families
+$ff-primary: 'Montserrat', sans-serif;
+$ff-mono: 'IBM Plex Mono', monospace;
 
-$clr-gray-5: #555753;
-$clr-red-5: #ef2929;
-$clr-green-5: #8ae234;
-$clr-yellow-5: #fce94f;
-$clr-blue-5: #729fcf;
-$clr-magenta-5: #ad7fa8;
-$clr-cyan-5: #34e2e2;
-$clr-white-5: #eeeeec;
+// Colors
+$clr-bg-0: #0a151f;
+$clr-bg-5: #0f202f;
+$clr-bg-10: #142a3e;
+$clr-primary-10: #25d0bc;
+$clr-primary-5: rgb(30, 168, 152);
+$clr-primary-0: rgb(25, 143, 129);
 
-$clr-bg: rgb(44, 13, 32);
+// Old colors
+// created new colors for more contrast
+// $clr-primary-10: #25d0bc;
+// $clr-primary-5: #22bfac;
+// $clr-primary-0: #1b998b;
 
-@mixin section() {
-	width: 100%;
-	height: auto;
+$clr-white-10: #e8f1f2;
+$clr-white-5: #d8e7e9;
+$clr-white-0: #bed7da;
 
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+// Element styling
+$transition: all 200ms ease-in-out;
+$shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+$radius: 0.5rem;
+
+@mixin button($display: inline-block) {
+	@if ($display) {
+		display: $display;
+	} @else {
+		display: block;
+	}
+
+	font-weight: 600;
+	text-decoration: none;
+	border-radius: $radius;
+	box-shadow: $shadow;
+	transition: $transition;
+	background-color: $clr-primary-10;
+	border: none;
+	border-bottom: 2px solid $clr-primary-0;
+	padding: 0.5rem 1.2rem;
+	cursor: pointer;
+	color: $clr-white-10;
+
+	&:hover {
+		background-color: $clr-primary-5;
+		color: $clr-white-10;
+	}
+
+	&:active {
+		background-color: $clr-primary-0;
+		color: $clr-white-10;
+	}
 }
 
-@mixin container() {
-	width: 90%;
-	max-width: 480px;
+@mixin container(
+	$sm: 576px,
+	$md: 768px,
+	$lg: 992px,
+	$xl: 1176px,
+	$xxl: 1200px,
+	$huge: 1400px
+) {
 	margin-inline: auto;
+	max-width: $sm;
+	padding-inline: 0.5rem;
 
-	@media screen and (min-width: 768px) {
-		max-width: 600px;
+	@media screen and (min-width: $md) {
+		max-width: $md;
 	}
 
-	@media screen and (min-width: 992px) {
-		max-width: 768px;
+	@media screen and (min-width: $lg) {
+		max-width: $lg;
 	}
 
-	@media screen and (min-width: 1176px) {
-		max-width: 1000px;
+	@media screen and (min-width: $xl) {
+		max-width: $xl;
 	}
+
+	@media screen and (min-width: $xxl) {
+		max-width: $xxl;
+	}
+
+	@media screen and (min-width: $huge) {
+		max-width: $huge;
+	}
+}
+
+@mixin text-gradient($gradient: -webkit-linear-gradient(#eee, #333)) {
+	background: $gradient;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

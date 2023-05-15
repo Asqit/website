@@ -1,0 +1,80 @@
+.contact {
+	&__container {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+
+		&__text,
+		&__form {
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		&__text {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-template-rows: repeat(2, minmax(0, 1fr));
+		}
+
+		&__text > .divider {
+			margin: 0.5rem;
+
+			text-align: center;
+		}
+
+		&__text > .divider:nth-child(3) {
+			font-size: 2rem;
+			grid-column: 1 / span 2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+		}
+
+		&__form {
+			h4 {
+				margin-bottom: 2rem;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+
+				textarea {
+					resize: vertical;
+					font-family: $ff-primary;
+					font-size: 0.875rem;
+					display: block;
+				}
+
+				input,
+				textarea {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		@media screen and (min-width: 800px) {
+			flex-direction: row;
+
+			&__text {
+				display: flex;
+				flex-direction: column;
+				.divider {
+					text-align: left;
+				}
+				.divider:nth-child(3) {
+					justify-content: flex-start;
+				}
+			}
+
+			&__form {
+				background-color: $clr-bg-5;
+				padding: 1rem;
+				border-radius: $radius;
+				padding-top: 2rem;
+			}
+		}
+	}
+}

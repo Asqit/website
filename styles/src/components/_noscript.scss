@@ -1,0 +1,37 @@
+.nojs {
+	position: fixed;
+	z-index: 10;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: orange;
+	padding: 1rem;
+
+	&__container {
+		padding: 0.5rem;
+
+		div {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			label {
+				cursor: pointer;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+#hide__nojs {
+	display: none;
+}
+
+// Cannot figure out why is this code not working
+// So for now its commented
+// #hide_nojs:checked ~ .nojs {
+// 	display: none;
+// }

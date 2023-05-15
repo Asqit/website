@@ -4,89 +4,315 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="description"
-			content="Ubuntu's terminal inspired website about Ondřej Tuček"
-		/>
 		<meta name="keywords" content="HTML, CSS, JavaScript, TypeScript" />
 		<meta name="author" content="Ondřej Tuček" />
 		<link rel="stylesheet" href="./styles/dist/main.min.css" />
-		<script src="./scripts/main.js" type="module" async defer></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script src="./scripts/main.js" async defer></script>
 		<title>Ondřej Tuček - Hello from Czechia 🧑🏻‍💻 🇨🇿</title>
 	</head>
 	<body>
-		<canvas class="frame"></canvas>
-		<section class="hero">
-			<div class="hero__container">
-				<img
-					src="./assets/images/andy.webp"
-					class="hero__container__image"
-					alt="Author"
-				/>
+		<!--BOF Navbar-->
+		<header class="navbar">
+			<nav class="navbar__container">
+				<a href="#" class="navbar__container__brand">Tuček</a>
 
-				<article class="hero__container__article">
-					<h2>> echo "Hello $(whoami)"<span id="blink">▌</span></h2>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-						Aliquid fugiat earum ducimus quibusdam, cum accusamus, aspernatur corrupti id ullam numquam iure quaerat! 
-						Quasi amet tempore eum nulla harum temporibus dicta quam, dignissimos vel, 
-						reiciendis eveniet ullam, aliquid rerum delectus? Magnam qui 
-						voluptatem reprehenderit saepe suscipit!
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-						Labore minima nulla ut ea ex facere sunt veniam culpa. 
-						Vel maxime rerum inventore dignissimos, culpa aperiam 
-						doloremque explicabo amet consequatur error.
-					</p>
+				<input type="checkbox" id="hamburger" />
+				<label for="hamburger" class="hamburger">
+					<span class="top-bun"></span>
+					<span class="meat"></span>
+					<span class="bottom-bun"></span>
+				</label>
 
-					>
-					<a href="https://www.github.com/asqit">[ github ]</a>
-					<a href="https://dev.to/iasqiti">[ dev.to ]</a>
-					<a href="./assets/docs/cv.pdf">[ cv ]</a>
+				<ul class="navbar__container__list">
+					<li><a href="#about">About me</a></li>
+					<li><a href="#projects">My projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--EOF Navbar-->
+
+		<!--BOF Hero-->
+		<section class="section hero">
+			<article class="container hero__container">
+				<span>Hi there, my name is</span>
+				<h2>Ondřej Tuček.</h2>
+				<h3>I make web applications</h3>
+				<p>
+					I am a computer entusiast,
+					<i class="fa-brands fa-linux"></i>linux enjoyer and
+					fullstack web developer specializing in MERN stack.
+				</p>
+				<a
+					href="https://www.github.com/asqit"
+					target="_blank"
+					class="btn"
+				>
+					<i class="fa-solid fa-code"></i> Github</a
+				>
+				<a href="./assets/docs/cv.pdf" class="btn"
+					><i class="fa-solid fa-file-pdf"></i>CV</a
+				>
+			</article>
+		</section>
+		<!--EOF Hero-->
+
+		<!--BOF noscript-->
+		<noscript>
+			<input type="checkbox" id="hide__nojs" />
+			<div class="nojs">
+				<article class="nojs__container">
+					<div>
+						<h4>JavaScript is missing</h4>
+						<label for="hide__nojs"></label>
+					</div>
+					<p>
+						This page requires you to enabled
+						<code>JavaScript</code>. This page uses it to render
+						visual effects when scrolling through.
+					</p>
 				</article>
 			</div>
+		</noscript>
+		<!--EOF noscript-->
+
+		<!--BOF About-->
+		<section class="section tag about" id="about">
+			<div class="container about__container">
+				<article class="about__container__text">
+					<div class="section-title">
+						<h1>About me</h1>
+						<div class="underline"></div>
+					</div>
+					<p>
+						<a
+							href="https://www.youtube.com/watch?v=eaEMSKzqGAg"
+							target="_blank"
+							>Hello there!</a
+						>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo pariatur reprehenderit reiciendis omnis non sunt iste enim. Delectus natus dolores, nostrum provident cum tempore doloribus neque quae? Dolores ex autem maxime porro nobis. Assumenda, dignissimos!
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae similique consequuntur sapiente maiores accusamus explicabo est sint rerum inventore, unde rem nostrum cum sit deleniti? Fugit explicabo illo impedit cupiditate!
+					</p>
+					<p>Here is quick view of technologies, that I use often:</p>
+					<ul>
+						<li><i class="fa-brands fa-java"></i>Java</li>
+						<li>
+							<i class="fa-brands fa-square-js"></i>JavaScript
+						</li>
+						<li>
+							<i class="fa-brands fa-microsoft"></i>TypeScript
+						</li>
+						<li>
+							<i class="fa-brands fa-css3-alt"></i>css / scss /
+							Tailwind
+						</li>
+						<li><i class="fa-brands fa-html5"></i>Html</li>
+						<li><i class="fa-brands fa-react"></i>React.js</li>
+						<li><i class="fa-brands fa-node-js"></i>Node.js</li>
+						<li><i class="fa-solid fa-database"></i>MongoDB</li>
+					</ul>
+				</article>
+				<figure class="about__container__image">
+					<span class="about__container__image__note"
+						>Apulia, Italy 2022</span
+					>
+					<div class="about__container__image__photography">
+						<img src="./assets/images/andrew.webp" alt="author" />
+					</div>
+				</figure>
+			</div>
 		</section>
-		<section class="about">
-			<div class="about__container">
-				<h2>> cat about.txt | format</h2>
-				<div class="about__container__articles">
-					<article class="about__container__articles__article">
-						<h3>Languages</h3>
-						<p>
-							Here is my continuesly expanding list of programming
-							languages, that I currently control at some level.
-						</p>
-						<ul>
-							<li>HTML5</li>
-							<li>CSS3</li>
-							<li>JavaScript</li>
-							<li>Java (Beginer)</li>
-						</ul>
-					</article>
-					<article class="about__container__articles__article">
-						<h3>Tools/frameworks</h3>
-						<p>
-							This list bellow contains most of tools and
-							frameworks, that I use in my workflow.
-						</p>
-						<ul>
-							<li>VsCode/Idea/VS2022</li>
-							<li>Tailwind css</li>
-							<li>Node.js/Yarn</li>
-							<li>TypeScript</li>
-							<li>Express.js</li>
-							<li>React.js</li>
-							<li>Sass</li>
-							<li>Git</li>
-							<li>Zsh</li>
-						</ul>
-					</article>
+		<!--EOF About-->
+
+		<!--BOF Projects-->
+		<section class="section projects tag" id="projects">
+			<div class="container projects__container">
+				<article class="projects__container__text">
+					<div class="section-title">
+						<h1>My Projects</h1>
+						<div class="underline"></div>
+					</div>
+					<p>Here is list of projects, that I really enjoyed.</p>
+				</article>
+				<div class="projects__container__projects">
+					<!--project-->
+					<div class="projects__container__projects__project">
+						<div>
+							<span><i class="fa-solid fa-code"></i>Project</span>
+							<a
+								href="https://www.github.com/asqit/spacelads"
+								target="_blank"
+								><i class="fa-brands fa-github-alt"></i
+								>source</a
+							>
+						</div>
+
+						<article>
+							<h4>Spacelads</h4>
+							<p>
+								My first big <code>JavaScript</code> project.
+								This project is a retro styled space shooter
+								game like space invaders. This project suite a
+								few intentions. First as graduation work and
+								secondly to sharpen my programming skills. (in
+								time when I had none)
+							</p>
+							<ul>
+								<li>HTML5</li>
+								<li>SCSS</li>
+								<li>JavaScript</li>
+							</ul>
+						</article>
+					</div>
+					<!--end of project-->
+					<!--project-->
+					<div class="projects__container__projects__project">
+						<div>
+							<span><i class="fa-solid fa-code"></i>Project</span>
+							<a
+								href="https://www.github.com/asqit/asteroids"
+								target="_blank"
+								><i class="fa-brands fa-github-alt"></i
+								>source</a
+							>
+						</div>
+						<article>
+							<h4>Asteroids</h4>
+							<p>
+								As the name implies, its my clone of the
+								original Atari asteroids game from 1981. It's
+								made with <code>TypeScript</code> and
+								<code>Sass</code>. It's my first game created
+								entirely in <code>TypeScript</code> and I think
+								it's ok.
+							</p>
+							<ul>
+								<li>TypeScript</li>
+								<li>SCSS</li>
+								<li>Webpack</li>
+								<li>Arrow-js</li>
+							</ul>
+						</article>
+					</div>
+					<!--end of project-->
+					<!--project-->
+					<div class="projects__container__projects__project">
+						<div>
+							<span><i class="fa-solid fa-code"></i>Project</span>
+							<a
+								href="https://www.github.com/asqit/backroads"
+								target="_blank"
+								><i class="fa-brands fa-github-alt"></i
+								>source</a
+							>
+						</div>
+						<article>
+							<h4>BackRoads</h4>
+
+							<p>
+								One of many pages, that I made during my time
+								learning css. It's a single
+								<code>.html</code> website about fiction tour
+								company.
+							</p>
+							<ul>
+								<li>HTML5</li>
+								<li>SCSS</li>
+								<li>JavaScript</li>
+								<li>font-awesome</li>
+							</ul>
+						</article>
+					</div>
+					<!--end of project-->
 				</div>
 			</div>
 		</section>
-		<footer class="footer">
-			<p>////////// &copy; 2022 Ondřej Tuček //////////</p>
+		<!--EOF Projects-->
+
+		<!--BOF Contact-->
+		<section class="section contact tag" id="contact">
+			<div class="container contact__container">
+				<article class="contact__container__text">
+					<div class="divider">
+						<h4>Contact</h4>
+						<ul>
+							<li>Phone: +420 123 456 789</li>
+							<li>Email: joedoe@email.com</li>
+						</ul>
+					</div>
+					<div class="divider">
+						<h4>Living in</h4>
+
+						<p>Czech Budweis, Czech republic</p>
+					</div>
+					<div class="divider">
+						<a target="_blank" href="https://www.github.com/asqit"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<a
+							target="_blank"
+							href="https://www.instagram.com/tucek_andrew/"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+						<a target="_blank" href="https://dev.to/iasqiti"
+							><i class="fa-brands fa-dev"></i
+						></a>
+					</div>
+				</article>
+				<article class="contact__container__form">
+					<h4>Send me a message</h4>
+					<form data-netlify="true" method="POST" name="contact">
+						<input
+							type="email"
+							class="input"
+							name="contact-from"
+							placeholder="who are you ?"
+						/>
+
+						<input
+							type="text"
+							class="input"
+							name="contact-subject"
+							placeholder="what is it about ?"
+						/>
+
+						<textarea
+							name=""
+							id=""
+							cols="30"
+							rows="10"
+							name="contact-message"
+							class="input"
+							placeholder="Hello Andrew, I would like to..."
+						></textarea>
+						<button type="submit" class="btn">send</button>
+					</form>
+				</article>
+			</div>
+		</section>
+		<!--EOF Contact-->
+
+		<!--BOF Footer-->
+		<footer class="footer section">
+			<article class="container footer__container">
+				<p>
+					Website by Ondřej Tuček with
+					<i style="color: red" class="fa-solid fa-heart"></i>
+				</p>
+				<a href="https://www.github.com/asqit/portfolio" target="_blank"
+					><i class="fa-regular fa-star"></i> Give me your feedback</a
+				>
+			</article>
 		</footer>
+		<!--EOF Footer-->
 	</body>
 </html>

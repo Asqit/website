@@ -1,34 +1,36 @@
+*,
 *::before,
-*::after,
-* {
+*::after {
 	padding: 0;
 	margin: 0;
 	outline: none;
-	box-sizing: border-box;
+	box-sizing: border-box; // Better box model
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
 	font-family: $ff-primary;
-	background: $clr-bg;
-	color: $clr-white-0;
-}
-
-img {
-	display: block;
-	width: 100%;
+	background-color: $clr-bg-0;
+	color: $clr-white-10;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
 ul {
 	list-style-type: none;
+
+	li > a {
+		all: inherit; // Using parent styles for list
+	}
 }
 
-li > a {
-	all: inherit;
-}
-
-p {
-	line-height: 1.5;
-	font-size: 0.875rem;
+img {
+	display: block; // Fixing gap when image is in container
+	width: 100%;
 }
 
 h1,
@@ -36,65 +38,147 @@ h2,
 h3,
 h4 {
 	line-height: 1.2;
-	color: $clr-white-5;
+	margin-bottom: 0.25rem;
 }
 
+// Decrement is 0.5rem
+// highest value is 4rem
 h1 {
-	font-size: 2.5rem;
+	font-size: 3rem;
+	font-weight: 500;
+
+	@media screen and (min-width: 768px) {
+		font-size: 4rem;
+	}
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 2.5rem;
+	font-weight: 600;
+
+	@media screen and (min-width: 768px) {
+		font-size: 3.5rem;
+	}
 }
 
 h3 {
-	font-size: 1.5rem;
+	font-size: 2rem;
+	font-weight: 700;
+
+	@media screen and (min-width: 768px) {
+		font-size: 3rem;
+	}
 }
 
 h4 {
-	font-size: 1rem;
+	font-size: 1.5rem;
+	font-weight: 800;
+
+	@media screen and (min-width: 768px) {
+		font-size: 2.5rem;
+	}
+}
+
+p {
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.5;
+
+	@media screen and (min-width: 768px) {
+		font-size: 1rem;
+	}
+}
+
+button {
+	display: inline-block;
+	padding: 0.25rem 1.2rem;
+	margin: 0.125rem;
+}
+
+input {
+	padding: 0.25rem;
 }
 
 a {
-	color: $clr-white-0;
-	text-decoration: underline;
+	text-decoration: none;
+	color: $clr-primary-10;
+	transition: $transition;
+}
 
-	&:hover {
-		font-weight: 600;
-		color: $clr-white-5;
+a:hover {
+	color: $clr-primary-0;
+}
+
+/////////////////////////////////////////////
+//////////////// CUSTOMS ////////////////////
+/////////////////////////////////////////////
+.btn {
+	@include button();
+}
+
+.container {
+	@include container();
+}
+
+.section {
+	padding: 2rem;
+
+	@media screen and (min-width: 768px) {
+		padding: 4rem;
 	}
 }
 
-a:visited {
-	color: $clr-cyan-0;
-
-	&:hover {
-		color: $clr-cyan-5;
-	}
-}
-
-///////////////// GLOBALS (no section)
-.frame {
-	z-index: -1;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	max-width: 100%;
-	background-color: rgba(0, 0, 0, 0.245);
-}
-
-#play {
-	position: absolute;
-	top: 1rem;
-	left: 1rem;
-	background: transparent;
+.input {
 	border: none;
-	cursor: pointer;
-	color: $clr-white-0;
+	border-left: 4px solid $clr-primary-10;
+	background-color: $clr-bg-10;
+	color: $clr-white-10;
+	transition: $transition;
+	padding: 0.5rem;
+	box-shadow: $shadow;
+	border-radius: $radius;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 
-	&:hover {
-		color: $clr-white-5;
+	&:focus {
+		padding-left: 0.75rem;
 	}
+}
+
+.tag {
+	transition: all 1s;
+}
+
+.tagEffect {
+	opacity: 0;
+	transform: translate(0, 10vh);
+}
+
+.tag.visible {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.section-title {
+	margin: 0.5rem 0;
+	.underline {
+		width: 200px;
+		height: 0.5rem;
+		background-color: $clr-primary-10;
+		border-radius: $radius;
+	}
+
+	h1 {
+		font-weight: 700;
+	}
+
+	.code {
+		font-family: $ff-mono;
+	}
+}
+
+code {
+	font-family: $ff-mono;
+	background-color: $clr-bg-10;
+	padding: 0.125rem;
 }
