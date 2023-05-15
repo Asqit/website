@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.btn {
+		@apply py-2 px-4  bg-primary10 hover:bg-primary5 active:bg-primary0 border-b-2 border-primary0 text-white font-semibold rounded-lg transition-all;
+	}
+
+	.link {
+		@apply cursor-pointer transition-colors text-slate-200 hover:text-primary10 active:text-primary5;
+	}
+
+	.link.dark {
+		@apply text-primary10 hover:text-primary5 active:text-primary0;
+	}
+
+	.input {
+		@apply bg-bg10 p-2 rounded-lg border-l-4 rounded-l-none focus:border-l-8 transition-all border-primary10 outline-none;
+	}
+}
+
+body {
+	@apply text-white font-medium bg-bg0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 768px) {
+	.about__photography {
+		transition: all 200ms ease-in-out;
+	}
+
+	.about__image:hover .about__photography {
+		transform: scale(1.4);
+		opacity: 1;
+	}
+}

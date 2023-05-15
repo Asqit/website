@@ -1,0 +1,17 @@
+> ssh viewer@ondrejtucek.netlify.app
+[viewer@ondrejtucek.netlify.app ~]$ node greetings.mjs
+Hi viewer 👋
+Let's write some code together.
+[viewer@ondrejtucek.netlify.app ~]$ █
+
+
+
+import os from "node:os";
+
+(() => {
+  const { username } = os.userInfo();
+
+  console.log(`Hi ${username} 👋
+  \rLet's write some code together.`);
+})();
+

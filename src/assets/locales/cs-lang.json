@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "greetings": "ahoj ty tam, já se jmenuji",
+    "short-description": "jsem webový vývojář",
+    "comment-1": "chceš vidět zbytek ?",
+    "comment-2": "tak se podívej na můj github"
+  },
+  "about": {
+    "nav-name": "O mě",
+    "title": "O mě",
+    "paragraph": "Co k tomu říct ? Snad jen že jsem vášnivý programátor, linuxový nadšenec a hardwarový maniak. Mým domovem je web, ale to neznamená, že nejsem nakloněný novým věcem. koneckonců v učení spočívá smysl programování."
+  },
+  "knowledge": "Dovednosti",
+  "projects": {
+    "nav-name": "Mé projekty",
+    "title": "Moje projekty",
+    "short-description": "Zde je krátký seznam projektů co jsem vytvořil. Detaily na githubu",
+    "projects-data": {
+      "1": "Můj první velký javascriptový projekt. Tehle projekt posloužil hned několika účelům. První byla maturitní práce na téma  \"webová hra\" a druhým bylo zlepšit mé programátorské dovednosti v době, kdy jsem žádné neměl.",
+      "3": "Jak asi jméno napovídá, jedná se o můj klon legendářní klasické Atari hry se stejným názvem. Tenhle projekt byla moje první hra napsaná čistě v TypeScriptu",
+      "2": "Tenhle projekt je jedna z mých fiktivních webových stránek, které jsem vytvořit, když jsem se učit html a css. V tomto případě jde o fiktivní cestovku.",
+      "0": "Jednoduchý SPA poznámkový blok dělaný v react, psaný v TypeScriptu a stylovaný pomocí bootstrapu a jeho react verzi. Aplikace ukládá poznámky do localStorage, filteruje data podle značek a podporuje markdown syntax.",
+      "4": "Ultra jednoduchá knihovna pro manipulaci s HTML canvasem. Knihovnu jsem začal psát s mým prvním větším projektem. Celý kód je psaný jako obyčejný JavaScript, normově ES6+",
+      "5": "Tenhle projekt, je momentálně viditelný na vaší obrazovce, jedná se totiž o tuto stránku. Je psaná v reactu a stylovaná pomocí tailwindu."
+    }
+  },
+  "contact": {
+    "nav-name": "Kontakt",
+    "details-title": "Kontaktní informace",
+    "location-title": "Žiju v",
+    "location-city": "Českých Budějovicích",
+    "form-title": "Napiš mi zprávu...",
+    "form-author-placeholder": "Jaký máš email ?",
+    "form-subject-placeholder": "O čem to bude šéfe ?",
+    "form-message-placeholder": "Ahoj Ondro, Chtel bych ..."
+  }
+}

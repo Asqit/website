@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "greetings": "hi there, my name is",
+    "short-description": "I'm web developer",
+    "comment-1": "wanna see rest of the code ?",
+    "comment-2": "then check out my github"
+  },
+  "about": {
+    "nav-name": "About",
+    "title": "About me",
+    "paragraph": "What's there to say, maybe just that I am passionate programmer, linux user and hardware admirer. Web development is my home, but I am open to new things, after all, that is the point of programming."
+  },
+  "knowledge": "Skills",
+  "projects": {
+    "nav-name": "projects",
+    "title": "My Projects",
+    "short-description": "Here is a short list of some of my projects. More on github",
+    "projects-data": {
+      "1": "My first big javascript project. This project is a retro styled space shooter. This project suite few purposes, the first being high school graduation work and the second one was to sharpen my programming knowledge. (in time when I had none)",
+      "3": "As the name implies, its my clone of the original Atari asteroids game from 1981. It's made with TypeScript and Sass. It's my first game created entirely in TypeScript and I think it's ok. ",
+      "2": "One of many pages, that I made during my time learning css. It's a single .html website about fiction tour company. ",
+      "0": "It's is a simple react application written in TypeScript and styled with bootstrap and it's react components. The application stores your notes into localStorage and it's capable of filtering via tags and markdown syntax.",
+      "4": "Super simple JavaScript library with single purpose and that is to ease your work with HTMLCanvas element. Actually, this is one of my first ever JavaScript projects. It was used in my previous works. (with minor improvements)",
+      "5": "This little project, is currently visible on your screen. It is the website, that you are seeing right now. It's been written in react with typescript and styled in tailwind"
+    }
+  },
+  "contact": {
+    "nav-name": "Contact",
+    "details-title": "Contact info",
+    "location-title": "Living in",
+    "location-city": "Czech Budweis",
+    "form-title": "Send me a message ...",
+    "form-author-placeholder": "What is your email address ?",
+    "form-subject-placeholder": "What is it about ?",
+    "form-message-placeholder": "Hi Andrew, I would like to..."
+  }
+}

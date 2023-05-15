@@ -1,5 +1,3 @@
-# portfolio
+# Portfolio
 
-Initial interation of my portfolio website
-
-![screenshot of the website](about.png)
+This repo contains my portfolio website avaible [here](ondrejtucek.netlify.app). It was build with `vite` generated react project and styled with `tailwind css`.
