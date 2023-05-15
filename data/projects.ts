@@ -48,7 +48,7 @@ export const projectsData: Project[] = [
     id: 4,
     title: "Portfolio",
     tags: ["React", "TypeScript", "i18next", "tailwind css"],
-    link: "https://github.com/Asqit/Portfolio",
+    link: "https://github.com/Asqit/website",
     description:
       "My portfolio website with many iterations. Each iteration is made with different technologies.",
     image: "portfolio.png",

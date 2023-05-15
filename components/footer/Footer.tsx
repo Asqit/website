@@ -1,5 +1,10 @@
-import { FaDev, FaGithub, FaInstagram, FaPaperclip } from "react-icons/fa";
-import { Emoji } from "../emoji/Emoji.tsx";
+import {
+  FaDev,
+  FaEnvelope,
+  FaGithub,
+  FaInstagram,
+  FaPaperclip,
+} from "react-icons/fa";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 
 export function Footer() {
@@ -41,6 +46,11 @@ export function Footer() {
                 <FaPaperclip />
               </a>
             </li>
+            <li>
+              <a target="blank" href="mailto:ondrejtucek9@gmail.com">
+                <FaEnvelope />
+              </a>
+            </li>
           </ul>
         </div>
         <ul className={"hidden md:block text-center"}>
@@ -66,10 +76,10 @@ export function Footer() {
           <p>
             Website by Ondřej Tuček
           </p>
-          <a href="https://fresh.deno.dev">
+          <a href="https://fresh.deno.dev" target="_blank">
             <span className={"flex items-center gap-x-2"}>
               <img
-                src={asset("logo.svg")}
+                src={asset("images/logo.svg")}
                 className={"w-[32px] aspect-square"}
               />{" "}
               Made with <b>Fresh</b>
