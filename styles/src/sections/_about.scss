@@ -1,0 +1,34 @@
+.about {
+	@include section;
+	&__container {
+		@include container;
+
+		&__articles {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+
+			@media screen and (min-width: 768px) {
+				flex-direction: row;
+			}
+
+			&__article {
+				margin: 1rem 0;
+
+				h3 {
+					color: $clr-magenta-0;
+				}
+
+				h3,
+				p,
+				ul {
+					margin: 0.5rem;
+				}
+
+				p {
+					max-width: 600px;
+				}
+			}
+		}
+	}
+}
