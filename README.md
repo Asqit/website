@@ -1,4 +1,5 @@
 # portfolio
-my portfolio [website](https://ondrejtucek.netlify.app/)
+
+Initial interation of my portfolio website
 
 ![screenshot of the website](about.png)
