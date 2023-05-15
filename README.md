@@ -1,5 +1,11 @@
-# portfolio
+# fresh project
 
-Initial interation of my portfolio website
+### Usage
 
-![screenshot of the website](about.png)
+Start the project:
+
+```
+deno task start
+```
+
+This will watch the project directory and restart as necessary.
