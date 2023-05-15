@@ -11,7 +11,7 @@ export default function AuthorImage() {
       </div>
       <div className="overflow-hidden rounded-lg object-cover transition-all">
         <img
-          src={asset("andy.webp")}
+          src={asset("images/andy.webp")}
           className="md:opacity-50 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
           loading={"lazy"}
         />

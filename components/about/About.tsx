@@ -90,7 +90,17 @@ export function About() {
           </h3>
           <ul className={"flex items-center gap-2 my-2 font-mono flex-wrap"}>
             {languagesData.map((lang) => {
-              return <Chip key={lang.id} children={lang.value} />;
+              return (
+                <li key={lang.id}>
+                  <Chip className={"flex items-center gap-x-2"}>
+                    {lang.Icon ? <lang.Icon /> : null}
+                    {lang.value}
+                    <span className={"bg-background-10 px-1"}>
+                      {lang.level}
+                    </span>
+                  </Chip>
+                </li>
+              );
             })}
           </ul>
 
@@ -99,16 +109,36 @@ export function About() {
           </h3>
           <ul className={"flex items-center gap-2 my-2 font-mono flex-wrap"}>
             {libsData.map((lib) => {
-              return <Chip key={lib.id} children={lib.value} />;
+              return (
+                <li key={lib.id}>
+                  <Chip className={"flex items-center gap-x-2"}>
+                    {lib.Icon ? <lib.Icon /> : null}
+                    {lib.value}
+                    <span className={"bg-background-10 px-1"}>
+                      {lib.level}
+                    </span>
+                  </Chip>
+                </li>
+              );
             })}
           </ul>
 
           <h3 className={"my-2 font-bold"}>Further knowledge</h3>
           <ul className={"flex items-center gap-2 my-2 font-mono flex-wrap"}>
             {furtherData.map((etc) => {
-              return <Chip key={etc.id} children={etc.value} />;
+              return (
+                <li key={etc.id}>
+                  <Chip className={"flex items-center gap-x-2"}>
+                    {etc.Icon ? <etc.Icon /> : null}
+                    {etc.value}
+                    <span className={"bg-background-10 px-1"}>{etc.level}</span>
+                  </Chip>
+                </li>
+              );
             })}
           </ul>
+
+          <i>Each skill has a knowledge level. Levels spans from 0 to 10</i>
         </article>
       </main>
     </section>
