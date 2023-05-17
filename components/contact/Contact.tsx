@@ -9,9 +9,19 @@ export function Contact() {
       >
         <SectionTitle value="Contact" />
         <div>
-          <div className={"bg-orange-400 text-white rounded-md my-4 p-4"}>
-            <h3 className={"font-bold text-xl"}>Warning</h3>
+          <div
+            className={"bg-orange-700 text-white rounded-md my-4 p-4 font-semibold"}
+          >
+            <h3 className={"font-black text-xl"}>Warning</h3>
             <p>Sending emails is temporarily not working.</p>
+            <p>
+              Deno deploy doesn't support SMTP port 465. I am looking for
+              another solution.
+            </p>
+            <p>
+              If you persist on contacting me, you can do so via envelope icon
+              in the footer.
+            </p>
           </div>
           <ContactForm />
         </div>
