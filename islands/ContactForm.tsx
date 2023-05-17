@@ -78,7 +78,7 @@ export default function ContactForm() {
         required
       >
       </textarea>
-      <Button type="submit" className={"mt-4"}>send</Button>
+      <Button type="submit" className={"mt-4"} disabled={true}>send</Button>
     </form>
   );
 }

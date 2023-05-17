@@ -4,7 +4,7 @@
 
 @layer components {
 	.btn {
-		@apply py-2 px-4  bg-primary-10 hover:bg-primary-5 active:bg-primary-0 border-b-2 border-primary-0 text-white font-semibold rounded-lg transition-all;
+		@apply py-2 px-4  bg-primary-10 hover:bg-primary-5 active:bg-primary-0 border-b-2 border-primary-0 text-white font-semibold rounded-lg transition-all disabled:cursor-not-allowed;
 	}
 
 	.link {

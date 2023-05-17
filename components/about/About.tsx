@@ -66,7 +66,9 @@ export function About() {
               <b>Jihočeská univerzita</b>
               <ol>
                 <li>Comp. science - Bachelor's Degree</li>
-                <li>2022 - 2023 (ditched)</li>
+                <li>
+                  2022 - 2023 <b>(ditched)</b>
+                </li>
                 <li>
                   I really loved my time there, but because I am suffering from
                   strong social anxiety since covid I had to quit.
