@@ -81,6 +81,7 @@ export function Footer() {
               <img
                 src={asset("images/logo.svg")}
                 className={"w-[32px] aspect-square"}
+                alt={"Fresh framework logo"}
               />{" "}
               Made with <b>Fresh</b>
             </span>

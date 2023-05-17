@@ -7,3 +7,4 @@ export * from "./chip/Chip.tsx";
 export * from "./simple-project/SimpleProject.tsx";
 export * from "./contact/Contact.tsx";
 export * from "./hamburger/Hamburger.tsx";
+export * from "./brand/Brand.tsx";

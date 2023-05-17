@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
-import { Hamburger } from "../components/index.ts";
+import { Brand, Hamburger } from "../components/index.ts";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="p-4 container mx-auto flex items-center justify-between">
-        <h1 className="text-2xl font-semibold text-white">Tuček</h1>
+        <Brand />
         <div>
           <Hamburger
             containerClassName="md:hidden overflow-hidden"

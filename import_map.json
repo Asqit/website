@@ -8,6 +8,9 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3",
 
     "react-icons/fa": "https://deno.land/x/react_icons@0.2.3/fa/mod.ts",
-    "react-icons/si": "https://deno.land/x/react_icons@0.2.3/si/mod.ts"
+    "react-icons/si": "https://deno.land/x/react_icons@0.2.3/si/mod.ts",
+    "i18next": "https://cdn.skypack.dev/i18next?dts",
+    "BrowserLanguageDetector": "https://cdn.skypack.dev/i18next-browser-languagedetector?dts",
+    "HttpBackend": "https://cdn.skypack.dev/i18next-http-backend?dts"
   }
 }
