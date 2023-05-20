@@ -21,16 +21,15 @@ export function About() {
             my first ever computer, since then I tinkered with it and learned
             how do computers work. In year 2017 a decision was to be made, a
             decision that would forever change the way I see life: "What I wanna
-            become?". (Because when you code at least a guessing game, you see
-            the world completely different)
+            become?". Because when you code at least a guessing game, you see
+            the world completely different.
           </p>
           <p>
-            At first I thought I was no good for IT, because math was and still
-            is my arch nemesis, but quickly I overcame that and started
-            attending a high school focused on teaching IT. Weirdly enough,
-            distant education made me really like math. I didn't feel
-            embarrassed for wrong answers, plus vectors and combinatorics was
-            kinda fun.
+            At first I thought I was no good for IT, because math was my arch
+            nemesis, but quickly I overcame that and started attending a high
+            school focused on teaching IT. Weirdly enough, distant education
+            made me feel respect for math. I didn't feel embarrassed for wrong
+            answers, plus vectors and combinatorics was kinda fun.
           </p>
           <p className={"my-4"}>
             I love to tinker with things of all kind, lately I am really into

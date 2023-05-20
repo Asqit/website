@@ -32,22 +32,34 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a target="blank" href={"https://www.github.com/asqit"}>
+              <a
+                target="blank"
+                rel="noreferrer"
+                href={"https://www.github.com/asqit"}
+              >
                 <FaGithub />
               </a>
             </li>
             <li>
-              <a target="blank" href={"https://dev.to/iasqiti"}>
+              <a
+                target="blank"
+                rel="noreferrer"
+                href={"https://dev.to/iasqiti"}
+              >
                 <FaDev />
               </a>
             </li>
             <li>
-              <a target="blank" href={asset("Resume.pdf")}>
+              <a target="blank" rel="author" href={asset("Resume.pdf")}>
                 <FaPaperclip />
               </a>
             </li>
             <li>
-              <a target="blank" href="mailto:ondrejtucek9@gmail.com">
+              <a
+                target="blank"
+                rel="author"
+                href="mailto:ondrejtucek9@gmail.com"
+              >
                 <FaEnvelope />
               </a>
             </li>
@@ -59,24 +71,25 @@ export function Footer() {
           </li>
           <li>
             <a
+              rel="external"
               target="blank"
-              href={"https://github.com/asqit/portfolio"}
+              href={"https://github.com/asqit/website"}
             >
-              source
+              code
             </a>
           </li>
           <li>
-            <a href={"#about"}>about</a>
+            <a rel="tag" href={"#about"}>about</a>
           </li>
           <li>
-            <a href={"#projects"}>projects</a>
+            <a rel="tag" href={"#projects"}>projects</a>
           </li>
         </ul>
         <div>
           <p>
             Website by Ondřej Tuček
           </p>
-          <a href="https://fresh.deno.dev" target="_blank">
+          <a href="https://fresh.deno.dev" target="_blank" rel="external">
             <span className={"flex items-center gap-x-2"}>
               <img
                 src={asset("images/logo.svg")}

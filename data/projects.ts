@@ -41,7 +41,7 @@ export const projectsData: Project[] = [
     image: "momentify.png",
     tags: ["React", "Tailwind CSS", "TypeScript", "MongoDB", "Express"],
     description:
-      "Momentify is a MERN stack social application in which users are able to create and share posts of their experiences. You can take like cut-down instagram.",
+      "Momentify is a MERN stack social application in which users are able to create and share posts of their experiences. You can take it like cut-down instagram.",
     link: "https://github.com/Asqit/momentify",
   },
   {
