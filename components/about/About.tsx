@@ -17,20 +17,23 @@ export function About() {
             facts.
           </p>
           <p className={"my-4"}>
-            My journey began when I was around 10, it was time when I got my
-            first ever computer, since then I tinkered with it, up until 2017.
-            In 2017 a decision was to be made, a decision that would forever
-            change the way I see life: "What I wanna become?". (Because when you
-            code at least guessing game, you see the world completely different)
-            At first I thought I was no good for IT, because I was and still am
-            scared of math, but quickly I overcame that and started attending a
-            high school focused on teaching IT. Weirdly enough, distant
-            education made me really like math. I did'nt feel embarrassed for
-            wrong answers, plus vectors and combinatorics was kinda fun.
+            My journey began when I was around 10 years old. At that time I got
+            my first ever computer, since then I tinkered with it and learned
+            how do computers work. In year 2017 a decision was to be made, a
+            decision that would forever change the way I see life: "What I wanna
+            become?". Because when you code at least a guessing game, you see
+            the world completely different.
+          </p>
+          <p>
+            At first I thought I was no good for IT, because math was my arch
+            nemesis, but quickly I overcame that and started attending a high
+            school focused on teaching IT. Weirdly enough, distant education
+            made me feel respect for math. I didn't feel embarrassed for wrong
+            answers, plus vectors and combinatorics was kinda fun.
           </p>
           <p className={"my-4"}>
-            I love to tinker with things of any kind, lately I am really into
-            cars, but computer are forever in my hearth.
+            I love to tinker with things of all kind, lately I am really into
+            cars, but computers are forever in my hearth.
           </p>
           <p className={"my-4"}>
             Currently I live in small district town with around 100k others.
