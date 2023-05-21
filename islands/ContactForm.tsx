@@ -1,9 +1,9 @@
 import { Button } from "../components/button/Button.tsx";
 import { FaSpinner } from "react-icons/fa";
-import { useState } from "preact/hooks";
+import { useCallback, useState } from "preact/hooks";
 
 interface EmailPayload {
-  subject: string;
+  email: string;
   message: string;
 }
 
@@ -11,7 +11,7 @@ export default function ContactForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
   const [payload, setPayload] = useState<EmailPayload>({
-    subject: "",
+    email: "",
     message: "",
   });
 
@@ -26,26 +26,30 @@ export default function ContactForm() {
     });
   };
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-
+  const handleSubmit = useCallback(async (event: Event) => {
+    event.preventDefault();
     try {
       setIsLoading(true);
-      await fetch("/api/mail", {
+      const response = await fetch("/api/mail", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          mail: payload.email,
+          message: payload.message,
+        }),
       });
+      if (response.status !== 200) throw Error;
       setIsLoading(false);
-    } catch (error) {
+    } catch (e) {
       setIsError(true);
     }
-  };
+  }, [payload]);
 
   return (
-    <form className={"flex flex-col gap-3"} onSubmit={handleSubmit}>
+    <form
+      className={"flex flex-col gap-3"}
+      onSubmit={handleSubmit}
+      method={"POST"}
+    >
       {isLoading
         ? (
           <div className={"flex items-center justify-center"}>
@@ -53,15 +57,15 @@ export default function ContactForm() {
           </div>
         )
         : null}
-      <label className={"text-slate-400"} htmlFor={"subject"}>
-        Subject
+      <label className={"text-slate-400"} htmlFor={"email"}>
+        Email
       </label>
       <input
         className={"input"}
         type="text"
-        id="subject"
-        value={payload.subject}
-        name={"subject"}
+        id="email"
+        value={payload.email}
+        name={"email"}
         onChange={handleChange}
         required
       />
@@ -78,7 +82,7 @@ export default function ContactForm() {
         required
       >
       </textarea>
-      <Button type="submit" className={"mt-4"} disabled={true}>send</Button>
+      <Button type="submit" className={"mt-4"}>send</Button>
     </form>
   );
 }
