@@ -1,11 +1,20 @@
 import { FaCode, FaGithubAlt } from "react-icons/fa";
-import { Project } from "../../data/projects.ts";
 import { Chip } from "../index.ts";
 
-type SimpleProjectProps = Project & {};
+export interface GitHubRepo {
+  name: string;
+  id: number;
+  language: string;
+  html_url: string;
+  description: string;
+  topics: string[];
+  fork: boolean;
+}
+
+type SimpleProjectProps = GitHubRepo & {};
 
 export function SimpleProject(props: SimpleProjectProps) {
-  const { title, tags, link, id, description } = props;
+  const { name, topics, html_url, description } = props;
 
   const handleMouseMove = (e: any) => {
     const { currentTarget: target } = e;
@@ -17,9 +26,11 @@ export function SimpleProject(props: SimpleProjectProps) {
     e.currentTarget.style.setProperty("--mouse-y", y);
   };
 
+  console.table(props);
+
   return (
     <a
-      href={link}
+      href={html_url}
       target={"_blank"}
       onMouseMove={handleMouseMove}
       className={`rounded-lg relative bg-background-5 hover:before:opacity-100 group project`}
@@ -36,18 +47,14 @@ export function SimpleProject(props: SimpleProjectProps) {
         </div>
         <article className="flex-grow">
           <h2 className="text-2xl md:text-4xl my-2 font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-0 to-primary-10">
-            {title}
+            {name}
           </h2>
           <p>{description}</p>
         </article>
         <div className={"flex flex-wrap gap-2"}>
-          {tags.map((tag) => (
-            <span
-              className={"text-slate-500 lowercase font-mono"}
-              key={tag}
-              children={tag}
-            />
-          ))}
+          {Array.isArray(topics)
+            ? topics.map((tag) => <Chip key={tag} children={tag} />)
+            : <p>none</p>}
         </div>
       </div>
     </a>

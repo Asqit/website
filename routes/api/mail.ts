@@ -1,17 +1,17 @@
 import { Handlers, Status } from "$fresh/server.ts";
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
-import { load } from "std";
+import { config } from "https://deno.land/x/dotenv@v3.2.2/mod.ts";
 
 interface Payload {
-  email: string;
+  mail: string;
   message: string;
 }
 
 export const handler: Handlers = {
   async POST(req: Request) {
-    await load();
+    const env = config();
 
-    const { username, password, service, port } = Deno.env.toObject();
+    const { username, password, service, port, target } = env;
 
     const client = new SMTPClient({
       connection: {
@@ -27,15 +27,12 @@ export const handler: Handlers = {
 
     const payload: Payload | undefined = await req.json();
 
-    console.log(username, password, service, port);
-    console.log(payload);
-
     if (payload) {
       try {
         await client.send({
           from: username,
-          to: "ondrejtucek9@gmail.com",
-          subject: `New email from ${payload.email}`,
+          to: target,
+          subject: `New email from ${payload.mail}`,
           content: payload.message,
         });
 

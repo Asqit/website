@@ -1,6 +1,6 @@
 import { Button } from "../components/button/Button.tsx";
-import { FaSpinner } from "react-icons/fa";
 import { useCallback, useState } from "preact/hooks";
+import { Spinner } from "../components/index.ts";
 
 interface EmailPayload {
   email: string;
@@ -10,6 +10,7 @@ interface EmailPayload {
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [payload, setPayload] = useState<EmailPayload>({
     email: "",
     message: "",
@@ -30,6 +31,7 @@ export default function ContactForm() {
     event.preventDefault();
     try {
       setIsLoading(true);
+
       const response = await fetch("/api/mail", {
         method: "POST",
         body: JSON.stringify({
@@ -37,7 +39,10 @@ export default function ContactForm() {
           message: payload.message,
         }),
       });
+
       if (response.status !== 200) throw Error;
+
+      setIsSuccess(true);
       setIsLoading(false);
     } catch (e) {
       setIsError(true);
@@ -50,13 +55,25 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       method={"POST"}
     >
-      {isLoading
+      {isSuccess
         ? (
-          <div className={"flex items-center justify-center"}>
-            <FaSpinner className={"text-4xl animate-spin text-white"} />
-          </div>
+          <h2
+            className={"bg-primary-10 text-white p-8 rounded-md font-black text-3xl"}
+          >
+            Success
+          </h2>
         )
         : null}
+      {isError
+        ? (
+          <h2
+            className={"bg-red-600 text-white p-8 rounded-md font-black text-3xl"}
+          >
+            Error
+          </h2>
+        )
+        : null}
+      {isLoading ? <Spinner /> : null}
       <label className={"text-slate-400"} htmlFor={"email"}>
         Email
       </label>
