@@ -69,7 +69,7 @@ export function Footer() {
           <li>
             <b>Links</b>
           </li>
-          <li>
+          <li className={"link"}>
             <a
               rel="external"
               target="blank"
@@ -78,10 +78,10 @@ export function Footer() {
               code
             </a>
           </li>
-          <li>
+          <li className={"link"}>
             <a rel="tag" href={"#about"}>about</a>
           </li>
-          <li>
+          <li className={"link"}>
             <a rel="tag" href={"#projects"}>projects</a>
           </li>
         </ul>

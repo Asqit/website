@@ -47,10 +47,10 @@ body {
 
 .project::before {
 	z-index: 30;
-	background:radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 59%);
+	background:radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.103) 0%, rgba(255,255,255,0) 59%);
 }
 
 .project-border {
 	z-index: 10;
-	background:radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 59%);
+	background:radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.514) 0%, rgba(255,255,255,0) 59%);
 }

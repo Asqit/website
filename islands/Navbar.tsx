@@ -17,8 +17,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`w-screen backdrop-blur-md fixed z-[999] top-0 left-0 transition-colors ${
-        isScrolled ? "bg-black/50" : "bg-black/0"
+      className={`w-screen fixed z-[999] top-0 left-0 transition-colors ${
+        isScrolled ? "bg-black/50 backdrop-blur-lg" : "bg-transparent"
       }`}
     >
       <nav className="p-4 container mx-auto flex items-center justify-between">
