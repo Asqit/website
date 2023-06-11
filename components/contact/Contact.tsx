@@ -8,7 +8,6 @@ export function Contact() {
         className={"container mx-auto max-w-7xl p-8 text-white "}
       >
         <SectionTitle value="Contact" />
-
         <ContactForm />
       </div>
     </section>

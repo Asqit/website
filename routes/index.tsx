@@ -1,14 +1,46 @@
-import { About, Contact, Footer, Hero } from "../components/index.ts";
+import { Handlers, PageProps } from "$fresh/server.ts";
+import { About, Contact, Footer, Hero, Projects } from "../components/index.ts";
 import Navbar from "../islands/Navbar.tsx";
-import Projects from "../islands/Projects.tsx";
+import { GitHubRepo } from "../islands/SimpleProject.tsx";
 
-export default function Home() {
+export const handler: Handlers<GitHubRepo[] | null> = {
+  async GET(_, ctx) {
+    const resp = await fetch(`https://api.github.com/users/Asqit/repos`);
+
+    if (resp.status === 404) {
+      return ctx.render(null);
+    }
+
+    let repos: GitHubRepo[] = await resp.json();
+    repos = repos.filter((repo) => repo.fork !== true);
+
+    const finalData: GitHubRepo[] = [];
+
+    while (true) {
+      const current = repos[Math.floor(Math.random() * repos.length - 1)];
+
+      if (finalData.includes(current)) {
+        continue;
+      }
+
+      finalData.push(current);
+
+      if (finalData.length === 6) {
+        break;
+      }
+    }
+
+    return ctx.render(finalData);
+  },
+};
+
+export default function Home({ data }: PageProps<GitHubRepo[] | null>) {
   return (
     <>
       <Navbar />
       <Hero />
       <About />
-      <Projects />
+      <Projects data={data} />
       <Contact />
       <Footer />
     </>

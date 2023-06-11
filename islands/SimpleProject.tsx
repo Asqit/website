@@ -1,5 +1,5 @@
-import { FaCode, FaGithubAlt } from "react-icons/fa";
-import { Chip } from "../index.ts";
+import { FaCode } from "react-icons/fa";
+import { Chip } from "../components/index.ts";
 
 export interface GitHubRepo {
   name: string;
@@ -13,8 +13,8 @@ export interface GitHubRepo {
 
 type SimpleProjectProps = GitHubRepo & {};
 
-export function SimpleProject(props: SimpleProjectProps) {
-  const { name, topics, html_url, description, language } = props;
+export default function SimpleProject(props: SimpleProjectProps) {
+  const { name, topics, html_url, description } = props;
 
   const handleMouseMove = (e: any) => {
     const { currentTarget: target } = e;
@@ -26,41 +26,39 @@ export function SimpleProject(props: SimpleProjectProps) {
     e.currentTarget.style.setProperty("--mouse-y", y);
   };
 
-  console.table(props);
-
   return (
     <a
       href={html_url}
       target={"_blank"}
       onMouseMove={handleMouseMove}
-      className={`rounded-lg relative bg-background-5 hover:before:opacity-100 group project`}
+      className={`rounded-lg relative hover:before:opacity-100 group project`}
     >
       <div className={"project-border group-hover:opacity-100"} />
       <div
         className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-background-10"}
       >
-        <div className="grid grid-cols-3">
+        <div>
           <span className="text-2xl flex items-center gap-1">
             <FaCode />
             Project
           </span>
         </div>
         <article className="flex-grow">
-          <h2 className="text-2xl md:text-4xl my-2 font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-0 to-primary-10">
+          <h2 className="text-2xl md:text-4xl font-bold text-primary-10 my-2">
             {name}
           </h2>
-          {language
-            ? (
-              <h3 className={"text-slate-500 my-2"}>
-                Made with: <code>{language}</code>
-              </h3>
-            )
-            : null}
-          <p>{description}</p>
+          <p className={"my-2"}>{description}</p>
         </article>
-        <div className={"flex flex-wrap gap-2"}>
+        {topics.length > 0 ? <hr className={"border-slate-700 my-2"} /> : null}
+        <div className={"flex flex-wrap gap-2 my-2"}>
+          {/* Limit array length to 3 */}
           {Array.isArray(topics)
-            ? topics.map((tag) => <Chip key={tag} children={tag} />)
+            ? topics.slice(0, 3).map((tag) => (
+              <Chip
+                key={tag}
+                children={tag}
+              />
+            ))
             : <p>none</p>}
         </div>
       </div>
