@@ -39,11 +39,11 @@ export const handler: Handlers = {
         await client.close();
 
         return new Response("", { status: Status.OK });
-      } catch (e) {
-        console.log(e);
+      } catch {
         return new Response("", { status: Status.BadRequest });
       }
     }
+
     return new Response("", { status: Status.NoContent });
   },
 };

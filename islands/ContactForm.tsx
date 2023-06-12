@@ -1,6 +1,5 @@
-import { Button } from "../components/button/Button.tsx";
 import { useCallback, useState } from "preact/hooks";
-import { Spinner } from "../components/index.ts";
+import { Button, Spinner } from "../components/index.ts";
 
 interface EmailPayload {
   email: string;

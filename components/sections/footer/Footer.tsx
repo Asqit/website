@@ -75,7 +75,7 @@ export function Footer() {
               target="blank"
               href={"https://github.com/asqit/website"}
             >
-              code
+              source
             </a>
           </li>
           <li className={"link"}>

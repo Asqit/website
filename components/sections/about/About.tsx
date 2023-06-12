@@ -1,7 +1,7 @@
-import AuthorImage from "../author-image/AuthorImage.tsx";
-import { furtherData, languagesData, libsData } from "../../data/skills.ts";
-import { Chip } from "../index.ts";
-import { SectionTitle } from "../section-title/SectionTitle.tsx";
+import { furtherData, languagesData, libsData } from "../../../data/skills.ts";
+import AuthorImage from "../../common/author-image/AuthorImage.tsx";
+import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
+import { Chip } from "../../index.ts";
 
 export function About() {
   return (
@@ -143,7 +143,9 @@ export function About() {
             })}
           </ul>
 
-          <i>Each skill has a knowledge level. Levels spans from 0 to 10</i>
+          <p className={"float-right text-slate-500 mt-2"}>
+            Each skill has a knowledge level. Levels spans from 0 to 10
+          </p>
         </article>
       </main>
     </section>

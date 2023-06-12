@@ -1,6 +1,6 @@
-import { Spinner } from "../index.ts";
-import { SectionTitle } from "../section-title/SectionTitle.tsx";
-import SimpleProject, { GitHubRepo } from "../../islands/SimpleProject.tsx";
+import SimpleProject, { GitHubRepo } from "../../../islands/SimpleProject.tsx";
+import { Spinner } from "../../index.ts";
+import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 
 interface ProjectsProps {
   data: GitHubRepo[] | null;
