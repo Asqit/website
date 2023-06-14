@@ -10,33 +10,30 @@ export function Projects(props: ProjectsProps) {
   const { data } = props;
 
   return (
-    <section id="projects" className={"py-8"}>
+    <section id="projects" className={"py-8 bg-background-5"}>
       <article className={"container mx-auto max-w-7xl p-8 text-white"}>
         <SectionTitle value="Projects" />
 
         {!data
           ? (
-            <div className={"h-96"}>
-              <Spinner />
+            <div className={"h-96 flex items-center justify-center flex-col"}>
+              <h4
+                className={"text-center text-3xl text-red-400 font-mono font-semibold"}
+              >
+                Failed to fetch data
+              </h4>
+              <p>(Limit Exceeded)</p>
             </div>
           )
           : (
             <div
               className={"grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4"}
             >
-              {Array.isArray(data)
-                ? data.map((project) => {
-                  return project && (
-                    <SimpleProject {...project} key={project.id} />
-                  );
-                })
-                : (
-                  <h4
-                    className={"text-center col-span-3 text-white font-semibold"}
-                  >
-                    Failed to fetch data
-                  </h4>
-                )}
+              {data.map((project) => {
+                return project && (
+                  <SimpleProject {...project} key={project.id} />
+                );
+              })}
             </div>
           )}
         <p className={"float-right text-slate-500 mt-2"}>

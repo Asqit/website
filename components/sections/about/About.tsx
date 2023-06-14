@@ -5,7 +5,10 @@ import { Chip } from "../../index.ts";
 
 export function About() {
   return (
-    <section id="about" className={"bg-background-10 py-8"}>
+    <section
+      id="about"
+      className={"md:bg-background-10/10 bg-background-10 backdrop-blur-[200px] py-8"}
+    >
       <main
         className={"container mx-auto max-w-7xl grid grid-cols-1 xl:grid-cols-2 gap-4 items-center p-8 text-white font-sans"}
       >

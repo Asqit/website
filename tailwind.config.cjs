@@ -41,10 +41,22 @@ module.exports = {
             opacity: 1,
           },
         },
+        rotate: {
+          from: {
+            rotate: "0deg",
+          },
+          "50%": {
+            scale: "1 1.5",
+          },
+          to: {
+            rotate: "360deg",
+          },
+        },
       },
       animation: {
         "fade-in": "fadeIn 1s cubic-bezier(0, 0, 0.2, 1)",
         "fade-in-up": "fadeInUp 1s cubic-bezier(0, 0, 0.2, 1)",
+        "sphere-rotate": "rotate 20s infinite",
       },
     },
   },

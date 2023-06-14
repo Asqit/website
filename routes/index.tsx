@@ -11,8 +11,16 @@ export const handler: Handlers<GitHubRepo[] | null> = {
       return ctx.render(null);
     }
 
+    if (resp.status === 403) {
+      console.log("Limit Exceeded");
+      return ctx.render(null);
+    }
+
     let repos: GitHubRepo[] = await resp.json();
-    repos = repos.filter((repo) => repo.fork !== true);
+
+    if (Array.isArray(repos)) {
+      repos = repos.filter((repo) => repo.fork !== true);
+    }
 
     const finalData: GitHubRepo[] = [];
 

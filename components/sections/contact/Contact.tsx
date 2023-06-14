@@ -4,7 +4,10 @@ import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 
 export function Contact() {
   return (
-    <section className={"bg-background-0 py-8 md:py-16"} id="contact">
+    <section
+      className={"md:bg-background-0/10 bg-background-0 backdrop-blur-[200px] py-8 md:py-16"}
+      id="contact"
+    >
       <div
         className={"container mx-auto max-w-7xl p-8 text-white "}
       >
