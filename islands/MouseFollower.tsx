@@ -5,7 +5,7 @@ function clamp(n: number, min: number, max: number) {
 }
 
 function followMouse(event: MouseEvent, mouse: HTMLDivElement) {
-  const x = clamp(event.pageX, 250, innerWidth - 250);
+  const x = clamp(event.pageX, 250, innerWidth - 250); // Clamping due to overflow
   const y = event.pageY;
 
   mouse.animate(
@@ -45,7 +45,7 @@ export default function MouseFollower() {
   return (
     <div
       ref={ref}
-      className={"bg-gradient-to-bl from-red-600 to-primary-5"}
+      className={"bg-gradient-to-bl from-red-600 to-primary-5 animate-sphere-rotate"}
       style={style}
     />
   );

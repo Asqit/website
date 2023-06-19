@@ -1,5 +1,12 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { About, Contact, Footer, Hero, Projects } from "../components/index.ts";
+import {
+  About,
+  Contact,
+  Footer,
+  FurtherDetails,
+  Hero,
+  Projects,
+} from "../components/index.ts";
 import Navbar from "../islands/Navbar.tsx";
 import { GitHubRepo } from "../islands/SimpleProject.tsx";
 
@@ -48,6 +55,7 @@ export default function Home({ data }: PageProps<GitHubRepo[] | null>) {
       <Navbar />
       <Hero />
       <About />
+      <FurtherDetails />
       <Projects data={data} />
       <Contact />
       <Footer />

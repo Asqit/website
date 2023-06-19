@@ -31,7 +31,7 @@ export function Contact() {
                 </a>
               </li>
               <li className={"flex gap-x-1 items-center flex-wrap"}>
-                <FaBeer />
+                <FaBeer className={"text-yellow-500 -rotate-45"} />
                 <b>
                   In-Person
                 </b>: České Budějovice, Česká Republika
