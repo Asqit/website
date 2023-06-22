@@ -8,6 +8,11 @@ This repository contains my portfolio website and it's assets. It is written in
 **Note:** deno runtime is **required** in order to run the app. (learn more
 [here](https://deno.com/manual@v1.34.3/getting_started/installation))
 
+Since I switched from `twind` to regular `tailwindcss` a copy of
+`tailwindcss-cli` has to be present in order to start the app. For *nix users I
+have a `bash` script that automatically fetches and prepares the `tailwindcss`.
+Windows/others have to download the copy on their own.
+
 Start the project:
 
 ```shell

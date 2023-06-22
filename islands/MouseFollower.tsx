@@ -31,8 +31,8 @@ export default function MouseFollower() {
   }, [ref]);
 
   const style = {
-    width: "250px",
-    height: "250px",
+    width: "400px",
+    height: "400px",
     borderRadius: "50%",
     position: "absolute",
     zIndex: "-1",
@@ -45,7 +45,7 @@ export default function MouseFollower() {
   return (
     <div
       ref={ref}
-      className={"bg-gradient-to-bl from-red-600 to-primary-5 animate-sphere-rotate"}
+      className={"bg-gradient-to-bl from-special-red to-primary-5 animate-sphere-rotate"}
       style={style}
     />
   );

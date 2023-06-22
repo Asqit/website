@@ -30,8 +30,9 @@ export function Hero() {
             className={"max-w-md mt-4 font-semibold animate-fade-in-up"}
             style={{ animationDuration: "2.5s" }}
           >
-            I am a computer enthusiast and as such I love linux and producing
-            reliable, fast software with bleeding edge technologies.
+            I am a passionate computer enthusiast, and as such, I have a deep
+            love for Linux and enjoy developing reliable, high-performance
+            software using cutting-edge technologies.
           </p>
         </article>
       </div>

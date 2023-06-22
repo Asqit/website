@@ -4,3 +4,4 @@ export * from "./chip/Chip.tsx";
 export * from "./hamburger/Hamburger.tsx";
 export * from "./brand/Brand.tsx";
 export * from "./spinner/Spinner.tsx";
+export * from "./accordion/Accordion.tsx";

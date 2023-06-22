@@ -55,7 +55,6 @@ export default function Home({ data }: PageProps<GitHubRepo[] | null>) {
       <Navbar />
       <Hero />
       <About />
-      <FurtherDetails />
       <Projects data={data} />
       <Contact />
       <Footer />

@@ -20,6 +20,7 @@ module.exports = {
         "background-0": "#0a151f",
         "background-5": "#0f202f",
         "background-10": "#142a3e",
+        "special-red": "#bc252c",
       },
       keyframes: {
         fadeInUp: {
@@ -46,7 +47,7 @@ module.exports = {
             rotate: "0deg",
           },
           "50%": {
-            scale: "1 1.5",
+            scale: "1 1.25",
           },
           to: {
             rotate: "360deg",
