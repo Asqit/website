@@ -5,6 +5,10 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const toggleIsVisible = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   useEffect(() => {
     self.addEventListener("scroll", (e) => {
       if (self.scrollY > 80) {
@@ -17,21 +21,44 @@ export default function Navbar() {
 
   return (
     <header
-      className={`w-screen fixed z-[999] top-0 left-0 transition-colors ${
-        isScrolled ? "bg-black/50 backdrop-blur-lg" : "bg-transparent"
+      className={`fixed w-full top-0 left-0 z-50 ${
+        isScrolled
+          ? "bg-black/50 backdrop-blur-xl"
+          : "bg-transparent backdrop-blur-none"
       }`}
     >
-      <nav className="p-4 container mx-auto flex items-center justify-between">
+      <nav
+        className={`container mx-auto flex items-center justify-between flex-wrap p-4 py-8`}
+      >
         <Brand />
-        <div>
-          <Hamburger
-            containerClassName="md:hidden overflow-hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          />
+        <div className="md:hidden relative z-50">
+          <Hamburger onClick={toggleIsVisible} />
+        </div>
+        <ul
+          className={`hidden basis-full md:basis-auto md:flex items-center gap-x-2 uppercase`}
+        >
+          <li className="link">
+            <a href="#about">About</a>
+          </li>
+
+          <li className="link">
+            <a href="#projects">Projects</a>
+          </li>
+
+          <li className="link">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div
+          className={`${
+            isMenuOpen ? "top-0 h-screen" : "-top-[1000%] max-h-0"
+          } fixed left-0 w-full z-40 bg-black/70 backdrop-blur-md p-4 transition-all md:hidden`}
+        >
+          <div className="flex justify-between p-4">
+            <Brand />
+          </div>
           <ul
-            className={`fixed z-10 top-[1vh] w-[80%] rounded-r-2xl transition-all p-8 text-3xl ${
-              isMenuOpen ? "left-0" : "-left-full"
-            } font-semibold bg-black h-[98vh] md:text-lg md:p-0 md:static md:flex md:z-0 md:top-0 md:left-0 md:w-auto md:h-auto md:gap-2 md:text-black md:bg-transparent`}
+            className={"text-xl uppercase mt-4 flex flex-col gap-4 items-center justify-center"}
           >
             <li className="link">
               <a href="#about">About</a>

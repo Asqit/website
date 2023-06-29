@@ -8,7 +8,7 @@ export function Hero() {
       <MouseFollower />
 
       <div
-        className={"w-full h-full backdrop-blur-3xl grid grid-cols-8 items-center justify-center pr-8"}
+        className={"w-full h-full backdrop-blur-3xl grid grid-cols-8 items-center justify-center"}
       >
         <article
           className={"col-span-full p-4 md:p-0 md:col-start-3 md:col-end-6"}

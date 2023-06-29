@@ -5,7 +5,7 @@ function clamp(n: number, min: number, max: number) {
 }
 
 function followMouse(event: MouseEvent, mouse: HTMLDivElement) {
-  const x = clamp(event.pageX, 250, innerWidth - 250); // Clamping due to overflow
+  const x = clamp(event.pageX, 400, innerWidth - 400); // Clamping due to overflow
   const y = event.pageY;
 
   mouse.animate(
@@ -31,8 +31,8 @@ export default function MouseFollower() {
   }, [ref]);
 
   const style = {
-    width: "400px",
-    height: "400px",
+    width: "350px",
+    height: "350px",
     borderRadius: "50%",
     position: "absolute",
     zIndex: "-1",

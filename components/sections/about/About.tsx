@@ -59,8 +59,7 @@ export function About() {
                     - multimedia (Vector & Raster graphics, Video editing, SFX)
                   </li>
                   <li>
-                    - Programming in:{" "}
-                    <code>HTML5, CSS3, JavaScript, PHP, MySQL, Java</code>
+                    - Programming in: HTML5, CSS3, JavaScript, PHP, MySQL, Java
                   </li>
                   <li>
                     - Hardware and basics of computer science

@@ -26,14 +26,6 @@ export function Footer() {
             <li>
               <a
                 target="blank"
-                href={"https://www.instagram.com/tucek_andrew/"}
-              >
-                <FaInstagram />
-              </a>
-            </li>
-            <li>
-              <a
-                target="blank"
                 rel="noreferrer"
                 href={"https://www.github.com/asqit"}
               >
@@ -61,6 +53,14 @@ export function Footer() {
                 href="mailto:ondrejtucek9@gmail.com"
               >
                 <FaEnvelope />
+              </a>
+            </li>
+            <li>
+              <a
+                target="blank"
+                href={"https://www.instagram.com/tucek_andrew/"}
+              >
+                <FaInstagram />
               </a>
             </li>
           </ul>
