@@ -2,7 +2,7 @@ import MouseFollower from '../../../islands/MouseFollower.tsx';
 
 export function Hero() {
   return (
-    <section className={'w-full min-h-screen text-gray-200'}>
+    <section className={'w-full h-screen min-h-fit text-gray-200'}>
       <MouseFollower />
 
       <div

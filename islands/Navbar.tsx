@@ -52,7 +52,7 @@ export default function Navbar() {
         <div
           className={`${
             isMenuOpen ? 'top-0 h-screen' : '-top-[1000%] max-h-0'
-          } fixed left-0 w-full z-40 bg-black/70 backdrop-blur-md p-4 transition-all md:hidden`}
+          } fixed left-0 w-full z-40 bg-black p-4 transition-all md:hidden`}
         >
           <div className='flex justify-between p-4'>
             <Brand />
