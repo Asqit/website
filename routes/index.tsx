@@ -1,7 +1,7 @@
-import { Handlers, PageProps } from "$fresh/server.ts";
-import { About, Contact, Footer, Hero, Projects } from "../components/index.ts";
-import Navbar from "../islands/Navbar.tsx";
-import { GitHubRepo } from "../islands/SimpleProject.tsx";
+import { Handlers, PageProps } from '$fresh/server.ts';
+import { About, Contact, Footer, Hero, Projects } from '../components/index.ts';
+import Navbar from '../islands/Navbar.tsx';
+import { GitHubRepo } from '../islands/SimpleProject.tsx';
 
 export const handler: Handlers<GitHubRepo[] | null> = {
   async GET(_, ctx) {
@@ -12,7 +12,7 @@ export const handler: Handlers<GitHubRepo[] | null> = {
     }
 
     if (resp.status === 403) {
-      console.log("Limit Exceeded");
+      console.log('Limit Exceeded');
       return ctx.render(null);
     }
 
@@ -44,13 +44,13 @@ export const handler: Handlers<GitHubRepo[] | null> = {
 
 export default function Home({ data }: PageProps<GitHubRepo[] | null>) {
   return (
-    <>
+    <div className='relative overflow-x-hidden'>
       <Navbar />
       <Hero />
       <About />
       <Projects data={data} />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
