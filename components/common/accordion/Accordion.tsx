@@ -1,3 +1,4 @@
+import { FaChevronRight } from "react-icons/fa";
 import { JSX } from "preact/jsx-runtime";
 
 interface AccordionProps {
@@ -19,12 +20,16 @@ export function Accordion(props: AccordionProps) {
       <input type="checkbox" className={"hidden peer"} id={title} />
       <label
         htmlFor={title}
-        className={"flex flex-grow items-center justify-center font-semibold bg-background-10 p-2 cursor-pointer hover:bg-background-5 peer-checked:bg-background-0"}
+        className={"flex flex-grow gap-x-4 items-center justify-center font-semibold bg-background-10 p-2 cursor-pointer hover:bg-background-5 peer-checked:bg-background-0"}
       >
         {title}
+        <FaChevronRight
+          className={"transition-transform duration-300 peer-checked:rotate-90"}
+        />
       </label>
+
       <div
-        className={"max-h-0 transition-all duration-500 px-2 peer-checked:p-2 peer-checked:max-h-screen bg-background-0/40"}
+        className={"max-h-0 transition-[max-height] duration-300 px-2 peer-checked:max-h-screen bg-background-0/40"}
       >
         {children}
       </div>

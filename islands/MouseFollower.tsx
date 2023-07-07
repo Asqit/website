@@ -1,19 +1,19 @@
-import { useEffect, useRef } from 'preact/hooks';
+import { useEffect, useRef } from "preact/hooks";
 
 function clamp(n: number, min: number, max: number) {
   return Math.max(min, Math.min(max, n));
 }
 
 function followMouse(event: MouseEvent, mouse: HTMLDivElement) {
-  const x = event.pageX; //clamp(event.pageX, 200, innerWidth - 200); // Clamping due to overflow
+  const x = event.pageX;
   const y = event.pageY;
 
   mouse.animate(
     {
-      left: x + 'px',
-      top: y + 'px',
+      left: x + "px",
+      top: y + "px",
     },
-    { duration: 2000, fill: 'forwards' }
+    { duration: 2000, fill: "forwards" },
   );
 }
 
@@ -22,7 +22,7 @@ export default function MouseFollower() {
 
   useEffect(() => {
     if (innerWidth >= 768) {
-      self.addEventListener('mousemove', (e) => {
+      self.addEventListener("mousemove", (e) => {
         if (ref.current) {
           followMouse(e, ref.current);
         }
@@ -31,23 +31,21 @@ export default function MouseFollower() {
   }, [ref]);
 
   const style = {
-    width: '400px',
-    height: '400px',
-    borderRadius: '50%',
-    position: 'absolute',
-    zIndex: '-1',
-    top: '70%',
-    left: '70%',
-    translate: '-70% -70%',
-    animation: 'rotate 20s infinite',
+    width: "400px",
+    height: "400px",
+    borderRadius: "50%",
+    position: "absolute",
+    zIndex: "-1",
+    top: "50%",
+    left: "50%",
+    translate: "-50% -50%",
+    animation: "rotate 8s infinite",
   };
 
   return (
     <div
       ref={ref}
-      className={
-        'bg-gradient-to-bl from-special-red to-primary-5 animate-sphere-rotate'
-      }
+      className={"bg-gradient-to-bl from-special-red to-primary-5 animate-sphere-rotate"}
       style={style}
     />
   );

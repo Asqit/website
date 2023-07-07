@@ -2,10 +2,10 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/_app.tsx";
-import * as $1 from "./routes/api/mail.ts";
-import * as $2 from "./routes/index.tsx";
+import * as $1 from "./routes/about.tsx";
+import * as $2 from "./routes/api/mail.ts";
+import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/ContactForm.tsx";
 import * as $$1 from "./islands/MouseFollower.tsx";
 import * as $$2 from "./islands/Navbar.tsx";
@@ -14,8 +14,9 @@ import * as $$3 from "./islands/SimpleProject.tsx";
 const manifest = {
   routes: {
     "./routes/_app.tsx": $0,
-    "./routes/api/mail.ts": $1,
-    "./routes/index.tsx": $2,
+    "./routes/about.tsx": $1,
+    "./routes/api/mail.ts": $2,
+    "./routes/index.tsx": $3,
   },
   islands: {
     "./islands/ContactForm.tsx": $$0,
@@ -24,7 +25,6 @@ const manifest = {
     "./islands/SimpleProject.tsx": $$3,
   },
   baseUrl: import.meta.url,
-  config,
 };
 
 export default manifest;

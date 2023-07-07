@@ -1,18 +1,20 @@
-import { Handlers, PageProps } from '$fresh/server.ts';
-import { About, Contact, Footer, Hero, Projects } from '../components/index.ts';
-import Navbar from '../islands/Navbar.tsx';
-import { GitHubRepo } from '../islands/SimpleProject.tsx';
+import { Handlers, PageProps } from "$fresh/server.ts";
+import { About, Contact, Footer, Hero, Projects } from "../components/index.ts";
+import MouseFollower from "../islands/MouseFollower.tsx";
+import Navbar from "../islands/Navbar.tsx";
+import { GitHubRepo } from "../islands/SimpleProject.tsx";
 
 export const handler: Handlers<GitHubRepo[] | null> = {
   async GET(_, ctx) {
     const resp = await fetch(`https://api.github.com/users/Asqit/repos`);
+    //const resp = { status: 404 };
 
     if (resp.status === 404) {
       return ctx.render(null);
     }
 
     if (resp.status === 403) {
-      console.log('Limit Exceeded');
+      console.log("Limit Exceeded");
       return ctx.render(null);
     }
 
@@ -44,8 +46,9 @@ export const handler: Handlers<GitHubRepo[] | null> = {
 
 export default function Home({ data }: PageProps<GitHubRepo[] | null>) {
   return (
-    <div className='relative overflow-x-hidden'>
+    <div className="relative overflow-hidden">
       <Navbar />
+      <MouseFollower />
       <Hero />
       <About />
       <Projects data={data} />

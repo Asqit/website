@@ -6,6 +6,7 @@ import {
   FaJava,
   FaNodeJs,
   FaReact,
+  FaRust,
 } from "react-icons/fa";
 import {
   SiJavascript,
@@ -41,13 +42,13 @@ export const languagesData: Skill[] = [
     id: 2,
     value: "Java",
     Icon: FaJava,
-    level: 5,
+    level: 3,
   },
   {
-    id: 3,
-    value: "Lua",
-    Icon: SiLua,
-    level: 5,
+    id: 4,
+    value: "Rust",
+    Icon: FaRust,
+    level: 3,
   },
 ];
 
