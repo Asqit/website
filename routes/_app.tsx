@@ -9,8 +9,8 @@ export default function App(props: AppProps) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>Ondřej Tuček - junior fullstack developer 👨‍💻</title>
-        <link rel="icon" type="image/png" href="../images/favicon.ico"></link>
+        <title>Ondřej Tuček - computer enthusiast 👨‍💻</title>
+        <link rel="icon" type="image/png" href="../images/kirby.gif"></link>
         <link rel="stylesheet" href="../styles/tailwind.css" />
         <meta
           name="description"

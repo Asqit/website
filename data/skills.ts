@@ -9,6 +9,7 @@ import {
   FaRust,
 } from "react-icons/fa";
 import {
+  SiGnubash,
   SiJavascript,
   SiLua,
   SiPrisma,
@@ -48,6 +49,12 @@ export const languagesData: Skill[] = [
     id: 4,
     value: "Rust",
     Icon: FaRust,
+    level: 4,
+  },
+  {
+    id: 5,
+    value: "Bash",
+    Icon: SiGnubash,
     level: 3,
   },
 ];
@@ -106,11 +113,6 @@ export const libsData: Skill[] = [
 
 /** Array representing the other skills, that the author knows */
 export const furtherData: Skill[] = [
-  {
-    id: 0,
-    value: "Bash",
-    level: 7,
-  },
   {
     id: 1,
     value: "HTML5",

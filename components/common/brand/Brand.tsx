@@ -1,6 +1,6 @@
 export function Brand() {
   return (
-    <a href="#" className={"flex gap-x-2 items-center"}>
+    <a href="/" className={"flex gap-x-2 items-center"}>
       <div
         className={"w-[1.25rem] aspect-square rounded-full bg-gradient-to-br from-primary-10 via-primary-0 to-sky-500"}
       />
