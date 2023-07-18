@@ -1,4 +1,9 @@
-import { furtherData, languagesData, libsData } from "../../../data/skills.ts";
+import {
+  backendTechnologies,
+  frontendTechnologies,
+  furtherTechSkills,
+  programmingLanguages,
+} from "../../../data/skills.ts";
 import AuthorImage from "../../common/author-image/AuthorImage.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 import { Accordion, Chip } from "../../index.ts";
@@ -70,12 +75,12 @@ export function About() {
             </h2>
 
             <h3 className={"my-2 font-bold"}>
-              Programming languages
+              Programming Languages
             </h3>
             <ul
               className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
             >
-              {languagesData.map((lang) => {
+              {programmingLanguages.map((lang) => {
                 return (
                   <li key={lang.id}>
                     <Chip className={"flex items-center gap-x-2"}>
@@ -91,12 +96,12 @@ export function About() {
             </ul>
 
             <h3 className={"my-2 font-bold"}>
-              Libraries & frameworks
+              Front-End
             </h3>
             <ul
               className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
             >
-              {libsData.map((lib) => {
+              {frontendTechnologies.map((lib) => {
                 return (
                   <li key={lib.id}>
                     <Chip className={"flex items-center gap-x-2"}>
@@ -111,11 +116,30 @@ export function About() {
               })}
             </ul>
 
-            <h3 className={"my-2 font-bold"}>Further knowledge</h3>
+            <h3 className={"my-2 font-bold"}>Back-End & DBs</h3>
             <ul
               className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
             >
-              {furtherData.map((etc) => {
+              {backendTechnologies.map((etc) => {
+                return (
+                  <li key={etc.id}>
+                    <Chip className={"flex items-center gap-x-2"}>
+                      {etc.Icon ? <etc.Icon /> : null}
+                      {etc.value}
+                      <span className={"bg-background-10 px-1"}>
+                        {etc.level}
+                      </span>
+                    </Chip>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <h3 className={"my-2 font-bold"}>Other Tech. Skills</h3>
+            <ul
+              className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
+            >
+              {furtherTechSkills.map((etc) => {
                 return (
                   <li key={etc.id}>
                     <Chip className={"flex items-center gap-x-2"}>

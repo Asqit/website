@@ -1,140 +1,71 @@
+// Icons ----------------------------------------------->
 import {
   FaBootstrap,
-  FaCss3Alt,
   FaDirections,
-  FaHtml5,
-  FaJava,
+  FaLinux,
   FaNodeJs,
   FaReact,
-  FaRust,
+  FaYarn,
 } from "react-icons/fa";
 import {
+  SiCss3,
+  SiDeno,
+  SiGit,
   SiGnubash,
+  SiHtml5,
+  SiJava,
   SiJavascript,
   SiLua,
+  SiMariadb,
+  SiMongodb,
   SiPrisma,
   SiRedux,
+  SiRust,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
 
+// Typing -------------------------------------------->
+import { IconBaseProps } from "https://deno.land/x/react_icons@0.2.3/lib/mod.tsx";
+import { JSX } from "preact/jsx-runtime";
+
+/** Interface representing each individual skill shown on the final website */
 interface Skill {
   id: number;
   value: string;
-  Icon?: any;
+  Icon?: (props: IconBaseProps) => JSX.Element;
   level: number;
 }
 
-/** Array representing the programming languages, that the author knows */
-export const languagesData: Skill[] = [
-  {
-    id: 0,
-    value: "TypeScript",
-    Icon: SiTypescript,
-    level: 8,
-  },
-  {
-    id: 1,
-    value: "JavaScript",
-    Icon: SiJavascript,
-    level: 9,
-  },
-  {
-    id: 2,
-    value: "Java",
-    Icon: FaJava,
-    level: 3,
-  },
-  {
-    id: 4,
-    value: "Rust",
-    Icon: FaRust,
-    level: 4,
-  },
-  {
-    id: 5,
-    value: "Bash",
-    Icon: SiGnubash,
-    level: 3,
-  },
+export const programmingLanguages: Skill[] = [
+  { id: 0, value: "Bash", Icon: SiGnubash, level: 3 },
+  { id: 1, value: "TypeScript", Icon: SiTypescript, level: 7 },
+  { id: 2, value: "JavaScript", Icon: SiJavascript, level: 8 },
+  { id: 3, value: "Rust", Icon: SiRust, level: 4 },
+  { id: 4, value: "Java", Icon: SiJava, level: 3 },
+  { id: 5, value: "Lua", Icon: SiLua, level: 3 },
 ];
 
-/** Array representing the libraries and frameworks, that the author knows  */
-export const libsData: Skill[] = [
-  {
-    id: 0,
-    value: "React",
-    Icon: FaReact,
-    level: 8,
-  },
-  {
-    id: 1,
-    value: "RTK",
-    Icon: SiRedux,
-    level: 7,
-  },
-  {
-    id: 2,
-    value: "Node.js",
-    Icon: FaNodeJs,
-    level: 7,
-  },
-  {
-    id: 3,
-    value: "Tailwind",
-    Icon: SiTailwindcss,
-    level: 8,
-  },
-  {
-    id: 4,
-    value: "Express.js",
-    Icon: FaDirections,
-    level: 8,
-  },
-  {
-    id: 5,
-    value: "Bootstrap",
-    Icon: FaBootstrap,
-    level: 4,
-  },
-  {
-    id: 6,
-    value: "Prisma",
-    Icon: SiPrisma,
-    level: 7,
-  },
-  {
-    id: 7,
-    value: "Yup",
-    Icon: null,
-    level: 8,
-  },
+export const frontendTechnologies: Skill[] = [
+  { id: 0, value: "HTML", Icon: SiHtml5, level: 7 },
+  { id: 1, value: "CSS", Icon: SiCss3, level: 6 },
+  { id: 3, value: "Tailwind", Icon: SiTailwindcss, level: 8 },
+  { id: 2, value: "Bootstrap", Icon: FaBootstrap, level: 3 },
+  { id: 3, value: "React", Icon: FaReact, level: 8 },
+  { id: 4, value: "RTK", Icon: SiRedux, level: 7 },
 ];
 
-/** Array representing the other skills, that the author knows */
-export const furtherData: Skill[] = [
-  {
-    id: 1,
-    value: "HTML5",
-    Icon: FaHtml5,
-    level: 9,
-  },
-  {
-    id: 2,
-    value: "CSS",
-    Icon: FaCss3Alt,
-    level: 7,
-  },
-  {
-    id: 4,
-    value: "markdown",
-    level: 10,
-  },
-  { id: 3, value: "rest-api", level: 6 },
-  { id: 5, value: "sass", level: 6 },
-  { id: 6, value: "git", level: 3 },
-  { id: 7, value: "mern-stack", level: 5 },
-  { id: 8, value: "Linux", level: 7 },
-  { id: 9, value: "yarn", level: 8 },
-  { id: 10, value: "deno", level: 2 },
+export const backendTechnologies: Skill[] = [
+  { id: 0, value: "Node.js", Icon: FaNodeJs, level: 7 },
+  { id: 1, value: "Express.js", Icon: FaDirections, level: 8 },
+  { id: 2, value: "Prisma", Icon: SiPrisma, level: 7 },
+  { id: 3, value: "MySQL", Icon: SiMariadb, level: 4 },
+  { id: 4, value: "MongoDB", Icon: SiMongodb, level: 5 },
+];
+
+export const furtherTechSkills: Skill[] = [
+  { id: 0, value: "Git", Icon: SiGit, level: 4 },
+  { id: 1, value: "Linux", Icon: FaLinux, level: 6 },
+  { id: 2, value: "Deno", Icon: SiDeno, level: 4 },
+  { id: 3, value: "Yarn", Icon: FaYarn, level: 7 },
 ];

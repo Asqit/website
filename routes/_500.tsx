@@ -1,4 +1,4 @@
-import { Button, Footer } from "../components/index.ts";
+import { Footer } from "../components/index.ts";
 import { ErrorPageProps } from "$fresh/server.ts";
 import Navbar from "../islands/Navbar.tsx";
 

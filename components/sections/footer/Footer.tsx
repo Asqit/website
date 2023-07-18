@@ -67,7 +67,13 @@ export function Footer() {
         </div>
         <ul className={"hidden md:block text-center"}>
           <li>
-            <b>Links</b>
+            <b>Useful Links</b>
+          </li>
+          <li className={"link"}>
+            <a rel="tag" href={"#about"}>about</a>
+          </li>
+          <li className={"link"}>
+            <a rel="tag" href={"#projects"}>projects</a>
           </li>
           <li className={"link"}>
             <a
@@ -77,12 +83,6 @@ export function Footer() {
             >
               source
             </a>
-          </li>
-          <li className={"link"}>
-            <a rel="tag" href={"#about"}>about</a>
-          </li>
-          <li className={"link"}>
-            <a rel="tag" href={"#projects"}>projects</a>
           </li>
         </ul>
         <div>

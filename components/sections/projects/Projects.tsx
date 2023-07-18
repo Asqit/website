@@ -18,11 +18,13 @@ export function Projects(props: ProjectsProps) {
           ? (
             <div className={"h-96 flex items-center justify-center flex-col"}>
               <h4
-                className={"text-center text-3xl text-red-400 font-mono font-semibold"}
+                className={"text-center text-3xl bg-clip-text text-transparent bg-gradient-to-br from-red-400 to-special-red font-mono font-semibold drop-shadow-lg"}
               >
                 Failed to fetch data
               </h4>
-              <p>(Limit Exceeded)</p>
+              <p className="font-mono text-slate-500">
+                API call Limit Exceeded
+              </p>
             </div>
           )
           : (

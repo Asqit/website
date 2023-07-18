@@ -34,7 +34,24 @@ export function Contact() {
                 <FaBeer className={"text-yellow-500 -rotate-45"} />
                 <b>
                   In-Person
-                </b>: České Budějovice, Česká Republika
+                </b>:{" "}
+                <a
+                  href="https://en.wikipedia.org/wiki/Prague"
+                  target={"_blank"}
+                  referrerpolicy={"no-referrer"}
+                  className={"link"}
+                >
+                  Prague
+                </a>
+                or{" "}
+                <a
+                  href="https://en.wikipedia.org/wiki/%C4%8Cesk%C3%A9_Bud%C4%9Bjovice"
+                  target={"_blank"}
+                  referrerpolicy={"no-referrer"}
+                  className={"link"}
+                >
+                  Czech Budweis
+                </a>
                 <span className={"basis-full text-slate-500"}>
                   (By prior arrangement)
                 </span>
