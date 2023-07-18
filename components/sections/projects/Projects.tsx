@@ -23,7 +23,7 @@ export function Projects(props: ProjectsProps) {
                 Failed to fetch data
               </h4>
               <p className="font-mono text-slate-500">
-                API call Limit Exceeded
+                reason: api limit reached
               </p>
             </div>
           )

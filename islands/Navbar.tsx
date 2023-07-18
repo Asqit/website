@@ -10,6 +10,12 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+    if (self.scrollY > 80) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+
     self.addEventListener("scroll", (e) => {
       if (self.scrollY > 80) {
         setIsScrolled(true);

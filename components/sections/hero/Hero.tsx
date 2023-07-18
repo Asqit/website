@@ -1,4 +1,16 @@
+import { Button } from "../../index.ts";
+
 export function Hero() {
+  const quotes: string[] = [
+    "I Make Web Apps",
+    "Website Maker",
+    "FOSS Enjoyer",
+    "Junior Rustcean",
+    "Redditor, Lol",
+    "Nano > VIm",
+  ];
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
   return (
     <section className={"w-full h-screen min-h-fit text-gray-200"}>
       <div
@@ -18,7 +30,7 @@ export function Hero() {
           <h2
             className={"text-3xl md:text-6xl font-black text-slate-400 animate-fade-in-up"}
           >
-            I make web apps.
+            {randomQuote || "web developer"}
           </h2>
           <p
             className={"max-w-md mt-4 font-semibold animate-fade-in-up"}

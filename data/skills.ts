@@ -5,6 +5,7 @@ import {
   FaLinux,
   FaNodeJs,
   FaReact,
+  FaWrench,
   FaYarn,
 } from "react-icons/fa";
 import {
@@ -21,6 +22,7 @@ import {
   SiPrisma,
   SiRedux,
   SiRust,
+  SiSass,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
@@ -52,12 +54,13 @@ export const frontendTechnologies: Skill[] = [
   { id: 3, value: "Tailwind", Icon: SiTailwindcss, level: 8 },
   { id: 2, value: "Bootstrap", Icon: FaBootstrap, level: 3 },
   { id: 3, value: "React", Icon: FaReact, level: 8 },
-  { id: 4, value: "RTK", Icon: SiRedux, level: 7 },
+  { id: 4, value: "RTK", Icon: SiRedux, level: 6 },
+  { id: 5, value: "Sass", Icon: SiSass, level: 8 },
 ];
 
 export const backendTechnologies: Skill[] = [
   { id: 0, value: "Node.js", Icon: FaNodeJs, level: 7 },
-  { id: 1, value: "Express.js", Icon: FaDirections, level: 8 },
+  { id: 1, value: "Express.js", Icon: FaDirections, level: 9 },
   { id: 2, value: "Prisma", Icon: SiPrisma, level: 7 },
   { id: 3, value: "MySQL", Icon: SiMariadb, level: 4 },
   { id: 4, value: "MongoDB", Icon: SiMongodb, level: 5 },
@@ -68,4 +71,9 @@ export const furtherTechSkills: Skill[] = [
   { id: 1, value: "Linux", Icon: FaLinux, level: 6 },
   { id: 2, value: "Deno", Icon: SiDeno, level: 4 },
   { id: 3, value: "Yarn", Icon: FaYarn, level: 7 },
+  { id: 4, value: "PC Service", Icon: FaWrench, level: 8 },
+  /*
+  { id: 5, value: "Networking (Mikrotik)", Icon: FaDirections, level: 4 },
+  { id: 6, value: "CCTV (dahua)", Icon: FaCamera, level: 4 },
+  */
 ];
