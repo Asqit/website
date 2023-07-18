@@ -1,5 +1,7 @@
+// deno-lint-ignore-file
 import { FaCode } from "react-icons/fa";
 import { Chip } from "../components/index.ts";
+import { JSX } from "preact/jsx-runtime";
 
 export interface GitHubRepo {
   name: string;
@@ -16,7 +18,7 @@ type SimpleProjectProps = GitHubRepo & {};
 export default function SimpleProject(props: SimpleProjectProps) {
   const { name, topics, html_url, description } = props;
 
-  const handleMouseMove = (e: any) => {
+  const handleMouseMove = (e: JSX.TargetedMouseEvent<HTMLAnchorElement>) => {
     const { currentTarget: target } = e;
     const rect = target.getBoundingClientRect();
     const x = e.clientX - rect.left + "px";

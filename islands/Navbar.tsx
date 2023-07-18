@@ -10,6 +10,12 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+    if (self.scrollY > 80) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+
     self.addEventListener("scroll", (e) => {
       if (self.scrollY > 80) {
         setIsScrolled(true);
@@ -35,17 +41,17 @@ export default function Navbar() {
           <Hamburger onClick={toggleIsVisible} />
         </div>
         <ul
-          className={`hidden basis-full md:basis-auto md:flex items-center gap-x-2 uppercase`}
+          className={`hidden basis-full md:basis-auto md:flex items-center gap-x-2 uppercase font-semibold`}
         >
-          <li className="link">
+          <li className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0">
             <a href="/#about">About</a>
           </li>
 
-          <li className="link">
+          <li className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0">
             <a href="/#projects">Projects</a>
           </li>
 
-          <li className="link">
+          <li className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0">
             <a href="/#contact">Contact</a>
           </li>
         </ul>

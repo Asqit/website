@@ -1,4 +1,9 @@
-import { furtherData, languagesData, libsData } from "../../../data/skills.ts";
+import {
+  backendTechnologies,
+  frontendTechnologies,
+  furtherTechSkills,
+  programmingLanguages,
+} from "../../../data/skills.ts";
 import AuthorImage from "../../common/author-image/AuthorImage.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 import { Accordion, Chip } from "../../index.ts";
@@ -24,9 +29,6 @@ export function About() {
         <AuthorImage />
         <Accordion title="Education">
           <article className={"text-slate-200"}>
-            <h2 className={"mt-4 font-bold text-xl text-slate-400"}>
-              Education
-            </h2>
             <ul>
               <li className={"my-2"}>
                 <b>EDUCAnet</b>
@@ -65,17 +67,13 @@ export function About() {
         </Accordion>
         <Accordion title="Skills">
           <article>
-            <h2 className={"mt-4 font-bold text-xl text-slate-400"}>
-              Skills
-            </h2>
-
             <h3 className={"my-2 font-bold"}>
-              Programming languages
+              Programming Languages
             </h3>
             <ul
               className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
             >
-              {languagesData.map((lang) => {
+              {programmingLanguages.map((lang) => {
                 return (
                   <li key={lang.id}>
                     <Chip className={"flex items-center gap-x-2"}>
@@ -91,19 +89,19 @@ export function About() {
             </ul>
 
             <h3 className={"my-2 font-bold"}>
-              Libraries & frameworks
+              Front-End
             </h3>
             <ul
               className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
             >
-              {libsData.map((lib) => {
+              {frontendTechnologies.map((frontend) => {
                 return (
-                  <li key={lib.id}>
+                  <li key={frontend.id}>
                     <Chip className={"flex items-center gap-x-2"}>
-                      {lib.Icon ? <lib.Icon /> : null}
-                      {lib.value}
+                      {frontend.Icon ? <frontend.Icon /> : null}
+                      {frontend.value}
                       <span className={"bg-background-10 px-1"}>
-                        {lib.level}
+                        {frontend.level}
                       </span>
                     </Chip>
                   </li>
@@ -111,18 +109,18 @@ export function About() {
               })}
             </ul>
 
-            <h3 className={"my-2 font-bold"}>Further knowledge</h3>
+            <h3 className={"my-2 font-bold"}>Back-End & DBs</h3>
             <ul
               className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
             >
-              {furtherData.map((etc) => {
+              {backendTechnologies.map((backend) => {
                 return (
-                  <li key={etc.id}>
+                  <li key={backend.id}>
                     <Chip className={"flex items-center gap-x-2"}>
-                      {etc.Icon ? <etc.Icon /> : null}
-                      {etc.value}
+                      {backend.Icon ? <backend.Icon /> : null}
+                      {backend.value}
                       <span className={"bg-background-10 px-1"}>
-                        {etc.level}
+                        {backend.level}
                       </span>
                     </Chip>
                   </li>
@@ -130,7 +128,26 @@ export function About() {
               })}
             </ul>
 
-            <p className={"float-right text-slate-500 mt-2"}>
+            <h3 className={"my-2 font-bold"}>Other Tech. Skills</h3>
+            <ul
+              className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
+            >
+              {furtherTechSkills.map((further) => {
+                return (
+                  <li key={further.id}>
+                    <Chip className={"flex items-center gap-x-2"}>
+                      {further.Icon ? <further.Icon /> : null}
+                      {further.value}
+                      <span className={"bg-background-10 px-1"}>
+                        {further.level}
+                      </span>
+                    </Chip>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <p className={"float-right text-slate-500 my-2"}>
               Each skill has a knowledge level. Levels spans from 0 to 10
             </p>
           </article>

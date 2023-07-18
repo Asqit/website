@@ -42,7 +42,7 @@ module.exports = {
             opacity: 1,
           },
         },
-        rotate: {
+        rotateSphere: {
           from: {
             rotate: "0deg",
           },
@@ -53,11 +53,20 @@ module.exports = {
             rotate: "360deg",
           },
         },
+        rotate: {
+          from: {
+            rotate: "0deg",
+          },
+          to: {
+            rotate: "360deg",
+          },
+        },
       },
       animation: {
         "fade-in": "fadeIn 1s cubic-bezier(0, 0, 0.2, 1)",
         "fade-in-up": "fadeInUp 1s cubic-bezier(0, 0, 0.2, 1)",
-        "sphere-rotate": "rotate 20s infinite",
+        "sphere-rotate": "rotateSpheres 20s infinite",
+        "rotate": "rotate 1s infinite cubic-bezier(0, 0, 0.2, 1)",
       },
     },
   },

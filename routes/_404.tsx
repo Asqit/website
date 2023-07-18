@@ -3,17 +3,15 @@ import { UnknownPageProps } from "$fresh/server.ts";
 import Navbar from "../islands/Navbar.tsx";
 
 export default function NotFound(props: UnknownPageProps) {
-  const { url } = props;
-
   return (
     <>
       <Navbar />
-      <section className={"w-full h-screen"}>
+      <section className={"w-full h-screen bg-hero-gradient-phone"}>
         <article
           className={"h-full container mx-auto flex flex-col items-center justify-center gap-4 text-slate-300"}
         >
           <h1
-            className={"text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-primary-10 via-primary-0 to-sky-500"}
+            className={"text-6xl font-black font-mono"}
           >
             404
           </h1>
