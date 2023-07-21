@@ -1,5 +1,3 @@
-import { Button } from "../../index.ts";
-
 export function Hero() {
   const quotes: string[] = [
     "I Make Web Apps",
@@ -7,7 +5,7 @@ export function Hero() {
     "FOSS Enjoyer",
     "Junior Rustcean",
     "Redditor, Lol",
-    "Nano > VIm",
+    "VIm > emacs",
   ];
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
