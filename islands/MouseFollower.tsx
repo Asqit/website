@@ -13,7 +13,7 @@ function followMouse(event: MouseEvent, mouse: HTMLDivElement) {
       left: x + "px",
       top: y + "px",
     },
-    { duration: 2000, fill: "forwards" },
+    { duration: 300, fill: "forwards" },
   );
 }
 
