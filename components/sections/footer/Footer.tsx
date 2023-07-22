@@ -42,7 +42,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a target="blank" rel="author" href={asset("Resume.pdf")}>
+              <a target="blank" rel="author" href={asset("docs/cv.pdf")}>
                 <FaPaperclip />
               </a>
             </li>

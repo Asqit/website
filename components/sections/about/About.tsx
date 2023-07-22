@@ -6,8 +6,10 @@ import {
 } from "../../../data/skills.ts";
 import AuthorImage from "../../common/author-image/AuthorImage.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
-import { Accordion, Chip } from "../../index.ts";
+import { Accordion, Button, Chip } from "../../index.ts";
 import { about } from "../../../data/about.ts";
+import { asset } from "$fresh/runtime.ts";
+import { FaPaperclip } from "react-icons/fa";
 
 export function About() {
   return (
@@ -25,6 +27,15 @@ export function About() {
               {article}
             </p>
           ))}
+          <a
+            target="blank"
+            rel="author"
+            href={asset("docs/cv.pdf")}
+            className={"btn primary px-8 inline-flex gap-x-2 items-center capitalize"}
+          >
+            <FaPaperclip />
+            <span>Get CV</span>
+          </a>
         </article>
         <AuthorImage />
         <Accordion title="Education">
