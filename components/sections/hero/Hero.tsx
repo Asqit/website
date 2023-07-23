@@ -7,12 +7,15 @@ export function Hero() {
     "Redditor, Lol",
     "VIm > emacs",
   ];
+
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
   return (
-    <section className={"w-full h-screen min-h-fit text-gray-200"}>
+    <section
+      className={"w-full h-screen min-h-fit bg-background-0 text-gray-200"}
+    >
       <div
-        className={"w-full h-full backdrop-blur-3xl grid grid-cols-8 items-center justify-center"}
+        className={"container mx-auto max-w-7xl h-full grid grid-cols-8 items-center justify-center"}
       >
         <article
           className={"col-span-full p-4 md:p-0 md:col-start-3 lg:col-end-6"}

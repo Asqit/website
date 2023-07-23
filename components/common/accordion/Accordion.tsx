@@ -1,7 +1,7 @@
 import { FaChevronRight } from "react-icons/fa";
 import { JSX } from "preact/jsx-runtime";
 
-interface AccordionProps {
+interface AccordionProps extends JSX.HTMLAttributes<HTMLElement> {
   children: JSX.Element;
   title: string;
 }
@@ -10,16 +10,17 @@ interface AccordionProps {
  * @description Server-side friendly accordion component.
  */
 export function Accordion(props: AccordionProps) {
-  const { children, title } = props;
+  const { children, title, ...rest } = props;
 
   return (
     <article
-      className={"overflow-hidden rounded-md backdrop-blur-md flex flex-col border border-background-5"}
+      className={"overflow-hidden rounded-md backdrop-blur-md flex items-start flex-col border border-background-5"}
+      {...rest}
     >
       <input type="checkbox" className={"hidden peer"} id={title} />
       <label
         htmlFor={title}
-        className={"flex flex-grow gap-x-4 items-center transition-colors justify-center font-semibold md:bg-background-10 bg-background-5 p-2 cursor-pointer hover:bg-background-5 peer-checked:bg-background-0"}
+        className={"flex flex-grow w-full gap-x-4 items-center transition-colors justify-center font-semibold md:bg-background-10 bg-background-5 p-2 cursor-pointer hover:bg-background-5 peer-checked:bg-background-0"}
       >
         {title}
       </label>

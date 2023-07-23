@@ -34,6 +34,7 @@ export default function SimpleProject(props: SimpleProjectProps) {
       target={"_blank"}
       onMouseMove={handleMouseMove}
       className={`rounded-lg relative hover:before:opacity-100 group project`}
+      aria-roledescription={"button"}
     >
       <div className={"project-border group-hover:opacity-100"} />
       <div
@@ -46,7 +47,7 @@ export default function SimpleProject(props: SimpleProjectProps) {
           </span>
         </div>
         <article className="flex-grow">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary-10 my-2">
+          <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary-10 via-primary-0 to-primary-10 my-2 capitalize">
             {name}
           </h2>
           <p className={"my-2"}>{description}</p>

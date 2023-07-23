@@ -7,8 +7,8 @@ import { GitHubRepo } from "../islands/SimpleProject.tsx";
 export const handler: Handlers<GitHubRepo[] | null> = {
   async GET(_, ctx) {
     // Dev. env. variable to stop from re-fetching
-    const resp = await fetch(`https://api.github.com/users/Asqit/repos`);
-    //const resp = { status: 404 };
+    //const resp = await fetch(`https://api.github.com/users/Asqit/repos`);
+    const resp = { status: 404 };
 
     if (resp.status === 404) {
       return ctx.render(null);

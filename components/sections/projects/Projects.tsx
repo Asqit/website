@@ -10,7 +10,7 @@ export function Projects(props: ProjectsProps) {
   const { data } = props;
 
   return (
-    <section id="projects" className={"py-8 bg-background-5"}>
+    <section id="projects" className={"py-8 bg-background-0"}>
       <article className={"container mx-auto max-w-7xl p-8 text-white"}>
         <SectionTitle value="Projects" />
 

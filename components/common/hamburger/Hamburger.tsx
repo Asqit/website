@@ -1,21 +1,18 @@
 import { useState } from "preact/hooks";
 
 interface IHamburgerProps {
-  open?: boolean;
-  onClick?: () => void;
+  isOpen: boolean;
+  onClick: () => void;
   containerClassName?: string;
 }
 
 export function Hamburger(props: IHamburgerProps) {
-  const { open, onClick, containerClassName } = props;
-  const [isOpen, setIsOpen] = useState<boolean>(open ?? false);
+  const { isOpen, onClick, containerClassName } = props;
 
   const handleClick = () => {
     if (onClick) {
       onClick();
     }
-
-    setIsOpen((isOpen) => !isOpen);
   };
 
   return (

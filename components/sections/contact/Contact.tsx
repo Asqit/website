@@ -5,7 +5,7 @@ import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 export function Contact() {
   return (
     <section
-      className={"md:bg-background-0/10 bg-background-0 backdrop-blur-[200px] py-8 md:py-16"}
+      className={"bg-background-5 backdrop-blur-[200px] py-8 md:py-16"}
       id="contact"
     >
       <div

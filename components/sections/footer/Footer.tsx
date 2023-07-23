@@ -10,7 +10,7 @@ import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 export function Footer() {
   return (
     <footer
-      className={"bg-black text-slate-200 p-8"}
+      className={"bg-black text-slate-200 p-8 border-t-4 border-t-slate-900"}
     >
       <article
         className={"container max-w-4xl mx-auto p-4 flex flex-col md:flex-row gap-6 md:gap-0 items-center md:justify-around"}
