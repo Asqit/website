@@ -36,6 +36,15 @@ export function About() {
             <FaPaperclip />
             <span>Get CV</span>
           </a>
+          <a
+            target="blank"
+            rel="author"
+            referrerpolicy={"no-referrer"}
+            href={"https://www.github.com/asqit"}
+            className={"btn ml-4 primary outlined px-8 inline-flex gap-x-2 items-center capitalize"}
+          >
+            GitHub
+          </a>
         </article>
         <AuthorImage />
         <Accordion title="Education">

@@ -7,7 +7,6 @@ export default function App(props: AppProps) {
   return (
     <html>
       <Head>
-        <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Ondřej Tuček - Computer Enthusiast 👨‍💻</title>
         <link rel="icon" type="image/ico" href="../images/favicon.ico" />

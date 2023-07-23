@@ -1,9 +1,5 @@
 import { useEffect, useRef } from "preact/hooks";
 
-function clamp(n: number, min: number, max: number) {
-  return Math.max(min, Math.min(max, n));
-}
-
 function followMouse(event: MouseEvent, mouse: HTMLDivElement) {
   const x = event.pageX;
   const y = event.pageY;

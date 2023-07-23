@@ -25,7 +25,7 @@ export function Contact() {
                 <b>Email:</b>
                 <a
                   href={"mailto:ondrejtucek9@gmail.com"}
-                  className={"underline"}
+                  className={"underline link"}
                 >
                   ondrejtucek9@gmail.com
                 </a>

@@ -95,6 +95,7 @@ export default function ContactForm() {
         value={payload.message}
         onChange={handleChange}
         id={"message"}
+        minLength={12}
         required
       >
       </textarea>
