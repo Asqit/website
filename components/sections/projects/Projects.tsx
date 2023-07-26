@@ -2,14 +2,9 @@ import SimpleProject, { GitHubRepo } from "../../../islands/SimpleProject.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 import HighlightedProject from "../../../islands/HighlightedProject.tsx";
 import { projects } from "../../../data/project.ts";
-
-interface ProjectsProps {
-  data: GitHubRepo[] | null;
-}
+import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 
 export function Projects(props: ProjectsProps) {
-  const { data } = props;
-
   return (
     <section id="projects" className={"py-16 bg-background-0 relative z-50"}>
       <article className={"container mx-auto max-w-7xl p-8 text-white"}>
@@ -33,6 +28,18 @@ export function Projects(props: ProjectsProps) {
             description="TeaStation is e-shop landing page for fictional tea shop. It's written in html and sass and it served me as learning project."
             tags={["HTML", "SCSS"]}
             imageSrc="images/teastation.png"
+          />
+          <HighlightedProject
+            isEven={false}
+            title="Notes App 📓"
+            imageSrc={[
+              asset("images/notes-app-1.png"),
+              asset("images/notes-app-2.png"),
+            ]}
+            githubLink="https://github.com/asqit/notes-app"
+            releaseLink="https://notes-app-asqit.netlify.app"
+            description="An notebook application written in TypeScript with React and styled by boostrap. The application is able to sort posts by tags and render / write notes in markdown format."
+            tags={["React", "TypeScript", "Bootstrap", "Markdown"]}
           />
         </div>
 

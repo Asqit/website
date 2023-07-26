@@ -43,8 +43,6 @@ export const programmingLanguages: Skill[] = [
   { id: 1, value: "TypeScript", Icon: SiTypescript },
   { id: 2, value: "JavaScript", Icon: SiJavascript },
   { id: 3, value: "Rust", Icon: SiRust },
-  { id: 4, value: "Java", Icon: SiJava },
-  { id: 5, value: "Lua", Icon: SiLua },
 ];
 
 export const frontendTechnologies: Skill[] = [
@@ -71,8 +69,4 @@ export const furtherTechSkills: Skill[] = [
   { id: 2, value: "Deno", Icon: SiDeno },
   { id: 3, value: "Yarn", Icon: FaYarn },
   { id: 4, value: "PC Service", Icon: FaWrench },
-  /*
-  { id: 5, value: "Networking (Mikrotik)", Icon: FaDirections},
-  { id: 6, value: "CCTV (dahua)", Icon: FaCamera},
-  */
 ];

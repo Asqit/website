@@ -53,12 +53,22 @@ export const projects: GitHubRepo[] = [
   },
   {
     id: 5,
-    name: "BackRoads",
-    language: "html",
-    html_url: "https://github.com/asqit/backroads",
+    name: "momentify",
+    language: "typescript",
+    html_url: "https://github.com/asqit/momentify",
     description:
-      "BackRoads is website for fictional tour company. It was my learning project, while learning css.",
-    topics: ["html", "css"],
+      "Platform for sharing your moments with others made in MERN stack. The application is yet to be released. I am currently looking for service providers.",
+    topics: ["MERN", "typescript", "react"],
     fork: false,
   },
+  // {
+  //   id: 5,
+  //   name: "BackRoads",
+  //   language: "html",
+  //   html_url: "https://github.com/asqit/backroads",
+  //   description:
+  //     "BackRoads is website for fictional tour company. It was my learning project, while learning css.",
+  //   topics: ["html", "css"],
+  //   fork: false,
+  // },
 ];
