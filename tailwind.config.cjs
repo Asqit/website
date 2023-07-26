@@ -7,12 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "hero-gradient-desktop":
-          "radial-gradient(circle,rgba(10, 21, 31, 1) 0%,rgba(27, 153, 139, 1) 56%,rgba(11, 30, 38, 1) 87%,rgba(10, 21, 31, 1) 100%)",
-        "hero-gradient-phone":
-          "linear-gradient(36deg, rgb(10, 21, 31) 0%, rgb(27, 153, 139) 56%, rgb(11, 30, 38) 87%, rgb(10, 21, 31) 100%)",
-      },
       colors: {
         "primary-10": "#25d0bc",
         "primary-5": "rgb(30, 168, 152)",

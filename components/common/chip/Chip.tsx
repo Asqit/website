@@ -1,7 +1,7 @@
 import { JSX } from "preact/jsx-runtime";
 
 interface ChipProps extends JSX.HTMLAttributes<HTMLSpanElement> {
-  children: any;
+  children: JSX.Element;
 }
 
 export function Chip(props: ChipProps) {
@@ -10,7 +10,7 @@ export function Chip(props: ChipProps) {
   return (
     <span
       {...rest}
-      className={`rounded-md py-1 px-2 bg-background-0 border border-background-10 text-white font-mono ${
+      className={`rounded-md py-1 px-2 bg-background-0 border-b-2 border-b-slate-950 text-white font-mono ${
         className ? className : ""
       }`}
     >

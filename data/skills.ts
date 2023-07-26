@@ -36,44 +36,37 @@ interface Skill {
   id: number;
   value: string;
   Icon?: (props: IconBaseProps) => JSX.Element;
-  level: number;
 }
 
 export const programmingLanguages: Skill[] = [
-  { id: 0, value: "Bash", Icon: SiGnubash, level: 3 },
-  { id: 1, value: "TypeScript", Icon: SiTypescript, level: 7 },
-  { id: 2, value: "JavaScript", Icon: SiJavascript, level: 8 },
-  { id: 3, value: "Rust", Icon: SiRust, level: 4 },
-  { id: 4, value: "Java", Icon: SiJava, level: 3 },
-  { id: 5, value: "Lua", Icon: SiLua, level: 3 },
+  { id: 0, value: "Bash", Icon: SiGnubash },
+  { id: 1, value: "TypeScript", Icon: SiTypescript },
+  { id: 2, value: "JavaScript", Icon: SiJavascript },
+  { id: 3, value: "Rust", Icon: SiRust },
 ];
 
 export const frontendTechnologies: Skill[] = [
-  { id: 0, value: "HTML", Icon: SiHtml5, level: 7 },
-  { id: 1, value: "CSS", Icon: SiCss3, level: 6 },
-  { id: 3, value: "Tailwind", Icon: SiTailwindcss, level: 8 },
-  { id: 2, value: "Bootstrap", Icon: FaBootstrap, level: 3 },
-  { id: 3, value: "React", Icon: FaReact, level: 8 },
-  { id: 4, value: "RTK", Icon: SiRedux, level: 6 },
-  { id: 5, value: "Sass", Icon: SiSass, level: 8 },
+  { id: 0, value: "HTML", Icon: SiHtml5 },
+  { id: 1, value: "CSS", Icon: SiCss3 },
+  { id: 3, value: "Tailwind", Icon: SiTailwindcss },
+  { id: 2, value: "Bootstrap", Icon: FaBootstrap },
+  { id: 3, value: "React", Icon: FaReact },
+  { id: 4, value: "RTK", Icon: SiRedux },
+  { id: 5, value: "Sass", Icon: SiSass },
 ];
 
 export const backendTechnologies: Skill[] = [
-  { id: 0, value: "Node.js", Icon: FaNodeJs, level: 7 },
-  { id: 1, value: "Express.js", Icon: FaDirections, level: 9 },
-  { id: 2, value: "Prisma", Icon: SiPrisma, level: 7 },
-  { id: 3, value: "MySQL", Icon: SiMariadb, level: 4 },
-  { id: 4, value: "MongoDB", Icon: SiMongodb, level: 5 },
+  { id: 0, value: "Node.js", Icon: FaNodeJs },
+  { id: 1, value: "Express.js", Icon: FaDirections },
+  { id: 2, value: "Prisma", Icon: SiPrisma },
+  { id: 3, value: "MySQL", Icon: SiMariadb },
+  { id: 4, value: "MongoDB", Icon: SiMongodb },
 ];
 
 export const furtherTechSkills: Skill[] = [
-  { id: 0, value: "Git", Icon: SiGit, level: 4 },
-  { id: 1, value: "Linux", Icon: FaLinux, level: 6 },
-  { id: 2, value: "Deno", Icon: SiDeno, level: 4 },
-  { id: 3, value: "Yarn", Icon: FaYarn, level: 7 },
-  { id: 4, value: "PC Service", Icon: FaWrench, level: 8 },
-  /*
-  { id: 5, value: "Networking (Mikrotik)", Icon: FaDirections, level: 4 },
-  { id: 6, value: "CCTV (dahua)", Icon: FaCamera, level: 4 },
-  */
+  { id: 0, value: "Git", Icon: SiGit },
+  { id: 1, value: "Linux", Icon: FaLinux },
+  { id: 2, value: "Deno", Icon: SiDeno },
+  { id: 3, value: "Yarn", Icon: FaYarn },
+  { id: 4, value: "PC Service", Icon: FaWrench },
 ];

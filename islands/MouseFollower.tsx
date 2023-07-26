@@ -9,7 +9,7 @@ function followMouse(event: MouseEvent, mouse: HTMLDivElement) {
       left: x + "px",
       top: y + "px",
     },
-    { duration: 300, fill: "forwards" },
+    { duration: 0, fill: "forwards" },
   );
 }
 
@@ -17,31 +17,27 @@ export default function MouseFollower() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (innerWidth >= 768) {
-      self.addEventListener("mousemove", (e) => {
+    self.onmousemove = (e) => {
+      if (e && e.currentTarget) {
         if (ref.current) {
-          followMouse(e, ref.current);
+          ref.current.style.setProperty("--sphere-x", e.clientX + "px");
+          ref.current.style.setProperty("--sphere-y", e.clientY + "px");
         }
-      });
-    }
+      }
+    };
   }, [ref]);
 
   const style = {
-    width: "400px",
-    height: "400px",
-    borderRadius: "50%",
-    position: "absolute",
-    zIndex: "-1",
     top: "50%",
     left: "50%",
     translate: "-50% -50%",
-    animation: "rotate 8s infinite",
   };
 
   return (
     <div
       ref={ref}
-      className={"bg-gradient-to-bl from-special-red to-primary-5 animate-sphere-rotate"}
+      id="MOUSE_FOLLOWER"
+      className={"z-30 pointer-events-none fixed inset-0 w-screen h-screen"}
       style={style}
     />
   );
