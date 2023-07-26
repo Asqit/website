@@ -47,7 +47,7 @@ export default function SimpleProject(props: SimpleProjectProps) {
           </span>
         </div>
         <article className="flex-grow">
-          <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary-10 via-primary-0 to-primary-10 my-2 capitalize">
+          <h2 className="text-2xl md:text-4xl font-bold text-primary-10 my-2 capitalize">
             {name}
           </h2>
           <p className={"my-2"}>{description}</p>

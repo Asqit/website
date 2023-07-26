@@ -1,4 +1,5 @@
 import { asset } from "$fresh/runtime.ts";
+import LazyImage from "../../../islands/LazyImage.tsx";
 
 export default function AuthorImage() {
   return (
@@ -10,7 +11,7 @@ export default function AuthorImage() {
         <span className="text-center">hover to zoom</span>
       </div>
       <div className="overflow-hidden rounded-lg object-cover transition-all">
-        <img
+        <LazyImage
           src={asset("images/andy.webp")}
           className="md:opacity-50 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
           loading={"lazy"}

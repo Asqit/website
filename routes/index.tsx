@@ -10,6 +10,8 @@ export const handler: Handlers<GitHubRepo[] | null> = {
     //const resp = await fetch(`https://api.github.com/users/Asqit/repos`);
     const resp = { status: 404 };
 
+    console.log(resp);
+
     if (resp.status === 404) {
       return ctx.render(null);
     }
@@ -30,9 +32,8 @@ export const handler: Handlers<GitHubRepo[] | null> = {
     while (true) {
       const current = repos[Math.floor(Math.random() * repos.length - 1)];
 
-      if (finalData.includes(current)) {
-        continue;
-      }
+      if (finalData.includes(current)) continue;
+      if (current.topics.length === 0) continue;
 
       finalData.push(current);
 

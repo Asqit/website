@@ -12,7 +12,7 @@ export function Hero() {
 
   return (
     <section
-      className={"w-full h-screen min-h-fit bg-background-0 text-gray-200"}
+      className={"w-full h-screen min-h-fit bg-background-0 text-gray-200 py-16"}
     >
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-8 items-center justify-center"}

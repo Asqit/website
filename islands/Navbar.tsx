@@ -4,6 +4,7 @@ import { Brand, Hamburger } from "../components/index.ts";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [prevVal, setPrevVal] = useState<number>(0);
 
   const toggleIsVisible = () => {
     setIsMenuOpen((prev) => !prev);
@@ -27,7 +28,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed w-screen top-0 left-0 z-50 ${
+      className={`fixed w-screen top-0 left-0 z-[999] transition-all ${
         isScrolled
           ? "bg-black/50 backdrop-blur-xl"
           : "bg-transparent backdrop-blur-none"
