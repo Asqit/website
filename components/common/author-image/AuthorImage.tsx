@@ -14,7 +14,7 @@ export default function AuthorImage() {
         <LazyImage
           src={asset("images/andy.webp")}
           className="md:opacity-50 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
-          loading={"lazy"}
+          loading={"eager"}
           alt="Image of author standing in from of sea horizon"
         />
       </div>

@@ -31,6 +31,6 @@ export default function LazyImage(props: LazyImageProps) {
   }
 
   return (
-    <div className="w-full aspect-video bg-slate-700 animate-pulse rounded-md" />
+    <div className="min-w-[400px] w-full aspect-video bg-slate-700 animate-pulse rounded-md" />
   );
 }

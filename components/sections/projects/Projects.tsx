@@ -4,7 +4,7 @@ import HighlightedProject from "../../../islands/HighlightedProject.tsx";
 import { projects } from "../../../data/project.ts";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 
-export function Projects(props: ProjectsProps) {
+export function Projects() {
   return (
     <section id="projects" className={"py-16 bg-background-0 relative z-50"}>
       <article className={"container mx-auto max-w-7xl p-8 text-white"}>
@@ -18,7 +18,7 @@ export function Projects(props: ProjectsProps) {
             releaseLink="https://backroads-asqit.netlify.app"
             description="BackRoads is website for fictional tour company. It was my learning project, while learning css."
             tags={["HTML", "CSS"]}
-            imageSrc="images/backroads.png"
+            imageSrc="images/backroads.webp"
           />
           <HighlightedProject
             isEven={true}
@@ -27,14 +27,14 @@ export function Projects(props: ProjectsProps) {
             releaseLink="https://teastation-asqit.netlify.app"
             description="TeaStation is e-shop landing page for fictional tea shop. It's written in html and sass and it served me as learning project."
             tags={["HTML", "SCSS"]}
-            imageSrc="images/teastation.png"
+            imageSrc="images/teastation.webp"
           />
           <HighlightedProject
             isEven={false}
             title="Notes App 📓"
             imageSrc={[
-              asset("images/notes-app-1.png"),
-              asset("images/notes-app-2.png"),
+              asset("images/notes-app-1.webp"),
+              asset("images/notes-app-2.webp"),
             ]}
             githubLink="https://github.com/asqit/notes-app"
             releaseLink="https://notes-app-asqit.netlify.app"
@@ -44,7 +44,7 @@ export function Projects(props: ProjectsProps) {
         </div>
 
         <h2
-          className={"text-4xl font-black my-4 mt-8 text-center capitalize text-transparent bg-clip-text bg-gradient-to-bl from-primary-10 to-primary-5"}
+          className={"text-4xl font-black my-8 mt-16 text-center capitalize text-transparent bg-clip-text bg-gradient-to-bl from-primary-10 to-primary-5"}
         >
           Other Projects
         </h2>

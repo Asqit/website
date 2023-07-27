@@ -34,7 +34,6 @@ body {
 :root {
 	--mouse-x: 100px;
 	--mouse-y: 100px;
-
 	--sphere-x: 100px;
 	--sphere-y: 100px;
 }
@@ -63,5 +62,5 @@ body {
 
 .project-border {
 	z-index: 10;
-	background:radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.514) 0%, rgba(255,255,255,0) 59%);
+	background:radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.74) 0%, rgba(255,255,255,0) 59%);
 }
