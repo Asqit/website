@@ -1,35 +1,36 @@
 import { Handlers, Status } from "$fresh/server.ts";
-import { config } from "https://deno.land/x/dotenv@v3.2.2/mod.ts";
 
+/** interface representing the email form */
 interface Payload {
   mail: string;
   message: string;
 }
 
 export const handler: Handlers = {
-  async POST(req: Request) {
-    const env = config();
+  POST: async function (req: Request) {
+    const payload: Payload = await req.json();
 
-    const { ntfy_topic } = env;
-
-    const payload: Payload | undefined = await req.json();
-
-    if (payload) {
-      try {
-        await fetch(`https://ntfy.sh/${ntfy_topic}`, {
-          method: "POST",
-          body: JSON.stringify({
-            title: `Portfolio: New message from ${payload.mail}`,
-            message: payload.message,
-          }),
-        });
-
-        return new Response("", { status: Status.OK });
-      } catch {
-        return new Response("", { status: Status.BadRequest });
-      }
+    if (!payload) {
+      return new Response("Invalid Request", { status: Status.NoContent });
     }
 
-    return new Response("", { status: Status.NoContent });
+    const response = await fetch(
+      `https://ntfy.sh/${Deno.env.get("ntfy_topic")}`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          title: `Website: new message from ${payload.mail}`,
+          body: payload.message,
+        }),
+      },
+    );
+
+    if (response.ok) {
+      return new Response("OK", { status: Status.OK });
+    }
+
+    return new Response(response.statusText, {
+      status: response.status,
+    });
   },
 };
