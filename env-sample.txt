@@ -1,6 +1,1 @@
-# Environmental variables for emailing
-username="joedoe@email.com"
-password="password123"
-service="email.smtp"
-port=465
-target="janedoe@email.com"
+ntfy_topic=""
