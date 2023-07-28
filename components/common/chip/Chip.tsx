@@ -1,7 +1,7 @@
 import { JSX } from "preact/jsx-runtime";
 
 interface ChipProps extends JSX.HTMLAttributes<HTMLSpanElement> {
-  children: JSX.Element;
+  children: JSX.Element | string;
 }
 
 export function Chip(props: ChipProps) {

@@ -32,10 +32,7 @@ export function Projects() {
           <HighlightedProject
             isEven={false}
             title="Notes App 📓"
-            imageSrc={[
-              asset("images/notes-app-1.webp"),
-              asset("images/notes-app-2.webp"),
-            ]}
+            imageSrc={asset("images/notes-app-1.webp")}
             githubLink="https://github.com/asqit/notes-app"
             releaseLink="https://notes-app-asqit.netlify.app"
             description="An notebook application written in TypeScript with React and styled by boostrap. The application is able to sort posts by tags and render / write notes in markdown format."

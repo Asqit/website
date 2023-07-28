@@ -4,12 +4,6 @@ import { Accordion, Chip } from "../../index.ts";
 import { about } from "../../../data/about.ts";
 import { asset } from "$fresh/runtime.ts";
 import { FaPaperclip } from "react-icons/fa";
-import {
-  backendTechnologies,
-  frontendTechnologies,
-  furtherTechSkills,
-  programmingLanguages,
-} from "../../../data/skills.ts";
 
 export function About() {
   return (
@@ -28,92 +22,6 @@ export function About() {
               {article}
             </p>
           ))}
-
-          <div className={"my-4"}>
-            <Accordion title="Skills">
-              <article>
-                <h3 className={"my-2 font-bold"}>
-                  Programming Languages
-                </h3>
-                <ul
-                  className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
-                >
-                  {programmingLanguages.map((lang) => {
-                    return (
-                      <li key={lang.id}>
-                        <Chip className={"flex items-center gap-x-2"}>
-                          <>
-                            {lang.Icon ? <lang.Icon /> : null}
-                            {lang.value}
-                          </>
-                        </Chip>
-                      </li>
-                    );
-                  })}
-                </ul>
-
-                <h3 className={"my-2 font-bold"}>
-                  Front-End
-                </h3>
-                <ul
-                  className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
-                >
-                  {frontendTechnologies.map((frontend) => {
-                    return (
-                      <li key={frontend.id}>
-                        <Chip className={"flex items-center gap-x-2"}>
-                          <>
-                            {frontend.Icon ? <frontend.Icon /> : null}
-                            {frontend.value}
-                          </>
-                        </Chip>
-                      </li>
-                    );
-                  })}
-                </ul>
-
-                <h3 className={"my-2 font-bold"}>Back-End & DBs</h3>
-                <ul
-                  className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
-                >
-                  {backendTechnologies.map((backend) => {
-                    return (
-                      <li key={backend.id}>
-                        <Chip className={"flex items-center gap-x-2"}>
-                          <>
-                            {backend.Icon ? <backend.Icon /> : null}
-                            {backend.value}
-                          </>
-                        </Chip>
-                      </li>
-                    );
-                  })}
-                </ul>
-
-                <h3 className={"my-2 font-bold"}>Other Tech. Skills</h3>
-                <ul
-                  className={"flex items-center gap-2 my-2 font-mono flex-wrap"}
-                >
-                  {furtherTechSkills.map((further) => {
-                    return (
-                      <li key={further.id}>
-                        <Chip className={"flex items-center gap-x-2"}>
-                          <>
-                            {further.Icon ? <further.Icon /> : null}
-                            {further.value}
-                          </>
-                        </Chip>
-                      </li>
-                    );
-                  })}
-                </ul>
-
-                <p className={"float-right text-slate-500 my-2"}>
-                  Each skill has a knowledge level. Levels spans from 0 to 10
-                </p>
-              </article>
-            </Accordion>
-          </div>
 
           <a
             target="blank"

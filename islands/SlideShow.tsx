@@ -1,7 +1,6 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState } from "preact/hooks";
 import LazyImage from "./LazyImage.tsx";
-import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 
 type SlideshowProps = {
   images: string[];
@@ -37,11 +36,10 @@ export default function Slideshow(props: SlideshowProps) {
           return (
             <LazyImage
               className="h-full aspect-square object-cover inline-block dark:brightness-75"
+              crossOrigin="anonymous"
               src={filename}
               key={filename}
               alt={filename}
-              loading="eager"
-              crossOrigin="anonymous"
             />
           );
         })}

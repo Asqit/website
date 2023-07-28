@@ -1,5 +1,5 @@
 import { FaGithubAlt, FaInfo } from "react-icons/fa";
-import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
+import { asset } from "$fresh/runtime.ts";
 import LazyImage from "./LazyImage.tsx";
 import Slideshow from "./SlideShow.tsx";
 
@@ -40,17 +40,22 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
       >
         <header className={"my-4"}>
           <h3 className={"text-primary-5 font-mono"}>Featured Project</h3>
-          <h2 className={"font-bold text-xl"}>{title}</h2>
+          <h2 className={"font-bold text-3xl"}>{title}</h2>
         </header>
         <main
-          className={"my-4 md:bg-background-10 md:p-4 md:rounded-md md:border-t-2 md:border-t-slate-700 md:border-b-2 md:border-b-slate-950"}
+          className={`my-4 md:relative md:w-[120%] md:z-10 ${
+            isEven ? "md:left-[0%]" : "md:right-[20%]"
+          }  md:bg-background-10 md:p-4 md:rounded-md md:border-t-2 md:border-t-slate-700 md:border-b-2 md:border-b-slate-950`}
         >
           <p>{description}</p>
         </main>
         <footer className={"my-4"}>
           <div>
-            {tags.map((tag) => (
-              <span key={tag} className={"font-mono text-slate-500 mr-1"}>
+            {tags.map((tag, i) => (
+              <span
+                key={tag}
+                className={"font-mono text-slate-500 mr-2 font-bold"}
+              >
                 {tag}
               </span>
             ))}

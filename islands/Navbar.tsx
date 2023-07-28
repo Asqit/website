@@ -4,7 +4,6 @@ import { Brand, Hamburger } from "../components/index.ts";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [prevVal, setPrevVal] = useState<number>(0);
 
   const toggleIsVisible = () => {
     setIsMenuOpen((prev) => !prev);

@@ -3,12 +3,12 @@ import { GitHubRepo } from "../islands/SimpleProject.tsx";
 export const projects: GitHubRepo[] = [
   {
     id: 0,
-    name: "Notes App 📓",
+    name: "Website",
     language: "typescript",
-    html_url: "https://github.com/asqit/notes-app",
+    html_url: "https://github.com/asqit/website",
     description:
-      "An notebook application written in TypeScript with React and styled by boostrap. The application is able to sort posts by tags and render / write notes in markdown format.",
-    topics: ["bootstrap", "react", "typescript", "markdown"],
+      "Current iteration of my portfolio website. Currently, it's fast and beautiful SSG website, that you are currently viewing.",
+    topics: ["typescript", "fresh", "deno", "tailwind css"],
     fork: false,
   },
   {
