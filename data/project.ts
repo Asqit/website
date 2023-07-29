@@ -23,12 +23,12 @@ export const projects: GitHubRepo[] = [
   },
   {
     id: 2,
-    name: "ChartingApp",
+    name: "RTK-Todo",
     language: "typescript",
-    html_url: "null",
+    html_url: "https://github.com/asqit/rtk-todo",
     description:
-      "My first MERN stack application released to the wild parts of the internet. It was my first paid project and my first MERN application. The point of this application was to fetch data from MySQL collected by IoT Arduino device and then plot the on chart.",
-    topics: ["IoT", "react"],
+      "RTk-Todo is simple todo application written in typescript and todo state handled by Redux-Toolkit",
+    topics: ["todoapp", "react", "redux-toolkit"],
     fork: false,
   },
   {

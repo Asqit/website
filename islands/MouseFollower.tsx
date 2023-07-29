@@ -1,20 +1,16 @@
 import { useEffect, useRef } from "preact/hooks";
 
-function followMouse(event: MouseEvent, mouse: HTMLDivElement) {
-  const x = event.pageX;
-  const y = event.pageY;
-
-  mouse.animate(
-    {
-      left: x + "px",
-      top: y + "px",
-    },
-    { duration: 0, fill: "forwards" },
-  );
+interface MouseFollowerProps {
+  isEnabled?: boolean;
 }
 
-export default function MouseFollower() {
+export default function MouseFollower(props: MouseFollowerProps) {
+  const { isEnabled } = props;
   const ref = useRef<HTMLDivElement>(null);
+
+  if (!isEnabled) {
+    return null;
+  }
 
   useEffect(() => {
     self.onmousemove = (e) => {

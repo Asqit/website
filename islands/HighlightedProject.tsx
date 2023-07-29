@@ -29,9 +29,15 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
       className={"bg-background-5 p-4 rounded-md md:bg-transparent md:grid md:grid-cols-3 md:gap-4 md:items-center"}
     >
       <figure className={"md:col-span-2"}>
-        {Array.isArray(imageSrc)
-          ? <Slideshow images={imageSrc} />
-          : <LazyImage src={asset(imageSrc)} />}
+        <a
+          href={releaseLink}
+          target={"_blank"}
+          referrerpolicy={"no-referrer"}
+        >
+          {Array.isArray(imageSrc)
+            ? <Slideshow images={imageSrc} />
+            : <LazyImage src={asset(imageSrc)} />}
+        </a>
       </figure>
       <section
         className={`text-center ${
