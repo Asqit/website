@@ -13,7 +13,7 @@ export function Hero() {
 
   return (
     <section
-      className={"w-full h-screen min-h-fit bg-background-0 text-gray-200 py-16"}
+      className={"w-full h-screen min-h-fit bg-background-0 text-gray-200 py-16 scroll-m-8"}
     >
       <div
         className={"container mx-auto max-w-7xl h-full flex items-center justify-center md:block md:relative"}

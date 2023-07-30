@@ -1,4 +1,4 @@
-import { FaGithubAlt, FaInfo } from "react-icons/fa";
+import { FaGithubAlt, FaSignOutAlt } from "react-icons/fa";
 import { asset } from "$fresh/runtime.ts";
 import LazyImage from "./LazyImage.tsx";
 import Slideshow from "./SlideShow.tsx";
@@ -6,7 +6,7 @@ import Slideshow from "./SlideShow.tsx";
 interface HighlightedProjectProps {
   githubLink: string;
   releaseLink: string;
-  imageSrc: string | string[];
+  imageSrc: string;
   title: string;
   description: string;
   tags: string[];
@@ -28,15 +28,18 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
     <article
       className={"bg-background-5 p-4 rounded-md md:bg-transparent md:grid md:grid-cols-3 md:gap-4 md:items-center"}
     >
-      <figure className={"md:col-span-2"}>
+      <figure
+        className={"md:col-span-2 md:bg-primary-10/40 group overflow-hidden"}
+      >
         <a
           href={releaseLink}
           target={"_blank"}
           referrerpolicy={"no-referrer"}
         >
-          {Array.isArray(imageSrc)
-            ? <Slideshow images={imageSrc} />
-            : <LazyImage src={asset(imageSrc)} />}
+          <LazyImage
+            src={asset(imageSrc)}
+            className={"md:opacity-50 md:group-hover:opacity-100 md:group-hover:scale-105 md:transition-all md:duration-300"}
+          />
         </a>
       </figure>
       <section
@@ -78,8 +81,9 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
               href={releaseLink}
               referrerpolicy={"no-referrer"}
               target={"_blank"}
+              className={"order-first"}
             >
-              <FaInfo />
+              <FaSignOutAlt />
             </a>
           </div>
         </footer>

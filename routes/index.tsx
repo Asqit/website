@@ -1,9 +1,7 @@
-import { PageProps } from "$fresh/server.ts";
 import { About, Contact, Footer, Hero, Projects } from "../components/index.ts";
 import Navbar from "../islands/Navbar.tsx";
-import { GitHubRepo } from "../islands/SimpleProject.tsx";
 
-export default function Home({ data }: PageProps<GitHubRepo[] | null>) {
+export default function Home() {
   return (
     <div className="relative overflow-hidden">
       <Navbar />

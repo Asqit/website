@@ -6,7 +6,10 @@ import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 
 export function Projects() {
   return (
-    <section id="projects" className={"py-16 bg-background-0 relative z-50"}>
+    <section
+      id="projects"
+      className={"py-16 bg-background-0 relative z-50 scroll-m-8"}
+    >
       <article className={"container mx-auto max-w-7xl p-8 text-white"}>
         <SectionTitle value="Projects" />
 

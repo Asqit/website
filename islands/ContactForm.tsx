@@ -1,5 +1,6 @@
+import { FaSpinner } from "react-icons/fa";
+import { Button } from "../components/index.ts";
 import { useCallback, useState } from "preact/hooks";
-import { Button, Spinner } from "../components/index.ts";
 
 interface EmailPayload {
   email: string;
@@ -8,14 +9,16 @@ interface EmailPayload {
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isError, setIsError] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const [messageError, setMessageError] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [error, setError] = useState<string>("");
   const [payload, setPayload] = useState<EmailPayload>({
     email: "",
     message: "",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = useCallback((e: any) => {
     const target = e.currentTarget;
     const value = target.value;
     const name = target.name;
@@ -24,7 +27,7 @@ export default function ContactForm() {
       ...payload,
       [name]: value,
     });
-  };
+  }, []);
 
   const handleSubmit = useCallback(async (event: Event) => {
     event.preventDefault();
@@ -39,67 +42,78 @@ export default function ContactForm() {
         }),
       });
 
-      if (response.status !== 200) throw Error;
+      if (response.status !== 200) {
+        throw new Error();
+      }
 
       setIsSuccess(true);
       setIsLoading(false);
-    } catch (e) {
-      setIsError(true);
+    } catch (_) {
+      setError("An error occurred while sending your email");
     }
   }, [payload]);
 
   return (
-    <form
-      className={"flex flex-col gap-3"}
-      onSubmit={handleSubmit}
-      method={"POST"}
-    >
+    <form method={"POST"} onSubmit={handleSubmit}>
       {isSuccess
         ? (
-          <h2
-            className={"bg-primary-10 text-white p-8 rounded-md font-black text-3xl"}
+          <span
+            className={"bg-primary-10 text-white p-2 block rounded-md my-3 font-bold"}
           >
-            Success
-          </h2>
+            Email was successfully sent
+          </span>
         )
         : null}
-      {isError
+      {error
         ? (
-          <h2
-            className={"bg-red-600 text-white p-8 rounded-md font-black text-3xl"}
+          <span
+            className={"bg-red-700 text-white p-2 block rounded-md my-3 font-bold"}
           >
-            Error
-          </h2>
+            {error}
+          </span>
         )
         : null}
-      {isLoading ? <Spinner /> : null}
-      <label className={"text-slate-400"} htmlFor={"email"}>
-        Email
-      </label>
-      <input
-        className={"input"}
-        type="text"
-        id="email"
-        value={payload.email}
-        name={"email"}
-        onChange={handleChange}
-        required
-      />
+      {isLoading
+        ? <FaSpinner className={"animate-spin my-4 text-3xl mx-auto"} />
+        : (
+          <>
+            <div className={"flex flex-col gap-3 my-3"}>
+              <label className={"text-slate-400"} htmlFor={"email"}>
+                Email Address
+              </label>
+              <input
+                type="email"
+                value={payload.email}
+                className={"input"}
+                id="email"
+                name="email"
+                required
+              />
+              {emailError
+                ? <span className={"text-red-400"}>{emailError}</span>
+                : null}
+            </div>
 
-      <label className={"text-slate-400"} htmlFor={"message"}>
-        Message
-      </label>
-      <textarea
-        className={"input min-h-[100px]"}
-        name={"message"}
-        value={payload.message}
-        onChange={handleChange}
-        id={"message"}
-        minLength={12}
-        required
-      >
-      </textarea>
-      <Button type="submit" className={"mt-4"}>send</Button>
+            <div className={"flex flex-col gap-3 my-3"}>
+              <label className={"text-slate-400"} htmlFor={"message"}>
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                className={"input min-h-[100px] resize-y"}
+                value={payload.message}
+                minLength={12}
+                required
+              />
+              {messageError
+                ? <span className={"text-red-400"}>{messageError}</span>
+                : null}
+            </div>
+
+            <Button type="submit" className={"w-full my-3"}>Send</Button>
+          </>
+        )}
     </form>
   );
 }

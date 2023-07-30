@@ -9,7 +9,7 @@ export function About() {
   return (
     <section
       id="about"
-      className={"bg-background-5 backdrop-blur-[200px] py-16"}
+      className={"bg-background-5 backdrop-blur-[200px] py-16 scroll-m-8"}
     >
       <main
         className={"container mx-auto max-w-7xl grid grid-cols-1 xl:grid-cols-2 gap-x-4 gap-y-16 items-center p-8 text-white font-sans"}
