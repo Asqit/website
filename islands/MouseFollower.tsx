@@ -33,7 +33,7 @@ export default function MouseFollower(props: MouseFollowerProps) {
     <div
       ref={ref}
       id="MOUSE_FOLLOWER"
-      className={"z-30 pointer-events-none fixed inset-0 w-screen h-screen"}
+      className={"z-10 pointer-events-none fixed inset-0 w-screen h-screen"}
       style={style}
     />
   );
