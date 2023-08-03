@@ -18,7 +18,12 @@ export function About() {
         <article>
           <SectionTitle value="About" />
           {about.map((article, index) => (
-            <p key={index} className={"my-4"}>
+            <p
+              key={index}
+              className={`${
+                index == 0 ? "text-xl my-4" : "text-base text-slate-200"
+              } my-2`}
+            >
               {article}
             </p>
           ))}

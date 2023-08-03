@@ -43,16 +43,24 @@ export function Projects() {
           />
         </div>
 
-        <h2
-          className={"text-4xl font-black my-8 mt-16 text-center capitalize text-transparent bg-clip-text bg-gradient-to-bl from-primary-10 to-primary-5"}
-        >
-          Other Projects
-        </h2>
+        <div className={"my-8 mt-16"}>
+          <h2
+            className={"text-4xl font-black text-center capitalize text-white"}
+          >
+            Other Projects
+          </h2>
+          <h3 className={"text-slate-400 text-center text-lg"}>
+            (with shiny borders)
+          </h3>
+        </div>
         <div
-          className={"grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4"}
+          className={"grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4 relative"}
         >
+          <div
+            className={"absolute w-full h-full top-0 left-0 z-[999] pointer-events-none bg-gradient-to-b from-transparent to-background-0/70"}
+          />
           {projects.map((project) => {
-            return project && <SimpleProject {...project} key={project.id} />;
+            return <SimpleProject {...project} key={project.id} />;
           })}
         </div>
       </article>

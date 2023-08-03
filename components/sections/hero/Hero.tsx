@@ -2,11 +2,10 @@ import { asset } from "https://deno.land/x/fresh@1.2.0/runtime.ts";
 
 export function Hero() {
   const quotes: string[] = [
-    "I Make Web Apps",
     "Website Maker",
+    "Full-Stack Dev.",
     "FOSS Enjoyer",
     "Junior Rustcean",
-    "VIm > emacs",
     "Redditor, Lol",
     "Sprawl cowboy",
   ];
@@ -15,13 +14,17 @@ export function Hero() {
 
   return (
     <section
-      className={"w-full h-[100vh] min-h-fit bg-background-0 text-gray-200 py-16 scroll-m-8"}
+      className={"w-full h-[100vh] min-h-fit bg-gradient-to-b from-black to-background-10  text-gray-200 py-16 scroll-m-8 relative"}
     >
+      <img
+        src={asset("images/pattern.webp")}
+        className={"absolute w-full h-full top-0 left-0 pointer-events-none"}
+      />
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}
       >
         <article
-          className={"p-4 col-span-2"}
+          className={"p-4 col-span-full"}
         >
           <h3 className={"font-black text-primary-10 animate-fade-in-up"}>
             Hi there! My name is
@@ -45,10 +48,15 @@ export function Hero() {
             software using cutting-edge technologies.
           </p>
         </article>
-        <figure className={"col-span-3"}>
+        <figure className={"col-span-3 hidden relative"}>
           <img
+            className={"relative z-50"}
             src={asset("images/snippet.webp")}
             alt="code snippet:Hello username"
+          />
+          <img
+            src={asset("images/bash.png")}
+            className={"absolute top-[46%] z-[60] right-[5%] w-2/3"}
           />
         </figure>
       </div>
