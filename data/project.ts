@@ -1,8 +1,18 @@
 import { GitHubRepo } from "../islands/SimpleProject.tsx";
 
-export const projects: GitHubRepo[] = [
+let data: GitHubRepo[] = [
   {
     id: 0,
+    name: "momentify",
+    language: "typescript",
+    html_url: "https://github.com/asqit/momentify",
+    description:
+      "Platform for sharing your moments with others made in MERN stack. The application is yet to be released. I am currently looking for service providers.",
+    topics: ["MERN", "typescript", "react"],
+    fork: false,
+  },
+  {
+    id: 1,
     name: "Website",
     language: "typescript",
     html_url: "https://github.com/asqit/website",
@@ -12,7 +22,7 @@ export const projects: GitHubRepo[] = [
     fork: false,
   },
   {
-    id: 1,
+    id: 5,
     name: "Asteroids",
     language: "typescript",
     html_url: "https://github.com/asqit/asteroids",
@@ -32,7 +42,7 @@ export const projects: GitHubRepo[] = [
     fork: false,
   },
   {
-    id: 3,
+    id: 4,
     name: "fresh-project",
     language: "typescript",
     html_url: "https://github.com/asqit/fresh-project",
@@ -42,7 +52,7 @@ export const projects: GitHubRepo[] = [
     fork: false,
   },
   {
-    id: 4,
+    id: 3,
     name: "SpaceLads",
     language: "javascript",
     html_url: "https://github.com/Asqit/SpaceLads/releases/tag/1.0.0",
@@ -51,24 +61,6 @@ export const projects: GitHubRepo[] = [
     topics: ["js", "gaming"],
     fork: false,
   },
-  {
-    id: 5,
-    name: "momentify",
-    language: "typescript",
-    html_url: "https://github.com/asqit/momentify",
-    description:
-      "Platform for sharing your moments with others made in MERN stack. The application is yet to be released. I am currently looking for service providers.",
-    topics: ["MERN", "typescript", "react"],
-    fork: false,
-  },
-  // {
-  //   id: 5,
-  //   name: "BackRoads",
-  //   language: "html",
-  //   html_url: "https://github.com/asqit/backroads",
-  //   description:
-  //     "BackRoads is website for fictional tour company. It was my learning project, while learning css.",
-  //   topics: ["html", "css"],
-  //   fork: false,
-  // },
 ];
+
+export const projects = data.sort((a, b) => a.id - b.id);

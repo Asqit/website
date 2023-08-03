@@ -19,7 +19,7 @@ export function Footer() {
           <h3 className={"font-bold text-2xl"}>
             Ondřej Tuček
           </h3>
-          <p className={"my-1 mb-2"}>Junior full-stack developer</p>
+          <p className={"my-1 mb-2"}>Full-Stack Developer</p>
           <ul
             className={"flex items-center justify-center md:justify-start gap-x-2 text-2xl text-primary-10"}
           >

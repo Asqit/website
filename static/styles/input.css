@@ -24,10 +24,13 @@
 	}
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
     background: #0f202f;
 }
-
 
 /* -------------------------> Project-highlight effect <------------------------- */
 

@@ -63,11 +63,14 @@ export default function Navbar() {
                 Contact
               </a>
             </li>
+            <span className={"text-white"}>|</span>
             <li
               onClick={() => setIsFollowingMouse((p) => !p)}
-              className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0"
+              className={`font-bold cursor-pointer hover:underline ${
+                isFollowingMouse ? "text-primary-10" : "text-white"
+              }`}
             >
-              Mouse
+              Follow Mouse
             </li>
           </ul>
           <div
