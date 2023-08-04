@@ -5,7 +5,7 @@ import MouseFollower from "./MouseFollower.tsx";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isFollowingMouse, setIsFollowingMouse] = useState<boolean>(true);
+  const [isFollowingMouse, setIsFollowingMouse] = useState(true);
 
   const toggleIsVisible = () => {
     setIsMenuOpen((prev) => !prev);

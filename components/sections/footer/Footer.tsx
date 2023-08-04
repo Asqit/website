@@ -23,7 +23,7 @@ export function Footer() {
           <ul
             className={"flex items-center justify-center md:justify-start gap-x-2 text-2xl text-primary-10"}
           >
-            <li>
+            <li className={"hover:text-primary-0"}>
               <a
                 target="blank"
                 rel="noreferrer"
@@ -32,7 +32,7 @@ export function Footer() {
                 <FaGithub />
               </a>
             </li>
-            <li>
+            <li className={"hover:text-primary-0"}>
               <a
                 target="blank"
                 rel="noreferrer"
@@ -41,12 +41,12 @@ export function Footer() {
                 <FaDev />
               </a>
             </li>
-            <li>
+            <li className={"hover:text-primary-0"}>
               <a target="blank" rel="author" href={asset("docs/cv.pdf")}>
                 <FaPaperclip />
               </a>
             </li>
-            <li>
+            <li className={"hover:text-primary-0"}>
               <a
                 target="blank"
                 rel="author"
@@ -55,7 +55,7 @@ export function Footer() {
                 <FaEnvelope />
               </a>
             </li>
-            <li>
+            <li className={"hover:text-primary-0"}>
               <a
                 target="blank"
                 href={"https://www.instagram.com/tucek_andrew/"}
@@ -70,19 +70,19 @@ export function Footer() {
             <b>Useful Links</b>
           </li>
           <li className={"link"}>
-            <a rel="tag" href={"#about"}>about</a>
-          </li>
-          <li className={"link"}>
-            <a rel="tag" href={"#projects"}>projects</a>
-          </li>
-          <li className={"link"}>
             <a
               rel="external"
               target="blank"
               href={"https://github.com/asqit/website"}
             >
-              source
+              source code
             </a>
+          </li>
+          <li className={"link"}>
+            <a rel="tag" href={"#about"}>about</a>
+          </li>
+          <li className={"link"}>
+            <a rel="tag" href={"#projects"}>projects</a>
           </li>
         </ul>
         <div>

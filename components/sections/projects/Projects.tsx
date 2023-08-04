@@ -57,7 +57,7 @@ export function Projects() {
           className={"grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4 relative"}
         >
           <div
-            className={"absolute w-full h-full top-0 left-0 z-[999] pointer-events-none bg-gradient-to-b from-transparent to-background-0/70"}
+            className={"hidden md:block absolute w-full h-full top-0 left-0 z-[999] pointer-events-none bg-gradient-to-b from-transparent to-background-0/70"}
           />
           {projects.map((project) => {
             return <SimpleProject {...project} key={project.id} />;

@@ -18,13 +18,13 @@ export function Hero() {
     >
       <img
         src={asset("images/pattern.webp")}
-        className={"absolute w-full h-full top-0 left-0 pointer-events-none"}
+        className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none"}
       />
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}
       >
         <article
-          className={"p-4 col-span-full"}
+          className={"p-4 md:col-start-2 col-span-full"}
         >
           <h3 className={"font-black text-primary-10 animate-fade-in-up"}>
             Hi there! My name is
