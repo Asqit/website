@@ -4,8 +4,6 @@ export function Hero() {
   const quotes: string[] = [
     "Website Maker",
     "Full-Stack Dev.",
-    "FOSS Enjoyer",
-    "Junior Rustcean",
     "Redditor, Lol",
     "Sprawl cowboy",
   ];
@@ -18,8 +16,9 @@ export function Hero() {
     >
       <img
         src={asset("images/pattern.webp")}
-        className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none"}
+        className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none animate-pulse"}
       />
+
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}
       >
@@ -48,17 +47,6 @@ export function Hero() {
             software using cutting-edge technologies.
           </p>
         </article>
-        <figure className={"col-span-3 hidden relative"}>
-          <img
-            className={"relative z-50"}
-            src={asset("images/snippet.webp")}
-            alt="code snippet:Hello username"
-          />
-          <img
-            src={asset("images/bash.png")}
-            className={"absolute top-[46%] z-[60] right-[5%] w-2/3"}
-          />
-        </figure>
       </div>
     </section>
   );

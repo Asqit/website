@@ -1,6 +1,7 @@
 import { FaBeer, FaEnvelope, FaPhone } from "react-icons/fa";
 import ContactForm from "../../../islands/ContactForm.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
+import { asset } from "$fresh/runtime.ts";
 
 export function Contact() {
   return (
@@ -8,6 +9,10 @@ export function Contact() {
       className={"bg-background-5 backdrop-blur-[200px] py-16 scroll-m-8"}
       id="contact"
     >
+      <img
+        src={asset("images/pattern-2.png")}
+        className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none animate-pulse -z-10 contrast-125"}
+      />
       <div
         className={"container mx-auto max-w-7xl p-8 text-white "}
       >

@@ -5,16 +5,25 @@ export default function App(props: AppProps) {
   const { Component } = props;
 
   return (
-    <html>
+    <html lang={"en"}>
       <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>Ondřej Tuček - Computer Enthusiast 👨‍💻</title>
+        <title>
+          Ondřej Tuček - Full-Stack web developer 👨‍💻 from Czech Republic 🇨🇿
+        </title>
         <link rel="icon" type="image/ico" href="../images/favicon.ico" />
         <link rel="stylesheet" href="../styles/tailwind.css" />
+        <meta lang={"en"} />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="description"
-          content="Computer enthusiast and junior full-stack web developer"
+          content="A website about Ondřej Tuček and his expertise in the field of IT, specifically Web Development."
         />
+        <meta
+          name="keywords"
+          content="portfolio, Ondřej Tuček, Full-Stack developer, Czech Republic, HTML, CSS, JavaScript, React, Next.js"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Ondřej Tuček" />
       </Head>
       <body>
         <Component />
@@ -22,3 +31,4 @@ export default function App(props: AppProps) {
     </html>
   );
 }
+"";

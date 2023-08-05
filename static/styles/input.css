@@ -42,7 +42,7 @@ body {
 }
 
 #MOUSE_FOLLOWER {
-	background: radial-gradient(400px at var(--sphere-x) var(--sphere-y), rgba(37, 208, 188, 0.158), transparent 80%);
+	background: radial-gradient(600px at var(--sphere-x) var(--sphere-y), rgba(37, 208, 188, 0.158), transparent 80%);
 }
 
 .project::before,

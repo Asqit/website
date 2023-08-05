@@ -16,5 +16,13 @@
     "react-icons/fa": "https://deno.land/x/react_icons@0.2.3/fa/mod.ts",
     "react-icons/si": "https://deno.land/x/react_icons@0.2.3/si/mod.ts",
     "smtp": "https://deno.land/x/smtp/mod.ts"
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
   }
 }

@@ -27,6 +27,7 @@ export function Footer() {
               <a
                 target="blank"
                 rel="noreferrer"
+                aria-label={"An icon link to author's github"}
                 href={"https://www.github.com/asqit"}
               >
                 <FaGithub />
@@ -36,13 +37,19 @@ export function Footer() {
               <a
                 target="blank"
                 rel="noreferrer"
+                aria-label={"An icon link to author's blog"}
                 href={"https://dev.to/iasqiti"}
               >
                 <FaDev />
               </a>
             </li>
             <li className={"hover:text-primary-0"}>
-              <a target="blank" rel="author" href={asset("docs/cv.pdf")}>
+              <a
+                target="blank"
+                rel="author"
+                href={asset("docs/cv.pdf")}
+                aria-label={"An icon link to cv in .pdf format"}
+              >
                 <FaPaperclip />
               </a>
             </li>
@@ -50,6 +57,7 @@ export function Footer() {
               <a
                 target="blank"
                 rel="author"
+                aria-label={"An icon link to author's email"}
                 href="mailto:ondrejtucek9@gmail.com"
               >
                 <FaEnvelope />
@@ -58,6 +66,7 @@ export function Footer() {
             <li className={"hover:text-primary-0"}>
               <a
                 target="blank"
+                aria-label={"An icon link to author's instagram"}
                 href={"https://www.instagram.com/tucek_andrew/"}
               >
                 <FaInstagram />
