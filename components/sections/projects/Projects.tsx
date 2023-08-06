@@ -34,12 +34,12 @@ export function Projects() {
           />
           <HighlightedProject
             isEven={false}
-            title="Notes App 📓"
-            imageSrc={asset("images/notes-app-1.webp")}
-            githubLink="https://github.com/asqit/notes-app"
-            releaseLink="https://notes-app-asqit.netlify.app"
-            description="An notebook application written in TypeScript with React and styled by boostrap. The application is able to sort posts by tags and render / write notes in markdown format."
-            tags={["React", "TypeScript", "Bootstrap", "Markdown"]}
+            title="Momentify"
+            imageSrc={asset("images/momentify.png")}
+            githubLink="https://github.com/asqit/momentify"
+            releaseLink="https://momentify-client.onrender.com"
+            description="Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack"
+            tags={["MERN", "Tailwind", "i18n", "Redux-Toolkit"]}
           />
         </div>
 

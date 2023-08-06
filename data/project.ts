@@ -2,17 +2,7 @@ import { GitHubRepo } from "../islands/SimpleProject.tsx";
 
 let data: GitHubRepo[] = [
   {
-    id: 0,
-    name: "momentify",
-    language: "typescript",
-    html_url: "https://github.com/asqit/momentify",
-    description:
-      "Platform for sharing your moments with others made in MERN stack. The application is yet to be released. I am currently looking for service providers.",
-    topics: ["MERN", "typescript", "react"],
-    fork: false,
-  },
-  {
-    id: 1,
+    id: 5,
     name: "Website",
     language: "typescript",
     html_url: "https://github.com/asqit/website",
@@ -22,7 +12,7 @@ let data: GitHubRepo[] = [
     fork: false,
   },
   {
-    id: 5,
+    id: 0,
     name: "Asteroids",
     language: "typescript",
     html_url: "https://github.com/asqit/asteroids",
@@ -59,6 +49,16 @@ let data: GitHubRepo[] = [
     description:
       "Project, that served my as graduation work and my big project for learning javascript. You play as small spaceship and your goal is to survive as long as you can while shooting aliens.",
     topics: ["js", "gaming"],
+    fork: false,
+  },
+  {
+    id: 1,
+    name: "Notes-app",
+    language: "javascript",
+    html_url: "https://github.com/Asqit/notes-app",
+    description:
+      "Notebook application written in TypeScript with bootstrap and react. It supports filtering via tags and markdown syntax",
+    topics: ["typescript", "markdown", "react"],
     fork: false,
   },
 ];
