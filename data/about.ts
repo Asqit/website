@@ -1,7 +1,7 @@
-/** Array containing few articles about me */
+/** An Array featuring several articles about me */
 export const about = [
-  `I am a full-stack web developer from the Czech Republic, and I am passionate about computers, cars, and history.`,
-  `My main focus is on creating web applications using the latest JavaScript frameworks, with an emphasis on ensuring they are accessible and reliable.`,
-  `In addition to my expertise in web development, I also have a decent level of proficiency in Linux administration.`,
-  `I speak natively Czech, but I also possess English at B2 level and currently, as a hobby, am learning German.`,
+  "I am a full-stack web developer from the Czech Republic with a deep passion for computers, cars and history.",
+  "My main focus is programming web applications with JavaScript using fast, modern frameworks like Next.js",
+  "In addition to my web development knowledge, I have a strong foundation in Linux administration. For about two years I ran an online radio running on a Debian 11 based distribution.",
+  "I am a native Czech speaker, in addition to Czech, I have knowledge of English at the B1/B2 level. Right now, I am learning German as a hobby.",
 ];

@@ -38,7 +38,7 @@ export function Projects() {
             imageSrc={asset("images/momentify.png")}
             githubLink="https://github.com/asqit/momentify"
             releaseLink="https://momentify-server.onrender.com"
-            description="Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack"
+            description="WARNING:Due to provider, it takes sometime to spin up the service. Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack"
             tags={["MERN", "Tailwind", "i18n", "Redux-Toolkit", "RTK-Query"]}
           />
         </div>

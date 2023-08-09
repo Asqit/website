@@ -1,4 +1,4 @@
-import { FaBeer, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaBeer, FaEnvelope } from "react-icons/fa";
 import ContactForm from "../../../islands/ContactForm.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 import { asset } from "$fresh/runtime.ts";
@@ -21,10 +21,6 @@ export function Contact() {
           <article className={"hidden md:block"}>
             <h4 className={"font-semibold text-xl"}>Contact me directly</h4>
             <ul>
-              <li className={"flex gap-x-1 items-center"}>
-                <FaPhone />
-                <b>Phone:</b>+420 771 115 994
-              </li>
               <li className={"flex gap-x-1 items-center"}>
                 <FaEnvelope />
                 <b>Email:</b>

@@ -55,6 +55,12 @@ export default function Navbar() {
             </li>
 
             <li className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0">
+              <a href="/#skills">
+                Skills
+              </a>
+            </li>
+
+            <li className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0">
               <a href="/#projects">Projects</a>
             </li>
 
@@ -66,11 +72,11 @@ export default function Navbar() {
             <span className={"text-white"}>|</span>
             <li
               onClick={() => setIsFollowingMouse((p) => !p)}
-              className={`font-bold cursor-pointer hover:underline ${
+              className={`font-bold cursor-pointer hover:underline group ${
                 isFollowingMouse ? "text-primary-10" : "text-white"
               }`}
             >
-              Follow Mouse
+              Mouse
             </li>
           </ul>
           <div
@@ -86,6 +92,10 @@ export default function Navbar() {
             >
               <li onClick={toggleIsVisible} className="link">
                 <a href="#about">About</a>
+              </li>
+
+              <li onClick={toggleIsVisible} className="link">
+                <a href="#skills">Skills</a>
               </li>
 
               <li onClick={toggleIsVisible} className="link">

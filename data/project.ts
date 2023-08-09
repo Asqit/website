@@ -12,7 +12,7 @@ let data: GitHubRepo[] = [
     fork: false,
   },
   {
-    id: 0,
+    id: 4,
     name: "Asteroids",
     language: "typescript",
     html_url: "https://github.com/asqit/asteroids",
@@ -32,10 +32,11 @@ let data: GitHubRepo[] = [
     fork: false,
   },
   {
-    id: 4,
+    id: 0,
     name: "fresh-project",
     language: "typescript",
-    html_url: "https://github.com/asqit/fresh-project",
+    html_url:
+      "https://dev.to/iasqiti/replacing-twind-with-tailwind-in-fresh-1j4d",
     description:
       "Template for starting a new fresh project styled by the regular tailwind css. You can find more information on my dev.to article. (See it for yourself under my profile at dev.to)",
     topics: ["deno", "fresh", "typescript"],
