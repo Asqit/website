@@ -16,7 +16,8 @@ export function Hamburger(props: IHamburgerProps) {
   };
 
   return (
-    <button
+    <div
+      aria-label={"Hamburger menu"}
       onClick={handleClick}
       className={`w-8 h-8 flex justify-around flex-col flex-wrap z-10 cursor-pointer ${containerClassName}`}
     >
@@ -35,6 +36,6 @@ export function Hamburger(props: IHamburgerProps) {
           isOpen ? "rotate-[-45deg]" : "rotate-0"
         }`}
       />
-    </button>
+    </div>
   );
 }

@@ -35,7 +35,7 @@ export function Projects() {
           <HighlightedProject
             isEven={false}
             title="Momentify"
-            imageSrc={asset("images/momentify.png")}
+            imageSrc={asset("images/momentify.webp")}
             githubLink="https://github.com/asqit/momentify"
             releaseLink="https://momentify-server.onrender.com"
             description="WARNING:Due to provider, it takes sometime to spin up the service. Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack"

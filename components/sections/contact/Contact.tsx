@@ -10,8 +10,9 @@ export function Contact() {
       id="contact"
     >
       <img
-        src={asset("images/pattern-2.png")}
+        src={asset("images/pattern-2.webp")}
         className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none animate-pulse -z-10 contrast-125"}
+        alt="background illustration"
       />
       <div
         className={"container mx-auto max-w-7xl p-8 text-white "}
@@ -32,7 +33,9 @@ export function Contact() {
                 </a>
               </li>
               <li className={"flex gap-x-1 items-center flex-wrap"}>
-                <FaBeer className={"text-yellow-500 -rotate-45"} />
+                <span className={"text-yellow-500 -rotate-45"}>
+                  <FaBeer />
+                </span>
                 <b>
                   In-Person
                 </b>:{" "}
