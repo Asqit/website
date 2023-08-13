@@ -20,7 +20,7 @@ export function Contact() {
         <SectionTitle value="Contact" />
         <div className={"md:grid grid-cols-2 justify-center items-center"}>
           <article className={"hidden md:block"}>
-            <h4 className={"font-semibold text-xl"}>Contact me directly</h4>
+            <h2 className={"font-semibold text-xl"}>Contact me directly</h2>
             <ul>
               <li className={"flex gap-x-1 items-center"}>
                 <FaEnvelope />

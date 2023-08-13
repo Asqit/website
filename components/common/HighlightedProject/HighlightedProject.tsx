@@ -39,6 +39,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
           <LazyImage
             src={asset(imageSrc)}
             className={"md:opacity-50 md:group-hover:opacity-100 md:group-hover:scale-100 md:scale-125 md:transition-all md:duration-300"}
+            alt={`Photography of my ${title} project`}
           />
         </a>
       </figure>

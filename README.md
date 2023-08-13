@@ -1,5 +1,7 @@
 # Portfolio website
 
+![Lighthouse rating](./repo.png)
+
 This repository contains my portfolio website and it's assets. It is written in
 `TypeScript` with libraries such as: `Tailwind css`, `preact` and `fresh`.
 
