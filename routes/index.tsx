@@ -3,10 +3,10 @@ import {
   Contact,
   Footer,
   Hero,
+  Navbar,
   Projects,
   Skills,
 } from "../components/index.ts";
-import Navbar from "../islands/Navbar.tsx";
 
 export default function Home() {
   return (

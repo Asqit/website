@@ -1,5 +1,3 @@
-import { useState } from "preact/hooks";
-
 interface IHamburgerProps {
   isOpen: boolean;
   onClick: () => void;
@@ -25,16 +23,19 @@ export function Hamburger(props: IHamburgerProps) {
         className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
           isOpen ? "rotate-45" : "rotate-0"
         }`}
+        aria-label={'Hamburger menu "bun"'}
       />
       <span
         className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
           isOpen ? "translate-x-full bg-transparent" : "translate-x-0"
         }`}
+        aria-label={'Hamburger menu "bun"'}
       />
       <span
         className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
           isOpen ? "rotate-[-45deg]" : "rotate-0"
         }`}
+        aria-label={'Hamburger menu "bun"'}
       />
     </div>
   );

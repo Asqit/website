@@ -8,12 +8,9 @@ import * as $2 from "./routes/_app.tsx";
 import * as $3 from "./routes/api/mail.ts";
 import * as $4 from "./routes/index.tsx";
 import * as $$0 from "./islands/ContactForm.tsx";
-import * as $$1 from "./islands/HighlightedProject.tsx";
-import * as $$2 from "./islands/LazyImage.tsx";
-import * as $$3 from "./islands/MouseFollower.tsx";
-import * as $$4 from "./islands/Navbar.tsx";
-import * as $$5 from "./islands/SimpleProject.tsx";
-import * as $$6 from "./islands/SlideShow.tsx";
+import * as $$1 from "./islands/LazyImage.tsx";
+import * as $$2 from "./islands/MouseFollower.tsx";
+import * as $$3 from "./islands/SimpleProject.tsx";
 
 const manifest = {
   routes: {
@@ -25,12 +22,9 @@ const manifest = {
   },
   islands: {
     "./islands/ContactForm.tsx": $$0,
-    "./islands/HighlightedProject.tsx": $$1,
-    "./islands/LazyImage.tsx": $$2,
-    "./islands/MouseFollower.tsx": $$3,
-    "./islands/Navbar.tsx": $$4,
-    "./islands/SimpleProject.tsx": $$5,
-    "./islands/SlideShow.tsx": $$6,
+    "./islands/LazyImage.tsx": $$1,
+    "./islands/MouseFollower.tsx": $$2,
+    "./islands/SimpleProject.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };

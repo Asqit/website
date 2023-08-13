@@ -59,7 +59,7 @@ export default function SimpleProject(props: SimpleProjectProps) {
             ? topics.slice(0, 3).map((tag) => (
               <Chip
                 key={tag}
-                children={tag}
+                children={<>{tag}</>}
               />
             ))
             : <p>none</p>}

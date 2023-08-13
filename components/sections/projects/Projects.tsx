@@ -1,8 +1,8 @@
-import SimpleProject, { GitHubRepo } from "../../../islands/SimpleProject.tsx";
+import SimpleProject from "../../../islands/SimpleProject.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
-import HighlightedProject from "../../../islands/HighlightedProject.tsx";
 import { projects } from "../../../data/project.ts";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
+import HighlightedProject from "../../common/HighlightedProject/HighlightedProject.tsx";
 
 export function Projects() {
   return (

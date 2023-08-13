@@ -1,6 +1,5 @@
-import { Footer } from "../components/index.ts";
+import { Footer, Navbar } from "../components/index.ts";
 import { ErrorPageProps } from "$fresh/server.ts";
-import Navbar from "../islands/Navbar.tsx";
 
 export default function ServerFailure(props: ErrorPageProps) {
   const { error } = props;

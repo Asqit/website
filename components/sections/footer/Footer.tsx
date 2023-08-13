@@ -16,9 +16,9 @@ export function Footer() {
         className={"container max-w-4xl mx-auto p-4 flex flex-col md:flex-row gap-6 md:gap-0 items-center md:justify-around"}
       >
         <div className={"text-center md:text-left"}>
-          <h3 className={"font-bold text-2xl"}>
+          <h1 className={"font-bold text-2xl"}>
             Ondřej Tuček
-          </h3>
+          </h1>
           <p className={"my-1 mb-2"}>Full-Stack Developer</p>
           <ul
             className={"flex items-center justify-center md:justify-start gap-x-2 text-2xl text-primary-10"}

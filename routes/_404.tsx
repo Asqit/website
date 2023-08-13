@@ -1,6 +1,5 @@
-import { Button, Footer } from "../components/index.ts";
+import { Button, Footer, Navbar } from "../components/index.ts";
 import { UnknownPageProps } from "$fresh/server.ts";
-import Navbar from "../islands/Navbar.tsx";
 
 export default function NotFound(props: UnknownPageProps) {
   return (
