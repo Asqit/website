@@ -8,9 +8,8 @@ import * as $2 from "./routes/_app.tsx";
 import * as $3 from "./routes/api/mail.ts";
 import * as $4 from "./routes/index.tsx";
 import * as $$0 from "./islands/ContactForm.tsx";
-import * as $$1 from "./islands/LazyImage.tsx";
-import * as $$2 from "./islands/MouseFollower.tsx";
-import * as $$3 from "./islands/SimpleProject.tsx";
+import * as $$1 from "./islands/MouseFollower.tsx";
+import * as $$2 from "./islands/SimpleProject.tsx";
 
 const manifest = {
   routes: {
@@ -22,9 +21,8 @@ const manifest = {
   },
   islands: {
     "./islands/ContactForm.tsx": $$0,
-    "./islands/LazyImage.tsx": $$1,
-    "./islands/MouseFollower.tsx": $$2,
-    "./islands/SimpleProject.tsx": $$3,
+    "./islands/MouseFollower.tsx": $$1,
+    "./islands/SimpleProject.tsx": $$2,
   },
   baseUrl: import.meta.url,
 };

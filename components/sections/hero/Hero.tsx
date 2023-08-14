@@ -12,35 +12,38 @@ export function Hero() {
 
   return (
     <section
-      className={"w-full h-[100vh] min-h-fit bg-gradient-to-b from-black to-background-10  text-gray-200 py-16 scroll-m-8 relative"}
+      className={"w-full h-[100vh] min-h-fit bg-gradient-to-b from-black via-background-10 to-black  text-gray-200 py-16 scroll-m-8 relative"}
     >
       <img
         src={asset("images/pattern.webp")}
         className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none"}
         alt="background illustration"
+        loading={"eager"}
       />
 
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}
       >
         <article
-          className={"p-4 md:col-start-2 col-span-full"}
+          className={"p-8 md:col-start-1 md:ml-16 col-span-full"}
         >
-          <h1 className={"font-black text-primary-10 animate-fade-in-up"}>
+          <h1
+            className={"font-black md:text-xl text-primary-10 animate-fade-in-up"}
+          >
             Hi there! My name is
           </h1>
           <h2
-            className={"text-3xl font-black md:text-6xl text-slate-100 animate-fade-in-up"}
+            className={"text-4xl font-black md:text-6xl lg:text-7xl text-slate-100 animate-fade-in-up"}
           >
             Ondřej Tuček.
           </h2>
           <h3
-            className={"text-3xl md:text-6xl font-black text-slate-400 animate-fade-in-up"}
+            className={"text-4xl md:text-6xl lg:text-7xl font-black text-slate-400 animate-fade-in-up"}
           >
             {randomQuote || "web developer"}
           </h3>
           <p
-            className={"max-w-md mt-4 font-semibold animate-fade-in-up"}
+            className={"max-w-lg md:text-lg mt-4 font-semibold animate-fade-in-up"}
             style={{ animationDuration: "2.5s" }}
           >
             I am a passionate computer enthusiast, and as such, I have a deep

@@ -1,6 +1,5 @@
 import { FaGithubAlt, FaSignOutAlt } from "react-icons/fa";
 import { asset } from "$fresh/runtime.ts";
-import LazyImage from "../../../islands/LazyImage.tsx";
 
 interface HighlightedProjectProps {
   githubLink: string;
@@ -35,11 +34,16 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
           target={"_blank"}
           referrerpolicy={"no-referrer"}
           aria-label={`A link to project: "${title}"`}
+          title={title}
         >
-          <LazyImage
+          <img
+            loading="lazy"
             src={asset(imageSrc)}
-            className={"md:opacity-50 md:group-hover:opacity-100 md:group-hover:scale-100 md:scale-125 md:transition-all md:duration-300"}
-            alt={`Photography of my ${title} project`}
+            /* Fallback image: srcset={asset(imageSrc)} */
+            alt={title}
+            width={600}
+            height={337}
+            className={"w-full md:opacity-50 md:group-hover:opacity-100 md:group-hover:scale-100 md:scale-125 md:transition-all md:duration-300"}
           />
         </a>
       </figure>
@@ -64,7 +68,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
             {tags.map((tag, i) => (
               <span
                 key={tag}
-                className={"font-mono text-slate-500 mr-2 font-bold"}
+                className={"font-mono text-slate-300 mr-2 font-bold"}
               >
                 {tag}
               </span>

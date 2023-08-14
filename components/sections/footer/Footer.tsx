@@ -29,6 +29,7 @@ export function Footer() {
                 rel="noreferrer"
                 aria-label={"An icon link to author's github"}
                 href={"https://www.github.com/asqit"}
+                title={"Ondřej's github"}
               >
                 <FaGithub />
               </a>
@@ -39,6 +40,7 @@ export function Footer() {
                 rel="noreferrer"
                 aria-label={"An icon link to author's blog"}
                 href={"https://dev.to/iasqiti"}
+                title={"Ondřej's blog"}
               >
                 <FaDev />
               </a>
@@ -49,6 +51,7 @@ export function Footer() {
                 rel="author"
                 href={asset("docs/cv.pdf")}
                 aria-label={"An icon link to cv in .pdf format"}
+                title={"Ondřej's CV document"}
               >
                 <FaPaperclip />
               </a>
@@ -59,6 +62,7 @@ export function Footer() {
                 rel="author"
                 aria-label={"An icon link to author's email"}
                 href="mailto:ondrejtucek9@gmail.com"
+                title={"Ondřej's email contact"}
               >
                 <FaEnvelope />
               </a>
@@ -68,6 +72,7 @@ export function Footer() {
                 target="blank"
                 aria-label={"An icon link to author's instagram"}
                 href={"https://www.instagram.com/tucek_andrew/"}
+                title={"Ondřej's instagram"}
               >
                 <FaInstagram />
               </a>
