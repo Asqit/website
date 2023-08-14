@@ -10,6 +10,7 @@ import * as $4 from "./routes/index.tsx";
 import * as $$0 from "./islands/ContactForm.tsx";
 import * as $$1 from "./islands/MouseFollower.tsx";
 import * as $$2 from "./islands/SimpleProject.tsx";
+import * as $$3 from "./islands/SphereFollower.tsx";
 
 const manifest = {
   routes: {
@@ -23,6 +24,7 @@ const manifest = {
     "./islands/ContactForm.tsx": $$0,
     "./islands/MouseFollower.tsx": $$1,
     "./islands/SimpleProject.tsx": $$2,
+    "./islands/SphereFollower.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };

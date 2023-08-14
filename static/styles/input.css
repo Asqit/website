@@ -4,7 +4,7 @@
 
 @layer components {
 	.btn {
-		@apply py-2 px-4  bg-primary-10 hover:bg-primary-5 active:bg-primary-0 border-b-2 border-primary-0 text-white font-semibold rounded-lg transition-all disabled:cursor-not-allowed;
+		@apply py-3 px-6  bg-primary-10 hover:bg-primary-5 active:bg-primary-0 border-b-2 border-primary-0 text-[#112220] text-[18px] font-medium rounded-lg transition-all disabled:cursor-not-allowed;
 	}
 
 	.btn.outlined {

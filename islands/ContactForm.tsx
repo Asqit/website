@@ -78,7 +78,7 @@ export default function ContactForm() {
         : (
           <>
             <div className={"flex flex-col gap-3 my-3"}>
-              <label className={"text-slate-400"} htmlFor={"email"}>
+              <label className={"text-slate-200"} htmlFor={"email"}>
                 Email Address
               </label>
               <input
@@ -95,7 +95,7 @@ export default function ContactForm() {
             </div>
 
             <div className={"flex flex-col gap-3 my-3"}>
-              <label className={"text-slate-400"} htmlFor={"message"}>
+              <label className={"text-slate-200"} htmlFor={"message"}>
                 Message
               </label>
               <textarea

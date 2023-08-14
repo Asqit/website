@@ -1,6 +1,5 @@
 import AuthorImage from "../../common/author-image/AuthorImage.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
-import { Accordion, Chip } from "../../index.ts";
 import { about } from "../../../data/about.ts";
 import { asset } from "$fresh/runtime.ts";
 import { FaPaperclip } from "react-icons/fa";
@@ -42,7 +41,7 @@ export function About() {
             rel="author"
             referrerpolicy={"no-referrer"}
             href={"https://www.github.com/asqit"}
-            className={"btn ml-4 primary outlined px-8 inline-flex gap-x-2 items-center capitalize"}
+            className={"btn ml-4 px-8 inline-flex text-white gap-x-2 items-center capitalize bg-transparent hover:bg-transparent active:bg-transparent border border-primary-10 hover:border-primary-5 hover:text-primary-5 active:border-primary-0 active:text-primary-0"}
           >
             GitHub
           </a>

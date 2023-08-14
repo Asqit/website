@@ -17,16 +17,13 @@ export function Navbar() {
             className={"w-8 h-8 flex justify-around flex-col flex-wrap z-10 cursor-pointer md:hidden"}
           >
             <span
-              className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] peer-checked:translate-x-full peer-checked:bg-transparent translate-x-0`}
-              aria-label={'Hamburger menu "bun"'}
+              className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] peer-checked:-rotate-45 peer-checked:bg-transparent rotate-0`}
             />
             <span
               className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] peer-checked:translate-x-full peer-checked:bg-transparent translate-x-0`}
-              aria-label={'Hamburger menu "bun"'}
             />
             <span
-              className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] peer-checked:translate-x-full peer-checked:bg-transparent translate-x-0`}
-              aria-label={'Hamburger menu "bun"'}
+              className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] peer-checked:rotate-45 peer-checked:bg-transparent rotate-0`}
             />
           </label>
 

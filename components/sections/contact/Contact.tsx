@@ -14,7 +14,7 @@ export function Contact() {
         loading="lazy"
         src={asset("images/pattern-2.webp")}
         alt="background illustration"
-        className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none animate-pulse -z-10 contrast-125"}
+        className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none -z-10 contrast-125"}
       />
       <div
         className={"container mx-auto max-w-7xl p-8 text-white "}
@@ -80,9 +80,6 @@ function DirectContact() {
           >
             Czech Budweis
           </a>
-          <span className={"basis-full text-slate-500"}>
-            (By prior arrangement)
-          </span>
         </li>
       </ul>
     </>

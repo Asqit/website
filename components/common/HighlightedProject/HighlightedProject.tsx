@@ -53,7 +53,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
         } text-slate-300`}
       >
         <header className={"my-4"}>
-          <h2 className={"text-primary-5 font-mono"}>Featured Project</h2>
+          <h2 className={"text-primary-10 font-mono"}>Featured Project</h2>
           <h3 className={"font-bold text-3xl"}>{title}</h3>
         </header>
         <main
@@ -79,6 +79,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
               href={githubLink}
               referrerpolicy={"no-referrer"}
               target={"_blank"}
+              title={`${title}'s source code`}
             >
               <FaGithubAlt />
             </a>
@@ -87,6 +88,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
               referrerpolicy={"no-referrer"}
               target={"_blank"}
               className={"order-first"}
+              title={`${title}'s website`}
             >
               <FaSignOutAlt />
             </a>
