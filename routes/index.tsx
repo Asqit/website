@@ -19,7 +19,7 @@ export const handler: Handlers = {
     const form = await req.formData();
     const email = form.get("email")?.toString();
     const message = form.get("message")?.toString();
-    let topic;
+    let topic: string | undefined;
 
     if (!Deno.env.has("NTFY_TOPIC")) {
       const env = await load();
@@ -35,7 +35,7 @@ export const handler: Handlers = {
     }
 
     const response = await fetch(
-      `https://ntfy.shs/${topic}`,
+      `https://ntfy.sh/${topic}`,
       {
         method: "POST",
         body: JSON.stringify({
@@ -54,7 +54,7 @@ export const handler: Handlers = {
 
     headers.set("location", "/contact-failed");
     return new Response(response.statusText, {
-      status: response.status,
+      status: Status.SeeOther,
       headers,
     });
   },
