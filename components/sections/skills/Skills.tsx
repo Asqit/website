@@ -4,12 +4,12 @@ import { Chip } from "../../index.ts";
 
 export function Skills() {
   return (
-    <section className={"py-16 bg-background-10 px-4 scroll-m-16"} id="skills">
-      <main className={"container mx-auto max-w-7xl text-white text-center"}>
+    <section className={"py-16 px-4 scroll-m-16"} id="skills">
+      <main className={"container mx-auto max-w-6xl text-white text-center"}>
         <SectionTitle value="Skills" />
         <div className={"grid grid-cols-1 md:grid-cols-2 gap-4"}>
           <div
-            className={"md:col-span-2 p-8 bg-background-5 border-t border-t-slate-700 border-b border-b-background-0 relative z-20 rounded-md"}
+            className={"md:col-span-2 p-8 bg-background-5 relative z-20 rounded-md"}
           >
             <h2 className={"text-2xl mb-6"}>Programming Languages</h2>
             <ul
@@ -29,7 +29,7 @@ export function Skills() {
           </div>
 
           <div
-            className={"p-8 bg-background-5 border-t border-t-slate-700 border-b border-b-background-0 relative z-20 rounded-md"}
+            className={"p-8 bg-background-5 relative z-20 rounded-md"}
           >
             <h2 className={"text-2xl mb-6"}>Front-End Development</h2>
             <ul
@@ -49,7 +49,7 @@ export function Skills() {
           </div>
 
           <div
-            className={"p-8 bg-background-5 border-t border-t-slate-700 border-b border-b-background-0 relative z-20 rounded-md"}
+            className={"p-8 bg-background-5 relative z-20 rounded-md"}
           >
             <h2 className={"text-2xl mb-6"}>Back-End Development</h2>
             <ul

@@ -1,23 +1,15 @@
 import { FaBeer, FaEnvelope } from "react-icons/fa";
-import ContactForm from "../../../islands/ContactForm.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
-import { asset } from "$fresh/runtime.ts";
-import { Accordion } from "../../index.ts";
+import { Accordion, Button } from "../../index.ts";
 
 export function Contact() {
   return (
     <section
-      className={"bg-background-5 backdrop-blur-[200px] py-16 scroll-m-8"}
+      className={"py-16 scroll-m-8"}
       id="contact"
     >
-      <img
-        loading="lazy"
-        src={asset("images/pattern-2.webp")}
-        alt="background illustration"
-        className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none -z-10 contrast-125"}
-      />
       <div
-        className={"container mx-auto max-w-7xl p-8 text-white "}
+        className={"container mx-auto max-w-6xl p-8 text-white "}
       >
         <SectionTitle value="Contact" />
 
@@ -83,5 +75,39 @@ function DirectContact() {
         </li>
       </ul>
     </>
+  );
+}
+
+function ContactForm() {
+  return (
+    <form method="post">
+      <div className={"flex flex-col gap-3 my-3"}>
+        <label className={"text-slate-200"} htmlFor={"email"}>
+          Email Address
+        </label>
+        <input
+          type="email"
+          className={"input"}
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+
+      <div className={"flex flex-col gap-3 my-3"}>
+        <label className={"text-slate-200"} htmlFor={"message"}>
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          className={"input min-h-[100px] resize-y"}
+          minLength={12}
+          required
+        />
+      </div>
+
+      <Button type="submit" className={"w-full my-3"}>Send</Button>
+    </form>
   );
 }

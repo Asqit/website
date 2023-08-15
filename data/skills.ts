@@ -5,6 +5,7 @@ import {
   SiExpress,
   SiGnubash,
   SiHtml5,
+  SiJava,
   SiJavascript,
   SiMariadb,
   SiMongodb,
@@ -38,6 +39,11 @@ const languages: Skill[] = [
     id: 2,
     value: "BASH",
     Icon: SiGnubash,
+  },
+  {
+    id: 3,
+    value: "Java",
+    Icon: SiJava,
   },
 ];
 

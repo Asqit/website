@@ -20,7 +20,7 @@
 	}
 
 	.input {
-		@apply bg-background-10 p-2 rounded-lg outline outline-transparent focus:outline-primary-0;
+		@apply bg-background-5 p-2 rounded-lg outline outline-transparent focus:outline-primary-0;
 	}
 }
 
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    background: #0f202f;
+	@apply bg-background-10
 }
 
 /* -------------------------> Project-highlight effect <------------------------- */

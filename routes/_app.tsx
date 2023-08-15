@@ -25,7 +25,7 @@ export default function App(props: AppProps) {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Ondřej Tuček" />
       </Head>
-      <body>
+      <body className={"antialiased"}>
         <Component />
       </body>
     </html>

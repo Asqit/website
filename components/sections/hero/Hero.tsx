@@ -1,5 +1,3 @@
-import { asset } from "https://deno.land/x/fresh@1.2.0/runtime.ts";
-
 export function Hero() {
   const quotes: string[] = [
     "Website Maker",
@@ -12,15 +10,8 @@ export function Hero() {
 
   return (
     <section
-      className={"w-full h-[100vh] min-h-fit bg-gradient-to-b from-black via-background-10 to-black  text-gray-200 py-16 scroll-m-8 relative"}
+      className={"w-full h-[100vh] min-h-fit bg-gradient-to-b background-10 text-gray-200 py-16 scroll-m-8 relative"}
     >
-      <img
-        src={asset("images/pattern.webp")}
-        className={"absolute w-full h-full object-cover top-0 left-0 pointer-events-none"}
-        alt="background illustration"
-        loading={"eager"}
-      />
-
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}
       >
@@ -44,7 +35,7 @@ export function Hero() {
           </h3>
           <p
             className={"max-w-lg md:text-lg mt-4 font-semibold animate-fade-in-up"}
-            style={{ animationDuration: "2.5s" }}
+            style={{ animationDuration: "2s" }}
           >
             I am a passionate computer enthusiast, and as such, I have a deep
             love for Linux and enjoy developing reliable, high-performance

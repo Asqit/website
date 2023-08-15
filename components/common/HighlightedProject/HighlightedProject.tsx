@@ -1,4 +1,9 @@
-import { FaGithubAlt, FaSignOutAlt } from "react-icons/fa";
+import {
+  FaArrowCircleRight,
+  FaArrowRight,
+  FaGithubAlt,
+  FaSignOutAlt,
+} from "react-icons/fa";
 import { asset } from "$fresh/runtime.ts";
 
 interface HighlightedProjectProps {
@@ -24,7 +29,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
 
   return (
     <article
-      className={"bg-background-5 p-4 rounded-md md:bg-transparent md:grid md:grid-cols-3 md:gap-4 md:items-center"}
+      className={"bg-background-10 p-4 rounded-md md:bg-transparent md:grid md:grid-cols-3 md:gap-4 md:items-center"}
     >
       <figure
         className={"md:col-span-2 md:bg-primary-10/40 group overflow-hidden"}
@@ -59,7 +64,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
         <main
           className={`my-4 md:relative md:w-[120%] md:z-10 ${
             isEven ? "md:left-[0%]" : "md:right-[20%]"
-          }  md:bg-background-10 md:p-4 md:rounded-md md:border-t-2 md:border-t-slate-700 md:border-b-2 md:border-b-slate-950`}
+          }  md:bg-background-10 md:p-4 md:py-8`}
         >
           <p>{description}</p>
         </main>
@@ -76,21 +81,21 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
           </div>
           <div className={"inline-flex gap-x-2 my-4 text-xl"}>
             <a
+              href={releaseLink}
+              referrerpolicy={"no-referrer"}
+              target={"_blank"}
+              className={"order-last"}
+              title={`${title}'s website`}
+            >
+              <FaArrowCircleRight />
+            </a>
+            <a
               href={githubLink}
               referrerpolicy={"no-referrer"}
               target={"_blank"}
               title={`${title}'s source code`}
             >
               <FaGithubAlt />
-            </a>
-            <a
-              href={releaseLink}
-              referrerpolicy={"no-referrer"}
-              target={"_blank"}
-              className={"order-first"}
-              title={`${title}'s website`}
-            >
-              <FaSignOutAlt />
             </a>
           </div>
         </footer>

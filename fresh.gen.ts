@@ -5,10 +5,11 @@
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_500.tsx";
 import * as $2 from "./routes/_app.tsx";
-import * as $3 from "./routes/api/mail.ts";
-import * as $4 from "./routes/index.tsx";
-import * as $$0 from "./islands/ContactForm.tsx";
-import * as $$1 from "./islands/MouseFollower.tsx";
+import * as $3 from "./routes/contact-failed.tsx";
+import * as $4 from "./routes/contact-successful.tsx";
+import * as $5 from "./routes/index.tsx";
+import * as $$0 from "./islands/MouseFollower.tsx";
+import * as $$1 from "./islands/Navbar.tsx";
 import * as $$2 from "./islands/SimpleProject.tsx";
 import * as $$3 from "./islands/SphereFollower.tsx";
 
@@ -17,12 +18,13 @@ const manifest = {
     "./routes/_404.tsx": $0,
     "./routes/_500.tsx": $1,
     "./routes/_app.tsx": $2,
-    "./routes/api/mail.ts": $3,
-    "./routes/index.tsx": $4,
+    "./routes/contact-failed.tsx": $3,
+    "./routes/contact-successful.tsx": $4,
+    "./routes/index.tsx": $5,
   },
   islands: {
-    "./islands/ContactForm.tsx": $$0,
-    "./islands/MouseFollower.tsx": $$1,
+    "./islands/MouseFollower.tsx": $$0,
+    "./islands/Navbar.tsx": $$1,
     "./islands/SimpleProject.tsx": $$2,
     "./islands/SphereFollower.tsx": $$3,
   },

@@ -8,9 +8,9 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className={"py-16 bg-background-0 relative z-50 scroll-m-8"}
+      className={"py-16 relative z-50 scroll-m-8 bg-background-5"}
     >
-      <article className={"container mx-auto max-w-7xl p-8 text-white"}>
+      <article className={"container mx-auto max-w-6xl p-8 text-white"}>
         <SectionTitle value="Projects" />
 
         <div className={"grid grid-cols-1 gap-8"}>
@@ -38,7 +38,7 @@ export function Projects() {
             imageSrc={asset("images/momentify.webp")}
             githubLink="https://github.com/asqit/momentify"
             releaseLink="https://momentify-server.onrender.com"
-            description="WARNING:Due to provider, it takes sometime to spin up the service. Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack"
+            description="Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack"
             tags={["MERN", "Tailwind", "i18n", "Redux-Toolkit", "RTK-Query"]}
           />
         </div>
@@ -54,11 +54,8 @@ export function Projects() {
           </h3>
         </div>
         <div
-          className={"grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4 relative"}
+          className={"grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4"}
         >
-          <div
-            className={"hidden md:block absolute w-full h-full top-0 left-0 z-[999] pointer-events-none bg-gradient-to-b from-transparent to-background-0/70"}
-          />
           {projects.map((project) => {
             return <SimpleProject {...project} key={project.id} />;
           })}
