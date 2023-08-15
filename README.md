@@ -1,26 +1,41 @@
 # Portfolio website
 
-![Lighthouse rating](./repo.png)
+![Website Index](./repo-website.png)
 
-This repository contains my portfolio website and it's assets. It is written in
-`TypeScript` with libraries such as: `Tailwind css`, `preact` and `fresh`.
+My portfolio website developed with Fresh.js, TypeScript and styled with Tailwind CSS. Website is aiming to be fast, accessible and responsive. 
 
-## Running the development server
+<details>
+  <summary>Lighthouse Rating</summary>
+  <img src="./repo.png" alt="lighthouse rating" />
+</details>
 
-**Note:** deno runtime is **required** in order to run the app. (learn more
+## Before Running locally
+
+**Warning:** deno runtime is **required** in order to run the app. (learn more
 [here](https://deno.com/manual@v1.34.3/getting_started/installation))
 
 Since I switched from `twind` to regular `tailwindcss` a copy of
-`tailwindcss-cli` has to be present in order to start the app. For Linux/Mac
-users I have a `shell` script (prepare.sh) that automatically fetches and
-prepares the `tailwindcss`. Windows/others have to download the copy on their
-own.
+`tailwindcss-cli` has to be present in order transpile your classes into css files. 
+For Linux and macOS users I've prepared a shell script (`prepare.sh`) that automatically prepares your development environment. Windows/others have to download the copy on their own.
 
-Start the project:
+### Running locally
+
+Clone the repo
+
+```shell
+git clone https://github.com/Asqit/website.git
+```
+Go to the repo directory
+
+```shell
+cd website
+```
+
+Start the dev. server
 
 ```shell
 deno task start
 ```
 
-This will watch the project directory and restart as necessary. (Also
+The last command will automatically install dependecies and starts the development server, that watches the project directory and restart as necessary. (Also
 transpilles tailwind `className` --> `.css`)
