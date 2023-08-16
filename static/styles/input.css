@@ -37,17 +37,17 @@ body {
 :root {
 	--mouse-x: 100px;
 	--mouse-y: 100px;
-	/*
+	
 	--sphere-x: 100px;
 	--sphere-y: 100px;
-	*/
+	
 }
 
-/*
+
 #MOUSE_FOLLOWER {
 	background: radial-gradient(600px at var(--sphere-x) var(--sphere-y), rgba(37, 208, 188, 0.158), transparent 80%);
 }
-*/
+
 
 .project::before,
 .project-border {

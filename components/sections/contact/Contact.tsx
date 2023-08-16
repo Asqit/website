@@ -80,7 +80,7 @@ function DirectContact() {
 
 function ContactForm() {
   return (
-    <form method="post">
+    <form method="post" className={"relative z-20"}>
       <div className={"flex flex-col gap-3 my-3"}>
         <label className={"text-slate-200"} htmlFor={"email"}>
           Email Address

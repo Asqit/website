@@ -1,12 +1,17 @@
 import { JSX } from "preact/jsx-runtime";
-import { FaGlobe, FaSitemap } from "react-icons/fa";
+import { FaGlobe, FaLemon, FaSitemap } from "react-icons/fa";
 import {
   SiCss3,
   SiExpress,
+  SiGit,
   SiGnubash,
   SiHtml5,
+  SiInsomnia,
+  SiIntellijidea,
   SiJava,
   SiJavascript,
+  SiJsonwebtokens,
+  SiLinux,
   SiMariadb,
   SiMongodb,
   SiNodedotjs,
@@ -16,6 +21,10 @@ import {
   SiSass,
   SiTailwindcss,
   SiTypescript,
+  SiVim,
+  SiVisualstudiocode,
+  SiVsco,
+  SiYarn,
 } from "react-icons/si";
 
 interface Skill {
@@ -88,6 +97,11 @@ const frontEnd: Skill[] = [
     value: "i18n",
     Icon: FaGlobe,
   },
+  {
+    id: 9,
+    value: "Fresh",
+    Icon: FaLemon,
+  },
 ];
 
 const backEnd: Skill[] = [
@@ -121,6 +135,49 @@ const backEnd: Skill[] = [
     value: "Mongo",
     Icon: SiMongodb,
   },
+  {
+    id: 6,
+    value: "JWT",
+    Icon: SiJsonwebtokens,
+  },
 ];
 
-export const skills = { languages, frontEnd, backEnd };
+export const tools: Skill[] = [
+  {
+    id: 0,
+    value: "VSCodium",
+    Icon: SiVisualstudiocode,
+  },
+  {
+    id: 1,
+    value: "NeoVim",
+    Icon: SiVim,
+  },
+  {
+    id: 2,
+    value: "Linux",
+    Icon: SiLinux,
+  },
+  {
+    id: 3,
+    value: "Insomnia",
+    Icon: SiInsomnia,
+  },
+  {
+    id: 4,
+    value: "Git",
+    Icon: SiGit,
+  },
+  {
+    id: 5,
+    value: "Yarn",
+    Icon: SiYarn,
+  },
+  {
+    id: 6,
+    value: "InteliJ Idea",
+    Icon: SiIntellijidea,
+  },
+];
+
+export const skills = { languages, frontEnd, backEnd, tools };

@@ -1,41 +1,60 @@
-import { useEffect, useRef } from "preact/hooks";
+import { useEffect, useMemo, useRef } from "preact/hooks";
 
-function followMouse(event: MouseEvent, mouse: HTMLDivElement) {
-  const x = event.pageX;
-  const y = event.pageY;
-
-  mouse.animate(
-    {
-      left: x + "px",
-      top: y + "px",
-    },
-    { duration: 300, fill: "forwards" },
-  );
+interface SphereFollowerProps {
+  isEnabled: boolean;
 }
 
-export default function SphereFollower() {
+export default function SphereFollower(props: SphereFollowerProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const { isEnabled } = props;
+
+  if (!isEnabled) {
+    return null;
+  }
+
+  const handleMouseMove = (e: MouseEvent, mouse: HTMLDivElement) => {
+    const x = e.pageX;
+    const y = e.pageY;
+
+    mouse.animate(
+      {
+        left: x + "px",
+        top: y + "px",
+      },
+      { duration: 1800, fill: "forwards" },
+    );
+  };
+
+  const optimizedHandleMouseMove = useMemo(
+    () => handleMouseMove,
+    [],
+  );
 
   useEffect(() => {
     if (innerWidth >= 768) {
-      self.addEventListener("mousemove", (e) => {
+      const handleMouseMoveWrapper = (e: MouseEvent) => {
         if (ref.current) {
-          followMouse(e, ref.current);
+          optimizedHandleMouseMove(e, ref.current);
         }
-      });
+      };
+
+      self.addEventListener("mousemove", handleMouseMoveWrapper);
+
+      return () => {
+        self.removeEventListener("mousemove", handleMouseMoveWrapper);
+      };
     }
-  }, [ref]);
+  }, [ref, optimizedHandleMouseMove]);
 
   const style = {
-    width: "400px",
-    height: "400px",
+    width: "800px",
+    height: "800px",
     borderRadius: "50%",
     position: "absolute",
     zIndex: "-1",
     top: "50%",
     left: "50%",
     translate: "-50% -50%",
-    animation: "rotate 8s infinite",
   };
 
   return (

@@ -10,7 +10,7 @@ export function Hero() {
 
   return (
     <section
-      className={"w-full h-[100vh] min-h-fit bg-gradient-to-b background-10 text-gray-200 py-16 scroll-m-8 relative"}
+      className={"w-full backdrop-blur-[200px] h-[100vh] min-h-fit bg-gradient-to-b background-10 text-gray-200 py-16 scroll-m-8 relative"}
     >
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}

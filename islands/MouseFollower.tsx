@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "preact/hooks";
+import { useEffect, useMemo, useRef } from "preact/hooks";
 
 interface MouseFollowerProps {
   isEnabled?: boolean;
@@ -12,13 +12,19 @@ export default function MouseFollower(props: MouseFollowerProps) {
     return null;
   }
 
+  const mouseMove = (e: MouseEvent) => {
+    if (ref.current) {
+      ref.current.style.setProperty("--sphere-x", e.clientX + "px");
+      ref.current.style.setProperty("--sphere-y", e.clientY + "px");
+    }
+  };
+
+  const optimizedMouseMove = useMemo(() => mouseMove, []);
+
   useEffect(() => {
     self.onmousemove = (e) => {
       if (e && e.currentTarget) {
-        if (ref.current) {
-          ref.current.style.setProperty("--sphere-x", e.clientX + "px");
-          ref.current.style.setProperty("--sphere-y", e.clientY + "px");
-        }
+        self.addEventListener("mousemove", (e) => optimizedMouseMove(e), false);
       }
     };
   }, [ref]);
