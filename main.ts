@@ -8,6 +8,4 @@ import { start } from "$fresh/server.ts";
 import manifest from "./fresh.gen.ts";
 
 // Starting without twind plugin
-await start(manifest, {
-  plugins: [],
-});
+await start(manifest);
