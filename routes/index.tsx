@@ -1,14 +1,6 @@
-import {
-  About,
-  Contact,
-  Footer,
-  Hero,
-  Projects,
-  Skills,
-} from "../components/index.ts";
+import { About, Contact, Hero, Projects, Skills } from "../components/index.ts";
 import { Handlers, Status } from "$fresh/server.ts";
 import { load } from "https://deno.land/std@0.198.0/dotenv/mod.ts";
-import Navbar from "../islands/Navbar.tsx";
 
 export const handler: Handlers = {
   async GET(req, ctx) {
@@ -63,13 +55,11 @@ export const handler: Handlers = {
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Contact />
-      <Footer />
     </>
   );
 }
