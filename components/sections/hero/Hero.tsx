@@ -35,7 +35,7 @@ export function Hero() {
           </h3>
           <p
             className={"max-w-lg md:text-lg mt-4 font-semibold animate-fade-in-up"}
-            style={{ animationDuration: "2s" }}
+            style={{ animationDuration: "1300ms" }}
           >
             I am a passionate computer enthusiast, and as such, I have a deep
             love for Linux and enjoy developing reliable, high-performance

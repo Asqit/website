@@ -10,6 +10,7 @@ export default function App(props: AppProps) {
         <title>
           Ondřej Tuček - Full-Stack web developer 👨‍💻 from Czech Republic 🇨🇿
         </title>
+        <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/ico" href="../images/favicon.ico" />
         <link rel="stylesheet" href="../styles/tailwind.css" />
         <meta lang={"en"} />
