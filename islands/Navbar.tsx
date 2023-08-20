@@ -59,7 +59,7 @@ export default function Navbar() {
               </li>
 
               <li onClick={toggleIsVisible} className="link">
-                <a href="#skill">Skills</a>
+                <a href="#skills">Skills</a>
               </li>
 
               <li onClick={toggleIsVisible} className="link">

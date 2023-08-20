@@ -1,14 +1,10 @@
 export function Brand() {
   return (
-    <a href="/" className={"flex gap-x-2 items-center group"}>
-      <div
-        className={"w-[1.25rem] aspect-square rounded-full group-hover:animate-rotate bg-gradient-to-br from-primary-10 via-primary-0 to-sky-500"}
-      />
-      <h1
-        className={"text-2xl transition-[padding] text-white font-semibold"}
-      >
-        Tuček
-      </h1>
+    <a
+      href="/"
+      className={"text-2xl transition-[padding] text-white font-semibold font-mono"}
+    >
+      Asqit.<span className={"text-primary-10"}>dev</span>
     </a>
   );
 }
