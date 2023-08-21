@@ -1,10 +1,8 @@
 import { useState } from "preact/hooks";
 import { Brand, Hamburger } from "../components/index.ts";
-import MouseFollower from "./MouseFollower.tsx";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isDesktop = self.innerWidth >= 992 ? true : false;
 
   const toggleIsVisible = () => {
     setIsMenuOpen((prev) => !prev);
@@ -23,21 +21,21 @@ export default function Navbar() {
             <Hamburger isOpen={isMenuOpen} onClick={toggleIsVisible} />
           </div>
           <ul
-            className={`hidden basis-full md:basis-auto md:flex items-center gap-x-2 uppercase font-semibold`}
+            className={`hidden basis-full md:basis-auto md:flex items-center gap-x-2 uppercase`}
           >
-            <li className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0">
+            <li className="font-mono uppercase hover:text-primary-10 text-slate-300">
               <a href="/#about">About</a>
             </li>
 
-            <li className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0">
+            <li className="font-mono uppercase hover:text-primary-10 text-slate-300">
               <a href="/#skills">Skills</a>
             </li>
 
-            <li className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0">
+            <li className="font-mono uppercase hover:text-primary-10 text-slate-300">
               <a href="/#projects">Projects</a>
             </li>
 
-            <li className="link transition-all hover:bg-primary-10 hover:text-white hover:px-3 border-b-2 border-transparent rounded-md hover:border-b-primary-0">
+            <li className="font-mono uppercase hover:text-primary-10 text-slate-300">
               <a href="/#contact">
                 Contact
               </a>
@@ -73,7 +71,6 @@ export default function Navbar() {
           </div>
         </nav>
       </header>
-      <MouseFollower isEnabled={isDesktop} />
     </>
   );
 }

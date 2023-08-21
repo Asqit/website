@@ -27,24 +27,26 @@ export function About() {
             </p>
           ))}
 
-          <a
-            target="blank"
-            rel="author"
-            href={asset("docs/cv.pdf")}
-            className={"btn primary px-8 inline-flex gap-x-2 items-center capitalize"}
-          >
-            <FaPaperclip />
-            <span>Get CV</span>
-          </a>
-          <a
-            target="blank"
-            rel="author"
-            referrerpolicy={"no-referrer"}
-            href={"https://www.github.com/asqit"}
-            className={"btn ml-4 px-8 inline-flex text-primary-10 gap-x-2 items-center capitalize bg-transparent hover:bg-transparent active:bg-transparent border border-primary-10 hover:border-primary-5 hover:text-primary-5 active:border-primary-0 active:text-primary-0"}
-          >
-            GitHub
-          </a>
+          <div className={"mt-4"}>
+            <a
+              target="blank"
+              rel="author"
+              href={asset("docs/cv.pdf")}
+              className={"btn primary px-8 inline-flex gap-x-2 items-center capitalize"}
+            >
+              <FaPaperclip />
+              <span>Get CV</span>
+            </a>
+            <a
+              target="blank"
+              rel="author"
+              referrerpolicy={"no-referrer"}
+              href={"https://www.github.com/asqit"}
+              className={"btn ml-4 px-8 inline-flex text-primary-10 gap-x-2 items-center capitalize bg-transparent hover:bg-transparent active:bg-transparent border border-primary-10 hover:border-primary-5 hover:text-primary-5 active:border-primary-0 active:text-primary-0"}
+            >
+              GitHub
+            </a>
+          </div>
         </article>
       </main>
     </section>
