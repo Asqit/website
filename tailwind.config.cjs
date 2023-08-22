@@ -63,6 +63,14 @@ module.exports = {
             opacity: 1,
           },
         },
+        scroll: {
+          from: {
+            transform: "translateX(0)",
+          },
+          to: {
+            transform: "translateX(-100%)",
+          },
+        },
       },
       animation: {
         "fade-in": "fadeIn 1s cubic-bezier(0, 0, 0.2, 1)",
@@ -70,6 +78,7 @@ module.exports = {
         "sphere-rotate": "rotate 5s infinite",
         "rotate": "rotate 1s infinite cubic-bezier(0, 0, 0.2, 1)",
         "blink": "blink 1s infinite ease-in-out",
+        "scroll": "scroll ss infinite linear",
       },
     },
   },

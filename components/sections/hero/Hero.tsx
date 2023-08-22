@@ -1,16 +1,7 @@
 export function Hero() {
-  const quotes: string[] = [
-    "Website Maker",
-    "Full-Stack Dev.",
-    "Redditor, Lol",
-    "Sprawl cowboy",
-  ];
-
-  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
   return (
     <section
-      className={"w-full backdrop-blur-[200px] h-[100vh] min-h-fit bg-gradient-to-b background-10 text-gray-200 py-16 scroll-m-8 relative"}
+      className={"h-[100vh] min-h-fit text-gray-200 py-16 scroll-m-8"}
     >
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}
@@ -31,7 +22,7 @@ export function Hero() {
           <h3
             className={"text-4xl md:text-6xl lg:text-7xl font-black text-slate-400 animate-fade-in-up"}
           >
-            {randomQuote || "web developer"}
+            Web Developer
           </h3>
           <p
             className={"max-w-lg md:text-lg mt-4 font-semibold animate-fade-in-up"}

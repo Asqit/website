@@ -45,7 +45,7 @@ function fetch_deno {
     deno_path='export DENO_INSTALL="/home/andrew/.deno"'
     final_path='export PATH="$DENO_INSTALL/bin:$PATH"'
 
-    if [ $SHELL == "/usr/bin/zsh" ]; then
+    if [ "$SHELL" = "/usr/bin/zsh" ]; then
         echo "Updating path for zsh"
         echo $deno_path >> ~/.zshrc
         echo $final_path >> ~/.zshrc

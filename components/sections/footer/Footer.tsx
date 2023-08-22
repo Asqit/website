@@ -10,10 +10,10 @@ import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 export function Footer() {
   return (
     <footer
-      className={"bg-black text-slate-200 p-8 relative z-40"}
+      className={"p-8 relative z-40"}
     >
       <article
-        className={"container max-w-4xl mx-auto p-4 flex flex-col md:flex-row gap-6 md:gap-0 items-center md:justify-around"}
+        className={"container max-w-7xl rounded-xl bg-black text-white mx-auto p-16 flex flex-col md:flex-row gap-6 md:gap-0 items-center md:justify-around"}
       >
         <div className={"text-center md:text-left"}>
           <h1 className={"font-bold text-2xl"}>
@@ -83,7 +83,7 @@ export function Footer() {
           <li>
             <b>Useful Links</b>
           </li>
-          <li className={"link"}>
+          <li className={"hover:underline"}>
             <a
               rel="external"
               target="blank"
@@ -92,10 +92,10 @@ export function Footer() {
               source code
             </a>
           </li>
-          <li className={"link"}>
+          <li className={"hover:underline"}>
             <a rel="tag" href={"#about"}>about</a>
           </li>
-          <li className={"link"}>
+          <li className={"hover:underline"}>
             <a rel="tag" href={"#projects"}>projects</a>
           </li>
         </ul>

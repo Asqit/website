@@ -23,7 +23,6 @@ import {
   SiTypescript,
   SiVim,
   SiVisualstudiocode,
-  SiVsco,
   SiYarn,
 } from "react-icons/si";
 

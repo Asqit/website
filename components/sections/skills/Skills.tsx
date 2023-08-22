@@ -10,7 +10,7 @@ export function Skills() {
     >
       <main className={"container mx-auto max-w-6xl text-white text-center"}>
         <SectionTitle value="Skills" />
-        <div className={"grid grid-cols-1 md:grid-cols-6 gap-4"}>
+        <div className={"grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 gap-4"}>
           <div
             className={"md:col-span-4 p-8 bg-background-5 relative z-20 rounded-md flex flex-col items-center justify-center"}
           >
