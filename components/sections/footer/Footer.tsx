@@ -6,115 +6,143 @@ import {
   FaPaperclip,
 } from "react-icons/fa";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
+import { Brand } from "../../index.ts";
 
 export function Footer() {
   return (
-    <footer
-      className={"p-8 relative z-40"}
-    >
-      <article
-        className={"container max-w-7xl rounded-xl bg-black text-white mx-auto p-16 flex flex-col md:flex-row gap-6 md:gap-0 items-center md:justify-around"}
-      >
-        <div className={"text-center md:text-left"}>
-          <h1 className={"font-bold text-2xl"}>
-            Ondřej Tuček
-          </h1>
-          <p className={"my-1 mb-2"}>Full-Stack Developer</p>
-          <ul
-            className={"flex items-center justify-center md:justify-start gap-x-2 text-2xl text-primary-10"}
-          >
-            <li className={"hover:text-primary-0"}>
-              <a
-                target="blank"
-                rel="noreferrer"
-                aria-label={"An icon link to author's github"}
-                href={"https://www.github.com/asqit"}
-                title={"Ondřej's github"}
-              >
-                <FaGithub />
-              </a>
-            </li>
-            <li className={"hover:text-primary-0"}>
-              <a
-                target="blank"
-                rel="noreferrer"
-                aria-label={"An icon link to author's blog"}
-                href={"https://dev.to/iasqiti"}
-                title={"Ondřej's blog"}
-              >
-                <FaDev />
-              </a>
-            </li>
-            <li className={"hover:text-primary-0"}>
-              <a
-                target="blank"
-                rel="author"
-                href={asset("docs/cv.pdf")}
-                aria-label={"An icon link to cv in .pdf format"}
-                title={"Ondřej's CV document"}
-              >
-                <FaPaperclip />
-              </a>
-            </li>
-            <li className={"hover:text-primary-0"}>
-              <a
-                target="blank"
-                rel="author"
-                aria-label={"An icon link to author's email"}
-                href="mailto:ondrejtucek9@gmail.com"
-                title={"Ondřej's email contact"}
-              >
-                <FaEnvelope />
-              </a>
-            </li>
-            <li className={"hover:text-primary-0"}>
-              <a
-                target="blank"
-                aria-label={"An icon link to author's instagram"}
-                href={"https://www.instagram.com/tucek_andrew/"}
-                title={"Ondřej's instagram"}
-              >
-                <FaInstagram />
-              </a>
-            </li>
-          </ul>
+    <footer className="p-8">
+      <div className="container mx-auto max-w-7xl bg-white rounded-md p-4 px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="p-8">
+            <Brand />
+            <h1 className={"font-semibold text-slate-600"}>Web Developer</h1>
+            <p className="my-2 text-sm">
+              Passionate computer enthusiast with love for Linux and enjoys
+              developing reliable, high-performance software using cutting-edge
+              technologies.
+            </p>
+          </div>
+          <div className="p-8">
+            <h1 className="uppercase text-xl text-slate-600 mb-4">
+              Navigation
+            </h1>
+            <ul>
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"#about"}>about</a>
+              </li>
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"#projects"}>skills</a>
+              </li>
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"#projects"}>projects</a>
+              </li>
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"#projects"}>contact</a>
+              </li>
+            </ul>
+          </div>
+          <div className="p-8">
+            <h1 className="uppercase text-xl text-slate-600 mb-4">
+              Contact Me
+            </h1>
+            <ul>
+              <li>
+                <a
+                  target="blank"
+                  className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
+                  rel="noreferrer"
+                  aria-label={"An icon link to author's github"}
+                  href={"https://www.github.com/asqit"}
+                  title={"Ondřej's github"}
+                >
+                  <FaGithub /> Github
+                </a>
+              </li>
+              <li>
+                <a
+                  target="blank"
+                  className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
+                  rel="noreferrer"
+                  aria-label={"An icon link to author's blog"}
+                  href={"https://dev.to/iasqiti"}
+                  title={"Ondřej's blog"}
+                >
+                  <FaDev /> Dev.to
+                </a>
+              </li>
+              <li>
+                <a
+                  target="blank"
+                  className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
+                  rel="author"
+                  href={asset("docs/cv.pdf")}
+                  aria-label={"An icon link to cv in .pdf format"}
+                  title={"Ondřej's CV document"}
+                >
+                  <FaPaperclip /> CV
+                </a>
+              </li>
+              <li>
+                <a
+                  target="blank"
+                  className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
+                  rel="author"
+                  aria-label={"An icon link to author's email"}
+                  href="mailto:ondrejtucek9@gmail.com"
+                  title={"Ondřej's email contact"}
+                >
+                  <FaEnvelope /> Email
+                </a>
+              </li>
+              <li>
+                <a
+                  target="blank"
+                  className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
+                  aria-label={"An icon link to author's instagram"}
+                  href={"https://www.instagram.com/tucek_andrew/"}
+                  title={"Ondřej's instagram"}
+                >
+                  <FaInstagram /> Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul className={"hidden md:block text-center"}>
-          <li>
-            <b>Useful Links</b>
-          </li>
-          <li className={"hover:underline"}>
-            <a
-              rel="external"
-              target="blank"
-              href={"https://github.com/asqit/website"}
-            >
-              source code
-            </a>
-          </li>
-          <li className={"hover:underline"}>
-            <a rel="tag" href={"#about"}>about</a>
-          </li>
-          <li className={"hover:underline"}>
-            <a rel="tag" href={"#projects"}>projects</a>
-          </li>
-        </ul>
-        <div>
-          <p>
-            Website by Ondřej Tuček
-          </p>
-          <a href="https://fresh.deno.dev" target="_blank" rel="external">
-            <span className={"flex items-center gap-x-2"}>
-              <img
-                src={asset("images/logo.svg")}
-                className={"w-[32px] aspect-square"}
-                alt={"Fresh framework logo"}
-              />{" "}
-              Made with <b>Fresh</b>
-            </span>
-          </a>
+        <div className="p-8">
+          <hr className="dark:border-slate-400 mb-8" />
+          <div className={"flex justify-between items-center flex-wrap"}>
+            <div>
+              <p>
+                Website by Ondřej Tuček
+              </p>
+              <a href="https://fresh.deno.dev" target="_blank" rel="external">
+                <span className={"flex items-center gap-x-2"}>
+                  <img
+                    src={asset("images/logo.svg")}
+                    className={"w-[32px] aspect-square"}
+                    alt={"Fresh framework logo"}
+                  />{" "}
+                  Made with <b>Fresh</b>
+                </span>
+              </a>
+            </div>
+            <div className={"text-right"}>
+              <p>
+                Feedback? Issue?{" "}
+                <a
+                  rel="external"
+                  target="blank"
+                  className={"underline"}
+                  href={"https://github.com/asqit/website"}
+                >
+                  Let me know!
+                </a>
+              </p>
+              <p>Copyright &copy; 2023</p>
+            </div>
+          </div>
         </div>
-      </article>
+      </div>
     </footer>
   );
 }

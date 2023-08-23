@@ -6,3 +6,4 @@ export * from "./brand/Brand.tsx";
 export * from "./spinner/Spinner.tsx";
 export * from "./accordion/Accordion.tsx";
 export * from "./HighlightedProject/HighlightedProject.tsx";
+export * from "./shapes/Shapes.tsx";

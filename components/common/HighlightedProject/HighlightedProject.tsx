@@ -64,7 +64,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
         <main
           className={`my-4 md:relative md:w-[120%] md:z-10 ${
             isEven ? "md:left-[0%]" : "md:right-[20%]"
-          }  md:bg-background-10 md:p-4 md:py-8`}
+          }  md:bg-background-10 md:border md:border-background-0 md:p-4 md:py-8`}
         >
           <p>{description}</p>
         </main>

@@ -11,7 +11,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handler = (e: Event) => {
-      if (self.scrollY > 80) {
+      if (self.scrollY > 160) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -34,29 +34,31 @@ export default function Navbar() {
       <nav
         className={`container mx-auto flex items-center justify-between flex-wrap p-4 py-8`}
       >
-        <Brand />
+        <Brand isDark={true} />
         <div className="md:hidden relative z-50">
           <Hamburger isOpen={isMenuOpen} onClick={toggleIsVisible} />
         </div>
         <ul
-          className={`hidden basis-full md:basis-auto md:flex items-center gap-x-2 uppercase`}
+          className={`hidden basis-full md:basis-auto md:flex items-center gap-x-4`}
         >
-          <li className="font-mono uppercase hover:text-primary-10 text-slate-300">
+          <li className="font-mono capitalize hover:text-primary-10 text-slate-300">
+            <span className={"text-primary-10"}>0.</span>
             <a href="/#about">About</a>
           </li>
 
-          <li className="font-mono uppercase hover:text-primary-10 text-slate-300">
+          <li className="font-mono capitalize hover:text-primary-10 text-slate-300">
+            <span className={"text-primary-10"}>1.</span>
             <a href="/#skills">Skills</a>
           </li>
 
-          <li className="font-mono uppercase hover:text-primary-10 text-slate-300">
+          <li className="font-mono capitalize hover:text-primary-10 text-slate-300">
+            <span className={"text-primary-10"}>2.</span>
             <a href="/#projects">Projects</a>
           </li>
 
-          <li className="font-mono uppercase hover:text-primary-10 text-slate-300">
-            <a href="/#contact">
-              Contact
-            </a>
+          <li className="font-mono capitalize hover:text-primary-10 text-slate-300">
+            <span className={"text-primary-10"}>3.</span>
+            <a href="/#contact">Contact</a>
           </li>
         </ul>
         <div
@@ -65,7 +67,7 @@ export default function Navbar() {
           } fixed left-0 w-full z-40 bg-black p-4 transition-all md:hidden`}
         >
           <div className="flex justify-between p-4">
-            <Brand />
+            <Brand isDark={true} />
           </div>
           <ul
             className={"text-xl uppercase mt-4 flex flex-col gap-4 items-center justify-center"}

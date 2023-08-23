@@ -12,7 +12,7 @@ export function Skills() {
         <SectionTitle value="Skills" />
         <div className={"grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 gap-4"}>
           <div
-            className={"md:col-span-4 p-8 bg-background-5 relative z-20 rounded-md flex flex-col items-center justify-center"}
+            className={"md:col-span-4 p-8 bg-background-10 relative z-20 rounded-md flex flex-col items-center justify-center"}
           >
             <h2 className={"text-2xl mb-6"}>Programming Languages</h2>
             <ul
@@ -32,7 +32,7 @@ export function Skills() {
           </div>
 
           <div
-            className={"p-8 bg-background-5 relative z-20 rounded-md md:col-span-2 flex flex-col items-center justify-center"}
+            className={"p-8 bg-background-10 relative z-20 rounded-md md:col-span-2 flex flex-col items-center justify-center"}
           >
             <h2 className={"text-2xl mb-6"}>Tool Box</h2>
             <ul
@@ -52,7 +52,7 @@ export function Skills() {
           </div>
 
           <div
-            className={"p-8 bg-background-5 relative z-20 rounded-md md:col-span-3 flex flex-col items-center justify-center"}
+            className={"p-8 bg-background-10 relative z-20 rounded-md md:col-span-3 flex flex-col items-center justify-center"}
           >
             <h2 className={"text-2xl mb-6"}>Front-End Development</h2>
             <ul
@@ -72,7 +72,7 @@ export function Skills() {
           </div>
 
           <div
-            className={"p-8 bg-background-5 relative z-20 rounded-md md:col-span-3 flex flex-col items-center justify-center"}
+            className={"p-8 bg-background-10 relative z-20 rounded-md md:col-span-3 flex flex-col items-center justify-center"}
           >
             <h2 className={"text-2xl mb-6"}>Back-End Development</h2>
             <ul

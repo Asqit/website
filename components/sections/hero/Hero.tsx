@@ -1,13 +1,15 @@
+import { Shapes } from "../../index.ts";
+
 export function Hero() {
   return (
     <section
-      className={"h-[100vh] min-h-fit text-gray-200 py-16 scroll-m-8"}
+      className={"h-[100vh] min-h-fit text-gray-200 py-16 scroll-m-8 relative overflow-x-hidden"}
     >
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}
       >
         <article
-          className={"p-8 md:col-start-1 md:ml-16 col-span-full"}
+          className={"p-8 md:col-start-1 md:ml-16 col-span-full lg:col-span-3"}
         >
           <h1
             className={"font-black md:text-xl text-primary-10 animate-fade-in-up"}
@@ -33,6 +35,9 @@ export function Hero() {
             software using cutting-edge technologies.
           </p>
         </article>
+        <figure className={"hidden lg:block col-span-2"}>
+          <Shapes />
+        </figure>
       </div>
     </section>
   );

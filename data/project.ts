@@ -18,7 +18,7 @@ let data: GitHubRepo[] = [
     html_url: "https://github.com/asqit/asteroids",
     description:
       'My turn on the classic atari game called "Asteroids". You play as a small spaceship equipped with laser guns and your objective is to destroy as many aliens and asteroids as you can.',
-    topics: ["atari", "typescript", "retro-gaming"],
+    topics: ["atari", "typescript", "retro"],
     fork: false,
   },
   {
@@ -28,7 +28,7 @@ let data: GitHubRepo[] = [
     html_url: "https://github.com/asqit/rtk-todo",
     description:
       "RTk-Todo is simple todo application written in typescript and todo state handled by Redux-Toolkit",
-    topics: ["todoapp", "react", "redux-toolkit"],
+    topics: ["todoapp", "react", "RTK"],
     fork: false,
   },
   {
