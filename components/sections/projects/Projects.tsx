@@ -39,7 +39,7 @@ export function Projects() {
             githubLink="https://github.com/asqit/momentify"
             releaseLink="https://momentify-server.onrender.com"
             description="Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack"
-            tags={["MERN", "Tailwind", "i18n", "Redux-Toolkit", "RTK-Query"]}
+            tags={["MERN", "Tailwind", "i18n", "RTK + Query"]}
           />
         </div>
 
