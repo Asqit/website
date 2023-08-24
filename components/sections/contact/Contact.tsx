@@ -9,7 +9,7 @@ export function Contact() {
       id="contact"
     >
       <div
-        className={"container mx-auto max-w-6xl p-8 text-white "}
+        className={"container mx-auto max-w-6xl p-8 "}
       >
         <SectionTitle value="Contact" />
 
@@ -43,7 +43,7 @@ function DirectContact() {
           <b>Email:</b>
           <a
             href={"mailto:ondrejtucek9@gmail.com"}
-            className={"underline link"}
+            className={"underline hover:text-primary-0"}
           >
             ondrejtucek9@gmail.com
           </a>
@@ -59,7 +59,7 @@ function DirectContact() {
             href="https://en.wikipedia.org/wiki/Prague"
             target={"_blank"}
             referrerpolicy={"no-referrer"}
-            className={"link"}
+            className={"hover:text-primary-0"}
           >
             Prague
           </a>
@@ -68,7 +68,7 @@ function DirectContact() {
             href="https://en.wikipedia.org/wiki/%C4%8Cesk%C3%A9_Bud%C4%9Bjovice"
             target={"_blank"}
             referrerpolicy={"no-referrer"}
-            className={"link"}
+            className={"hover:text-primary-0"}
           >
             Czech Budweis
           </a>
@@ -82,7 +82,10 @@ function ContactForm() {
   return (
     <form method="post" className={"relative z-20"}>
       <div className={"flex flex-col gap-3 my-3"}>
-        <label className={"text-slate-200"} htmlFor={"email"}>
+        <label
+          className={"text-slate-600 dark:text-slate-200"}
+          htmlFor={"email"}
+        >
           Email Address
         </label>
         <input
@@ -95,7 +98,10 @@ function ContactForm() {
       </div>
 
       <div className={"flex flex-col gap-3 my-3"}>
-        <label className={"text-slate-200"} htmlFor={"message"}>
+        <label
+          className={"text-slate-600 dark:text-slate-200"}
+          htmlFor={"message"}
+        >
           Message
         </label>
         <textarea

@@ -1,6 +1,6 @@
 # Portfolio website
 
-![Website Index](./repo-website.png)
+![Website Index](./repo-website.jpg)
 
 My portfolio website developed with Fresh.js, TypeScript and styled with Tailwind CSS. Website is aiming to be fast, accessible and responsive. 
 

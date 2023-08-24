@@ -8,10 +8,10 @@ export function About() {
   return (
     <section
       id="about"
-      className={"py-16 scroll-m-8 bg-background-5"}
+      className={"py-16 scroll-m-8"}
     >
       <main
-        className={"container mx-auto max-w-6xl grid grid-cols-1 xl:grid-cols-2 gap-x-4 gap-y-16 items-center p-8 text-white font-sans"}
+        className={"container mx-auto max-w-6xl grid grid-cols-1 xl:grid-cols-2 gap-x-4 gap-y-16 items-center p-8 font-sans"}
       >
         <AuthorImage />
         <article>
@@ -19,9 +19,7 @@ export function About() {
           {about.map((article, index) => (
             <p
               key={index}
-              className={`${
-                index == 0 ? "text-xl my-4" : "text-base text-slate-200"
-              } my-2`}
+              className={`${index == 0 ? "text-xl my-4" : "text-base"} my-2`}
             >
               {article}
             </p>
@@ -42,7 +40,7 @@ export function About() {
               rel="author"
               referrerpolicy={"no-referrer"}
               href={"https://www.github.com/asqit"}
-              className={"btn ml-4 px-8 inline-flex text-primary-10 gap-x-2 items-center capitalize bg-transparent hover:bg-transparent active:bg-transparent border border-primary-10 hover:border-primary-5 hover:text-primary-5 active:border-primary-0 active:text-primary-0"}
+              className={"btn ml-4 px-8 inline-flex font-semibold text-primary-0 dark:text-primary-10 gap-x-2 items-center capitalize bg-transparent hover:bg-transparent active:bg-transparent border-2 border-primary-0 dark:border-primary-10"}
             >
               GitHub
             </a>

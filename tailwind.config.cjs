@@ -5,16 +5,20 @@ module.exports = {
     "./islands/**/*.{tsx,ts}",
     "./components/**/*.{tsx,ts}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         "primary-10": "#1eb09f",
         "primary-5": "#1a9183",
         "primary-0": "#147368",
-        "background-5": "#151515",
-        "background-10": "#212023",
-        "background-0": "#111111",
+        "background-5-dark": "#151515",
+        "background-10-dark": "#212023",
+        "background-0-dark": "#111111",
         "special-red": "#bc252c",
+        "background-0": "#bfbfbf",
+        "background-5": "#e6e6e6",
+        "background-10": "#ffffff",
       },
       keyframes: {
         fadeInUp: {

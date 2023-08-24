@@ -55,16 +55,18 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
       <section
         className={`text-center ${
           isEven ? "order-first md:text-left" : "order-last md:text-right"
-        } text-slate-300`}
+        }`}
       >
         <header className={"my-4"}>
-          <h2 className={"text-primary-10 font-mono"}>Featured Project</h2>
+          <h2 className={"text-primary-0 dark:text-primary-10 font-mono"}>
+            Featured Project
+          </h2>
           <h3 className={"font-bold text-3xl"}>{title}</h3>
         </header>
         <main
           className={`my-4 md:relative md:w-[120%] md:z-10 ${
             isEven ? "md:left-[0%]" : "md:right-[20%]"
-          }  md:bg-background-10 md:border md:border-background-0 md:p-4 md:py-8`}
+          }  md:bg-background-10 md:dark:bg-background-10-dark md:border md:border-background-0 md:dark:border-background-0-dark md:p-4 md:py-8`}
         >
           <p>{description}</p>
         </main>
@@ -73,7 +75,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
             {tags.map((tag, i) => (
               <span
                 key={tag}
-                className={"font-mono text-slate-300 mr-2 font-bold"}
+                className={"font-mono text-slate-600 dark:text-slate-300 mr-2 font-bold"}
               >
                 {tag}
               </span>

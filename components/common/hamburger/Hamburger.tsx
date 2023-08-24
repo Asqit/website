@@ -21,17 +21,19 @@ export function Hamburger(props: IHamburgerProps) {
       className={`w-8 h-8 flex justify-around flex-col flex-wrap z-10 cursor-pointer ${containerClassName}`}
     >
       <span
-        className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
+        className={`dark:bg-slate-200 bg-slate-600 block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
           isOpen ? "rotate-45" : "rotate-0"
         }`}
       />
       <span
-        className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
-          isOpen ? "translate-x-full bg-transparent" : "translate-x-0"
+        className={`block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
+          isOpen
+            ? "translate-x-full bg-transparent"
+            : "translate-x-0 dark:bg-slate-200 bg-slate-600"
         }`}
       />
       <span
-        className={`bg-slate-200 block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
+        className={`dark:bg-slate-200 bg-slate-600 block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
           isOpen ? "rotate-[-45deg]" : "rotate-0"
         }`}
       />
