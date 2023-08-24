@@ -33,12 +33,21 @@ export default function SimpleProject(props: SimpleProjectProps) {
       href={html_url}
       target={"_blank"}
       onMouseMove={handleMouseMove}
-      className={`rounded-lg relative hover:before:opacity-100 group project`}
+      className={`rounded-lg relative overflow-hidden hover:before:opacity-100 group project`}
       aria-roledescription={"button"}
     >
       <div className={"project-border group-hover:opacity-100"} />
       <div
-        className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-background-10"}
+        className={"absolute flex flex-col items-center justify-center -top-full w-full h-full z-30 left-0 bg-background/50 backdrop-blur-md group-hover:top-0 transition-all duration-300 dark:hidden"}
+      >
+        <h1 className="text-2xl font-bold">More Details</h1>
+        <p className="text-center text-sm text-slate-500">
+          After clicking upon me a new browser tab will open
+          <br /> with more details about the project.
+        </p>
+      </div>
+      <div
+        className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-background-10 dark:bg-background-10-dark"}
       >
         <div>
           <span className="text-2xl flex items-center gap-1">
