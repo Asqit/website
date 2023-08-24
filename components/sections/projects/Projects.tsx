@@ -8,9 +8,9 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className={"py-16 relative z-50 scroll-m-8 bg-background-5"}
+      className={"py-16 relative z-50 scroll-m-8"}
     >
-      <article className={"container mx-auto max-w-6xl p-8 text-white"}>
+      <article className={"container mx-auto max-w-6xl p-8"}>
         <SectionTitle value="Projects" />
 
         <div className={"grid grid-cols-1 gap-8"}>
@@ -45,11 +45,13 @@ export function Projects() {
 
         <div className={"my-8 mt-16"}>
           <h2
-            className={"text-4xl font-black text-center capitalize text-white"}
+            className={"text-4xl font-black text-center capitalize"}
           >
             Other Projects
           </h2>
-          <h3 className={"text-slate-400 text-center text-lg"}>
+          <h3
+            className={"text-slate-600 dark:text-slate-400 text-center text-lg"}
+          >
             (with shiny borders)
           </h3>
         </div>

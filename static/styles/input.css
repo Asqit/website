@@ -20,7 +20,7 @@
 	}
 
 	.input {
-		@apply bg-background-10 p-2 rounded-lg outline outline-transparent focus:outline-primary-0;
+		@apply bg-background-10 dark:bg-background-10-dark p-2 rounded-lg outline outline-transparent focus:outline-primary-0;
 	}
 }
 
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-	@apply bg-background-5
+	@apply bg-background-5 dark:bg-background-5-dark text-black dark:text-white
 }
 
 
@@ -37,9 +37,11 @@ body {
 :root {
 	--mouse-x: 100px;
 	--mouse-y: 100px;
-	
 	--sphere-x: 100px;
 	--sphere-y: 100px;
+
+	--project-border: rgba(255, 255, 255, 0.74);
+	--project-sphere: rgba(255, 255, 255, 0.103);
 	
 }
 
@@ -64,10 +66,10 @@ body {
 
 .project::before {
 	z-index: 30;
-	background:radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.103) 0%, rgba(255,255,255,0) 59%);
+	background:radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), var(--project-sphere) 0%, rgba(255,255,255,0) 59%);
 }
 
 .project-border {
 	z-index: 10;
-	background:radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.74) 0%, rgba(255,255,255,0) 59%);
+	background:radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), var(--project-border) 0%, rgba(255,255,255,0) 59%);
 }

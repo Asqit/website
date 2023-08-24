@@ -11,11 +11,13 @@ import { Brand } from "../../index.ts";
 export function Footer() {
   return (
     <footer className="p-8">
-      <div className="container mx-auto max-w-7xl bg-white rounded-md p-4 px-8">
+      <div className="container mx-auto max-w-7xl bg-black text-white dark:text-black dark:bg-white rounded-md p-4 px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div className="p-8">
-            <Brand />
-            <h1 className={"font-semibold text-slate-600"}>Web Developer</h1>
+            <Brand className="dark:text-black text-white" />
+            <h1 className={"font-semibold dark:text-slate-600 text-slate-300"}>
+              Web Developer
+            </h1>
             <p className="my-2 text-sm">
               Passionate computer enthusiast with love for Linux and enjoys
               developing reliable, high-performance software using cutting-edge
@@ -23,7 +25,7 @@ export function Footer() {
             </p>
           </div>
           <div className="p-8">
-            <h1 className="uppercase text-xl text-slate-600 mb-4">
+            <h1 className="uppercase text-xl dark:text-slate-600 text-slate-300 mb-4">
               Navigation
             </h1>
             <ul>
@@ -42,7 +44,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="p-8">
-            <h1 className="uppercase text-xl text-slate-600 mb-4">
+            <h1 className="uppercase text-xl dark:text-slate-600 text-slate-300 mb-4">
               Contact Me
             </h1>
             <ul>
@@ -51,9 +53,8 @@ export function Footer() {
                   target="blank"
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   rel="noreferrer"
-                  aria-label={"An icon link to author's github"}
+                  aria-label={"link to Ondřej's github"}
                   href={"https://www.github.com/asqit"}
-                  title={"Ondřej's github"}
                 >
                   <FaGithub /> Github
                 </a>
@@ -63,9 +64,8 @@ export function Footer() {
                   target="blank"
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   rel="noreferrer"
-                  aria-label={"An icon link to author's blog"}
+                  aria-label={"link to Ondřej's blog"}
                   href={"https://dev.to/iasqiti"}
-                  title={"Ondřej's blog"}
                 >
                   <FaDev /> Dev.to
                 </a>
@@ -76,8 +76,7 @@ export function Footer() {
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   rel="author"
                   href={asset("docs/cv.pdf")}
-                  aria-label={"An icon link to cv in .pdf format"}
-                  title={"Ondřej's CV document"}
+                  aria-label={"link to Ondřej's CV"}
                 >
                   <FaPaperclip /> CV
                 </a>
@@ -87,9 +86,8 @@ export function Footer() {
                   target="blank"
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   rel="author"
-                  aria-label={"An icon link to author's email"}
+                  aria-label={"link to Ondřej's email"}
                   href="mailto:ondrejtucek9@gmail.com"
-                  title={"Ondřej's email contact"}
                 >
                   <FaEnvelope /> Email
                 </a>
@@ -100,7 +98,6 @@ export function Footer() {
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   aria-label={"An icon link to author's instagram"}
                   href={"https://www.instagram.com/tucek_andrew/"}
-                  title={"Ondřej's instagram"}
                 >
                   <FaInstagram /> Instagram
                 </a>
@@ -110,7 +107,9 @@ export function Footer() {
         </div>
         <div className="p-8">
           <hr className="dark:border-slate-400 mb-8" />
-          <div className={"flex justify-between items-center flex-wrap"}>
+          <div
+            className={"flex justify-between items-center flex-wrap gap-y-4"}
+          >
             <div>
               <p>
                 Website by Ondřej Tuček
@@ -126,7 +125,7 @@ export function Footer() {
                 </span>
               </a>
             </div>
-            <div className={"text-right"}>
+            <div className={"md:text-right"}>
               <p>
                 Feedback? Issue?{" "}
                 <a

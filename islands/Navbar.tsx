@@ -1,12 +1,25 @@
 import { useEffect, useState } from "preact/hooks";
 import { Brand, Hamburger } from "../components/index.ts";
+import { useDarkMode } from "../hooks/useDarkMode.ts";
+import ThemeSwitcher from "./ThemeSwitcher.tsx";
 
 export default function Navbar() {
+  const sectionIds: string[] = ["about", "skills", "projects", "contact"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { isDarkMode, setDarkTheme, setLightTheme } = useDarkMode();
 
   const toggleIsVisible = () => {
     setIsMenuOpen((prev) => !prev);
+  };
+
+  const toggleDarkMode = () => {
+    if (isDarkMode) {
+      setLightTheme();
+      return;
+    }
+
+    setDarkTheme();
   };
 
   useEffect(() => {
@@ -28,37 +41,33 @@ export default function Navbar() {
   return (
     <header
       className={`fixed w-screen top-0 left-0 z-[999] transition-all ${
-        isScrolled ? "bg-black/40" : "bg-transparent"
+        isScrolled ? "dark:bg-black/40 bg-white/40" : "bg-transparent"
       } backdrop-blur-xl will-change-scroll`}
     >
       <nav
-        className={`container mx-auto flex items-center justify-between flex-wrap p-4 py-8`}
+        className={`container mx-auto max-w-7xl flex items-center justify-between flex-wrap p-6`}
       >
-        <Brand isDark={true} />
+        <Brand className="dark:text-white text-black" />
         <div className="md:hidden relative z-50">
           <Hamburger isOpen={isMenuOpen} onClick={toggleIsVisible} />
         </div>
         <ul
           className={`hidden basis-full md:basis-auto md:flex items-center gap-x-4`}
         >
-          <li className="font-mono capitalize hover:text-primary-10 text-slate-300">
-            <span className={"text-primary-10"}>0.</span>
-            <a href="/#about">About</a>
-          </li>
-
-          <li className="font-mono capitalize hover:text-primary-10 text-slate-300">
-            <span className={"text-primary-10"}>1.</span>
-            <a href="/#skills">Skills</a>
-          </li>
-
-          <li className="font-mono capitalize hover:text-primary-10 text-slate-300">
-            <span className={"text-primary-10"}>2.</span>
-            <a href="/#projects">Projects</a>
-          </li>
-
-          <li className="font-mono capitalize hover:text-primary-10 text-slate-300">
-            <span className={"text-primary-10"}>3.</span>
-            <a href="/#contact">Contact</a>
+          {sectionIds.map((link, index) => (
+            <li
+              key={link}
+              className="font-mono capitalize hover:text-primary-10"
+            >
+              <span className={"text-primary-10"}>{index}.</span>
+              <a href={`/#${link}`}>{link}</a>
+            </li>
+          ))}
+          <li>
+            <ThemeSwitcher
+              isDarkMode={isDarkMode}
+              toggleMode={toggleDarkMode}
+            />
           </li>
         </ul>
         <div
@@ -72,20 +81,18 @@ export default function Navbar() {
           <ul
             className={"text-xl uppercase mt-4 flex flex-col gap-4 items-center justify-center"}
           >
-            <li onClick={toggleIsVisible} className="link">
-              <a href="#about">About</a>
-            </li>
-
-            <li onClick={toggleIsVisible} className="link">
-              <a href="#skills">Skills</a>
-            </li>
-
-            <li onClick={toggleIsVisible} className="link">
-              <a href="#projects">Projects</a>
-            </li>
-
-            <li onClick={toggleIsVisible} className="link">
-              <a href="#contact">Contact</a>
+            {sectionIds.map((l, i) => (
+              <li key={l} onClick={toggleIsVisible} className="link">
+                <a href={`#${l}`}>{l}</a>
+              </li>
+            ))}
+            <li>
+              <button
+                className={"link"}
+                onClick={isDarkMode ? setLightTheme : setDarkTheme}
+              >
+                {isDarkMode ? "Light Theme" : "Dark Theme"}
+              </button>
             </li>
           </ul>
         </div>

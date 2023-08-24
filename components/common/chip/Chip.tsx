@@ -10,7 +10,7 @@ export function Chip(props: ChipProps) {
   return (
     <span
       {...rest}
-      className={`rounded-md py-1 px-2 bg-background-0 border-b-2 border-b-slate-950 text-white font-mono ${
+      className={`rounded-md py-1 px-2 bg-background-0 dark:bg-background-0-dark text-black dark:text-white font-mono ${
         className ? className : ""
       }`}
     >
