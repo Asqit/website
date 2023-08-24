@@ -6,7 +6,6 @@ deno.lock
 
 # tailwind binary and transpiled file
 tailwindcss
-/static/styles/tailwind.css
 
 # Ignore fresh build directory
 _fresh/
