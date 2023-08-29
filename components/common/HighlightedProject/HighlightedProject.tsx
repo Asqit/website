@@ -29,7 +29,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
 
   return (
     <article
-      className={"bg-background-10 p-4 rounded-md md:bg-transparent md:grid md:grid-cols-3 md:gap-4 md:items-center"}
+      className={"bg-background-10 dark:bg-background-10-dark p-4 rounded-md dark:md:bg-transparent md:bg-transparent md:grid md:grid-cols-3 md:gap-4 md:items-center"}
     >
       <figure
         className={"md:col-span-2 md:bg-primary-10/40 group overflow-hidden"}

@@ -29,17 +29,17 @@ export function Footer() {
               Navigation
             </h1>
             <ul>
-              <li className={"hover:underline"}>
-                <a rel="tag" href={"#about"}>about</a>
+              <li>
+                <a className={"hover:underline"} rel="tag" href={"#about"}>about</a>
               </li>
-              <li className={"hover:underline"}>
-                <a rel="tag" href={"#projects"}>skills</a>
+              <li>
+                <a className={"hover:underline"} rel="tag" href={"#projects"}>skills</a>
               </li>
-              <li className={"hover:underline"}>
-                <a rel="tag" href={"#projects"}>projects</a>
+              <li>
+                <a className={"hover:underline"} rel="tag" href={"#projects"}>projects</a>
               </li>
-              <li className={"hover:underline"}>
-                <a rel="tag" href={"#projects"}>contact</a>
+              <li>
+                <a className={"hover:underline"} rel="tag" href={"#projects"}>contact</a>
               </li>
             </ul>
           </div>

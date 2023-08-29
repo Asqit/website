@@ -1,6 +1,6 @@
 import { GitHubRepo } from "../islands/SimpleProject.tsx";
 
-let data: GitHubRepo[] = [
+const data: GitHubRepo[] = [
   {
     id: 5,
     name: "Website",

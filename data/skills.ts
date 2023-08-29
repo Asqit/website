@@ -2,6 +2,7 @@ import { JSX } from "preact/jsx-runtime";
 import { FaGlobe, FaLemon, FaSitemap } from "react-icons/fa";
 import {
   SiCss3,
+  SiDeno,
   SiExpress,
   SiGit,
   SiGnubash,
@@ -139,6 +140,11 @@ const backEnd: Skill[] = [
     value: "JWT",
     Icon: SiJsonwebtokens,
   },
+  {
+    id: 7,
+    value: "Deno",
+    Icon: SiDeno
+  }
 ];
 
 export const tools: Skill[] = [

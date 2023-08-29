@@ -6,7 +6,7 @@ export function Hero() {
       className={"h-[100vh] min-h-fit py-16 scroll-m-8 relative overflow-x-hidden"}
     >
       <div
-        className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}
+        className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center relative"}
       >
         <article
           className={"p-8 md:col-start-1 md:ml-16 col-span-full lg:col-span-3"}
@@ -35,7 +35,7 @@ export function Hero() {
             technologies.
           </p>
         </article>
-        <figure className={"hidden lg:block col-span-2"}>
+        <figure className={"absolute -z-10 left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 opacity-40 lg:translate-x-0 lg:translate-y-0 lg:static lg:z-0 lg:right-auto lg:top-auto lg:block col-span-2"}>
           <Shapes />
         </figure>
       </div>
