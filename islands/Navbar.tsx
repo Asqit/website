@@ -57,9 +57,9 @@ export default function Navbar() {
           {sectionIds.map((link, index) => (
             <li
               key={link}
-              className="font-mono capitalize hover:text-primary-10"
+              className="font-mono capitalize hover:text-primary-0 dark:hover:text-primary-10"
             >
-              <span className={"text-primary-10"}>{index}.</span>
+              <span className={"text-primary-0 dark:text-primary-10"}>{index}.</span>
               <a href={`/#${link}`}>{link}</a>
             </li>
           ))}

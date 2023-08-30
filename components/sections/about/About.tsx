@@ -19,7 +19,7 @@ export function About() {
           {about.map((article, index) => (
             <p
               key={index}
-              className={`${index == 0 ? "text-xl my-4" : "text-base"} my-2`}
+              className={`my-4`}
             >
               {article}
             </p>

@@ -10,8 +10,8 @@ export function Skills() {
     >
       <main className={"container mx-auto max-w-6xl text-center relative"}>
         <SectionTitle value="Skills" />
-        <h2 className={"max-w-sm mx-auto md:hidden text-lg"}>Temporarly growing list of technologies, that I current control at at least beginner level.</h2>
-        <h3 className={"max-w-xs mx-auto md:hidden text-sm text-slate-600 dark:text-slate-400"}>(I once will be removed as unused object by garbage collector)</h3>
+        <h2 className={"max-w-sm mx-auto md:hidden text-lg"}>Temporary growing list of technologies, that I currently control, at least at beginner level.</h2>
+        <h3 className={"max-w-xs mx-auto md:hidden text-sm text-slate-600 dark:text-slate-400"}>(The list will stop growing, once I will be removed by garbage collector.)</h3>
         <div className={"grid grid-cols-2 grid-rows-2 py-16 md:hidden"}>
           <ul className={"flex gap-2 flex-wrap items-center justify-center my-4 col-span-full row-span-full"}>
             {Object.entries(skills).map(type => type[1].map(tech => <li>

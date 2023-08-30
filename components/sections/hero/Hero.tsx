@@ -12,7 +12,7 @@ export function Hero() {
           className={"p-8 md:col-start-1 md:ml-16 col-span-full lg:col-span-3"}
         >
           <h1
-            className={"font-black md:text-xl text-primary-10 animate-fade-in-up"}
+            className={"font-black md:text-xl text-primary-0 dark:text-primary-10 animate-fade-in-up"}
           >
             Hi there! My name is
           </h1>

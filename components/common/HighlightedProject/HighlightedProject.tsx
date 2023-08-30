@@ -64,8 +64,8 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
           <h3 className={"font-bold text-3xl"}>{title}</h3>
         </header>
         <main
-          className={`my-4 md:relative md:w-[120%] md:z-10 ${
-            isEven ? "md:left-[0%]" : "md:right-[20%]"
+          className={`max-w-[80%] mx-auto md:max-w-[initial] my-4 md:relative md:w-[145%] md:z-10 ${
+            isEven ? "md:left-[0%]" : "md:right-[45%]"
           }  md:bg-background-10 md:dark:bg-background-10-dark md:border md:border-background-0 md:dark:border-background-0-dark md:p-4 md:py-8`}
         >
           <p>{description}</p>

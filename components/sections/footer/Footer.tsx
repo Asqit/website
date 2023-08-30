@@ -2,7 +2,6 @@ import {
   FaDev,
   FaEnvelope,
   FaGithub,
-  FaInstagram,
   FaPaperclip,
 } from "react-icons/fa";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
@@ -53,7 +52,7 @@ export function Footer() {
                   target="blank"
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   rel="noreferrer"
-                  aria-label={"link to Ondřej's github"}
+                  aria-label={"Github"}
                   href={"https://www.github.com/asqit"}
                 >
                   <FaGithub /> Github
@@ -64,7 +63,7 @@ export function Footer() {
                   target="blank"
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   rel="noreferrer"
-                  aria-label={"link to Ondřej's blog"}
+                  aria-label={"Dev.to"}
                   href={"https://dev.to/iasqiti"}
                 >
                   <FaDev /> Dev.to
@@ -76,7 +75,7 @@ export function Footer() {
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   rel="author"
                   href={asset("docs/cv.pdf")}
-                  aria-label={"link to Ondřej's CV"}
+                  aria-label={"CV"}
                 >
                   <FaPaperclip /> CV
                 </a>
@@ -86,7 +85,7 @@ export function Footer() {
                   target="blank"
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   rel="author"
-                  aria-label={"link to Ondřej's email"}
+                  aria-label={"Email"}
                   href="mailto:ondrejtucek9@gmail.com"
                 >
                   <FaEnvelope /> Email
@@ -108,8 +107,9 @@ export function Footer() {
                 <span className={"flex items-center gap-x-2"}>
                   <img
                     src={asset("images/logo.svg")}
-                    className={"w-[32px] aspect-square"}
                     alt={"Fresh framework logo"}
+                    width={32}
+                    height={32}
                   />{" "}
                   Made with <b>Fresh</b>
                 </span>
