@@ -8,9 +8,25 @@ export function Skills() {
       className={"py-16 px-4 scroll-m-16"}
       id="skills"
     >
-      <main className={"container mx-auto max-w-6xl text-center"}>
+      <main className={"container mx-auto max-w-6xl text-center relative"}>
         <SectionTitle value="Skills" />
-        <div className={"grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 gap-4"}>
+        <h2 className={"max-w-sm mx-auto md:hidden text-lg"}>Temporarly growing list of technologies, that I current control at at least beginner level.</h2>
+        <h3 className={"max-w-xs mx-auto md:hidden text-sm text-slate-600 dark:text-slate-400"}>(I once will be removed as unused object by garbage collector)</h3>
+        <div className={"grid grid-cols-2 grid-rows-2 py-16 md:hidden"}>
+          <ul className={"flex gap-2 flex-wrap items-center justify-center my-4 col-span-full row-span-full"}>
+            {Object.entries(skills).map(type => type[1].map(tech => <li>
+              <Chip className={"flex items-center justify-center gap-x-2 whitespace-nowrap snap-center"}>
+                      <>
+                        <tech.Icon />
+                        <span>{tech.value}</span>
+                      </>
+                    </Chip>
+              </li>))}
+          </ul>
+          <div class="from-background-5 to-background-5 dark:from-background-5-dark dark:to-background-5-dark dark:via-transparent via-transparent bg-gradient-to-r w-full h-full col-span-full row-span-full pointer-events-none"/>
+        </div>
+        
+        <div className={"hidden md:grid md:grid-cols-6 md:grid-rows-2 md:gap-4"}>
           <div
             className={"md:col-span-4 p-8 bg-background-10 dark:bg-background-10-dark relative z-20 rounded-md flex flex-col items-center justify-center"}
           >

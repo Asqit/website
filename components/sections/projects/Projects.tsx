@@ -10,10 +10,12 @@ export function Projects() {
       id="projects"
       className={"py-16 relative z-50 scroll-m-8"}
     >
-      <article className={"container mx-auto max-w-6xl p-8"}>
+      <article className={"container mx-auto max-w-6xl md:p-8"}>
+        <div className={"text-center md:text-left"}>
         <SectionTitle value="Projects" />
+        </div>
 
-        <div className={"grid grid-cols-1 gap-8"}>
+        <div className={"grid grid-cols-1 gap-8 px-4"}>
           <HighlightedProject
             isEven={false}
             title="BackRoads"
@@ -50,13 +52,13 @@ export function Projects() {
             Other Projects
           </h2>
           <h3
-            className={"text-slate-600 dark:text-slate-400 text-center text-lg"}
+            className={"text-slate-600 dark:text-slate-400 text-center text-lg hidden dark:block"}
           >
             (with shiny borders)
           </h3>
         </div>
         <div
-          className={"grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4"}
+          className={"flex overflow-x-auto snap-x flex-nowrap md:grid md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4"}
         >
           {projects.map((project) => {
             return <SimpleProject {...project} key={project.id} />;

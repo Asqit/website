@@ -92,16 +92,6 @@ export function Footer() {
                   <FaEnvelope /> Email
                 </a>
               </li>
-              <li>
-                <a
-                  target="blank"
-                  className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
-                  aria-label={"An icon link to author's instagram"}
-                  href={"https://www.instagram.com/tucek_andrew/"}
-                >
-                  <FaInstagram /> Instagram
-                </a>
-              </li>
             </ul>
           </div>
         </div>
