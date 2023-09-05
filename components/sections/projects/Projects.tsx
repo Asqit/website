@@ -22,7 +22,7 @@ export function Projects() {
             githubLink="https://github.com/asqit/deno-chatter"
             releaseLink="https://deno-chatter.deno.dev/"
             description="Deno-Chatter is anonymous chat application written with fresh.js, deno, Typescript and WebSocket."
-            tags={["HTML", "SCSS"]}
+            tags={["Deno", "WebSocket", "TypeScript", "Fresh", "Tailwind"]}
             imageSrc="images/deno-chatter.webp"
           />
           <HighlightedProject
@@ -35,7 +35,7 @@ export function Projects() {
             tags={["MERN", "Tailwind", "i18n", "RTK + Query"]}
           />
           <HighlightedProject
-            isEven={false}
+            isEven={true}
             title="BackRoads"
             githubLink="https://github.com/asqit/backroads"
             releaseLink="https://backroads-asqit.netlify.app"
