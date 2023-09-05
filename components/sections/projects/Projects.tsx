@@ -17,22 +17,13 @@ export function Projects() {
 
         <div className={"grid grid-cols-1 gap-8 px-4"}>
           <HighlightedProject
-            isEven={false}
-            title="BackRoads"
-            githubLink="https://github.com/asqit/backroads"
-            releaseLink="https://backroads-asqit.netlify.app"
-            description="BackRoads is website for fictional tour company. It was my learning project, while learning css."
-            tags={["HTML", "CSS"]}
-            imageSrc="images/backroads.webp"
-          />
-          <HighlightedProject
             isEven={true}
-            title="TeaStation"
-            githubLink="https://github.com/asqit/teastation"
-            releaseLink="https://teastation-asqit.netlify.app"
-            description="TeaStation is e-shop landing page for fictional tea shop. It's written in html and sass and it served me as learning project."
+            title="Deno-Chatter"
+            githubLink="https://github.com/asqit/deno-chatter"
+            releaseLink="https://deno-chatter.deno.dev/"
+            description="Deno-Chatter is anonymous chat application written with fresh.js, deno, Typescript and WebSocket."
             tags={["HTML", "SCSS"]}
-            imageSrc="images/teastation.webp"
+            imageSrc="images/deno-chatter.webp"
           />
           <HighlightedProject
             isEven={false}
@@ -42,6 +33,15 @@ export function Projects() {
             releaseLink="https://momentify-server.onrender.com"
             description="Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack"
             tags={["MERN", "Tailwind", "i18n", "RTK + Query"]}
+          />
+          <HighlightedProject
+            isEven={false}
+            title="BackRoads"
+            githubLink="https://github.com/asqit/backroads"
+            releaseLink="https://backroads-asqit.netlify.app"
+            description="BackRoads is website for fictional tour company. It was my learning project, while learning css."
+            tags={["HTML", "CSS"]}
+            imageSrc="images/backroads.webp"
           />
         </div>
 
