@@ -1,9 +1,4 @@
-import {
-  FaDev,
-  FaEnvelope,
-  FaGithub,
-  FaPaperclip,
-} from "react-icons/fa";
+import { FaDev, FaEnvelope, FaGithub, FaPaperclip } from "react-icons/fa";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 import { Brand } from "../../index.ts";
 
@@ -28,19 +23,6 @@ export function Footer() {
               Navigation
             </h1>
             <ul>
-<<<<<<< Updated upstream
-              <li>
-                <a className={"hover:underline"} rel="tag" href={"#about"}>about</a>
-              </li>
-              <li>
-                <a className={"hover:underline"} rel="tag" href={"#projects"}>skills</a>
-              </li>
-              <li>
-                <a className={"hover:underline"} rel="tag" href={"#projects"}>projects</a>
-              </li>
-              <li>
-                <a className={"hover:underline"} rel="tag" href={"#projects"}>contact</a>
-=======
               <li className={"hover:underline"}>
                 <a rel="tag" href={"/#about"}>about</a>
               </li>
@@ -55,7 +37,6 @@ export function Footer() {
               </li>
               <li className={"hover:underline"}>
                 <a rel="tag" href={"/job"}>job offers</a>
->>>>>>> Stashed changes
               </li>
             </ul>
           </div>
