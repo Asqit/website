@@ -7,3 +7,4 @@ export * from "./spinner/Spinner.tsx";
 export * from "./accordion/Accordion.tsx";
 export * from "./HighlightedProject/HighlightedProject.tsx";
 export * from "./shapes/Shapes.tsx";
+export * from "./job-banner/JobBanner.tsx";

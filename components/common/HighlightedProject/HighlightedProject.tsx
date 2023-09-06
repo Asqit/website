@@ -71,7 +71,11 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
           <p>{description}</p>
         </main>
         <footer className={"my-4"}>
-          <div>
+          <div
+            className={`flex flex-wrap items-center ${
+              isEven ? "justify-start" : "justify-end"
+            }`}
+          >
             {tags.map((tag, i) => (
               <span
                 key={tag}

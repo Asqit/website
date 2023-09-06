@@ -28,6 +28,7 @@ export function Footer() {
               Navigation
             </h1>
             <ul>
+<<<<<<< Updated upstream
               <li>
                 <a className={"hover:underline"} rel="tag" href={"#about"}>about</a>
               </li>
@@ -39,6 +40,22 @@ export function Footer() {
               </li>
               <li>
                 <a className={"hover:underline"} rel="tag" href={"#projects"}>contact</a>
+=======
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"/#about"}>about</a>
+              </li>
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"/#projects"}>skills</a>
+              </li>
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"/#projects"}>projects</a>
+              </li>
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"/#projects"}>contact</a>
+              </li>
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"/job"}>job offers</a>
+>>>>>>> Stashed changes
               </li>
             </ul>
           </div>

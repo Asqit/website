@@ -3,6 +3,7 @@ import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 import { about } from "../../../data/about.ts";
 import { asset } from "$fresh/runtime.ts";
 import { FaPaperclip } from "react-icons/fa";
+import { JobBanner } from "../../index.ts";
 
 export function About() {
   return (
@@ -16,6 +17,7 @@ export function About() {
         <AuthorImage />
         <article>
           <SectionTitle value="About" />
+          <JobBanner isLookingForJob={true} />
           {about.map((article, index) => (
             <p
               key={index}

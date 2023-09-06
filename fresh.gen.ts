@@ -9,6 +9,7 @@ import * as $3 from "./routes/_layout.tsx";
 import * as $4 from "./routes/contact-failed.tsx";
 import * as $5 from "./routes/contact-successful.tsx";
 import * as $6 from "./routes/index.tsx";
+import * as $7 from "./routes/job.tsx";
 import * as $$0 from "./islands/Navbar.tsx";
 import * as $$1 from "./islands/SimpleProject.tsx";
 import * as $$2 from "./islands/ThemeSwitcher.tsx";
@@ -22,6 +23,7 @@ const manifest = {
     "./routes/contact-failed.tsx": $4,
     "./routes/contact-successful.tsx": $5,
     "./routes/index.tsx": $6,
+    "./routes/job.tsx": $7,
   },
   islands: {
     "./islands/Navbar.tsx": $$0,
