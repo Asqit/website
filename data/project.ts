@@ -13,12 +13,12 @@ const data: GitHubRepo[] = [
   },
   {
     id: 4,
-    name: "Asteroids",
-    language: "typescript",
-    html_url: "https://github.com/asqit/asteroids",
+    name: "Gnome-binary-wallpaper",
+    language: "java",
+    html_url: "https://github.com/asqit/gnome-binary-wallpaper",
     description:
-      'My turn on the classic atari game called "Asteroids". You play as a small spaceship equipped with laser guns and your objective is to destroy as many aliens and asteroids as you can.',
-    topics: ["atari", "typescript", "retro"],
+      "Simple program written in Java with it's main purpose being the creation of dark & light wallpapers for linux environment gnome.",
+    topics: ["java", "gnome", "linux"],
     fork: false,
   },
   {

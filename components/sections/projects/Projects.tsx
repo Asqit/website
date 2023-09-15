@@ -12,7 +12,7 @@ export function Projects() {
     >
       <article className={"container mx-auto max-w-6xl md:p-8"}>
         <div className={"text-center md:text-left"}>
-        <SectionTitle value="Projects" />
+          <SectionTitle value="Projects" />
         </div>
 
         <div className={"grid grid-cols-1 gap-8 px-4"}>
@@ -31,7 +31,7 @@ export function Projects() {
             imageSrc={asset("images/momentify.webp")}
             githubLink="https://github.com/asqit/momentify"
             releaseLink="https://momentify-server.onrender.com"
-            description="Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack"
+            description="Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack (Very slow loading time due to provider)"
             tags={["MERN", "Tailwind", "i18n", "RTK + Query"]}
           />
           <HighlightedProject
@@ -39,7 +39,7 @@ export function Projects() {
             title="BackRoads"
             githubLink="https://github.com/asqit/backroads"
             releaseLink="https://backroads-asqit.netlify.app"
-            description="BackRoads is website for fictional tour company. It was my learning project, while learning css."
+            description="BackRoads is a landing page for fictional tour company. It was one of my project for practicing html, css."
             tags={["HTML", "CSS"]}
             imageSrc="images/backroads.webp"
           />

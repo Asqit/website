@@ -63,20 +63,25 @@ export default function Job() {
         <article className={"my-4 p-4"}>
           <h3 className={"my-2 font-bold text-lg"}>Me personally</h3>
           <p className={"my-4"}>
-            I am introvert and I don't hide it. I like to work alone and I don't
-            seek for a help from others, even thought I am happy if others help
-            me. I suffer from social anxiety, but I actively fight against it. I
-            am kind to others and I am trying to be as helpful as I can. I like
-            to keep things clean and organized.
+            I am introvert and I don't hide it. I like to work in team, but
+            because of my stubbornest usually I don't seek help from others.
+            Besides being introvert I also suffer from social anxiety, but I
+            actively fight against it. I am trying to be polite, kind and
+            generous to others. (Se slušností nejdál dojdeš)
           </p>
 
-          <h4>My hobbies</h4>
-          <ul>
-            <li>- Programming</li>
-            <li>- Cyberpunk movies & books (Bladerunner, Neuromancer...)</li>
-            <li>- Computer games (Battlefield, Forza)</li>
-            <li>- Cars (BMW, Honda, Mazda, Alfa Romeo...)</li>
-          </ul>
+          <p>
+            In my free time I like to read books, most recently the sprawl saga
+            from William Gibson. When it comes to movies I am huge fan of
+            Quentin Tarantino, Martin Scorsese, Zdeněk Svěrák and George Lucas.
+          </p>
+          <p>
+            Just as any youngster these days I also play video games. I prefer a
+            good written story rather than multiplayer madness. I also like
+            watching history videos (Historia Civilis), further practice my
+            programming skills or taking night trips in my old
+            cassette-player-holding BMW.
+          </p>
         </article>
 
         {/* kontaktní informace */}
