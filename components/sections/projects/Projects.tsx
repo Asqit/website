@@ -30,7 +30,7 @@ export function Projects() {
             title="Momentify"
             imageSrc={asset("images/momentify.webp")}
             githubLink="https://github.com/asqit/momentify"
-            releaseLink="https://momentify-server.onrender.com"
+            releaseLink="https://github.com/asqit/momentify"
             description="Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack (Very slow loading time due to provider)"
             tags={["MERN", "Tailwind", "i18n", "RTK + Query"]}
           />
