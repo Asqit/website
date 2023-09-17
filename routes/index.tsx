@@ -1,13 +1,40 @@
 import { About, Contact, Hero, Projects, Skills } from "../components/index.ts";
-import { Handlers, Status } from "$fresh/server.ts";
+import { Handlers, PageProps, Status } from "$fresh/server.ts";
 import { load } from "https://deno.land/std@0.198.0/dotenv/mod.ts";
+import { filterGithubRepos } from "../utils/filterGithubRepos.ts";
+
+export interface GitHubRepository {
+  id: number;
+  name: string;
+  full_name: string;
+  private: boolean;
+  url: string;
+  description: string;
+  language: string;
+  html_url: string;
+  topics: string[];
+  visibility: boolean;
+  fork: boolean;
+}
 
 export const handler: Handlers = {
-  async GET(req, ctx) {
-    return await ctx.render();
+  async GET(_, ctx) {
+    const API_URL = "https://api.github.com/users/Asqit/repos";
+
+    const response = await fetch(API_URL, {
+      method: "GET",
+    });
+
+    const parsed = await response.json() as GitHubRepository[];
+
+    if (!parsed) {
+      return ctx.render(null);
+    }
+
+    return await ctx.render(filterGithubRepos(parsed));
   },
 
-  async POST(req, ctx) {
+  async POST(req, _) {
     const form = await req.formData();
     const email = form.get("email")?.toString();
     const message = form.get("message")?.toString();
@@ -51,13 +78,15 @@ export const handler: Handlers = {
     });
   },
 };
-export default function Home() {
+export default function Home(props: PageProps) {
+  const { data } = props;
+
   return (
     <>
       <Hero />
       <About />
       <Skills />
-      <Projects />
+      <Projects data={data} />
       <Contact />
     </>
   );

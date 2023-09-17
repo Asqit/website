@@ -1,7 +1,7 @@
-// deno-lint-ignore-file
 import { FaCode } from "react-icons/fa";
 import { Chip } from "../components/index.ts";
 import { JSX } from "preact/jsx-runtime";
+import { useCallback } from "preact/hooks";
 
 export interface GitHubRepo {
   name: string;
@@ -18,34 +18,28 @@ type SimpleProjectProps = GitHubRepo & {};
 export default function SimpleProject(props: SimpleProjectProps) {
   const { name, topics, html_url, description } = props;
 
-  const handleMouseMove = (e: JSX.TargetedMouseEvent<HTMLAnchorElement>) => {
-    const { currentTarget: target } = e;
-    const rect = target.getBoundingClientRect();
-    const x = e.clientX - rect.left + "px";
-    const y = e.clientY - rect.top + "px";
+  const handleMouseMove = useCallback(
+    (e: JSX.TargetedMouseEvent<HTMLAnchorElement>) => {
+      const { currentTarget: target } = e;
+      const rect = target.getBoundingClientRect();
+      const x = e.clientX - rect.left + "px";
+      const y = e.clientY - rect.top + "px";
 
-    e.currentTarget.style.setProperty("--mouse-x", x);
-    e.currentTarget.style.setProperty("--mouse-y", y);
-  };
+      e.currentTarget.style.setProperty("--mouse-x", x);
+      e.currentTarget.style.setProperty("--mouse-y", y);
+    },
+    [],
+  );
 
   return (
     <a
       href={html_url}
       target={"_blank"}
       onMouseMove={handleMouseMove}
-      className={`rounded-lg relative overflow-hidden hover:before:opacity-100 group project max-w-xs flex-shrink-0 snap-center md:max-w-fit md:flex-initial`}
+      className={`rounded-lg relative overflow-hidden hover:before:opacity-100 group project max-w-xs flex-shrink-0 snap-center md:max-w-[initial] md:flex-initial`}
       aria-roledescription={"button"}
     >
       <div className={"project-border group-hover:opacity-100"} />
-      <div
-        className={"absolute flex flex-col items-center justify-center -top-full w-full h-full z-30 left-0 bg-background/50 backdrop-blur-md group-hover:top-0 transition-all duration-300 dark:hidden"}
-      >
-        <h1 className="text-2xl font-bold">More Details</h1>
-        <p className="text-center text-sm text-slate-500">
-          After clicking upon me a new browser tab will open
-          <br /> with more details about the project.
-        </p>
-      </div>
       <div
         className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-background-10 dark:bg-background-10-dark"}
       >

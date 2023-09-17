@@ -2,9 +2,16 @@ import SimpleProject from "../../../islands/SimpleProject.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 import { projects } from "../../../data/project.ts";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
-import HighlightedProject from "../../common/HighlightedProject/HighlightedProject.tsx";
+import { GitHubRepository } from "../../../routes/index.tsx";
+import HighlightedProject from "../../common/highlighted-project/HighlightedProject.tsx";
 
-export function Projects() {
+interface ProjectsProps {
+  data: GitHubRepository[] | null;
+}
+
+export function Projects(props: ProjectsProps) {
+  const { data } = props;
+
   return (
     <section
       id="projects"
@@ -36,12 +43,12 @@ export function Projects() {
           />
           <HighlightedProject
             isEven={true}
-            title="BackRoads"
-            githubLink="https://github.com/asqit/backroads"
-            releaseLink="https://backroads-asqit.netlify.app"
-            description="BackRoads is a landing page for fictional tour company. It was one of my project for practicing html, css."
-            tags={["HTML", "CSS"]}
-            imageSrc="images/backroads.webp"
+            title="Website"
+            githubLink="https://github.com/asqit/website"
+            releaseLink="https://asqit.deno.dev"
+            description="An accessible, fast and responsive website about me. To achieve all these target it uses Fresh.js, which is SSG framework for deno runtime."
+            tags={["Fresh", "Tailwind", "Preact", "Deno"]}
+            imageSrc="images/website.jpg"
           />
         </div>
 
@@ -60,10 +67,23 @@ export function Projects() {
         <div
           className={"flex overflow-x-auto snap-x flex-nowrap md:grid md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4"}
         >
-          {projects.map((project) => {
-            return <SimpleProject {...project} key={project.id} />;
-          })}
+          {data
+            ? data.map((project) => (
+              <SimpleProject key={project.id} {...project} />
+            ))
+            : projects.map((project) => (
+              <SimpleProject key={project.id} {...project} />
+            ))}
         </div>
+        {data
+          ? (
+            <p
+              className={"font-semibold text-sm float-right my-4 text-slate-400"}
+            >
+              Automatically fetched from api.github.
+            </p>
+          )
+          : null}
       </article>
     </section>
   );

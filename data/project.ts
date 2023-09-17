@@ -3,12 +3,12 @@ import { GitHubRepo } from "../islands/SimpleProject.tsx";
 const data: GitHubRepo[] = [
   {
     id: 5,
-    name: "Website",
-    language: "typescript",
-    html_url: "https://github.com/asqit/website",
+    name: "Backroads",
+    language: "css",
+    html_url: "https://github.com/asqit/backroads",
     description:
-      "Current iteration of my portfolio website. Currently, it's fast and beautiful SSG website, that you are currently viewing.",
-    topics: ["typescript", "fresh", "deno", "tailwind css"],
+      "A landing page for fictional tour company. It is written in vanilla css, javascript as one of my earlier projects.",
+    topics: ["css", "html", "javascript"],
     fork: false,
   },
   {
@@ -28,7 +28,7 @@ const data: GitHubRepo[] = [
     html_url: "https://github.com/asqit/rtk-todo",
     description:
       "RTk-Todo is simple todo application written in typescript and todo state handled by Redux-Toolkit",
-    topics: ["todoapp", "react", "RTK"],
+    topics: ["todo-app", "react", "RTK"],
     fork: false,
   },
   {

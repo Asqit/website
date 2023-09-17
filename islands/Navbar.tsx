@@ -1,7 +1,6 @@
-import { useEffect, useState } from "preact/hooks";
-import { Brand, Hamburger } from "../components/index.ts";
+import { useCallback, useEffect, useState } from "preact/hooks";
+import { Brand, Hamburger, ThemeSwitcher } from "../components/index.ts";
 import { useDarkMode } from "../hooks/useDarkMode.ts";
-import ThemeSwitcher from "./ThemeSwitcher.tsx";
 
 export default function Navbar() {
   const sectionIds: string[] = ["about", "skills", "projects", "contact"];
@@ -9,32 +8,32 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isDarkMode, setDarkTheme, setLightTheme } = useDarkMode();
 
-  const toggleIsVisible = () => {
+  const toggleIsVisible = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
-  };
+  }, []);
 
-  const toggleDarkMode = () => {
+  const toggleDarkMode = useCallback(() => {
     if (isDarkMode) {
       setLightTheme();
       return;
     }
 
     setDarkTheme();
-  };
+  }, [isDarkMode]);
+
+  const handleScroll = useCallback((e: Event) => {
+    if (self.scrollY > 160) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }, [self.scrollY]);
 
   useEffect(() => {
-    const handler = (e: Event) => {
-      if (self.scrollY > 160) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    self.addEventListener("scroll", handler, false);
+    self.addEventListener("scroll", handleScroll, false);
 
     return () => {
-      self.removeEventListener("scroll", handler);
+      self.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -59,7 +58,9 @@ export default function Navbar() {
               key={link}
               className="font-mono capitalize hover:text-primary-0 dark:hover:text-primary-10"
             >
-              <span className={"text-primary-0 dark:text-primary-10"}>{index}.</span>
+              <span className={"text-primary-0 dark:text-primary-10"}>
+                {index}.
+              </span>
               <a href={`/#${link}`}>{link}</a>
             </li>
           ))}

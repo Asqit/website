@@ -5,6 +5,7 @@ export * from "./hamburger/Hamburger.tsx";
 export * from "./brand/Brand.tsx";
 export * from "./spinner/Spinner.tsx";
 export * from "./accordion/Accordion.tsx";
-export * from "./HighlightedProject/HighlightedProject.tsx";
+export * from "./highlighted-project/HighlightedProject.tsx";
 export * from "./shapes/Shapes.tsx";
 export * from "./job-banner/JobBanner.tsx";
+export * from "./theme-switcher/ThemeSwitcher.tsx";
