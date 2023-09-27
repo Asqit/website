@@ -21,7 +21,7 @@ export default function Navbar() {
     setDarkTheme();
   }, [isDarkMode]);
 
-  const handleScroll = useCallback((e: Event) => {
+  const handleScroll = useCallback((_: Event) => {
     if (self.scrollY > 160) {
       setIsScrolled(true);
     } else {
@@ -41,7 +41,7 @@ export default function Navbar() {
     <header
       className={`fixed w-screen top-0 left-0 z-[999] transition-all ${
         isScrolled ? "dark:bg-black/40 bg-white/40" : "bg-transparent"
-      } backdrop-blur-xl will-change-scroll`}
+      } backdrop-blur-xl will-change-scroll max-h-20`}
     >
       <nav
         className={`container mx-auto max-w-7xl flex items-center justify-between flex-wrap p-6`}
@@ -64,6 +64,12 @@ export default function Navbar() {
               <a href={`/#${link}`}>{link}</a>
             </li>
           ))}
+          <li className="font-mono capitalize hover:text-primary-0 dark:hover:text-primary-10">
+            <span className={"text-primary-0 dark:text-primary-10"}>
+              4.
+            </span>
+            <a href={`/job`}>Job Offers</a>
+          </li>
           <li>
             <ThemeSwitcher
               isDarkMode={isDarkMode}

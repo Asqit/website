@@ -72,7 +72,7 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
         </main>
         <footer className={"my-4"}>
           <div
-            className={`flex flex-wrap items-center ${
+            className={`flex flex-wrap items-center  ${
               isEven ? "justify-start" : "justify-end"
             }`}
           >

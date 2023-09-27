@@ -56,10 +56,14 @@ export default function SimpleProject(props: SimpleProjectProps) {
           <p className={"my-2"}>{description}</p>
         </article>
         {topics.length > 0 ? <hr className={"border-slate-700 my-2"} /> : null}
-        <div className={"flex flex-wrap gap-2 my-2"}>
+        <div className={"flex flex-wrap-nowrap gap-2 my-2"}>
           {/* Limit array length to 3 */}
           {Array.isArray(topics)
-            ? topics.slice(0, 3).map((tag) => (
+            ? topics.map((t) => {
+              if (t.length <= 10) return t;
+            }).filter((t) => t && t).slice(0, 3).map((
+              tag,
+            ) => (
               <Chip
                 key={tag}
                 children={<>{tag}</>}

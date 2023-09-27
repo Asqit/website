@@ -1,4 +1,10 @@
-import { FaDev, FaEnvelope, FaGithub, FaPaperclip } from "react-icons/fa";
+import {
+  FaDev,
+  FaEnvelope,
+  FaGithub,
+  FaPaperclip,
+  FaToolbox,
+} from "react-icons/fa";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 import { Brand } from "../../index.ts";
 
@@ -42,7 +48,7 @@ export function Footer() {
           </div>
           <div className="p-8">
             <h1 className="uppercase text-xl dark:text-slate-600 text-slate-300 mb-4">
-              Contact Me
+              Learn more
             </h1>
             <ul>
               <li>
@@ -76,6 +82,17 @@ export function Footer() {
                   aria-label={"CV"}
                 >
                   <FaPaperclip /> CV
+                </a>
+              </li>
+              <li>
+                <a
+                  target="blank"
+                  rel="author"
+                  className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
+                  href={asset("/docs/java.png")}
+                >
+                  <FaToolbox />
+                  Java Certificate
                 </a>
               </li>
               <li>

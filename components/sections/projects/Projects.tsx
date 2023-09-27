@@ -78,9 +78,9 @@ export function Projects(props: ProjectsProps) {
         {data
           ? (
             <p
-              className={"font-semibold text-sm float-right my-4 text-slate-400"}
+              className={"font-semibold text-sm float-right my-4 text-slate-600 dark:text-slate-400"}
             >
-              Automatically fetched from api.github.
+              Random projects fetched from <code>api.github.com</code>
             </p>
           )
           : null}
