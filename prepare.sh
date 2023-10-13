@@ -56,7 +56,6 @@ function fetch_deno {
     fi
 }
 
-
 function main {
   if ! [ -x "$(command -v deno)" ]; then
     echo "Installing deno runtime"

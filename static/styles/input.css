@@ -42,7 +42,7 @@ body {
 
 	--project-border: rgba(255, 255, 255, 0.74);
 	--project-sphere: rgba(255, 255, 255, 0.103);
-	
+	--project-color: rgba(255, 255, 255, 0.163);
 }
 
 
@@ -66,10 +66,10 @@ body {
 
 .project::before {
 	z-index: 30;
-	background:radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), var(--project-sphere) 0%, rgba(255,255,255,0) 59%);
+	background:radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), var(--project-sphere) 0%, var(--project-color) 59%);
 }
 
 .project-border {
 	z-index: 10;
-	background:radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), var(--project-border) 0%, rgba(255,255,255,0) 59%);
+	background:radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), var(--project-border) 0%, var(--project-color) 59%);
 }

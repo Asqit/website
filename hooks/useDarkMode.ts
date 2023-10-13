@@ -5,11 +5,13 @@ export function useDarkMode() {
 
   const setLightTheme = () => {
     setIsDarkMode(false);
+    document.documentElement.style.setProperty("--project-color", "rgba(2, 2, 2, 0.128)");
     document.documentElement.classList.remove("dark");
   };
 
   const setDarkTheme = () => {
     setIsDarkMode(true);
+    document.documentElement.style.setProperty("--project-color", "rgba(255,255,255,0)");
     document.documentElement.classList.add("dark");
   };
 
