@@ -1,17 +1,41 @@
 import { useEffect, useState } from "preact/hooks";
 
+function updateSimpleProjectColorScheme(isDark: boolean): void {
+  if (isDark) {
+    document.documentElement.style.setProperty(
+      "--project-color",
+      "rgba(255,255,255,0)"
+    );
+    return;
+  }
+
+  document.querySelectorAll(".project").forEach((entity) => {
+    entity.classList.remove("project");
+  });
+
+  document.documentElement.style.setProperty(
+    "--project-color",
+    "rgba(225, 225, 225, 0.5)"
+  );
+
+  document.documentElement.style.setProperty(
+    "--project-border",
+    "rgb(150, 150, 150)"
+  );
+}
+
 export function useDarkMode() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   const setLightTheme = () => {
     setIsDarkMode(false);
-    document.documentElement.style.setProperty("--project-color", "rgba(2, 2, 2, 0.128)");
+    updateSimpleProjectColorScheme(false);
     document.documentElement.classList.remove("dark");
   };
 
   const setDarkTheme = () => {
     setIsDarkMode(true);
-    document.documentElement.style.setProperty("--project-color", "rgba(255,255,255,0)");
+    updateSimpleProjectColorScheme(true);
     document.documentElement.classList.add("dark");
   };
 

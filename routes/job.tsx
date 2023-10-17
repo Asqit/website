@@ -59,10 +59,11 @@ export default function Job() {
                   programming language just out of my curiosity.
                 </p>
                 <ul>
-                  <li>- JavaScript (advanced)</li>
-                  <li>- TypeScript (advanced)</li>
-                  <li>- Bash (mid)</li>
-                  <li>- Java (beginner)</li>
+                  <li>- JavaScript (medior)</li>
+                  <li>- TypeScript (medior)</li>
+                  <li>- Bash (junior)</li>
+                  <li>- Java (junior)</li>
+                  <li>- Python (junior)</li>
                 </ul>
               </article>
 
@@ -77,8 +78,7 @@ export default function Job() {
                   to so. You can use my contact form, that uses 3rd party
                   service called <code>ntfy.sh</code>{" "}
                   or you can write me an actual email. We can arrange personal
-                  meeting after either in Prague or České Budějovice after
-                  previous agreement.
+                  meeting Prague or České Budějovice after previous agreement.
                 </p>
 
                 <ul className={"flex flex-wrap gap-2"}>
@@ -160,6 +160,8 @@ export default function Job() {
                 </p>
               </article>
             </div>
+
+            {/* Image by the side */}
             <figure className={"relative"}>
               <img
                 className={"rounded-xl object-cover"}

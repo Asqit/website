@@ -11,7 +11,7 @@ export function JobBanner(props: JobBannerProps) {
     >
       <div
         className={`w-4 h-4 rounded-full ${
-          isLookingForJob ? "bg-emerald-400" : "bg-red-500"
+          isLookingForJob ? "bg-emerald-400 animate-pulse" : "bg-red-500"
         } inline-block`}
       />
       <span>

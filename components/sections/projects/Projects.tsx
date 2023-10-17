@@ -59,7 +59,7 @@ export function Projects(props: ProjectsProps) {
             Other Projects
           </h2>
           <h3
-            className={"text-slate-600 dark:text-slate-400 text-center text-lg hidden dark:block"}
+            className={"text-slate-600 dark:text-slate-400 text-center text-lg"}
           >
             (with shiny borders)
           </h3>
