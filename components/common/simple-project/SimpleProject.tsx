@@ -1,7 +1,5 @@
 import { FaCode } from "react-icons/fa";
-import { Chip } from "../components/index.ts";
-import { JSX } from "preact/jsx-runtime";
-import { useCallback } from "preact/hooks";
+import { Chip } from "../../index.ts";
 
 export interface GitHubRepo {
   name: string;
@@ -18,28 +16,14 @@ type SimpleProjectProps = GitHubRepo & {};
 export default function SimpleProject(props: SimpleProjectProps) {
   const { name, topics, html_url, description } = props;
 
-  const handleMouseMove = useCallback(
-    (e: JSX.TargetedMouseEvent<HTMLAnchorElement>) => {
-      const { currentTarget: target } = e;
-      const rect = target.getBoundingClientRect();
-      const x = e.clientX - rect.left + "px";
-      const y = e.clientY - rect.top + "px";
-
-      e.currentTarget.style.setProperty("--mouse-x", x);
-      e.currentTarget.style.setProperty("--mouse-y", y);
-    },
-    [],
-  );
-
   return (
     <a
       href={html_url}
       target={"_blank"}
-      onMouseMove={handleMouseMove}
       className={`rounded-lg relative overflow-hidden hover:before:opacity-100 group project max-w-xs flex-shrink-0 snap-center md:max-w-[initial] md:flex-initial`}
       aria-roledescription={"button"}
     >
-      <div className={"project-border group-hover:opacity-100"} />
+      <div className={"project-border"} />
       <div
         className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-background-5 dark:bg-background-10-dark"}
       >

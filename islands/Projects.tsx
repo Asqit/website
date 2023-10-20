@@ -1,16 +1,33 @@
-import SimpleProject from "../../../islands/SimpleProject.tsx";
-import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
-import { projects } from "../../../data/project.ts";
+import SimpleProject from "../components/common/simple-project/SimpleProject.tsx";
+import { SectionTitle } from "../components/common/section-title/SectionTitle.tsx";
+import { projects } from "../data/project.ts";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
-import { GitHubRepository } from "../../../routes/index.tsx";
-import HighlightedProject from "../../common/highlighted-project/HighlightedProject.tsx";
+import { GitHubRepository } from "../routes/index.tsx";
+import HighlightedProject from "../components/common/highlighted-project/HighlightedProject.tsx";
+import { useCallback } from "preact/hooks";
+import { JSX } from "preact/jsx-runtime";
 
 interface ProjectsProps {
   data: GitHubRepository[] | null;
 }
 
-export function Projects(props: ProjectsProps) {
+export default function Projects(props: ProjectsProps) {
   const { data } = props;
+
+  const handleMouseMove = useCallback(
+    (e: JSX.TargetedMouseEvent<HTMLDivElement>) => {
+      for (const project of document.querySelectorAll(".project")) {
+        const rect = project.getBoundingClientRect();
+        const x = e.clientX - rect.left + "px";
+        const y = e.clientY - rect.top + "px";
+        const pr = project as HTMLAnchorElement;
+
+        pr.style.setProperty("--mouse-x", x);
+        pr.style.setProperty("--mouse-y", y);
+      }
+    },
+    [],
+  );
 
   return (
     <section
@@ -28,7 +45,7 @@ export function Projects(props: ProjectsProps) {
             title="Deno-Chatter"
             githubLink="https://github.com/asqit/deno-chatter"
             releaseLink="https://deno-chatter.deno.dev/"
-            description="Deno-Chatter is anonymous chat application written with fresh.js, deno, Typescript and WebSocket."
+            description="Aanonymous chat application written with fresh.js, deno, Typescript and WebSocket."
             tags={["Deno", "WebSocket", "TypeScript", "Fresh", "Tailwind"]}
             imageSrc="images/deno-chatter.webp"
           />
@@ -38,7 +55,7 @@ export function Projects(props: ProjectsProps) {
             imageSrc={asset("images/momentify.webp")}
             githubLink="https://github.com/asqit/momentify"
             releaseLink="https://github.com/asqit/momentify"
-            description="Momentify is a platform for sharing your moments with others. It's my learning purpose project written in MERN Stack (Very slow loading time due to provider)"
+            description="Momentify is a small social network, where people can share their moments with others."
             tags={["MERN", "Tailwind", "i18n", "RTK + Query"]}
           />
           <HighlightedProject
@@ -46,7 +63,7 @@ export function Projects(props: ProjectsProps) {
             title="Website"
             githubLink="https://github.com/asqit/website"
             releaseLink="https://asqit.deno.dev"
-            description="An accessible, fast and responsive website about me. To achieve all these target it uses Fresh.js, which is SSG framework for deno runtime."
+            description="You are literally looking at it right now! It is this website and it is responsive, accessible and fast thanks to Fresh.js"
             tags={["Fresh", "Tailwind", "Preact", "Deno"]}
             imageSrc="images/website.jpg"
           />
@@ -65,6 +82,8 @@ export function Projects(props: ProjectsProps) {
           </h3>
         </div>
         <div
+          id="simple-projects"
+          onMouseMove={handleMouseMove}
           className={"flex overflow-x-auto snap-x flex-nowrap md:grid md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4"}
         >
           {data
@@ -75,15 +94,6 @@ export function Projects(props: ProjectsProps) {
               <SimpleProject key={project.id} {...project} />
             ))}
         </div>
-        {data
-          ? (
-            <p
-              className={"font-semibold text-sm float-right my-4 text-slate-600 dark:text-slate-400"}
-            >
-              Random projects fetched from <code>api.github.com</code>
-            </p>
-          )
-          : null}
       </article>
     </section>
   );

@@ -44,7 +44,9 @@ export default function Navbar() {
       } backdrop-blur-xl will-change-scroll max-h-20`}
     >
       <nav
-        className={`container mx-auto max-w-7xl flex items-center justify-between flex-wrap p-6`}
+        className={`container mx-auto will-change-scroll transition-all ${
+          isScrolled ? "max-w-5xl" : "max-w-7xl"
+        } flex items-center justify-between flex-wrap p-6`}
       >
         <Brand className="dark:text-white text-black" />
         <div className="md:hidden relative z-50">

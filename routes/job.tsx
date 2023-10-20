@@ -22,7 +22,7 @@ export default function Job() {
             </h2>
           </header>
 
-          <div className={"grid grid-cols-2 gap-4 items-center"}>
+          <div className={"xl:grid grid-cols-2 gap-4 items-center"}>
             <div>
               {/* úvod */}
               <article className={"my-4 p-4"}>
@@ -162,7 +162,7 @@ export default function Job() {
             </div>
 
             {/* Image by the side */}
-            <figure className={"relative"}>
+            <figure className={"relative hidden xl:block"}>
               <img
                 className={"rounded-xl object-cover"}
                 src={asset("/images/job_offer.webp")}

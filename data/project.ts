@@ -1,4 +1,4 @@
-import { GitHubRepo } from "../islands/SimpleProject.tsx";
+import { GitHubRepo } from "../components/common/simple-project/SimpleProject.tsx";
 
 const data: GitHubRepo[] = [
   {

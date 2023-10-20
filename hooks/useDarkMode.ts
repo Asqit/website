@@ -9,10 +9,6 @@ function updateSimpleProjectColorScheme(isDark: boolean): void {
     return;
   }
 
-  document.querySelectorAll(".project").forEach((entity) => {
-    entity.classList.remove("project");
-  });
-
   document.documentElement.style.setProperty(
     "--project-color",
     "rgba(225, 225, 225, 0.5)"

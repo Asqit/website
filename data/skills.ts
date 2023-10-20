@@ -22,6 +22,7 @@ import {
   SiSass,
   SiTailwindcss,
   SiTypescript,
+  SiPython,
   SiVim,
   SiVisualstudiocode,
   SiYarn,
@@ -46,11 +47,16 @@ const languages: Skill[] = [
   },
   {
     id: 2,
+    value: "Python",
+    Icon: SiPython,
+  },
+  {
+    id: 3,
     value: "BASH",
     Icon: SiGnubash,
   },
   {
-    id: 3,
+    id: 4,
     value: "Java",
     Icon: SiJava,
   },
@@ -143,8 +149,8 @@ const backEnd: Skill[] = [
   {
     id: 7,
     value: "Deno",
-    Icon: SiDeno
-  }
+    Icon: SiDeno,
+  },
 ];
 
 export const tools: Skill[] = [

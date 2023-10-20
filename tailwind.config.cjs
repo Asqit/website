@@ -20,6 +20,7 @@ module.exports = {
         "background-10": "#ffffff",
       },
       keyframes: {
+        // Fade-In-Up
         fadeInUp: {
           from: {
             opacity: 0,
@@ -31,6 +32,43 @@ module.exports = {
             transform: "translate3d(0, 0, 0)",
           },
         },
+        // Fade-In-Down
+        fadeInDown: {
+          from: {
+            opacity: 0,
+            transform: "translate3d(0, -100%, 0)",
+          },
+
+          to: {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+        // Fade-In-Right
+        fadeInRight: {
+          from: {
+            opacity: 0,
+            transform: "translate3d(100%, 0, 0)",
+          },
+
+          to: {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+        // Fade-In-Left
+        fadeInLeft: {
+          from: {
+            opacity: 0,
+            transform: "translate3d(-100%, 0, 0)",
+          },
+
+          to: {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+        // Float
         float: {
           "0%, 100%": {
             transform: "translate3d(0, 0, 0)",
@@ -60,6 +98,9 @@ module.exports = {
       },
       animation: {
         "fade-in-up": "fadeInUp 1s cubic-bezier(0, 0, 0.2, 1)",
+        "fade-in-down": "fadeInDown 1s cubic-bezier(0, 0, 0.2, 1)",
+        "fade-in-left": "fadeInLeft 1s cubic-bezier(0, 0, 0.2, 1)",
+        "fade-in-right": "fadeInRight 1s cubic-bezier(0, 0, 0.2, 1)",
         "float": "float 10s infinite linear",
       },
     },

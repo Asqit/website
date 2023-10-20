@@ -32,8 +32,6 @@ body {
 	@apply bg-background-5 dark:bg-background-5-dark text-black dark:text-white
 }
 
-
-
 :root {
 	--mouse-x: 100px;
 	--mouse-y: 100px;
@@ -50,6 +48,11 @@ body {
 	background: radial-gradient(600px at var(--sphere-x) var(--sphere-y), rgba(37, 208, 188, 0.158), transparent 80%);
 }
 
+
+
+#simple-projects:hover > .project > .project-border {
+	opacity: 1;
+}
 
 .project::before,
 .project-border {

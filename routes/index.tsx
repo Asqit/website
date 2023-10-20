@@ -1,7 +1,8 @@
-import { About, Contact, Hero, Projects, Skills } from "../components/index.ts";
+import { About, Contact, Hero, Skills } from "../components/index.ts";
 import { Handlers, PageProps, Status } from "$fresh/server.ts";
 import { load } from "https://deno.land/std@0.198.0/dotenv/mod.ts";
 import { filterGithubRepos } from "../utils/filterGithubRepos.ts";
+import Projects from "../islands/Projects.tsx";
 
 export interface GitHubRepository {
   id: number;
@@ -24,6 +25,10 @@ export const handler: Handlers = {
     const response = await fetch(API_URL, {
       method: "GET",
     });
+
+    if (response.status !== 200) {
+      return ctx.render(null);
+    }
 
     const parsed = await response.json() as GitHubRepository[];
 

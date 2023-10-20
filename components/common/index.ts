@@ -9,3 +9,4 @@ export * from "./highlighted-project/HighlightedProject.tsx";
 export * from "./shapes/Shapes.tsx";
 export * from "./job-banner/JobBanner.tsx";
 export * from "./theme-switcher/ThemeSwitcher.tsx";
+export * from "./simple-project/SimpleProject.tsx";
