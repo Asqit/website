@@ -85,12 +85,12 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
               </span>
             ))}
           </div>
-          <div className={"inline-flex gap-x-2 my-4 text-xl"}>
+          <div className={"inline-flex gap-x-2 my-4 text-2xl"}>
             <a
               href={releaseLink}
               referrerpolicy={"no-referrer"}
               target={"_blank"}
-              className={"order-last"}
+              className={"order-last hover:-rotate-45 transition-transform"}
               title={`${title}'s website`}
             >
               <FaArrowCircleRight />

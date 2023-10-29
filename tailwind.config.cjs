@@ -20,6 +20,11 @@ module.exports = {
         "background-10": "#ffffff",
       },
       keyframes: {
+        blink: {
+          to: {
+            visibility: "hidden",
+          },
+        },
         // Fade-In-Up
         fadeInUp: {
           from: {
@@ -102,6 +107,7 @@ module.exports = {
         "fade-in-left": "fadeInLeft 1s cubic-bezier(0, 0, 0.2, 1)",
         "fade-in-right": "fadeInRight 1s cubic-bezier(0, 0, 0.2, 1)",
         "float": "float 10s infinite linear",
+        "blink": "blink 1s steps(5, start) infinite",
       },
     },
   },

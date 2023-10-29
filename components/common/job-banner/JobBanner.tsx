@@ -17,7 +17,7 @@ export function JobBanner(props: JobBannerProps) {
       <span>
         {isLookingForJob
           ? "Currently looking for work"
-          : "Not looking for work"}
+          : "Currently busy working"}
       </span>
     </div>
   );
