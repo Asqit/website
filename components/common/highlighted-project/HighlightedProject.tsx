@@ -44,7 +44,6 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
           <img
             loading="lazy"
             src={asset(imageSrc)}
-            /* Fallback image: srcset={asset(imageSrc)} */
             alt={title}
             width={600}
             height={337}
@@ -72,13 +71,13 @@ export default function HighlightedProject(props: HighlightedProjectProps) {
         </main>
         <footer className={"my-4"}>
           <div
-            className={`flex flex-wrap items-center  ${
-              isEven ? "justify-start" : "justify-end"
+            className={`flex flex-wrap items-center justify-center  ${
+              isEven ? "md:justify-start" : "md:justify-end"
             }`}
           >
             {tags.map((tag, i) => (
               <span
-                key={tag}
+                key={tag + i}
                 className={"font-mono text-slate-600 dark:text-slate-300 mr-2 font-bold"}
               >
                 {tag}

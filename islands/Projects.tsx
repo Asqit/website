@@ -45,7 +45,7 @@ export default function Projects(props: ProjectsProps) {
             title="Deno-Chatter"
             githubLink="https://github.com/asqit/deno-chatter"
             releaseLink="https://deno-chatter.deno.dev/"
-            description="Aanonymous chat application written with fresh.js, deno, Typescript and WebSocket."
+            description="Anonymous chat application written with WebSocket protocol."
             tags={["Deno", "WebSocket", "TypeScript", "Fresh", "Tailwind"]}
             imageSrc="images/deno-chatter.webp"
           />

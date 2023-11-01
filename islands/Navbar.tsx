@@ -51,7 +51,7 @@ export default function Navbar() {
     >
       <nav
         className={`container mx-auto will-change-scroll transition-all ${
-          isScrolled ? "max-w-5xl" : "max-w-7xl"
+          isScrolled ? "max-w-6xl" : "max-w-7xl"
         } flex items-center justify-between flex-wrap p-6`}
       >
         <Brand className="dark:text-white text-black" />
