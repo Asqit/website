@@ -1,6 +1,8 @@
+import { installGlobals } from "https://deno.land/x/virtualstorage@0.1.0/mod.ts";
 import { useState, useEffect } from "preact/hooks";
 
-export function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {
+export function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {¨
+  installGlobals();
   const [value, setValue] = useState<T>(() => {
     const jsonValue = self.localStorage.getItem(key);
 
