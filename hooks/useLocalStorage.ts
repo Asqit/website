@@ -1,8 +1,12 @@
-import { installGlobals } from "https://deno.land/x/virtualstorage@0.1.0/mod.ts";
 import { useState, useEffect } from "preact/hooks";
 
+/**
+ * ## DO_NOT_USE_FOR_PRODUCTION!!!
+ * 
+ * Deno deploy does not support `localStorage` API and so 
+ * this will cause internal server error
+ */
 export function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {¨
-  installGlobals();
   const [value, setValue] = useState<T>(() => {
     const jsonValue = self.localStorage.getItem(key);
 

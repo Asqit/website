@@ -1,5 +1,4 @@
-import { useEffect } from "preact/hooks";
-import { useLocalStorage } from "./useLocalStorage.ts";
+import { useEffect, useState } from "preact/hooks";
 import { useMediaQuery } from "./useMediaQuery.ts";
 import { updateSimpleProjectColorScheme } from "../utils/updateSimpleProjectColorScheme.ts";
 
@@ -16,8 +15,7 @@ interface UseDarkModeOutput {
  */
 export function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
   const isDarkOS = useMediaQuery("(prefers-color-scheme: dark)");
-  const [isDarkMode, setIsDarkMode] = useLocalStorage<boolean>(
-    "asqit.deno.dev/dark-mode",
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(
     defaultValue ?? isDarkOS ?? false
   );
 
