@@ -20,7 +20,7 @@ export interface GitHubRepository {
 
 export const handler: Handlers = {
   async GET(_, ctx) {
-    const API_URL = "https://apis.github.com/users/Asqit/repos";
+    const API_URL = "https://api.github.com/users/Asqit/repos";
 
     const response = await fetch(API_URL, {
       method: "GET",

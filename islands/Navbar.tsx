@@ -6,7 +6,7 @@ export default function Navbar() {
   const sectionIds: string[] = ["about", "skills", "projects", "contact"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { isDarkMode, setDarkTheme, setLightTheme } = useDarkMode();
+  const { isDarkMode, enable, disable } = useDarkMode();
 
   const toggleIsVisible = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -14,11 +14,11 @@ export default function Navbar() {
 
   const toggleDarkMode = useCallback(() => {
     if (isDarkMode) {
-      setLightTheme();
+      disable();
       return;
     }
 
-    setDarkTheme();
+    enable();
   }, [isDarkMode]);
 
   const handleScroll = useCallback((_: Event) => {
@@ -32,10 +32,16 @@ export default function Navbar() {
   useEffect(() => {
     self.addEventListener("scroll", handleScroll, false);
 
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
     return () => {
       self.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isDarkMode]);
 
   return (
     <header
@@ -98,7 +104,7 @@ export default function Navbar() {
             <li>
               <button
                 className={"link"}
-                onClick={isDarkMode ? setLightTheme : setDarkTheme}
+                onClick={isDarkMode ? enable : disable}
               >
                 {isDarkMode ? "Light Theme" : "Dark Theme"}
               </button>

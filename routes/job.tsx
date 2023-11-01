@@ -61,9 +61,10 @@ export default function Job() {
                 <ul>
                   <li>- JavaScript (medior)</li>
                   <li>- TypeScript (medior)</li>
+                  <li>- Python (junior)</li>
                   <li>- Bash (junior)</li>
                   <li>- Java (junior)</li>
-                  <li>- Python (junior)</li>
+                  <li>- Rust (less than junior, but willing to learn)</li>
                 </ul>
               </article>
 

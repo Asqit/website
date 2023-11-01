@@ -1,56 +1,44 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect } from "preact/hooks";
+import { useLocalStorage } from "./useLocalStorage.ts";
+import { useMediaQuery } from "./useMediaQuery.ts";
+import { updateSimpleProjectColorScheme } from "../utils/updateSimpleProjectColorScheme.ts";
 
-function updateSimpleProjectColorScheme(isDark: boolean): void {
-  if (isDark) {
-    document.documentElement.style.setProperty(
-      "--project-color",
-      "rgba(255,255,255,0)"
-    );
-    return;
-  }
-
-  document.documentElement.style.setProperty(
-    "--project-color",
-    "rgba(225, 225, 225, 0.5)"
-  );
-
-  document.documentElement.style.setProperty(
-    "--project-border",
-    "rgb(150, 150, 150)"
-  );
+interface UseDarkModeOutput {
+  isDarkMode: boolean;
+  toggle: () => void;
+  enable: () => void;
+  disable: () => void;
 }
 
-export function useDarkMode() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-
-  const setLightTheme = () => {
-    setIsDarkMode(false);
-    updateSimpleProjectColorScheme(false);
-    document.documentElement.classList.remove("dark");
-  };
-
-  const setDarkTheme = () => {
-    setIsDarkMode(true);
-    updateSimpleProjectColorScheme(true);
-    document.documentElement.classList.add("dark");
-  };
-
-  const setOsTheme = () => {
-    localStorage.removeItem("theme");
-    document.documentElement.classList.remove("dark");
-  };
+/**
+ * A hook that will match your OS preferred theme and change it if required by the user
+ * @param defaultValue if available, will be used as initial value for the theme. (`true` = dark, `false` = light)
+ */
+export function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
+  const isDarkOS = useMediaQuery("(prefers-color-scheme: dark)");
+  const [isDarkMode, setIsDarkMode] = useLocalStorage<boolean>(
+    "asqit.deno.dev/dark-mode",
+    defaultValue ?? isDarkOS ?? false
+  );
 
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      setDarkTheme();
-    } else {
-      setLightTheme();
-    }
-  }, []);
+    setIsDarkMode(isDarkOS);
+  }, [isDarkOS]);
 
-  return { isDarkMode, setDarkTheme, setLightTheme, setOsTheme };
+  return {
+    isDarkMode,
+    toggle: () =>
+      setIsDarkMode((prev: boolean) => {
+        updateSimpleProjectColorScheme(!prev);
+        return !prev;
+      }),
+    enable: () => {
+      setIsDarkMode(true);
+      updateSimpleProjectColorScheme(true);
+    },
+    disable: () => {
+      setIsDarkMode(false);
+      updateSimpleProjectColorScheme(false);
+    },
+  };
 }
