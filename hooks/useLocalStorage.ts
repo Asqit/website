@@ -2,13 +2,13 @@ import { useState, useEffect } from "preact/hooks";
 
 /**
  * ## DO_NOT_USE_FOR_PRODUCTION!!!
- * 
- * Deno deploy does not support `localStorage` API and so 
+ *
+ * Deno deploy does not support `localStorage` API and so
  * this will cause internal server error
  */
-export function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {¨
+export function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {
   const [value, setValue] = useState<T>(() => {
-    const jsonValue = self.localStorage.getItem(key);
+    const jsonValue = window.localStorage.getItem(key);
 
     if (jsonValue == null) {
       if (typeof initialValue === "function") {
