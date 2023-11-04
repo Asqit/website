@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "start": "tailwindcss -i ./static/styles/input.css -o ./static/styles/tailwind.css --minify --watch & deno run -A --watch=static/,routes/ dev.ts",
+    "start": "tailwindcss -i ./static/styles/input.css -o ./static/styles/tailwind.css --minify --watch & deno run --unstable -A --watch=static/,routes/ dev.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts"

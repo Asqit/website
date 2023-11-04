@@ -73,7 +73,7 @@ export default function Job() {
                 <h3 className={"my-2 font-bold text-lg"}>
                   Contact Information
                 </h3>
-                <JobBanner isLookingForJob={false} />
+                <JobBanner isLookingForJob={true} />
                 <p className={"my-4"}>
                   So you have decided to contact me? Great! There are few ways
                   to so. You can use my contact form, that uses 3rd party

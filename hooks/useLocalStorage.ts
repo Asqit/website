@@ -1,28 +1,33 @@
 import { useState, useEffect } from "preact/hooks";
+import { LocalStorage } from "../utils/localStorage.ts";
 
-/**
- * ## DO_NOT_USE_FOR_PRODUCTION!!!
- *
- * Deno deploy does not support `localStorage` API and so
- * this will cause internal server error
- */
 export function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {
-  const [value, setValue] = useState<T>(() => {
-    const jsonValue = window.localStorage.getItem(key);
-
-    if (jsonValue == null) {
-      if (typeof initialValue === "function") {
-        return (initialValue as () => T)();
-      } else {
-        return initialValue;
-      }
-    } else {
-      return JSON.parse(jsonValue);
-    }
-  });
+  const [value, setValue] = useState<T>();
 
   useEffect(() => {
-    self.localStorage.setItem(key, JSON.stringify(value));
+    (async function loadInitialValue() {
+      try {
+        const jsonValue = await LocalStorage.getItem(key);
+
+        if (jsonValue == null) {
+          if (typeof initialValue === "function") {
+            setValue((initialValue as () => T)());
+          } else {
+            setValue(initialValue);
+          }
+        } else {
+          setValue(JSON.parse(jsonValue));
+        }
+      } catch (error) {
+        console.error("Failed to read data from the KV:", error);
+      }
+    })();
+  }, [key, initialValue]);
+
+  useEffect(() => {
+    (async function updateStorage() {
+      await LocalStorage.setItem(key, JSON.stringify(value));
+    })();
   }, [value, key]);
 
   return [value, setValue] as [T, typeof setValue];

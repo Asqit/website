@@ -17,7 +17,7 @@ export function About() {
         <AuthorImage />
         <article>
           <SectionTitle value="About Me" />
-          <JobBanner isLookingForJob={false} />
+          <JobBanner isLookingForJob={true} />
           {about.map((article, index) => (
             <p
               key={index}
