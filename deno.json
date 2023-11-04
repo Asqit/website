@@ -3,7 +3,7 @@
     "start": "tailwindcss -i ./static/styles/input.css -o ./static/styles/tailwind.css --minify --watch & deno run -A --watch=static/,routes/ --unstable dev.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
     "build": "deno run -A --unstable dev.ts build",
-    "preview": "deno run -A main.ts"
+    "preview": "deno run -A --unstable main.ts"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
   "imports": {
