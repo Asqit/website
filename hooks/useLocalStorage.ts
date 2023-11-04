@@ -1,5 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
-import { LocalStorage } from "../utils/localStorage.ts";
+import { LocalStorage } from "../utils/LocalStorage.ts";
 
 export function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {
   const [value, setValue] = useState<T>();
