@@ -14,6 +14,6 @@ export function updateSimpleProjectColorScheme(isDark: boolean): void {
 
   document.documentElement.style.setProperty(
     "--project-border",
-    "rgb(150, 150, 150)"
+    "rgb(120, 120, 120)"
   );
 }

@@ -89,7 +89,7 @@ export function Footer() {
                   target="blank"
                   rel="author"
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
-                  href={asset("/docs/java.png")}
+                  href={asset("docs/java.png")}
                 >
                   <FaToolbox />
                   Java Certificate

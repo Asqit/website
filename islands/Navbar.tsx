@@ -1,25 +1,20 @@
 import { useCallback, useEffect, useState } from "preact/hooks";
-import { Brand, Hamburger, ThemeSwitcher } from "../components/index.ts";
-import { useDarkMode } from "../hooks/useDarkMode.ts";
+import { Brand, Hamburger } from "../components/index.ts";
+import HeaderModeButton from "./HeaderModeButton.tsx";
+import { Signal } from "@preact/signals";
 
-export default function Navbar() {
+interface NavbarProps {
+  darkModeSignal: Signal<"light" | "dark">;
+}
+
+export default function Navbar({ darkModeSignal }: NavbarProps) {
   const sectionIds: string[] = ["about", "skills", "projects", "contact"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { isDarkMode, enable, disable } = useDarkMode();
 
   const toggleIsVisible = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
   }, []);
-
-  const toggleDarkMode = useCallback(() => {
-    if (isDarkMode) {
-      disable();
-      return;
-    }
-
-    enable();
-  }, [isDarkMode]);
 
   const handleScroll = useCallback((_: Event) => {
     if (self.scrollY > 160) {
@@ -31,17 +26,10 @@ export default function Navbar() {
 
   useEffect(() => {
     self.addEventListener("scroll", handleScroll, false);
-
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
     return () => {
       self.removeEventListener("scroll", handleScroll);
     };
-  }, [isDarkMode]);
+  }, []);
 
   return (
     <header
@@ -79,9 +67,9 @@ export default function Navbar() {
             <a href={`/job`}>Job Offers</a>
           </li>
           <li>
-            <ThemeSwitcher
-              isDarkMode={isDarkMode}
-              toggleMode={toggleDarkMode}
+            <HeaderModeButton
+              prev="light"
+              darkModeSignal={darkModeSignal}
             />
           </li>
         </ul>
@@ -101,13 +89,12 @@ export default function Navbar() {
                 <a href={`#${l}`}>{l}</a>
               </li>
             ))}
-            <li>
-              <button
-                className={"link"}
-                onClick={isDarkMode ? enable : disable}
-              >
-                {isDarkMode ? "Light Theme" : "Dark Theme"}
-              </button>
+            <li className={"link"}>
+              <HeaderModeButton
+                onClick={toggleIsVisible}
+                prev="light"
+                darkModeSignal={darkModeSignal}
+              />
             </li>
           </ul>
         </div>

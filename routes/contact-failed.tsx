@@ -1,5 +1,5 @@
 import { FaEnvelope } from "react-icons/fa";
-import { Button, Footer, Navbar } from "../components/index.ts";
+import { Button } from "../components/index.ts";
 
 export default function ContactSuccessful() {
   return (

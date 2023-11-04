@@ -11,8 +11,8 @@ export function Skills() {
       <main className={"container mx-auto max-w-6xl text-center relative"}>
         <SectionTitle value="Skills" />
         <h2 className={"max-w-sm mx-auto text-lg"}>
-          Growing list of technologies, that I currently control, at least at
-          beginner level.
+          Forever growing list of technologies that I currently control at least
+          at beginner level.
         </h2>
         <div className={"grid grid-cols-2 grid-rows-2 py-16"}>
           <ul

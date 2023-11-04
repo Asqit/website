@@ -1,8 +1,14 @@
 import { Head } from "$fresh/runtime.ts";
 import { AppProps } from "$fresh/src/server/types.ts";
+import { useSignal } from "@preact/signals";
+import { Footer } from "../components/index.ts";
+import Navbar from "../islands/Navbar.tsx";
 
 export default function App(props: AppProps) {
   const { Component } = props;
+
+  /** signal used to mark current color scheme */
+  const darkModeSignal = useSignal<"light" | "dark">("light");
 
   return (
     <html lang={"en"}>
@@ -27,9 +33,10 @@ export default function App(props: AppProps) {
         <meta name="author" content="Ondřej Tuček" />
       </Head>
       <body className={"antialiased"}>
+        <Navbar darkModeSignal={darkModeSignal} />
         <Component />
+        <Footer />
       </body>
     </html>
   );
 }
-"";
