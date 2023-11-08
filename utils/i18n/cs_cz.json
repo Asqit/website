@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "greetings": "Ahoj ty tam, Já se jmenuji",
+    "subtitle": "Počítačový blázen s láskou pro Linux a programování rychlého a spolehlivého softwaru"
+  },
+  "about": {
+    "title": "O Mě",
+    "paragraph_1": "Oh, ahoj! Já jsem Ondřej, těší mě. Já jsem full-stack vývojář s vášní pro počítače, auta a historii",
+    "paragraph_2": "Zatím se hlavně soustředím na programování webových aplikací, stránek a webových API v JavaScriptu s modernímy a rychlímy frameworky jako je fresh",
+    "paragraph_3": "K mým webových dovednostem, mám take dobré základy pro administraci linuxovských systémů",
+    "paragraph_4": "Jako důkazem může být můj projekt: online radio postaveného na Debiánu 11 a několika klientech postavených na Raspberry PI",
+    "paragraph_5": "Mluvím česky a taky anglicky na úrovni B2. Ve volných chvilkách se také učím německy",
+    "cv_button": "Získat CV"
+  },
+  "skills": {
+    "title": "Dovednosti",
+    "subtitle": "Na vždy rostoucí list dovedností které již umím alespoň jako začátečník"
+  },
+  "projects": {
+    "title": "Projekty",
+    "highlighted_project": {
+      "sub_title": "Uvedený Projekt"
+    },
+    "other_projects": "Ostatní Projekty",
+    "other_projects_subtitle": "(S lesklýmy hranami)",
+    "simple_project": {
+      "sub_title": "Projekt"
+    }
+  },
+  "contact": {
+    "title": "Koktaktůj Mě",
+    "sub_title": "Koktaktůj mě na přímo",
+    "in_person": "Osobně",
+    "email_address": "Emailová Adresa",
+    "message": "Zpráva",
+    "send_btn": "Odeslat"
+  },
+
+  "navbar": {
+    "0": "O mě",
+    "1": "dovednosti",
+    "2": "projekty",
+    "3": "kontakt",
+    "job": "pracovně"
+  }
+}

@@ -3,7 +3,7 @@ import { UnknownPageProps } from "$fresh/server.ts";
 
 export default function NotFound(props: UnknownPageProps) {
   return (
-    <section className={"w-full h-screen bg-hero-gradient-phone"}>
+    <section className={"w-full h-screen"}>
       <article
         className={"h-full container mx-auto flex flex-col items-center justify-center gap-4 text-slate-300"}
       >

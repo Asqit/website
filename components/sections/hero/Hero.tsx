@@ -1,6 +1,7 @@
+import { Translation } from "../../../routes/_middleware.tsx";
 import { Shapes } from "../../index.ts";
 
-export function Hero() {
+export function Hero(props: { lang: Translation["hero"] }) {
   return (
     <section
       className={"h-[100vh] min-h-fit py-16 scroll-m-8 relative overflow-x-hidden"}
@@ -14,7 +15,7 @@ export function Hero() {
           <h1
             className={"font-black md:text-xl text-primary-0 dark:text-primary-10 animate-fade-in-up"}
           >
-            Hi there! My name is
+            {props.lang.greetings}
           </h1>
           <h2
             className={"text-4xl font-black md:text-6xl lg:text-7xl dark:text-slate-100 animate-fade-in-up"}
@@ -30,9 +31,7 @@ export function Hero() {
             className={"max-w-lg md:text-lg mt-4 font-semibold animate-fade-in-up"}
             style={{ animationDuration: "1300ms" }}
           >
-            Passionate computer enthusiast with love for Linux and enjoys
-            developing reliable, high-performance software using cutting-edge
-            technologies.
+            {props.lang.subtitle}
           </p>
         </article>
         <figure

@@ -9,7 +9,7 @@ import {
   SiHtml5,
   SiInsomnia,
   SiIntellijidea,
-  SiJava,
+  SiGo,
   SiJavascript,
   SiJsonwebtokens,
   SiLinux,
@@ -57,8 +57,8 @@ const languages: Skill[] = [
   },
   {
     id: 4,
-    value: "Java",
-    Icon: SiJava,
+    value: "Go",
+    Icon: SiGo,
   },
 ];
 

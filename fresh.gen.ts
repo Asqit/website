@@ -5,32 +5,32 @@
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_500.tsx";
 import * as $2 from "./routes/_app.tsx";
-import * as $3 from "./routes/contact-failed.tsx";
-import * as $4 from "./routes/contact-successful.tsx";
-import * as $5 from "./routes/index.tsx";
-import * as $6 from "./routes/job.tsx";
-import * as $7 from "./routes/tty.tsx";
+import * as $3 from "./routes/_middleware.tsx";
+import * as $4 from "./routes/contact-failed.tsx";
+import * as $5 from "./routes/contact-successful.tsx";
+import * as $6 from "./routes/index.tsx";
+import * as $7 from "./routes/job.tsx";
 import * as $$0 from "./islands/HeaderModeButton.tsx";
-import * as $$1 from "./islands/Navbar.tsx";
-import * as $$2 from "./islands/Projects.tsx";
-import * as $$3 from "./islands/tty.tsx";
+import * as $$1 from "./islands/Language.tsx";
+import * as $$2 from "./islands/Navbar.tsx";
+import * as $$3 from "./islands/Projects.tsx";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
     "./routes/_500.tsx": $1,
     "./routes/_app.tsx": $2,
-    "./routes/contact-failed.tsx": $3,
-    "./routes/contact-successful.tsx": $4,
-    "./routes/index.tsx": $5,
-    "./routes/job.tsx": $6,
-    "./routes/tty.tsx": $7,
+    "./routes/_middleware.tsx": $3,
+    "./routes/contact-failed.tsx": $4,
+    "./routes/contact-successful.tsx": $5,
+    "./routes/index.tsx": $6,
+    "./routes/job.tsx": $7,
   },
   islands: {
     "./islands/HeaderModeButton.tsx": $$0,
-    "./islands/Navbar.tsx": $$1,
-    "./islands/Projects.tsx": $$2,
-    "./islands/tty.tsx": $$3,
+    "./islands/Language.tsx": $$1,
+    "./islands/Navbar.tsx": $$2,
+    "./islands/Projects.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };

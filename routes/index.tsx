@@ -3,6 +3,7 @@ import { Handlers, PageProps, Status } from "$fresh/server.ts";
 import { load } from "https://deno.land/std@0.198.0/dotenv/mod.ts";
 import { filterGithubRepos } from "../utils/filterGithubRepos.ts";
 import Projects from "../islands/Projects.tsx";
+import { State } from "./_middleware.tsx";
 
 export interface GitHubRepository {
   id: number;
@@ -86,13 +87,15 @@ export const handler: Handlers = {
 export default function Home(props: PageProps) {
   const { data } = props;
 
+  const translation = props.state.translation as State["translation"];
+
   return (
     <>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects data={data} />
-      <Contact />
+      <Hero lang={translation["hero"]} />
+      <About lang={translation["about"]} />
+      <Skills lang={translation["skills"]} />
+      <Projects lang={translation["projects"]} data={data} />
+      <Contact lang={translation["contact"]} />
     </>
   );
 }

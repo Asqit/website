@@ -3,9 +3,13 @@ import { AppProps } from "$fresh/src/server/types.ts";
 import { useSignal } from "@preact/signals";
 import { Footer } from "../components/index.ts";
 import Navbar from "../islands/Navbar.tsx";
+import { State } from "./_middleware.tsx";
 
 export default function App(props: AppProps) {
   const { Component } = props;
+
+  const language = props.state.lang as State["lang"];
+  const translation = props.state.translation as State["translation"];
 
   /** signal used to mark current color scheme */
   const darkModeSignal = useSignal<"light" | "dark">("light");
@@ -33,9 +37,13 @@ export default function App(props: AppProps) {
         <meta name="author" content="Ondřej Tuček" />
       </Head>
       <body className={"antialiased"}>
-        <Navbar darkModeSignal={darkModeSignal} />
+        <Navbar
+          darkModeSignal={darkModeSignal}
+          lang={language}
+          translation={translation["navbar"]}
+        />
         <Component />
-        <Footer />
+        <Footer lang={translation["hero"]} />
       </body>
     </html>
   );

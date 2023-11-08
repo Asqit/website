@@ -1,8 +1,13 @@
 import { FaBeer, FaEnvelope } from "react-icons/fa";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 import { Accordion, Button } from "../../index.ts";
+import { Translation } from "../../../routes/_middleware.tsx";
 
-export function Contact() {
+interface ContactProps {
+  lang: Translation["contact"];
+}
+
+export function Contact({ lang }: ContactProps) {
   return (
     <section
       className={"py-16 scroll-m-8"}
@@ -11,32 +16,32 @@ export function Contact() {
       <div
         className={"container mx-auto max-w-6xl p-8 "}
       >
-        <SectionTitle value="Contact" />
+        <SectionTitle value={lang.title} />
 
         <div className={"md:hidden"}>
           <Accordion title="Contact Info">
             <div className={"p-4"}>
-              <DirectContact />
+              <DirectContact lang={lang} />
             </div>
           </Accordion>
         </div>
 
         <div className={"md:grid grid-cols-2 justify-center items-center"}>
           <article className={"hidden md:block"}>
-            <DirectContact />
+            <DirectContact lang={lang} />
           </article>
 
-          <ContactForm />
+          <ContactForm lang={lang} />
         </div>
       </div>
     </section>
   );
 }
 
-function DirectContact() {
+function DirectContact({ lang }: ContactProps) {
   return (
     <>
-      <h2 className={"font-semibold text-xl"}>Contact me directly</h2>
+      <h2 className={"font-semibold text-xl"}>{lang.sub_title}</h2>
       <ul>
         <li className={"flex gap-x-1 items-center"}>
           <FaEnvelope />
@@ -53,7 +58,7 @@ function DirectContact() {
             <FaBeer />
           </span>
           <b>
-            In-Person
+            {lang.in_person}
           </b>:{" "}
           <a
             href="https://en.wikipedia.org/wiki/Prague"
@@ -63,7 +68,7 @@ function DirectContact() {
           >
             Prague
           </a>
-          or{" "}
+          ,{" "}
           <a
             href="https://en.wikipedia.org/wiki/%C4%8Cesk%C3%A9_Bud%C4%9Bjovice"
             target={"_blank"}
@@ -78,7 +83,7 @@ function DirectContact() {
   );
 }
 
-function ContactForm() {
+function ContactForm({ lang }: ContactProps) {
   return (
     <form method="post" className={"relative z-20"}>
       <div className={"flex flex-col gap-3 my-3"}>
@@ -86,7 +91,7 @@ function ContactForm() {
           className={"text-slate-600 dark:text-slate-200"}
           htmlFor={"email"}
         >
-          Email Address
+          {lang.email_address}
         </label>
         <input
           type="email"
@@ -102,7 +107,7 @@ function ContactForm() {
           className={"text-slate-600 dark:text-slate-200"}
           htmlFor={"message"}
         >
-          Message
+          {lang.message}
         </label>
         <textarea
           id="message"
@@ -113,7 +118,7 @@ function ContactForm() {
         />
       </div>
 
-      <Button type="submit" className={"w-full my-3"}>Send</Button>
+      <Button type="submit" className={"w-full my-3"}>{lang.send_btn}</Button>
     </form>
   );
 }

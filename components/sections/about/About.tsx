@@ -1,11 +1,16 @@
 import AuthorImage from "../../common/author-image/AuthorImage.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
-import { about } from "../../../data/about.ts";
+import { about } from "../../../utils/about.ts";
 import { asset } from "$fresh/runtime.ts";
 import { FaPaperclip } from "react-icons/fa";
 import { JobBanner } from "../../index.ts";
+import { Translation } from "../../../routes/_middleware.tsx";
 
-export function About() {
+interface AboutProps {
+  lang: Translation["about"];
+}
+
+export function About({ lang }: AboutProps) {
   return (
     <section
       id="about"
@@ -16,16 +21,33 @@ export function About() {
       >
         <AuthorImage />
         <article>
-          <SectionTitle value="About Me" />
+          <SectionTitle value={lang.title} />
           <JobBanner isLookingForJob={true} />
-          {about.map((article, index) => (
-            <p
-              key={index}
-              className={`my-4`}
-            >
-              {article}
-            </p>
-          ))}
+          <p
+            className={`my-4`}
+          >
+            {lang.paragraph_1}
+          </p>
+          <p
+            className={`my-4`}
+          >
+            {lang.paragraph_2}
+          </p>
+          <p
+            className={`my-4`}
+          >
+            {lang.paragraph_3}
+          </p>
+          <p
+            className={`my-4`}
+          >
+            {lang.paragraph_4}
+          </p>
+          <p
+            className={`my-4`}
+          >
+            {lang.paragraph_5}
+          </p>
 
           <div className={"mt-4"}>
             <a
@@ -35,7 +57,7 @@ export function About() {
               className={"btn primary px-8 inline-flex gap-x-2 items-center capitalize"}
             >
               <FaPaperclip />
-              <span>Get CV</span>
+              <span>{lang.cv_button}</span>
             </a>
             <a
               target="blank"

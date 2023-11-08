@@ -1,18 +1,22 @@
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
-import { skills } from "../../../data/skills.ts";
+import { skills } from "../../../utils/skills.ts";
 import { Chip } from "../../index.ts";
+import { Translation } from "../../../routes/_middleware.tsx";
 
-export function Skills() {
+interface SkillsProps {
+  lang: Translation["skills"];
+}
+
+export function Skills({ lang }: SkillsProps) {
   return (
     <section
       className={"py-16 px-4 scroll-m-16"}
       id="skills"
     >
       <main className={"container mx-auto max-w-6xl text-center relative"}>
-        <SectionTitle value="Skills" />
+        <SectionTitle value={lang.title} />
         <h2 className={"max-w-sm mx-auto text-lg"}>
-          Forever growing list of technologies that I currently control at least
-          at beginner level.
+          {lang.subtitle}
         </h2>
         <div className={"grid grid-cols-2 grid-rows-2 py-16"}>
           <ul

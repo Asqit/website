@@ -1,18 +1,20 @@
 import SimpleProject from "../components/common/simple-project/SimpleProject.tsx";
 import { SectionTitle } from "../components/common/section-title/SectionTitle.tsx";
-import { projects } from "../data/project.ts";
+import { projects } from "../utils/project.ts";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 import { GitHubRepository } from "../routes/index.tsx";
 import HighlightedProject from "../components/common/highlighted-project/HighlightedProject.tsx";
 import { useCallback } from "preact/hooks";
 import { JSX } from "preact/jsx-runtime";
+import { Translation } from "../routes/_middleware.tsx";
 
 interface ProjectsProps {
+  lang: Translation["projects"];
   data: GitHubRepository[] | null;
 }
 
 export default function Projects(props: ProjectsProps) {
-  const { data } = props;
+  const { data, lang } = props;
 
   const handleMouseMove = useCallback(
     (e: JSX.TargetedMouseEvent<HTMLDivElement>) => {
@@ -36,7 +38,7 @@ export default function Projects(props: ProjectsProps) {
     >
       <article className={"container mx-auto max-w-6xl md:p-8"}>
         <div className={"text-center md:text-left"}>
-          <SectionTitle value="Projects" />
+          <SectionTitle value={lang.title} />
         </div>
 
         <div className={"grid grid-cols-1 gap-8 px-4"}>
@@ -73,12 +75,12 @@ export default function Projects(props: ProjectsProps) {
           <h2
             className={"text-4xl font-black text-center capitalize"}
           >
-            Other Projects
+            {lang.other_projects}
           </h2>
           <h3
             className={"text-slate-600 dark:text-slate-400 text-center text-lg"}
           >
-            (with shiny borders)
+            {lang.other_projects_subtitle}
           </h3>
         </div>
         <div

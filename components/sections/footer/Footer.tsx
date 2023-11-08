@@ -7,8 +7,9 @@ import {
 } from "react-icons/fa";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 import { Brand } from "../../index.ts";
+import { Translation } from "../../../routes/_middleware.tsx";
 
-export function Footer() {
+export function Footer({ lang }: { lang: Translation["hero"] }) {
   return (
     <footer className="md:p-8">
       <div className="container mx-auto max-w-7xl bg-black text-white dark:text-black dark:bg-white md:rounded-md p-4 px-8">
@@ -19,9 +20,7 @@ export function Footer() {
               Web Developer
             </h1>
             <p className="my-2 text-sm">
-              Passionate computer enthusiast with love for Linux and enjoys
-              developing reliable, high-performance software using cutting-edge
-              technologies.
+              {lang.subtitle}
             </p>
           </div>
           <div className="p-8">

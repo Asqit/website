@@ -2,12 +2,18 @@ import { useCallback, useEffect, useState } from "preact/hooks";
 import { Brand, Hamburger } from "../components/index.ts";
 import HeaderModeButton from "./HeaderModeButton.tsx";
 import { Signal } from "@preact/signals";
+import Language from "./Language.tsx";
+import { State, Translation } from "../routes/_middleware.tsx";
 
 interface NavbarProps {
   darkModeSignal: Signal<"light" | "dark">;
+  lang: State["lang"];
+  translation: Translation["navbar"];
 }
 
-export default function Navbar({ darkModeSignal }: NavbarProps) {
+export default function Navbar(
+  { darkModeSignal, lang, translation }: NavbarProps,
+) {
   const sectionIds: string[] = ["about", "skills", "projects", "contact"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,20 +63,25 @@ export default function Navbar({ darkModeSignal }: NavbarProps) {
               <span className={"text-primary-0 dark:text-primary-10"}>
                 {index}.
               </span>
-              <a href={`/#${link}`}>{link}</a>
+              <a href={`/#${translation[index.toString()]}`}>
+                {translation[index.toString()]}
+              </a>
             </li>
           ))}
           <li className="font-mono capitalize hover:text-primary-0 dark:hover:text-primary-10">
             <span className={"text-primary-0 dark:text-primary-10"}>
               4.
             </span>
-            <a href={`/job`}>Job Offers</a>
+            <a href={`/job`}>{translation.job}</a>
           </li>
           <li>
             <HeaderModeButton
               prev="light"
               darkModeSignal={darkModeSignal}
             />
+          </li>
+          <li>
+            <Language lang={lang} />
           </li>
         </ul>
         <div
@@ -84,9 +95,11 @@ export default function Navbar({ darkModeSignal }: NavbarProps) {
           <ul
             className={"text-xl uppercase mt-4 flex flex-col gap-4 items-center justify-center"}
           >
-            {sectionIds.map((l, i) => (
-              <li key={l} onClick={toggleIsVisible} className="link">
-                <a href={`#${l}`}>{l}</a>
+            {sectionIds.map((link, i) => (
+              <li key={link} onClick={toggleIsVisible} className="link">
+                <a href={`#${translation[i.toString()]}`}>
+                  {translation[i.toString()]}
+                </a>
               </li>
             ))}
             <li className={"link"}>
@@ -95,6 +108,9 @@ export default function Navbar({ darkModeSignal }: NavbarProps) {
                 prev="light"
                 darkModeSignal={darkModeSignal}
               />
+            </li>
+            <li className={"link"}>
+              <Language lang={lang} />
             </li>
           </ul>
         </div>

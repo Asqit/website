@@ -4,7 +4,7 @@ import { Button } from "../components/index.ts";
 export default function ContactSuccessful() {
   return (
     <section
-      className={"bg-gradient-to-br from-special-red via-background-10 to-background-5 px-4"}
+      className={"bg-gradient-to-br from-special-red via-background-10 dark:via-background-10-dark to-background-5 dark:to-background-5-dark px-4"}
     >
       <div
         className={"container mx-auto max-w-7xl py-32 min-h-[80vh] text-white text-center flex flex-col items-center justify-center gap-2"}
