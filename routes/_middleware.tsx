@@ -1,7 +1,7 @@
 import { MiddlewareHandlerContext } from "$fresh/server.ts";
 
 import cs from "../utils/i18n/cs_cz.json" assert { type: "json" };
-import en from "../utils./i18n/en_us.json" assert { type: "json" };
+import en from "../utils/i18n/en_us.json" assert { type: "json" };
 
 export type Translation = typeof cs;
 
