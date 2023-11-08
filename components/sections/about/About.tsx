@@ -1,6 +1,5 @@
 import AuthorImage from "../../common/author-image/AuthorImage.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
-import { about } from "../../../utils/about.ts";
 import { asset } from "$fresh/runtime.ts";
 import { FaPaperclip } from "react-icons/fa";
 import { JobBanner } from "../../index.ts";
