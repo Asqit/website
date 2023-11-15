@@ -85,9 +85,8 @@ export const handler: Handlers = {
   },
 };
 export default function Home(props: PageProps) {
-  const { data } = props;
-
-  const translation = props.state.translation as State["translation"];
+  const { data, state } = props;
+  const translation = state.translation as State["translation"];
 
   return (
     <>

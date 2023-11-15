@@ -1,7 +1,12 @@
 import { Chip, JobBanner } from "../components/index.ts";
 import { asset, Head } from "$fresh/runtime.ts";
+import { State } from "./_middleware.tsx";
+import { PageProps } from "$fresh/server.ts";
 
-export default function Job() {
+export default function Job(props: PageProps) {
+  const raw = props.state.translation as State["translation"];
+  const translation = raw["job"];
+
   return (
     <>
       <Head>
@@ -26,37 +31,31 @@ export default function Job() {
             <div>
               {/* úvod */}
               <article className={"my-4 p-4"}>
-                <h3 className={"my-2 font-bold text-lg"}>Introduction</h3>
+                <h3 className={"my-2 font-bold text-lg"}>
+                  {translation.introduction_title}
+                </h3>
                 <p className={"my-4"}>
-                  Ahoj Světe! My name is Ondřej Tuček, and I am a full-stack web
-                  developer. I am a 22-year-old Czech with a burning passion for
-                  the computer world, programming, cars, and history. I started
-                  my journey in the world of programming in 2018 when I wrote my
-                  first 'hello world' in Bash during my sophomore year in high
-                  school.
+                  {translation.introduction}
                 </p>
               </article>
 
               {/* zkušenosti */}
               <article className={"my-4 p-4"}>
-                <h3 className={"my-2 font-bold text-lg"}>What do I now</h3>
+                <h3 className={"my-2 font-bold text-lg"}>
+                  {translation.current_job_title}
+                </h3>
                 <p className={"my-4"}>
-                  As for now I work as IT technician. I wire and then setup
-                  computer networks using MikroTik and prepare CCTV systems with
-                  Dahua. I also have made and maintain private online radio for
-                  string of restaurants. The main server is running on debian 11
-                  and my clients are made out of Raspberry Pi 4.
+                  {translation.current_job}
                 </p>
               </article>
 
               {/* dovednosti */}
               <article className={"my-4 p-4"}>
-                <h3 className={"my-2 font-bold text-lg"}>My skills</h3>
+                <h3 className={"my-2 font-bold text-lg"}>
+                  {translation.skills_title}
+                </h3>
                 <p className="my-4">
-                  I am able to code fluently in JavaScript / Typescript and
-                  script simple things in bash. I am also learning Java with
-                  course from University of Helsinki. I also study various other
-                  programming language just out of my curiosity.
+                  {translation.skills}
                 </p>
                 <ul>
                   <li>- JavaScript (medior)</li>
@@ -71,15 +70,11 @@ export default function Job() {
               {/* kontaktní informace */}
               <article className={"my-4 p-4"}>
                 <h3 className={"my-2 font-bold text-lg"}>
-                  Contact Information
+                  {translation.contact_title}
                 </h3>
                 <JobBanner isLookingForJob={true} />
                 <p className={"my-4"}>
-                  So you have decided to contact me? Great! There are few ways
-                  to so. You can use my contact form, that uses 3rd party
-                  service called <code>ntfy.sh</code>{" "}
-                  or you can write me an actual email. We can arrange personal
-                  meeting Prague or České Budějovice after previous agreement.
+                  {translation.contact}
                 </p>
 
                 <ul className={"flex flex-wrap gap-2"}>
@@ -136,28 +131,18 @@ export default function Job() {
 
               {/* zájmy a osobnost */}
               <article className={"my-4 p-4"}>
-                <h3 className={"my-2 font-bold text-lg"}>Me personally</h3>
+                <h3 className={"my-2 font-bold text-lg"}>
+                  {translation.personality_title}
+                </h3>
                 <p className={"my-4"}>
-                  I am introvert and I don't hide it. I like to work in team,
-                  but because of my stubbornest usually I don't seek help from
-                  others. Besides being introvert I also suffer from social
-                  anxiety, but I actively fight against it. I am trying to be
-                  polite, kind and generous to others. (Se slušností nejdál
-                  dojdeš)
+                  {translation.personality_1}
                 </p>
 
                 <p className={"my-4"}>
-                  In my free time I like to read books, most recently the sprawl
-                  saga from William Gibson. When it comes to movies I am huge
-                  fan of Quentin Tarantino, Martin Scorsese, Zdeněk Svěrák and
-                  George Lucas.
+                  {translation.personality_2}
                 </p>
                 <p className={"my-4"}>
-                  Just as any youngster these days I also play video games. I
-                  prefer a good written story rather than multiplayer madness. I
-                  also like watching history videos (Historia Civilis), further
-                  practice my programming skills or taking night trips in my old
-                  cassette-player-holding BMW.
+                  {translation.personality_3}
                 </p>
               </article>
             </div>

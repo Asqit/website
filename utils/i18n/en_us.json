@@ -43,5 +43,19 @@
     "2": "projects",
     "3": "contact",
     "job": "job_offers"
+  },
+  "job": {
+    "introduction_title": "Introduction",
+    "introduction": "Ahoj Světe! My name is Ondřej Tuček, and I am a full-stack web developer. I am a 22-year-old Czech with a burning passion for the computer world, programming, cars, and history. I started my journey in the world of programming in 2018 when I wrote my first 'hello world' in Bash during my sophomore year in high school.",
+    "current_job_title": "What do I do now",
+    "current_job": "As for now I work as IT technician. I wire and then setup computer networks using MikroTik and prepare CCTV systems with Dahua. I also have made and maintain private online radio for string of restaurants. The main server is running on debian 11 and my clients are made out of Raspberry Pi 4.",
+    "skills_title": "My Skills",
+    "skills": " I am able to code fluently in JavaScript / Typescript and script simple things in bash. I am also learning Java with course from University of Helsinki. I also study various other programming language just out of my curiosity.",
+    "contact_title": "Contact Information",
+    "contact": "So you have decided to contact me? Great! There are few ways to so. You can use my contact form, that uses 3rd party service called ntfy.sh or you can write me an actual email. We can arrange personal meeting Prague or České Budějovice after previous agreement.",
+    "personality_title": "Me Personally",
+    "personality_1": "I am introvert and I don't hide it. I like to work in team, but because of my stubbornest usually I don't seek help from others. Besides being introvert I also suffer from social anxiety, but I actively fight against it. I am trying to be polite, kind and generous to others. (Se slušností nejdál dojdeš)",
+    "personality_2": "In my free time I like to read books, most recently the sprawl saga from William Gibson. When it comes to movies I am huge fan of Quentin Tarantino, Martin Scorsese, Zdeněk Svěrák and George Lucas.",
+    "personality_3": "Just as any youngster these days I also play video games. I prefer a good written story rather than multiplayer madness. I also like watching history videos (Historia Civilis), further practice my programming skills or taking night trips in my old cassette-player-holding BMW."
   }
 }
