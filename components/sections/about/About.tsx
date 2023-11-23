@@ -21,7 +21,7 @@ export function About({ lang }: AboutProps) {
         <AuthorImage />
         <article>
           <SectionTitle value={lang.title} />
-          <JobBanner isLookingForJob={true} />
+          <JobBanner />
           <p
             className={`my-4`}
           >
@@ -36,11 +36,6 @@ export function About({ lang }: AboutProps) {
             className={`my-4`}
           >
             {lang.paragraph_3}
-          </p>
-          <p
-            className={`my-4`}
-          >
-            {lang.paragraph_4}
           </p>
           <p
             className={`my-4`}

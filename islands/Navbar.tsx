@@ -39,7 +39,7 @@ export default function Navbar(
 
   return (
     <header
-      className={`fixed w-screen top-0 left-0 z-[999] transition-all ${
+      className={`fixed w-screen top-0 left-0 z-[1200] transition-all ${
         isScrolled ? "dark:bg-black/40 bg-white/40" : "bg-transparent"
       } backdrop-blur-xl will-change-scroll max-h-20`}
     >
@@ -68,12 +68,16 @@ export default function Navbar(
               </a>
             </li>
           ))}
-          <li className="font-mono capitalize hover:text-primary-0 dark:hover:text-primary-10">
+          {
+            /*
+            <li className="font-mono capitalize hover:text-primary-0 dark:hover:text-primary-10">
             <span className={"text-primary-0 dark:text-primary-10"}>
               4.
             </span>
             <a href={`/job`}>{translation.job}</a>
           </li>
+           */
+          }
           <li>
             <HeaderModeButton
               prev="light"

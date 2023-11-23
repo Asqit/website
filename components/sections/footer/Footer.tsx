@@ -40,9 +40,6 @@ export function Footer({ lang }: { lang: Translation["hero"] }) {
               <li className={"hover:underline"}>
                 <a rel="tag" href={"/#projects"}>contact</a>
               </li>
-              <li className={"hover:underline"}>
-                <a rel="tag" href={"/job"}>job offers</a>
-              </li>
             </ul>
           </div>
           <div className="p-8">

@@ -1,15 +1,14 @@
 {
   "hero": {
     "greetings": "Ahoj ty tam, Já se jmenuji",
-    "subtitle": "Počítačový blázen s láskou pro Linux a programování rychlého a spolehlivého softwaru"
+    "subtitle": "Vášnivý nadšenec do světa počítačů a oddaný příznivec Linuxu, který s radostí vytváří spolehlivý a výkonný software, využívající nejmodernější technologie."
   },
   "about": {
     "title": "O Mě",
-    "paragraph_1": "Oh, ahoj! Já jsem Ondřej, těší mě. Já jsem full-stack vývojář s vášní pro počítače, auta a historii",
-    "paragraph_2": "Zatím se hlavně soustředím na programování webových aplikací, stránek a webových API v JavaScriptu s modernímy a rychlímy frameworky jako je fresh",
-    "paragraph_3": "K mým webových dovednostem, mám take dobré základy pro administraci linuxovských systémů",
-    "paragraph_4": "Jako důkazem může být můj projekt: online radio postaveného na Debiánu 11 a několika klientech postavených na Raspberry PI",
-    "paragraph_5": "Mluvím česky a taky anglicky na úrovni B2. Ve volných chvilkách se také učím německy",
+    "paragraph_1": "Ahoj! Jsem Ondřej a těší mě, že tě poznávám! Jsem full-stack developer z České republiky, který má vášeň pro počítače, auta a Linux.",
+    "paragraph_2": "Mé hlavní zaměření spočívá v programování webových aplikací, webových stránek a webových API pomocí JavaScriptu s využitím rychlých a moderních frameworků, jako je fresh.js.",
+    "paragraph_3": "Kromě znalosti web developmentu mám pevný základ v administraci Linuxu. Jako příklad mých dovedností v Linuxu může být mé 4 roky starý online rádio, který běží na Debianu 11, a jeho 6 klientů postavených z Raspberry Pi.",
+    "paragraph_5": "Kromě češtiny mluvím také anglicky na úrovni B2 a momentálně se učím německy pomocí Duolinga.",
     "cv_button": "Získat CV"
   },
   "skills": {
@@ -28,12 +27,9 @@
     }
   },
   "contact": {
-    "title": "Koktaktůj Mě",
-    "sub_title": "Koktaktůj mě na přímo",
-    "in_person": "Osobně",
-    "email_address": "Emailová Adresa",
-    "message": "Zpráva",
-    "send_btn": "Odeslat"
+    "title": "Kontaktůj Mě",
+    "paragraph": "S tebou a pro tebe – tvůj go-to člověk na cestě k vytváření úžasných věcí. S JavaScriptem, TypeScriptem a Node.js v rukávu a s chuťí do nových výzev. Pomoct s počítačem nebo rozjet webovou aplikaci? Jsem v obraze. Python, Golang – taky to zkouším. Dej mi vědět, jak ti můžu pomoct!",
+    "send_btn": "Jdeme na to!"
   },
 
   "navbar": {

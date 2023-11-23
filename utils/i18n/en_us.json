@@ -30,12 +30,9 @@
     }
   },
   "contact": {
-    "title": "Contact Me",
-    "sub_title": "Contact me directly",
-    "in_person": "in-person",
-    "email_address": "Email address",
-    "message": "Message",
-    "send_btn": "Send"
+    "title": "Contact Me!",
+    "paragraph": "With you and for you – your go-to person on the journey to creating awesome things. Armed with JavaScript, TypeScript, and Node.js, and ready for new challenges. Need help with your computer or kickstarting a web app? I've got you covered. Python, Golang – I'm diving into those too. Let me know how I can assist you!",
+    "send_btn": "let's do it!"
   },
   "navbar": {
     "0": "about",
