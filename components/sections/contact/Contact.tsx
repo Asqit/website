@@ -14,6 +14,9 @@ export function Contact({ lang }: ContactProps) {
         <h2 className="font-black text-2xl md:text-3xl lg:text-6xl my-3 text-center">
           {lang.title}
         </h2>
+        <h4 className={"text-slate-600 dark:text-slate-400"}>
+          ondrejtucek9@gmail.com
+        </h4>
         <p className="text-center text-lg max-w-4xl mx-auto">
           {lang.paragraph}
         </p>

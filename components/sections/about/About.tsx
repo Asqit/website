@@ -16,10 +16,10 @@ export function About({ lang }: AboutProps) {
       className={"py-16 scroll-m-8"}
     >
       <main
-        className={"container mx-auto max-w-6xl grid grid-cols-1 xl:grid-cols-2 gap-x-4 gap-y-16 items-center p-8 font-sans"}
+        className={"container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-16 md:p-8 items-center font-sans"}
       >
         <AuthorImage />
-        <article>
+        <article className={"p-8"}>
           <SectionTitle value={lang.title} />
           <JobBanner />
           <p

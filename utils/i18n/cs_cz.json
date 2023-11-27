@@ -4,7 +4,7 @@
     "subtitle": "Vášnivý nadšenec do světa počítačů a oddaný příznivec Linuxu, který s radostí vytváří spolehlivý a výkonný software, využívající nejmodernější technologie."
   },
   "about": {
-    "title": "O Mě",
+    "title": "O Mně",
     "paragraph_1": "Ahoj! Jsem Ondřej a těší mě, že tě poznávám! Jsem full-stack developer z České republiky, který má vášeň pro počítače, auta a Linux.",
     "paragraph_2": "Mé hlavní zaměření spočívá v programování webových aplikací, webových stránek a webových API pomocí JavaScriptu s využitím rychlých a moderních frameworků, jako je fresh.js.",
     "paragraph_3": "Kromě znalosti web developmentu mám pevný základ v administraci Linuxu. Jako příklad mých dovedností v Linuxu může být mé 4 roky starý online rádio, který běží na Debianu 11, a jeho 6 klientů postavených z Raspberry Pi.",
@@ -33,7 +33,7 @@
   },
 
   "navbar": {
-    "0": "O mě",
+    "0": "O mně",
     "1": "dovednosti",
     "2": "projekty",
     "3": "kontakt",
