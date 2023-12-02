@@ -1,15 +1,15 @@
 import { Head } from "$fresh/runtime.ts";
-import { AppProps } from "$fresh/src/server/types.ts";
+import { PageProps } from "$fresh/src/server/types.ts";
 import { useSignal } from "@preact/signals";
 import { Footer } from "../components/index.ts";
 import Navbar from "../islands/Navbar.tsx";
-import { State } from "./_middleware.tsx";
+import { LanguageState } from "../utils/type.index.ts";
 
-export default function App(props: AppProps) {
+export default function App(props: PageProps) {
   const { Component } = props;
 
-  const language = props.state.lang as State["lang"];
-  const translation = props.state.translation as State["translation"];
+  const language = props.state.lang as LanguageState["lang"];
+  const translation = props.state.translation as LanguageState["translation"];
 
   /** signal used to mark current color scheme */
   const darkModeSignal = useSignal<"light" | "dark">("light");
@@ -22,7 +22,7 @@ export default function App(props: AppProps) {
         </title>
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/ico" href="../images/favicon.ico" />
-        <link rel="stylesheet" href="../styles/tailwind.css" />
+        <link rel="stylesheet" href="/styles/styles.css" />
         <meta lang={"en"} />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta

@@ -9,7 +9,7 @@ import { Signal } from "@preact/signals";
 import { IS_BROWSER } from "$fresh/src/runtime/utils.ts";
 import { JSX } from "preact/jsx-runtime";
 import { Emoji } from "../components/index.ts";
-import { updateSimpleProjectColorScheme } from "../utils/updateSimpleProjectColorScheme.ts";
+import { updateProjectScheme } from "../utils/updateProjectsScheme.ts";
 
 interface DarkModeProps extends JSX.HTMLAttributes<HTMLButtonElement> {
   prev: "light" | "dark";
@@ -23,7 +23,7 @@ export default function HeaderModeButton(props: DarkModeProps) {
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches);
     document.documentElement.classList[w.isDark ? "add" : "remove"]("dark");
-    updateSimpleProjectColorScheme(w.isDark ? true : false);
+    updateProjectScheme(w.isDark ? true : false);
   }
 
   const getMode = () => {
@@ -45,14 +45,14 @@ export default function HeaderModeButton(props: DarkModeProps) {
   const toggleTheme = () => {
     if (props.darkModeSignal.value === "dark") {
       props.darkModeSignal.value = "light";
-      updateSimpleProjectColorScheme(false);
+      updateProjectScheme(false);
       localStorage.theme = props.darkModeSignal.value;
       updateMode();
       return;
     }
 
     props.darkModeSignal.value = "dark";
-    updateSimpleProjectColorScheme(true);
+    updateProjectScheme(true);
     localStorage.theme = props.darkModeSignal.value;
     updateMode();
   };

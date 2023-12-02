@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useState } from "preact/hooks";
 import { Brand, Hamburger } from "../components/index.ts";
-import HeaderModeButton from "./HeaderModeButton.tsx";
 import { Signal } from "@preact/signals";
 import Language from "./Language.tsx";
-import { State, Translation } from "../routes/_middleware.tsx";
+import { Translation } from "../routes/_middleware.tsx";
+import { LanguageState } from "../utils/type.index.ts";
+import HeaderModeButton from "./HeaderModeButton.tsx";
 
 interface NavbarProps {
   darkModeSignal: Signal<"light" | "dark">;
-  lang: State["lang"];
+  lang: LanguageState["lang"];
   translation: Translation["navbar"];
 }
 
@@ -17,6 +18,7 @@ export default function Navbar(
   const sectionIds: string[] = ["about", "skills", "projects", "contact"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const typedTranslation = translation as Record<string, string>;
 
   const toggleIsVisible = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -63,25 +65,17 @@ export default function Navbar(
               <span className={"text-primary-0 dark:text-primary-10"}>
                 {index}.
               </span>
-              <a href={`/#${translation[index.toString()]}`}>
-                {translation[index.toString()]}
+              <a href={`#${typedTranslation[index.toString()]}`}>
+                {typedTranslation[index.toString()]}
               </a>
             </li>
           ))}
-          {
-            /*
-            <li className="font-mono capitalize hover:text-primary-0 dark:hover:text-primary-10">
-            <span className={"text-primary-0 dark:text-primary-10"}>
-              4.
-            </span>
-            <a href={`/job`}>{translation.job}</a>
-          </li>
-           */
-          }
+
+          {/* SPECIAL LIST ITEMS */}
           <li>
             <HeaderModeButton
-              prev="light"
               darkModeSignal={darkModeSignal}
+              prev={"light"}
             />
           </li>
           <li>
@@ -99,18 +93,19 @@ export default function Navbar(
           <ul
             className={"text-xl uppercase mt-4 flex flex-col gap-4 items-center justify-center"}
           >
-            {sectionIds.map((link, i) => (
+            {sectionIds.map((link, index) => (
               <li key={link} onClick={toggleIsVisible} className="link">
-                <a href={`#${translation[i.toString()]}`}>
-                  {translation[i.toString()]}
+                <a href={`#${typedTranslation[index.toString()]}`}>
+                  {typedTranslation[index.toString()]}
                 </a>
               </li>
             ))}
-            <li className={"link"}>
+
+            {/* SPECIAL LIST ITEMS */}
+            <li>
               <HeaderModeButton
-                onClick={toggleIsVisible}
-                prev="light"
                 darkModeSignal={darkModeSignal}
+                prev={"light"}
               />
             </li>
             <li className={"link"}>

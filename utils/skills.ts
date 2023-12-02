@@ -1,4 +1,3 @@
-import { JSX } from "preact/jsx-runtime";
 import { FaGlobe, FaLemon, FaSitemap } from "react-icons/fa";
 import {
   SiCss3,
@@ -6,10 +5,10 @@ import {
   SiExpress,
   SiGit,
   SiGnubash,
+  SiGo,
   SiHtml5,
   SiInsomnia,
   SiIntellijidea,
-  SiGo,
   SiJavascript,
   SiJsonwebtokens,
   SiLinux,
@@ -17,22 +16,17 @@ import {
   SiMongodb,
   SiNodedotjs,
   SiPrisma,
+  SiPython,
   SiReact,
   SiRedux,
   SiSass,
   SiTailwindcss,
   SiTypescript,
-  SiPython,
   SiVim,
   SiVisualstudiocode,
   SiYarn,
 } from "react-icons/si";
-
-interface Skill {
-  id: number;
-  value: string;
-  Icon: (_: any) => JSX.Element;
-}
+import { Skill } from "./type.index.ts";
 
 const languages: Skill[] = [
   {

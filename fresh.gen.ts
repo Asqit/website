@@ -2,37 +2,32 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $0 from "./routes/_404.tsx";
-import * as $1 from "./routes/_500.tsx";
-import * as $2 from "./routes/_app.tsx";
-import * as $3 from "./routes/_middleware.tsx";
-import * as $4 from "./routes/contact-failed.tsx";
-import * as $5 from "./routes/contact-successful.tsx";
-import * as $6 from "./routes/index.tsx";
-import * as $7 from "./routes/job.tsx";
-import * as $$0 from "./islands/HeaderModeButton.tsx";
-import * as $$1 from "./islands/Language.tsx";
-import * as $$2 from "./islands/Navbar.tsx";
-import * as $$3 from "./islands/Projects.tsx";
+import * as $_404 from "./routes/_404.tsx";
+import * as $_500 from "./routes/_500.tsx";
+import * as $_app from "./routes/_app.tsx";
+import * as $_middleware from "./routes/_middleware.tsx";
+import * as $index from "./routes/index.tsx";
+import * as $HeaderModeButton from "./islands/HeaderModeButton.tsx";
+import * as $Language from "./islands/Language.tsx";
+import * as $Navbar from "./islands/Navbar.tsx";
+import * as $Projects from "./islands/Projects.tsx";
+import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
-    "./routes/_404.tsx": $0,
-    "./routes/_500.tsx": $1,
-    "./routes/_app.tsx": $2,
-    "./routes/_middleware.tsx": $3,
-    "./routes/contact-failed.tsx": $4,
-    "./routes/contact-successful.tsx": $5,
-    "./routes/index.tsx": $6,
-    "./routes/job.tsx": $7,
+    "./routes/_404.tsx": $_404,
+    "./routes/_500.tsx": $_500,
+    "./routes/_app.tsx": $_app,
+    "./routes/_middleware.tsx": $_middleware,
+    "./routes/index.tsx": $index,
   },
   islands: {
-    "./islands/HeaderModeButton.tsx": $$0,
-    "./islands/Language.tsx": $$1,
-    "./islands/Navbar.tsx": $$2,
-    "./islands/Projects.tsx": $$3,
+    "./islands/HeaderModeButton.tsx": $HeaderModeButton,
+    "./islands/Language.tsx": $Language,
+    "./islands/Navbar.tsx": $Navbar,
+    "./islands/Projects.tsx": $Projects,
   },
   baseUrl: import.meta.url,
-};
+} satisfies Manifest;
 
 export default manifest;

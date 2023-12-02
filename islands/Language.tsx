@@ -1,7 +1,7 @@
 import { Emoji } from "../components/index.ts";
-import { State } from "../routes/_middleware.tsx";
+import { LanguageState } from "../utils/type.index.ts";
 
-const Language = (data: { lang: State["lang"] }) => {
+const Language = (data: { lang: LanguageState["lang"] }) => {
   return (
     <button
       onClick={() => {

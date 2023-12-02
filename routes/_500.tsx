@@ -1,6 +1,6 @@
-import { ErrorPageProps } from "$fresh/server.ts";
+import { PageProps } from "$fresh/server.ts";
 
-export default function ServerFailure(props: ErrorPageProps) {
+export default function ServerFailure(props: PageProps) {
   const { error } = props;
 
   return (

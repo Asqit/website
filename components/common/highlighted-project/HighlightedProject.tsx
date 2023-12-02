@@ -1,9 +1,4 @@
-import {
-  FaArrowCircleRight,
-  FaArrowRight,
-  FaGithubAlt,
-  FaSignOutAlt,
-} from "react-icons/fa";
+import { FaArrowCircleRight, FaGithubAlt } from "react-icons/fa";
 import { asset } from "$fresh/runtime.ts";
 
 interface HighlightedProjectProps {

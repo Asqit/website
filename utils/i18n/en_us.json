@@ -38,8 +38,7 @@
     "0": "about",
     "1": "skills",
     "2": "projects",
-    "3": "contact",
-    "job": "job_offers"
+    "3": "contact"
   },
   "job": {
     "introduction_title": "Introduction",

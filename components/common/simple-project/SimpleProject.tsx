@@ -1,15 +1,6 @@
 import { FaCode } from "react-icons/fa";
 import { Chip } from "../../index.ts";
-
-export interface GitHubRepo {
-  name: string;
-  id: number;
-  language: string;
-  html_url: string;
-  description: string;
-  topics: string[];
-  fork: boolean;
-}
+import { GitHubRepo } from "../../../utils/type.index.ts";
 
 type SimpleProjectProps = GitHubRepo & {};
 

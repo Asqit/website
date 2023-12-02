@@ -1,7 +1,7 @@
 import { Button } from "../components/index.ts";
-import { UnknownPageProps } from "$fresh/server.ts";
+import { PageProps } from "$fresh/server.ts";
 
-export default function NotFound(props: UnknownPageProps) {
+export default function NotFound(props: PageProps) {
   return (
     <section className={"w-full h-screen"}>
       <article

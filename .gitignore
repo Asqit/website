@@ -4,9 +4,8 @@
 # Deno cached resources
 deno.lock
 
-# tailwind binary and transpiled file
-tailwindcss
-*.exe
-
 # Ignore fresh build directory
 _fresh/
+
+# NPM: tailwindcss (fresh 1.6)
+node_modules/

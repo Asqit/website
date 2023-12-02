@@ -1,5 +1,5 @@
-import { GitHubRepository } from "../routes/index.tsx";
 import { shuffleArray } from "./shuffleArray.ts";
+import { GitHubRepository } from "./type.index.ts";
 
 /**
  * function, that returns github repositories, that are filtered so that not a single highlighted-project is featured.

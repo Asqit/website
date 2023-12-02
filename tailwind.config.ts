@@ -1,8 +1,8 @@
-module.exports = {
+import { type Config } from "tailwindcss";
+
+export default {
   content: [
-    "./routes/**/*.{tsx,ts}",
-    "./islands/**/*.{tsx,ts}",
-    "./components/**/*.{tsx,ts}",
+    "{routes,islands,components}/**/*.{ts,tsx}",
   ],
   darkMode: "class",
   theme: {
@@ -25,55 +25,46 @@ module.exports = {
             visibility: "hidden",
           },
         },
-        // Fade-In-Up
         fadeInUp: {
           from: {
             opacity: 0,
             transform: "translate3d(0, 100%, 0)",
           },
-
           to: {
             opacity: 1,
             transform: "translate3d(0, 0, 0)",
           },
         },
-        // Fade-In-Down
         fadeInDown: {
           from: {
             opacity: 0,
             transform: "translate3d(0, -100%, 0)",
           },
-
           to: {
             opacity: 1,
             transform: "translate3d(0, 0, 0)",
           },
         },
-        // Fade-In-Right
         fadeInRight: {
           from: {
             opacity: 0,
             transform: "translate3d(100%, 0, 0)",
           },
-
           to: {
             opacity: 1,
             transform: "translate3d(0, 0, 0)",
           },
         },
-        // Fade-In-Left
         fadeInLeft: {
           from: {
             opacity: 0,
             transform: "translate3d(-100%, 0, 0)",
           },
-
           to: {
             opacity: 1,
             transform: "translate3d(0, 0, 0)",
           },
         },
-        // Float
         float: {
           "0%, 100%": {
             transform: "translate3d(0, 0, 0)",
@@ -111,5 +102,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-};
+} as Config;

@@ -2,11 +2,11 @@ import SimpleProject from "../components/common/simple-project/SimpleProject.tsx
 import { SectionTitle } from "../components/common/section-title/SectionTitle.tsx";
 import { projects } from "../utils/project.ts";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
-import { GitHubRepository } from "../routes/index.tsx";
 import HighlightedProject from "../components/common/highlighted-project/HighlightedProject.tsx";
 import { useCallback } from "preact/hooks";
 import { JSX } from "preact/jsx-runtime";
 import { Translation } from "../routes/_middleware.tsx";
+import { GitHubRepository } from "../utils/type.index.ts";
 
 interface ProjectsProps {
   lang: Translation["projects"];
