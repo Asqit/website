@@ -1,8 +1,6 @@
 import SimpleProject from "../components/common/simple-project/SimpleProject.tsx";
 import { SectionTitle } from "../components/common/section-title/SectionTitle.tsx";
 import { projects } from "../utils/project.ts";
-import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
-import HighlightedProject from "../components/common/highlighted-project/HighlightedProject.tsx";
 import { useCallback } from "preact/hooks";
 import { JSX } from "preact/jsx-runtime";
 import { Translation } from "../routes/_middleware.tsx";
@@ -37,46 +35,8 @@ export default function Projects(props: ProjectsProps) {
       className={"py-16 relative z-50 scroll-m-8"}
     >
       <article className={"container mx-auto max-w-6xl md:p-8"}>
-        <div className={"text-center md:text-left"}>
+        <div className={"my-8 mt-16 text-center"}>
           <SectionTitle value={lang.title} />
-        </div>
-
-        <div className={"grid grid-cols-1 gap-8 px-4"}>
-          <HighlightedProject
-            isEven={true}
-            title="Deno-Chatter"
-            githubLink="https://github.com/asqit/deno-chatter"
-            releaseLink="https://deno-chatter.deno.dev/"
-            description="Anonymous chat application written with WebSocket protocol."
-            tags={["Deno", "WebSocket", "TypeScript", "Fresh", "Tailwind"]}
-            imageSrc="images/deno-chatter.webp"
-          />
-          <HighlightedProject
-            isEven={false}
-            title="Momentify"
-            imageSrc={asset("images/momentify.webp")}
-            githubLink="https://github.com/asqit/momentify"
-            releaseLink="https://github.com/asqit/momentify"
-            description="Momentify is a small social network, where people can share their moments with others."
-            tags={["MERN", "Tailwind", "i18n", "RTK + Query"]}
-          />
-          <HighlightedProject
-            isEven={true}
-            title="Website"
-            githubLink="https://github.com/asqit/website"
-            releaseLink="https://asqit.deno.dev"
-            description="You are literally looking at it right now! It is this website and it is responsive, accessible and fast thanks to Fresh.js"
-            tags={["Fresh", "Tailwind", "Preact", "Deno"]}
-            imageSrc="images/website.jpg"
-          />
-        </div>
-
-        <div className={"my-8 mt-16"}>
-          <h2
-            className={"text-4xl font-black text-center capitalize"}
-          >
-            {lang.other_projects}
-          </h2>
           <h3
             className={"text-slate-600 dark:text-slate-400 text-center text-lg"}
           >

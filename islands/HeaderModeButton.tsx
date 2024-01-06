@@ -9,7 +9,7 @@ import { Signal } from "@preact/signals";
 import { IS_BROWSER } from "$fresh/src/runtime/utils.ts";
 import { JSX } from "preact/jsx-runtime";
 import { Emoji } from "../components/index.ts";
-import { updateProjectScheme } from "../utils/updateProjectsScheme.ts";
+import { updateProjectScheme } from "../utils/misc.ts";
 
 interface DarkModeProps extends JSX.HTMLAttributes<HTMLButtonElement> {
   prev: "light" | "dark";

@@ -1,8 +1,8 @@
 import { About, Contact, Hero, Skills } from "../components/index.ts";
 import { defineRoute, STATUS_CODE } from "$fresh/server.ts";
-import { filterGithubRepos } from "../utils/filterGithubRepos.ts";
 import { GitHubRepository, LanguageState } from "../utils/type.index.ts";
 import Projects from "../islands/Projects.tsx";
+import { filterGithubRepos } from "../utils/misc.ts";
 
 async function fetchData() {
   const resp = await fetch("https://api.github.com/users/Asqit/repos", {

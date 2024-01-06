@@ -20,11 +20,11 @@ export function Skills({ lang }: SkillsProps) {
         </h2>
         <div className={"grid grid-cols-2 grid-rows-2 py-16"}>
           <ul
-            className={"flex gap-2 flex-wrap items-center justify-center my-4 col-span-full row-span-full"}
+            className={"flex gap-2 flex-wrap items-center justify-center my-4 col-span-full row-span-full group"}
           >
             {Object.entries(skills).map((type) =>
               type[1].map((tech) => (
-                <li>
+                <li className={"group-hover:animate-move-right"}>
                   <Chip
                     className={"flex items-center justify-center gap-x-2 whitespace-nowrap snap-center"}
                   >

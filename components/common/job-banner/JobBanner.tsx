@@ -1,4 +1,4 @@
-import { misc } from "../../../utils/misc.ts";
+import { constants } from "../../../utils/constants.ts";
 
 export function JobBanner() {
   return (
@@ -7,11 +7,13 @@ export function JobBanner() {
     >
       <div
         className={`w-4 h-4 rounded-full ${
-          misc.isLookingForJob ? "bg-emerald-400 animate-pulse" : "bg-red-500"
+          constants.isLookingForJob
+            ? "bg-emerald-400 animate-pulse"
+            : "bg-red-500"
         } inline-block`}
       />
       <span>
-        {misc.isLookingForJob
+        {constants.isLookingForJob
           ? "Currently looking for work"
           : "Currently busy working"}
       </span>

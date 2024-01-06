@@ -17,10 +17,6 @@
   },
   "projects": {
     "title": "Projekty",
-    "highlighted_project": {
-      "sub_title": "Uvedený Projekt"
-    },
-    "other_projects": "Ostatní Projekty",
     "other_projects_subtitle": "(S lesklýmy hranami)",
     "simple_project": {
       "sub_title": "Projekt"

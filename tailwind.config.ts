@@ -1,9 +1,7 @@
 import { type Config } from "tailwindcss";
 
 export default {
-  content: [
-    "{routes,islands,components}/**/*.{ts,tsx}",
-  ],
+  content: ["{routes,islands,components}/**/*.{ts,tsx}"],
   darkMode: "class",
   theme: {
     extend: {
@@ -97,8 +95,8 @@ export default {
         "fade-in-down": "fadeInDown 1s cubic-bezier(0, 0, 0.2, 1)",
         "fade-in-left": "fadeInLeft 1s cubic-bezier(0, 0, 0.2, 1)",
         "fade-in-right": "fadeInRight 1s cubic-bezier(0, 0, 0.2, 1)",
-        "float": "float 10s infinite linear",
-        "blink": "blink 1s steps(5, start) infinite",
+        float: "float 10s infinite linear",
+        blink: "blink 1s steps(5, start) infinite",
       },
     },
   },

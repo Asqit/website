@@ -5,7 +5,7 @@
   },
   "about": {
     "title": "About Me",
-    "paragraph_1": "Oh, hey there! My name is Ondřej, nice to meet you! I am self-proclaimed full-stack developer from Czech Republic with passion for computers, cars and random history facts",
+    "paragraph_1": "Oh, hey there! My name is Ondřej, nice to meet you! I am a full-stack developer from Czech Republic with passion for computers, cars and random history facts",
     "paragraph_2": "I mainly focus on programming web applications, websites and web APIs with JavaScript using fast, modern frameworks like fresh.js",
     "paragraph_3": "In addition to my web development knowledge, I have a strong foundation in Linux administration.",
     "paragraph_4": "As an example of my Linux skills you can think of my 4 years old online radio server running Debian 11, and it's 6 clients made out of Raspberry Pi.",
@@ -20,10 +20,6 @@
 
   "projects": {
     "title": "Projects",
-    "highlighted_project": {
-      "sub_title": "Featured Project"
-    },
-    "other_projects": "Other Projects",
     "other_projects_subtitle": "(with shiny borders)",
     "simple_project": {
       "sub_title": "Project"
