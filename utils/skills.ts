@@ -5,7 +5,6 @@ import {
   SiExpress,
   SiGit,
   SiGnubash,
-  SiGo,
   SiHtml5,
   SiInsomnia,
   SiIntellijidea,
@@ -22,6 +21,7 @@ import {
   SiSass,
   SiTailwindcss,
   SiTypescript,
+  SiVercel,
   SiVim,
   SiVisualstudiocode,
   SiYarn,
@@ -48,11 +48,6 @@ const languages: Skill[] = [
     id: 3,
     value: "BASH",
     Icon: SiGnubash,
-  },
-  {
-    id: 4,
-    value: "Go",
-    Icon: SiGo,
   },
 ];
 
@@ -91,6 +86,12 @@ const frontEnd: Skill[] = [
     id: 7,
     value: "Redux (toolkit)",
     Icon: SiRedux,
+  },
+
+  {
+    id: 10,
+    value: "Next.js",
+    Icon: SiVercel,
   },
   {
     id: 8,
