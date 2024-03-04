@@ -29,29 +29,36 @@
   },
 
   "navbar": {
-    "0": "O mně",
-    "1": "dovednosti",
-    "2": "projekty",
-    "3": "kontakt"
+    "0": { "title": "O mně", "hyperlink": "about" },
+    "1": { "title": "Zkušenosti", "hyperlink": "experience" },
+    "2": { "title": "Dovednosti", "hyperlink": "skills" },
+    "3": { "title": "Projekty", "hyperlink": "projects" },
+    "4": { "title": "Kontak", "hyperlink": "contact" }
   },
-  "job": {
-    "introduction_title": "Představení",
-    "introduction": "Ahoj Světe! Jmenuji se Ondřej Tuček a jsem full-stack web developer. Jsem 22letý Čech s vášní pro svět počítačů, programování, auta a historii. S programováním jsem začal v roce 2018, kdy jsem napsal svůj první 'hello world' v Bash během svého druhého ročníku na střední škole.",
-
-    "current_job_title": "Co teď dělám",
-    "current_job": "Momentálně pracuji jako IT technik. Instaluji a nastavuji počítačové sítě s využitím MikroTik a připravuji systémy CCTV s použitím Dahua. Také jsem vytvořil a spravuji soukromé online rádio pro řetězec restaurací. Hlavní server běží na Debianu 11 a klienti jsou postaveni na Raspberry Pi 4.",
-
-    "skills_title": "Mé dovednosti",
-    "skills": "Dovedu plynule programovat v JavaScriptu / TypeScriptu a napsat jednoduché skripty v bashi. Také se učím Javu s kurzem z University of Helsinki. Studuji také různé jiné programovací jazyky z čiré zvědavosti.",
-
-    "contact_title": "Kontaktní Informace",
-    "contact": "Rozhodl jsi se mě kontaktovat? Skvělé! Existuje několik způsobů, jak to udělat. Můžeš použít můj kontaktní formulář, který využívá službu třetí strany s názvem ntfy.sh, nebo mi můžeš napsat e-mail. Můžeme také domluvit osobní setkání v Praze nebo Českých Budějovicích po předchozí dohodě.",
-
-    "personality_title": "Já Osobně",
-    "personality_1": "Jsem introvert a to nezatajuji. Rád pracuji v týmu, ale kvůli své tvrdohlavosti obvykle nehledám pomoc od ostatních. Kromě toho, že jsem introvert, trpím i sociální úzkostí, ale aktivně se proti ní snažím bojovat. Snažím se být zdvořilý, laskavý a štědrý k ostatním. (Se slušností nejdál dojdeš)",
-
-    "personality_2": "Ve volném čase rád čtu knihy, naposledy ze série sprawl od Williama Gibsona. Pokud jde o filmy, jsem velkým fanouškem Quentina Tarantina, Martina Scorseseho, Zdeňka Svěráka a George Lucase.",
-
-    "personality_3": "Stejně jako každý mladík v dnešní době, hraji i videohry. Upřednostňuji dobře napsaný příběh před multiplayerovým šílenstvím. Také rád sleduji historická videa (Historia Civilis), dále procvičuji své programátorské dovednosti nebo podnikám noční výlety ve svém starém automobilu s přehrávačem na kazety."
+  "experience": {
+    "title": "Zkušenosti",
+    "jobs": [
+      {
+        "title": "IT Technik",
+        "employer": "AnyTech s.r.o.",
+        "description": "Typicky obyčejná různorodá IT práce. Opravy/instalace a zálohování počítačů. Správa linuxovských server a nebo instalace CCTV systémů Dahua. Výjmečně web. dev. v MERN stacku, kde M stojí pro MySQL",
+        "skills": ["MERN Stack", "Dahua", "MikroTik", "GNU/Linux"],
+        "time_span": "2022-2023"
+      },
+      {
+        "title": "IT Developer",
+        "employer": "Raiffeisen BANK, Česká Republika",
+        "description": "Moje první práce v agilním týmu. Vytvořil jsem celý frontend pro naší interní webovou aplikaci. UI je nakreslený ve Figmě a kód napsaný v Typescriptu s frameworkem Next.js.",
+        "skills": [
+          "Typescript",
+          "React",
+          "Next.js",
+          "DaisyUI",
+          "Figma",
+          "RTK-q"
+        ],
+        "time_span": "2023-2024"
+      }
+    ]
   }
 }

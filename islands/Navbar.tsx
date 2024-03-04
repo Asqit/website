@@ -18,7 +18,10 @@ export default function Navbar(
   const sectionIds: string[] = ["about", "skills", "projects", "contact"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const typedTranslation = translation as Record<string, string>;
+  const typedTranslation = translation as Record<
+    string,
+    { title: string; hyperlink: string }
+  >;
 
   const toggleIsVisible = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -65,8 +68,8 @@ export default function Navbar(
               <span className={"text-primary-0 dark:text-primary-10"}>
                 {index}.
               </span>
-              <a href={`#${typedTranslation[index.toString()]}`}>
-                {typedTranslation[index.toString()]}
+              <a href={`#${typedTranslation[index.toString()]?.hyperlink}`}>
+                {typedTranslation[index.toString()]?.title}
               </a>
             </li>
           ))}
