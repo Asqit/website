@@ -41,6 +41,13 @@
     "title": "Experiences",
     "jobs": [
       {
+        "title": "Temp",
+        "employer": "NexGen IT",
+        "description": "Development of responsive, mobile friendly static websites with Bootstrap, Sass and HTML",
+        "skills": ["BS4", "SASS(.scss)", "HTML", "JS"],
+        "time_span": "September - October 2019, 2018"
+      },
+      {
         "title": "IT Technik",
         "employer": "AnyTech s.r.o.",
         "description": "Typically, I handled various IT tasks, including computer repairs, backups, and installations. I also managed GNU/Linux server maintenance and CCTV system installations and configurations. Additionally, I did some web development using the MERN stack, where the 'M' represents MySQL (instead of MongoDB).",

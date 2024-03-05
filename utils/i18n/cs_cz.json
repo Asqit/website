@@ -39,6 +39,13 @@
     "title": "Zkušenosti",
     "jobs": [
       {
+        "title": "Temp",
+        "employer": "NexGen IT",
+        "description": "Vývoj statických, responzivních webových stránek za pomocí knihovny bootstrap a preprocessoru pro css...SASS",
+        "skills": ["BS4", "SASS(.scss)", "HTML", "JS"],
+        "time_span": "September - October 2019, 2018"
+      },
+      {
         "title": "IT Technik",
         "employer": "AnyTech s.r.o.",
         "description": "Typicky obyčejná různorodá IT práce. Opravy/instalace a zálohování počítačů. Správa linuxovských server a nebo instalace CCTV systémů Dahua. Výjmečně web. dev. v MERN stacku, kde M stojí pro MySQL",
