@@ -1,5 +1,6 @@
 import { Translation } from "../../../routes/_middleware.tsx";
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
+import { Swirl } from "../../index.ts";
 
 interface ExperienceProps {
   lang: Translation["experience"];
@@ -7,13 +8,23 @@ interface ExperienceProps {
 
 export function Experience({ lang }: ExperienceProps) {
   return (
-    <section id="experience" className={"py-16 scroll-m-8"}>
-      <main className={"container mx-auto max-w-6xl p-8"}>
+    <section
+      id="experience"
+      className={"py-16 scroll-m-8"}
+    >
+      <main
+        className={"container mx-auto max-w-6xl p-8 relative z-10 bg-background-5 dark:bg-background-5-dark"}
+      >
         <SectionTitle value={lang.title} />
-        <ul>
-          {lang.jobs.map((job) => (
+        <ul className={"grid grid-cols-4"}>
+          {lang.jobs.map((job, i) => (
             <li
-              className={"my-8 bg-background-10 dark:bg-background-10-dark p-4 rounded-md"}
+              className={"my-8 bg-background-10 col-span-full dark:bg-background-10-dark p-4 rounded-md"
+                .concat(
+                  i % 2 === 0
+                    ? " md:col-span-2"
+                    : " md:col-span-4 md:col-start-2",
+                )}
             >
               <div className={"my-4"}>
                 <h1 className={"text-2xl font-bold"}>

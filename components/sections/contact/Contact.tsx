@@ -7,7 +7,7 @@ interface ContactProps {
 export function Contact({ lang }: ContactProps) {
   return (
     <section
-      className={"md:p-8 py-16 scroll-m-8"}
+      className={"p-8 py-16 scroll-m-8"}
       id="contact"
     >
       <main className="py-16 px-4 container mx-auto max-w-7xl flex flex-col items-center justify-center gap-y-4 bg-gray-100 dark:bg-background-10-dark rounded-md">
