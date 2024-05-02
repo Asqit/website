@@ -7,7 +7,6 @@ export default function AuthorImage() {
         <img
           loading="lazy"
           src={asset("images/andy.webp")}
-          alt="Ondřej's trip to vyšehrad posing in front of view of the magical Prague"
           className={`
             absolute
             bg-white
@@ -31,8 +30,7 @@ export default function AuthorImage() {
         />
         <img
           loading="lazy"
-          src={asset("images/tunisia.webp")}
-          alt="Ondřej standing in elevator"
+          src={asset("images/andy-2.webp")}
           className={`
             hidden
             sm:block
