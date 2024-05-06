@@ -1,6 +1,6 @@
 {
   "hero": {
-    "greetings": "Ahoj ty tam, Já se jmenuji",
+    "greetings": "Ahoj, jsem",
     "subtitle": "Vášnivý nadšenec do světa počítačů a oddaný příznivec Linuxu, který s radostí vytváří spolehlivý a výkonný software, využívající nejmodernější technologie."
   },
   "about": {
@@ -35,35 +35,29 @@
     "3": { "title": "Projekty", "hyperlink": "projects" },
     "4": { "title": "Kontak", "hyperlink": "contact" }
   },
-  "experience": {
+  "experiences": {
     "title": "Zkušenosti",
-    "jobs": [
+    "subtitle": "Moje zkušenosti v oblasti IT a vývoje webu.",
+    "data": [
       {
-        "title": "Temp",
+        "title": "Středoškolská stáž",
         "employer": "NexGen IT",
-        "description": "Vývoj statických, responzivních webových stránek za pomocí knihovny bootstrap a preprocessoru pro css...SASS",
-        "skills": ["BS4", "SASS(.scss)", "HTML", "JS"],
-        "time_span": "September - October 2019, 2018"
+        "description": "Moje první skutečná zkušenost s programováním a vývojem webu. Vytvořil jsem jednoduchou webovou stránku pro místní firmu pomocí HTML, CSS, Bootstrap 4 a JavaScriptu.",
+        "skills": ["BS4", "SASS", "HTML", "JS"],
+        "time_span": "Září - Říjen 2019, 2018"
       },
       {
         "title": "IT Technik",
         "employer": "AnyTech s.r.o.",
-        "description": "Typicky obyčejná různorodá IT práce. Opravy/instalace a zálohování počítačů. Správa linuxovských server a nebo instalace CCTV systémů Dahua. Výjmečně web. dev. v MERN stacku, kde M stojí pro MySQL",
-        "skills": ["MERN Stack", "Dahua", "MikroTik", "GNU/Linux"],
+        "description": "Moje první práce v IT. Naučil jsem se hodně o GNU/Linuxu, síťování a bezpečnosti. Také jsem vytvořil jednoduchou webovou aplikaci pro zobrazování dat získaných z IoT zařízení.",
+        "skills": ["MERN", "Dahua", "MikroTik", "GNU/Linux"],
         "time_span": "2022-2023"
       },
       {
         "title": "IT Developer",
         "employer": "Raiffeisen BANK, Česká Republika",
-        "description": "Moje první práce v agilním týmu. Vytvořil jsem celý frontend pro naší interní webovou aplikaci. UI je nakreslený ve Figmě a kód napsaný v Typescriptu s frameworkem Next.js.",
-        "skills": [
-          "Typescript",
-          "React",
-          "Next.js",
-          "DaisyUI",
-          "Figma",
-          "RTK-q"
-        ],
+        "description": "Moje první práce ve velké korporaci. Pracoval jsem v malém, agilním týmu na vývoji webové aplikace pro interní použití. Naučil jsem se hodně o TypeScriptu, Reactu a Next.js.",
+        "skills": ["Typescript", "React", "Next.js", "DaisyUI", "Figma"],
         "time_span": "2023-2024"
       }
     ]

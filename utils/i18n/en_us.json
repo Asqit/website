@@ -1,6 +1,6 @@
 {
   "hero": {
-    "greetings": "Hi there! My name is",
+    "greetings": "Hi, I'm",
     "subtitle": "Passionate computer enthusiast with love for Linux and enjoys developing reliable, high-performance software using cutting-edge technologies."
   },
   "about": {
@@ -10,7 +10,6 @@
     "paragraph_3": "In addition to my web development knowledge, I have a strong foundation in Linux administration.",
     "paragraph_4": "As an example of my Linux skills you can think of my 4 years old online radio server running Debian 11, and it's 6 clients made out of Raspberry Pi.",
     "paragraph_5": "Besides Czech, I also speak English at B2 level and I am currently learning German with Duolingo.",
-
     "cv_button": "Get CV"
   },
   "skills": {
@@ -37,27 +36,28 @@
     "3": { "title": "Projects", "hyperlink": "projects" },
     "4": { "title": "Contact", "hyperlink": "contact" }
   },
-  "experience": {
+  "experiences": {
     "title": "Experiences",
-    "jobs": [
+    "subtitle": "My journey through the world of computers and programming.",
+    "data": [
       {
-        "title": "Temp",
+        "title": "Highschool internship",
         "employer": "NexGen IT",
-        "description": "Development of responsive, mobile friendly static websites with Bootstrap, Sass and HTML",
-        "skills": ["BS4", "SASS(.scss)", "HTML", "JS"],
+        "description": "My first real world experience with programming and web development. I have created a simple website for a local company using HTML, CSS, Bootstrap 4, and JavaScript.",
+        "skills": ["BS4", "SASS", "HTML", "JS"],
         "time_span": "September - October 2019, 2018"
       },
       {
         "title": "IT Technik",
         "employer": "AnyTech s.r.o.",
-        "description": "Typically, I handled various IT tasks, including computer repairs, backups, and installations. I also managed GNU/Linux server maintenance and CCTV system installations and configurations. Additionally, I did some web development using the MERN stack, where the 'M' represents MySQL (instead of MongoDB).",
-        "skills": ["MERN Stack", "Dahua", "MikroTik", "GNU/Linux"],
+        "description": "My first job in IT. I have learned a lot about GNU/Linux, networking, and security. I have also created a simple web application for charting data collected from IoT devices.",
+        "skills": ["MERN", "Dahua", "MikroTik", "GNU/Linux"],
         "time_span": "2022-2023"
       },
       {
         "title": "IT Developer",
         "employer": "Raiffeisen BANK, Česká Republika",
-        "description": "My first experience with AGILE. I have designed and developed an internal web application. It's crafted in FIGMA and written in Typescript, leveraging Next.js for its remarkable speed and ecosystem.",
+        "description": "My first job in a big corporation. I have worked on a small, agile team developing a web application for internal use. I have learned a lot about TypeScript, React, and Next.js.",
         "skills": ["Typescript", "React", "Next.js", "DaisyUI", "Figma"],
         "time_span": "2023-2024"
       }

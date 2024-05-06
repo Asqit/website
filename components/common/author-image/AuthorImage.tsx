@@ -1,62 +1,23 @@
 import { asset } from "$fresh/runtime.ts";
+import { Polaroid } from "../polaroid/Polaroid.tsx";
 
 export default function AuthorImage() {
   return (
     <figure className="max-w-md relative z-40 flex-[0_0_45%] mx-auto">
-      <div className="object-center transition-all relative group w-[350px] aspect-[9/16]">
-        <img
+      <div className="transition-all relative group w-[350px] aspect-[9/16]">
+        <Polaroid
           loading="lazy"
           src={asset("images/andy.webp")}
-          className={`
-            absolute
-            bg-white
-            p-2
-            pb-12
-            shadow-md
-            w-full
-            h-full
-            object-cover 
-            top-0 
-            left-0 
-            z-20 
-            transition-all  
-            group-hover:z-10 
-            group-hover:-rotate-2
-            sepia-70 
-            contrast-[110%]
-            saturate-[110%]
-            hue-rotate-[342deg]
-          `}
+          className={`top-0 left-0 z-20 transition-all group-hover:z-10 group-hover:-rotate-2`}
+          caption="Andy the brave!"
+          captionClassName="text-2xl"
         />
-        <img
+        <Polaroid
           loading="lazy"
           src={asset("images/andy-2.webp")}
-          className={`
-            hidden
-            sm:block
-            absolute
-            bg-white
-            p-2
-            pb-12
-            w-full
-            h-full 
-            object-cover
-            shadow-md
-            z-10 
-            top-6 
-            left-6 
-            transition-all 
-            ease-in-out
-            rotate-6  
-            group-hover:-top-6
-            group-hover:left-0
-            group-hover:z-20 g
-            group-hover:rotate-2
-            sepia-70 
-            contrast-[110%]
-            saturate-[110%]
-            hue-rotate-[342deg]
-          `}
+          className={`hidden sm:block z-10 top-6 left-6 transition-all ease-in-out rotate-6 group-hover:-top-6 group-hover:left-0 group-hover:z-20 group-hover:rotate-2`}
+          caption="Prague, 2024"
+          captionClassName="rotate-0 left-4 text-xl text-black right-auto"
         />
       </div>
     </figure>

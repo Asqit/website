@@ -16,54 +16,58 @@ export function About({ lang }: AboutProps) {
       className={"py-16 scroll-m-8"}
     >
       <main
-        className={"container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-16 md:p-8 items-center font-sans"}
+        className={"container mx-auto max-w-6xl"}
       >
-        <AuthorImage />
-        <article className={"p-8"}>
-          <SectionTitle value={lang.title} />
-          <JobBanner />
-          <p
-            className={`my-4`}
-          >
-            {lang.paragraph_1}
-          </p>
-          <p
-            className={`my-4`}
-          >
-            {lang.paragraph_2}
-          </p>
-          <p
-            className={`my-4`}
-          >
-            {lang.paragraph_3}
-          </p>
-          <p
-            className={`my-4`}
-          >
-            {lang.paragraph_5}
-          </p>
+        <div
+          className={"grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-16 md:p-8 items-center"}
+        >
+          <AuthorImage />
+          <article className={"p-8"}>
+            <SectionTitle value={lang.title} />
+            <JobBanner />
+            <p
+              className={`my-4`}
+            >
+              {lang.paragraph_1}
+            </p>
+            <p
+              className={`my-4`}
+            >
+              {lang.paragraph_2}
+            </p>
+            <p
+              className={`my-4`}
+            >
+              {lang.paragraph_3}
+            </p>
+            <p
+              className={`my-4`}
+            >
+              {lang.paragraph_5}
+            </p>
 
-          <div className={"mt-4"}>
-            <a
-              target="blank"
-              rel="author"
-              href={asset("docs/cv.pdf")}
-              className={"btn primary px-8 inline-flex gap-x-2 items-center capitalize"}
-            >
-              <FaPaperclip />
-              <span>{lang.cv_button}</span>
-            </a>
-            <a
-              target="blank"
-              rel="author"
-              referrerpolicy={"no-referrer"}
-              href={"https://www.github.com/asqit"}
-              className={"btn ml-4 px-8 inline-flex font-semibold text-primary-0 dark:text-primary-10 gap-x-2 items-center capitalize bg-transparent hover:bg-transparent active:bg-transparent border-2 border-primary-0 dark:border-primary-10"}
-            >
-              GitHub
-            </a>
-          </div>
-        </article>
+            <div className={"mt-4"}>
+              <a
+                target="blank"
+                rel="author"
+                href={asset("docs/cv.pdf")}
+                className={"btn primary px-8 inline-flex gap-x-2 items-center capitalize"}
+              >
+                <FaPaperclip />
+                <span>{lang.cv_button}</span>
+              </a>
+              <a
+                target="blank"
+                rel="author"
+                referrerpolicy={"no-referrer"}
+                href={"https://www.github.com/asqit"}
+                className={"btn ml-4 px-8 inline-flex font-semibold text-primary-0 dark:text-primary-10 gap-x-2 items-center capitalize bg-transparent hover:bg-transparent active:bg-transparent border-2 border-primary-0 dark:border-primary-10"}
+              >
+                GitHub
+              </a>
+            </div>
+          </article>
+        </div>
       </main>
     </section>
   );

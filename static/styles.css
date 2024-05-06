@@ -35,17 +35,10 @@ body {
 :root {
 	--mouse-x: 100px;
 	--mouse-y: 100px;
-	--sphere-x: 100px;
-	--sphere-y: 100px;
 
 	--project-border: rgba(255, 255, 255, 0.74);
 	--project-sphere: rgba(255, 255, 255, 0.103);
 	--project-color: rgba(255, 255, 255, 0.163);
-}
-
-
-#MOUSE_FOLLOWER {
-	background: radial-gradient(600px at var(--sphere-x) var(--sphere-y), rgba(37, 208, 188, 0.158), transparent 80%);
 }
 
 
