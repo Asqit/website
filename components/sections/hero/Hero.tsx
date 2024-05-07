@@ -5,12 +5,12 @@ import { Shapes } from "../../index.ts";
 export function Hero(props: { lang: Translation["hero"] }) {
   return (
     <section
-      className={"h-[100vh] min-h-fit py-16 scroll-m-8 relative"}
+      className={"h-[100vh] min-h-fit py-16 scroll-m-8 relative overflow-x-hidden"}
     >
       <img
         src={asset("images/pattern.png")}
         alt="pattern"
-        className={"absolute z-10 bottom-0 left-0"}
+        className={"hidden xl:block absolute z-10 bottom-0 left-0"}
         width={128}
       />
 

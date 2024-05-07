@@ -99,7 +99,7 @@ export default function Navbar(
             {sectionIds.map((link, index) => (
               <li key={link} onClick={toggleIsVisible} className="link">
                 <a href={`#${typedTranslation[index.toString()]}`}>
-                  {typedTranslation[index.toString()]}
+                  {typedTranslation[index.toString()].title}
                 </a>
               </li>
             ))}

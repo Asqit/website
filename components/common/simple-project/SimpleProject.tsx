@@ -11,7 +11,7 @@ export default function SimpleProject(props: SimpleProjectProps) {
     <a
       href={html_url}
       target={"_blank"}
-      className={`rounded-lg relative overflow-hidden hover:before:opacity-100 group project max-w-xs flex-shrink-0 snap-center md:max-w-[initial] md:flex-initial`}
+      className={`rounded-2xl relative overflow-hidden hover:before:opacity-100 group project max-w-xs flex-shrink-0 snap-center md:max-w-[initial] md:flex-initial`}
       aria-roledescription={"button"}
     >
       <div className={"project-border"} />
