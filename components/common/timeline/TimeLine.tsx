@@ -17,7 +17,7 @@ export function TimeLine({ children, className }: Props) {
 TimeLine.Item = function ({ children }: Props) {
   return (
     <li class="mb-10 ml-4">
-      <div class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-primary-5 dark:bg-primary-5" />
+      <div class="absolute w-3 h-3 rounded-full -left-1.5 border border-primary-5 bg-primary-5" />
       {children}
     </li>
   );

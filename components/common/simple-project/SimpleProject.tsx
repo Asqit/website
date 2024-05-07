@@ -16,7 +16,7 @@ export default function SimpleProject(props: SimpleProjectProps) {
     >
       <div className={"project-border"} />
       <div
-        className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-background-5 dark:bg-background-10-dark"}
+        className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-background-10 dark:bg-background-10-dark"}
       >
         <div>
           <span className="text-2xl flex items-center gap-1">

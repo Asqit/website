@@ -14,7 +14,7 @@ export function Experiences({ lang }: Props) {
     >
       <main className={"container mx-auto max-w-7xl"}>
         <div
-          className={"p-4 md:p-16 bg-background-10-dark rounded-2xl mt-8 relative after:w-[2px] after:h-[98%] after:bg-gradient-to-b after:from-background-10-dark after:via-primary-10/30 after:to-background-10-dark after:absolute after:top-[1%] after:right-[2px] after:z-10 after:rounded-r-2xl"}
+          className={"p-4 md:p-16 bg-background-10 dark:bg-background-10-dark rounded-2xl mt-8 relative after:w-[2px] after:h-[98%] after:bg-gradient-to-b after:from-background-10 dark:from-background-10-dark after:via-primary-10/30 after:to-background-10 dark:after:to-background-10-dark after:absolute after:top-[1%] after:right-[2px] after:z-10 after:rounded-r-2xl"}
         >
           <SectionTitle value={lang.title} />
 

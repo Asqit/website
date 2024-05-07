@@ -12,7 +12,7 @@ const Language = (data: { lang: LanguageState["lang"] }) => {
       }}
     >
       {data.lang === "en"
-        ? <Emoji label="EN" symbol="🇬🇧" />
+        ? <Emoji symbol="🇬🇧" label="EN" />
         : <Emoji symbol="🇨🇿" label="CZ" />}
     </button>
   );
