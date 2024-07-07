@@ -46,7 +46,7 @@ export default function Projects(props: ProjectsProps) {
         <div
           id="simple-projects"
           onMouseMove={handleMouseMove}
-          className={"flex overflow-x-auto snap-x flex-nowrap md:grid md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4"}
+          className={"grid snap-x snap-mandatory [grid-auto-columns:100%] overflow-x-scroll grid-flow-col  md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4 p-4 md:p-0"}
         >
           {data
             ? data.map((project) => (

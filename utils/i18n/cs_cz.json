@@ -30,8 +30,8 @@
 
   "navbar": {
     "0": { "title": "O mně", "hyperlink": "about" },
-    "1": { "title": "Zkušenosti", "hyperlink": "experience" },
-    "2": { "title": "Dovednosti", "hyperlink": "skills" },
+    "1": { "title": "Dovednosti", "hyperlink": "skills" },
+    "2": { "title": "Zkušenosti", "hyperlink": "experience" },
     "3": { "title": "Projekty", "hyperlink": "projects" },
     "4": { "title": "Kontak", "hyperlink": "contact" }
   },

@@ -32,13 +32,16 @@ export function Footer({ lang }: { lang: Translation["hero"] }) {
                 <a rel="tag" href={"/#about"}>about</a>
               </li>
               <li className={"hover:underline"}>
-                <a rel="tag" href={"/#projects"}>skills</a>
+                <a rel="tag" href={"/#skills"}>skills</a>
+              </li>
+              <li className={"hover:underline"}>
+                <a rel="tag" href={"/#experience"}>experiences</a>
               </li>
               <li className={"hover:underline"}>
                 <a rel="tag" href={"/#projects"}>projects</a>
               </li>
               <li className={"hover:underline"}>
-                <a rel="tag" href={"/#projects"}>contact</a>
+                <a rel="tag" href={"/#contact"}>contact</a>
               </li>
             </ul>
           </div>
@@ -80,17 +83,7 @@ export function Footer({ lang }: { lang: Translation["hero"] }) {
                   <FaPaperclip /> CV
                 </a>
               </li>
-              <li>
-                <a
-                  target="blank"
-                  rel="author"
-                  className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
-                  href={asset("docs/java.png")}
-                >
-                  <FaToolbox />
-                  Java Certificate
-                </a>
-              </li>
+
               <li>
                 <a
                   target="blank"

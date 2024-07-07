@@ -11,12 +11,12 @@ export default function SimpleProject(props: SimpleProjectProps) {
     <a
       href={html_url}
       target={"_blank"}
-      className={`rounded-2xl relative overflow-hidden hover:before:opacity-100 group project max-w-xs flex-shrink-0 snap-center md:max-w-[initial] md:flex-initial`}
+      className={`snap-start rounded-2xl relative overflow-hidden hover:before:opacity-100 group project flex-shrink-0 md:flex-initial`}
       aria-roledescription={"button"}
     >
       <div className={"project-border"} />
       <div
-        className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-background-10 dark:bg-background-10-dark"}
+        className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-accent-10 dark:bg-background-10"}
       >
         <div>
           <span className="text-2xl flex items-center gap-1">
