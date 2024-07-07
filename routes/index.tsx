@@ -1,9 +1,8 @@
-import { About, Contact, Hero, Skills } from "../components/index.ts";
+import { About, Contact, Hero } from "../components/index.ts";
 import { defineRoute, STATUS_CODE } from "$fresh/server.ts";
 import { GitHubRepository, LanguageState } from "../utils/type.index.ts";
-import Projects from "../islands/Projects.tsx";
 import { filterGithubRepos } from "../utils/misc.ts";
-import { Experiences } from "../components/sections/experiences/Experiences.tsx";
+import Projects from "../islands/Projects.tsx";
 
 async function fetchData() {
   const resp = await fetch("https://api.github.com/users/Asqit/repos", {
@@ -21,7 +20,7 @@ async function fetchData() {
   return filterGithubRepos(parsed);
 }
 
-export default defineRoute(async (req, ctx) => {
+export default defineRoute(async (_req, ctx) => {
   const data = await fetchData();
   const state = ctx.state as Record<string, unknown>;
   const translation = state.translation as LanguageState["translation"];
@@ -29,9 +28,11 @@ export default defineRoute(async (req, ctx) => {
   return (
     <>
       <Hero lang={translation["hero"]} />
-      <About lang={translation["about"]} />
-      <Skills lang={translation["skills"]} />
-      <Experiences lang={translation["experiences"]} />
+      <About
+        about={translation["about"]}
+        skills={translation["skills"]}
+        experiences={translation["experiences"]}
+      />
       <Projects lang={translation["projects"]} data={data} />
       <Contact lang={translation["contact"]} />
     </>

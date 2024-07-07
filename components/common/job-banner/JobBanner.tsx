@@ -3,7 +3,7 @@ import { constants } from "../../../utils/constants.ts";
 export function JobBanner() {
   return (
     <div
-      className={"p-2 rounded-xl inline-flex items-center justify-center gap-x-2 bg-background-10 dark:bg-background-10-dark"}
+      className={"p-2 rounded-xl inline-flex items-center justify-center gap-x-2 bg-accent-10 dark:bg-background-10"}
     >
       <div
         className={`w-4 h-4 rounded-full ${

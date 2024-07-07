@@ -31,8 +31,8 @@
   },
   "navbar": {
     "0": { "title": "about", "hyperlink": "about" },
-    "1": { "title": "Experiences", "hyperlink": "experience" },
-    "2": { "title": "Skills", "hyperlink": "skills" },
+    "1": { "title": "Skills", "hyperlink": "skills" },
+    "2": { "title": "Experiences", "hyperlink": "experience" },
     "3": { "title": "Projects", "hyperlink": "projects" },
     "4": { "title": "Contact", "hyperlink": "contact" }
   },
