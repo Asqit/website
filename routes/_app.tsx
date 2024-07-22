@@ -1,4 +1,4 @@
-import { Head } from "$fresh/runtime.ts";
+import { asset, Head } from "$fresh/runtime.ts";
 import { PageProps } from "$fresh/src/server/types.ts";
 import { useSignal } from "@preact/signals";
 import { Footer } from "../components/index.ts";
@@ -22,7 +22,7 @@ export default function App(props: PageProps) {
         </title>
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/ico" href="../images/favicon.ico" />
-        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href={asset("/styles.css")} />
         <meta lang={"en"} />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta

@@ -8,9 +8,9 @@ export function Hero(props: { lang: Translation["hero"] }) {
       className={"h-[100vh] min-h-fit py-16 scroll-m-8 relative overflow-x-hidden"}
     >
       <img
-        src={asset("images/pattern.png")}
+        src={asset("/images/pattern.png")}
         alt="pattern"
-        className={"hidden xl:block absolute z-10 bottom-0 left-0"}
+        className={"hidden xl:block absolute z-10 bottom-0 left-0 animate-fade-in-left"}
         width={128}
       />
 
@@ -26,15 +26,13 @@ export function Hero(props: { lang: Translation["hero"] }) {
             {props.lang.greetings} Ondřej.
           </h1>
           <h2
-            className={"font-semibold text-xl md:text-3xl text-primary-0 dark:text-primary-10 my-2 animate-fade-in-up"}
-            style={{ animationDuration: "1300ms" }}
+            className={"font-semibold text-xl md:text-3xl text-primary-0 dark:text-primary-10 my-2 animate-fade-in-up [animation-duration:1300ms]"}
           >
             Web Developer & computer enthusiast.
           </h2>
 
           <p
-            className={"max-w-lg md:text-lg mt-4 font-semibold animate-fade-in-up"}
-            style={{ animationDuration: "1300ms" }}
+            className={"max-w-lg md:text-lg mt-4 font-semibold animate-fade-in-up [animation-duration:1300ms]"}
           >
             {props.lang.subtitle}
           </p>
