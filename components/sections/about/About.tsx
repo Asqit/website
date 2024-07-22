@@ -115,7 +115,7 @@ export function About({ about, skills, experiences }: AboutProps) {
                 {experiences.data.map((experience, index) => (
                   <TimeLine.Item key={index}>
                     <time
-                      className={"mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 font-mono"}
+                      className={"mb-1 text-sm font-normal leading-none text-gray-600 dark:text-gray-400 font-mono"}
                     >
                       {experience.time_span}
                     </time>
@@ -125,7 +125,7 @@ export function About({ about, skills, experiences }: AboutProps) {
                       {experience.employer} - {experience.title}
                     </h3>
                     <p
-                      className={"mb-2 text-base font-normal text-gray-500 dark:text-gray-400 max-w-3xl text-left"}
+                      className={"mb-2 text-base font-normal text-gray-600 dark:text-gray-400 max-w-3xl text-left"}
                     >
                       {experience.description}
                     </p>
