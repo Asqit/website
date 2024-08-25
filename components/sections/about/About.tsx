@@ -69,18 +69,25 @@ export function About({ about, skills, experiences }: AboutProps) {
           </article>
         </div>
         <div>
-          <section className={"my-8 p-4 md:p-0"}>
+          <section
+            className={"my-8 p-4 md:p-0 animate-reveal"}
+            style={{ animationTimeline: "view()" }}
+          >
             <AuthorImage />
           </section>
 
-          <section className={"my-32 scroll-m-64 "} id={"skills"}>
+          <section
+            className={"my-32 scroll-m-64 animate-reveal"}
+            id={"skills"}
+            style={{ animationTimeline: "view()" }}
+          >
             <div className={"md:hidden p-4 md:p-16 mt-8"}>
               <SectionTitle value={skills.title} />
               <h2 className={"max-w-sm mx-auto text-lg"}>
                 {skills.subtitle}
               </h2>
             </div>
-            <div className={"grid grid-cols-2 grid-rows-2"}>
+            <div className={"grid grid-cols-2 grid-rows-2 animate-reveal"}>
               <ul
                 className={"flex gap-2 flex-wrap items-center justify-center my-4 col-span-full row-span-full group"}
               >
@@ -103,7 +110,11 @@ export function About({ about, skills, experiences }: AboutProps) {
             </div>
           </section>
 
-          <section className={"my-8 scroll-m-16"} id="experience">
+          <section
+            className={"my-8 scroll-m-16 animate-reveal"}
+            id="experience"
+            style={{ animationTimeline: "view()" }}
+          >
             <div
               className={"p-4 md:p-16 mt-8"}
             >

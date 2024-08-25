@@ -32,7 +32,8 @@ export default function Projects(props: ProjectsProps) {
   return (
     <section
       id="projects"
-      className={"py-16 relative z-50 scroll-m-8"}
+      className={"py-16 relative z-50 scroll-m-8 animate-reveal"}
+      style={{ animationTimeline: "view()" }}
     >
       <article className={"container mx-auto max-w-6xl md:p-8"}>
         <div className={"my-8 mt-16 text-center"}>
@@ -46,7 +47,7 @@ export default function Projects(props: ProjectsProps) {
         <div
           id="simple-projects"
           onMouseMove={handleMouseMove}
-          className={"grid snap-x snap-mandatory [grid-auto-columns:100%] overflow-x-scroll grid-flow-col  md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4 p-4 md:p-0"}
+          className={"grid snap-x snap-mandatory [grid-auto-columns:100%] overflow-x-scroll grid-flow-col  md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 gap-4 p-4 md:p-0 md:overflow-hidden"}
         >
           {data
             ? data.map((project) => (
