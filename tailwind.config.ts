@@ -78,6 +78,14 @@ const cfg: Config = {
             transform: "translatey(0px)",
           },
         },
+        reveal: {
+          from: {
+            opacity: "0",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
       },
     },
     animation: {
@@ -87,6 +95,7 @@ const cfg: Config = {
       "fade-in-right": "fadeInRight 1s cubic-bezier(0, 0, 0.2, 1)",
       float: "float 6s ease-in-out infinite",
       blink: "blink 1s steps(5, start) infinite",
+      reveal: "reveal",
     },
   },
 };
