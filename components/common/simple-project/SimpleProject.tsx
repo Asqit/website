@@ -1,5 +1,4 @@
 import { FaCode } from "react-icons/fa";
-import { Chip } from "../../index.ts";
 import { GitHubRepo } from "../../../utils/type.index.ts";
 
 type SimpleProjectProps = GitHubRepo & {};
@@ -11,12 +10,12 @@ export default function SimpleProject(props: SimpleProjectProps) {
     <a
       href={html_url}
       target={"_blank"}
-      className={`snap-start rounded-2xl relative overflow-hidden hover:before:opacity-100 group project flex-shrink-0 md:flex-initial`}
+      className={`snap-start rounded-box relative overflow-hidden hover:before:opacity-100 group project flex-shrink-0 md:flex-initial`}
       aria-roledescription={"button"}
     >
       <div className={"project-border"} />
       <div
-        className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-accent-10 dark:bg-background-10"}
+        className={"p-8 flex flex-col relative z-20 gap-2 w-[calc(100%-2px)] h-[calc(100%-2px)] m-[1px] rounded-[inherit] bg-base-200"}
       >
         <div>
           <span className="text-2xl flex items-center gap-1">
@@ -25,7 +24,7 @@ export default function SimpleProject(props: SimpleProjectProps) {
           </span>
         </div>
         <article className="flex-grow">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary-0 dark:text-primary-10 my-2 capitalize">
+          <h2 className="text-2xl md:text-4xl font-bold text-primary my-2 capitalize">
             {name}
           </h2>
           <p className={"my-2"}>{description}</p>
@@ -38,12 +37,7 @@ export default function SimpleProject(props: SimpleProjectProps) {
               if (t.length <= 10) return t;
             }).filter((t) => t && t).slice(0, 3).map((
               tag,
-            ) => (
-              <Chip
-                key={tag}
-                children={<>{tag}</>}
-              />
-            ))
+            ) => <span key={tag} className={"badge"}>{tag}</span>)
             : <p>none</p>}
         </div>
       </div>

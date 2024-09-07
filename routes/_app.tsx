@@ -2,20 +2,18 @@ import { asset, Head } from "$fresh/runtime.ts";
 import { PageProps } from "$fresh/src/server/types.ts";
 import { useSignal } from "@preact/signals";
 import { Footer } from "../components/index.ts";
+import { LanguageState, Themes } from "../utils/type.index.ts";
 import Navbar from "../islands/Navbar.tsx";
-import { LanguageState } from "../utils/type.index.ts";
 
 export default function App(props: PageProps) {
   const { Component } = props;
 
   const language = props.state.lang as LanguageState["lang"];
   const translation = props.state.translation as LanguageState["translation"];
-
-  /** signal used to mark current color scheme */
-  const darkModeSignal = useSignal<"light" | "dark">("light");
+  const themeSignal = useSignal<Themes>("dracula");
 
   return (
-    <html lang={"en"}>
+    <html lang={"en"} data-theme={themeSignal.value}>
       <Head>
         <title>
           Ondřej Tuček - Full-Stack web developer 👨‍💻 from Czech Republic 🇨🇿
@@ -38,7 +36,7 @@ export default function App(props: PageProps) {
       </Head>
       <body className={"antialiased"}>
         <Navbar
-          darkModeSignal={darkModeSignal}
+          themeSignal={themeSignal}
           lang={language}
           translation={translation["navbar"]}
         />

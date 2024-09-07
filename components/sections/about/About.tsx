@@ -1,7 +1,7 @@
 import { SectionTitle } from "../../common/section-title/SectionTitle.tsx";
 import { asset } from "$fresh/runtime.ts";
 import { FaPaperclip } from "react-icons/fa";
-import { Chip, JobBanner, TimeLine } from "../../index.ts";
+import { JobBanner } from "../../index.ts";
 import { Translation } from "../../../routes/_middleware.tsx";
 import { skills as skillsData } from "../../../utils/skills.ts";
 import AuthorImage from "../../common/author-image/AuthorImage.tsx";
@@ -19,7 +19,7 @@ export function About({ about, skills, experiences }: AboutProps) {
       className={"py-16 scroll-m-8"}
     >
       <main
-        className={"container mx-auto max-w-6xl md:grid md:grid-cols-2 relative"}
+        className={"container mx-auto max-w-7xl md:grid md:grid-cols-2 relative"}
       >
         <div>
           <article className={"p-8 md:sticky md:top-20"}>
@@ -51,7 +51,7 @@ export function About({ about, skills, experiences }: AboutProps) {
                 target="blank"
                 rel="author"
                 href={asset("docs/cv.pdf")}
-                className={"btn primary px-8 inline-flex gap-x-2 items-center capitalize"}
+                className={"btn btn-primary px-8 inline-flex gap-x-2 items-center capitalize"}
               >
                 <FaPaperclip />
                 <span>{about.cv_button}</span>
@@ -61,7 +61,7 @@ export function About({ about, skills, experiences }: AboutProps) {
                 rel="author"
                 referrerpolicy={"no-referrer"}
                 href={"https://www.github.com/asqit"}
-                className={"btn ml-4 px-8 inline-flex font-semibold text-primary-0 dark:text-primary-10 gap-x-2 items-center capitalize bg-transparent hover:bg-transparent active:bg-transparent border-2 border-primary-0 dark:border-primary-10"}
+                className={"btn btn-outline btn-primary ml-4 px-8"}
               >
                 GitHub
               </a>
@@ -94,19 +94,15 @@ export function About({ about, skills, experiences }: AboutProps) {
                 {Object.entries(skillsData).map((type) =>
                   type[1].map((tech) => (
                     <li className={"group-hover:animate-move-right"}>
-                      <Chip
-                        className={"flex items-center justify-center gap-x-2 whitespace-nowrap snap-center"}
-                      >
-                        <>
-                          <tech.Icon />
-                          <span>{tech.value}</span>
-                        </>
-                      </Chip>
+                      <div className={"badge gap-2 badge-xl"}>
+                        <tech.Icon />
+                        <span>{tech.value}</span>
+                      </div>
                     </li>
                   ))
                 )}
               </ul>
-              <div class="from-accent-5 to-accent-5 dark:from-background-5 dark:to-background-5 dark:via-transparent via-transparent bg-gradient-to-r w-full h-full col-span-full row-span-full pointer-events-none" />
+              <div class="from-base-100 to-base-100  via-transparent bg-gradient-to-r w-full h-full col-span-full row-span-full pointer-events-none" />
             </div>
           </section>
 
@@ -122,34 +118,44 @@ export function About({ about, skills, experiences }: AboutProps) {
                 <SectionTitle value={experiences.title} />
                 <h2 className={"mb-4 font-semibold"}>{experiences.subtitle}</h2>
               </div>
-              <TimeLine>
-                {experiences.data.map((experience, index) => (
-                  <TimeLine.Item key={index}>
-                    <time
-                      className={"mb-1 text-sm font-normal leading-none text-gray-600 dark:text-gray-400 font-mono"}
-                    >
-                      {experience.time_span}
-                    </time>
-                    <h3
-                      className={"text-lg font-semibold text-gray-900 dark:text-white"}
-                    >
-                      {experience.employer} - {experience.title}
-                    </h3>
-                    <p
-                      className={"mb-2 text-base font-normal text-gray-600 dark:text-gray-400 max-w-3xl text-left"}
-                    >
-                      {experience.description}
-                    </p>
+              <ul
+                className={"timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"}
+              >
+                {experiences.data.map((exp, i) => (
+                  <li>
+                    <hr className="bg-primary" />
                     <div
-                      className={"flex flex-wrap gap-2 font-mono lowercase"}
+                      className={`${
+                        i % 2 == 0 ? "timeline-start" : "timeline-end"
+                      } timeline-box timeline-box-primary`}
                     >
-                      {experience.skills.map((skill, i) => (
-                        <span key={i}>{skill}</span>
-                      ))}
+                      <time
+                        className={"mb-1 text-sm font-normal leading-none font-mono"}
+                      >
+                        {exp.time_span}
+                      </time>
+                      <h3
+                        className={"text-lg font-semibold text-secondary my-4"}
+                      >
+                        {exp.employer} - {exp.title}
+                      </h3>
+                      <p
+                        className={"my-4 text-base font-normal max-w-3xl text-left"}
+                      >
+                        {exp.description}
+                      </p>
+                      <div
+                        className={"flex flex-wrap gap-2 font-mono lowercase"}
+                      >
+                        {exp.skills.map((skill, i) => (
+                          <span className={"badge"} key={i}>{skill}</span>
+                        ))}
+                      </div>
                     </div>
-                  </TimeLine.Item>
+                    <hr className="bg-primary" />
+                  </li>
                 ))}
-              </TimeLine>
+              </ul>
             </div>
           </section>
         </div>

@@ -1,23 +1,27 @@
-import { type Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
+import daisyui from "npm:daisyui";
+import { constants } from "./utils/constants.ts";
 
-const cfg: Config = {
+export default {
   content: ["{routes,islands,components}/**/*.{ts,tsx}"],
   darkMode: "class",
+  plugins: [daisyui as any],
+  daisyui: {
+    themes: [
+      {
+        default: {
+          "primary": "hsla(173, 70%, 34%, 1)",
+          "secondary": "hsla(357, 67%, 44%, 1)",
+          "accent": "hsla(173, 70%, 90%, 1)",
+          "neutral": "#3d4451",
+          "base-100": "hsla(0, 0%, 8%, 1)",
+        },
+      },
+      ...constants.themes,
+    ],
+  },
   theme: {
     extend: {
-      colors: {
-        // color-5 = base color
-        "primary-10": "hsla(173, 70%, 44%, 1)",
-        "primary-5": "hsla(173, 70%, 34%, 1)",
-        "primary-0": "hsla(173, 70%, 24%, 1)",
-        "background-10": "hsla(0, 0%, 12%, 1)",
-        "background-5": "hsla(0, 0%, 8%, 1)",
-        "background-0": "hsla(0, 0%, 4%, 1)",
-        "accent-10": "hsla(173, 70%, 95%, 1)",
-        "accent-5": "hsla(173, 70%, 90%, 1)",
-        "accent-0": "hsla(173, 70%, 85%, 1)",
-        "special-red": "hsla(357, 67%, 44%, 1)",
-      },
       keyframes: {
         blink: {
           to: {
@@ -98,6 +102,4 @@ const cfg: Config = {
       reveal: "reveal",
     },
   },
-};
-
-export default cfg;
+} as Config;

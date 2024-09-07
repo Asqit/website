@@ -1,8 +1,8 @@
 import { FreshContext } from "$fresh/server.ts";
 import { LanguageState } from "../utils/type.index.ts";
 
-import cs from "../utils/i18n/cs_cz.json" assert { type: "json" };
-import en from "../utils/i18n/en_us.json" assert { type: "json" };
+import cs from "../utils/i18n/cs_cz.json" with { type: "json" };
+import en from "../utils/i18n/en_us.json" with { type: "json" };
 
 export type Translation = typeof cs;
 
