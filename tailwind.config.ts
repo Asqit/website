@@ -16,6 +16,13 @@ export default {
           "neutral": "#3d4451",
           "base-100": "hsla(0, 0%, 8%, 1)",
         },
+        light: {
+          "primary": "hsla(173, 70%, 34%, 1)",
+          "secondary": "hsla(357, 67%, 44%, 1)",
+          "accent": "hsla(173, 70%, 90%, 1)",
+          "neutral": "#3d4451",
+          "base-100": "#e6e6e6",
+        },
       },
       ...constants.themes,
     ],

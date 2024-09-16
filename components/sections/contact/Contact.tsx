@@ -11,7 +11,7 @@ export function Contact({ lang }: ContactProps) {
       style={{ animationTimeline: "view()" }}
       id="contact"
     >
-      <main className="py-16 px-4 container mx-auto max-w-7xl flex flex-col items-center justify-center gap-y-4 bg-base-200 rounded-box">
+      <main className="py-16 px-4 container mx-auto max-w-7xl flex flex-col items-center justify-center gap-y-4 bg-base-200 rounded-box shadow">
         <h2 className="font-black text-2xl md:text-3xl lg:text-6xl my-3 text-center">
           {lang.title}
         </h2>

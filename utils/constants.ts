@@ -1,13 +1,12 @@
 import { AllValuesPresent } from "./type.index.ts";
 
 const data: AllValuesPresent<
-  ["default", "cyberpunk", "dracula", "black", "corporate", "retro"]
+  ["default", "light", "dracula", "black", "retro"]
 > = [
   "default",
-  "cyberpunk",
+  "light",
   "dracula",
   "black",
-  "corporate",
   "retro",
 ];
 

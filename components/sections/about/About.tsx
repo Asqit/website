@@ -81,7 +81,7 @@ export function About({ about, skills, experiences }: AboutProps) {
             id={"skills"}
             style={{ animationTimeline: "view()" }}
           >
-            <div className={"md:hidden p-4 md:p-16 mt-8"}>
+            <div className={"md:hidden p-4 md:p-16 mt-8 text-center"}>
               <SectionTitle value={skills.title} />
               <h2 className={"max-w-sm mx-auto text-lg"}>
                 {skills.subtitle}
@@ -112,9 +112,9 @@ export function About({ about, skills, experiences }: AboutProps) {
             style={{ animationTimeline: "view()" }}
           >
             <div
-              className={"p-4 md:p-16 mt-8"}
+              className={"p-4 md:p-0 mt-8"}
             >
-              <div className={"md:hidden"}>
+              <div className={"md:hidden text-center"}>
                 <SectionTitle value={experiences.title} />
                 <h2 className={"mb-4 font-semibold"}>{experiences.subtitle}</h2>
               </div>
@@ -123,11 +123,25 @@ export function About({ about, skills, experiences }: AboutProps) {
               >
                 {experiences.data.map((exp, i) => (
                   <li>
-                    <hr className="bg-primary" />
+                    <div className="timeline-middle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-5 w-5"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    {i === 0 && <hr className="bg-primary" />}
                     <div
                       className={`${
                         i % 2 == 0 ? "timeline-start" : "timeline-end"
-                      } timeline-box timeline-box-primary`}
+                      }`}
                     >
                       <time
                         className={"mb-1 text-sm font-normal leading-none font-mono"}
@@ -135,7 +149,7 @@ export function About({ about, skills, experiences }: AboutProps) {
                         {exp.time_span}
                       </time>
                       <h3
-                        className={"text-lg font-semibold text-secondary my-4"}
+                        className={"text-lg font-semibold text-primary my-4"}
                       >
                         {exp.employer} - {exp.title}
                       </h3>
@@ -148,7 +162,12 @@ export function About({ about, skills, experiences }: AboutProps) {
                         className={"flex flex-wrap gap-2 font-mono lowercase"}
                       >
                         {exp.skills.map((skill, i) => (
-                          <span className={"badge"} key={i}>{skill}</span>
+                          <span
+                            className={"badge badge-lg badge-primary"}
+                            key={i}
+                          >
+                            {skill}
+                          </span>
                         ))}
                       </div>
                     </div>

@@ -11,8 +11,8 @@ html {
 	--mouse-y: 100px;
 
 	--project-border: rgba(255, 255, 255, 0.74);
-	--project-sphere: rgba(255, 255, 255, 0.103);
-	--project-color: rgba(255, 255, 255, 0.163);
+	--project-sphere: rgba(255, 255, 255, 0.05);
+	--project-color: rgba(255, 255, 255, 0.02);
 }
 
 #simple-projects:hover > .project > .project-border {

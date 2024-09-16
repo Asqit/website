@@ -7,7 +7,6 @@ import * as $_500 from "./routes/_500.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_middleware from "./routes/_middleware.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $HeaderModeButton from "./islands/HeaderModeButton.tsx";
 import * as $Language from "./islands/Language.tsx";
 import * as $Navbar from "./islands/Navbar.tsx";
 import * as $Projects from "./islands/Projects.tsx";
@@ -22,7 +21,6 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
-    "./islands/HeaderModeButton.tsx": $HeaderModeButton,
     "./islands/Language.tsx": $Language,
     "./islands/Navbar.tsx": $Navbar,
     "./islands/Projects.tsx": $Projects,

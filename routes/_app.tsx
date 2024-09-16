@@ -10,7 +10,7 @@ export default function App(props: PageProps) {
 
   const language = props.state.lang as LanguageState["lang"];
   const translation = props.state.translation as LanguageState["translation"];
-  const themeSignal = useSignal<Themes>("dracula");
+  const themeSignal = useSignal<Themes>("default");
 
   return (
     <html lang={"en"} data-theme={themeSignal.value}>
