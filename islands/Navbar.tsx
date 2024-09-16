@@ -46,24 +46,21 @@ export default function Navbar(
   }, []);
 
   const SelectTheme = () => (
-    <li>
-      <select
-        className="select bg-transparent w-full max-w-xs"
-        onChange={(e) => {
-          const val = e.currentTarget.value;
+    <select
+      className="select bg-transparent w-full max-w-xs"
+      onChange={(e) => {
+        const val = e.currentTarget.value;
 
-          themeSignal.value = val as Themes;
-          document.querySelector("html")?.setAttribute(
-            "data-theme",
-            themeSignal.value,
-          );
-        }}
-      >
-        <option disabled selected>🎨 Theme</option>
-        {constants.themes.map((pl) => <option key={pl} value={pl}>{pl}
-        </option>)}
-      </select>
-    </li>
+        themeSignal.value = val as Themes;
+        document.querySelector("html")?.setAttribute(
+          "data-theme",
+          themeSignal.value,
+        );
+      }}
+    >
+      <option disabled selected>🎨 Theme</option>
+      {constants.themes.map((pl) => <option key={pl} value={pl}>{pl}</option>)}
+    </select>
   );
 
   return (
@@ -73,9 +70,7 @@ export default function Navbar(
       <nav
         className={classNames(
           "container mx-auto will-change-scroll transition-all rounded-box max-w-7xl backdrop-blur-xl flex items-center justify-between flex-wrap p-6",
-          isScrolled || isMenuOpen
-            ? "dark:bg-background-10/40 bg-accent-10/40"
-            : "bg-transparent",
+          isScrolled || isMenuOpen ? "bg-base-200/40 shadow" : "bg-transparent",
         )}
       >
         <Brand />
@@ -100,14 +95,16 @@ export default function Navbar(
           ))}
 
           {/* SPECIAL LIST ITEMS */}
-          <SelectTheme />
+          <li>
+            <SelectTheme />
+          </li>
           <li>
             <Language lang={lang} />
           </li>
         </ul>
         <div
           className={classNames(
-            "rounded-box fixed left-0 w-full z-40 bg-accent-10/40 dark:bg-background-10/40 p-4 transition-all md:hidden backdrop-blur-xl",
+            "rounded-box fixed left-0 shadow w-full z-40 bg-accent-10/40 dark:bg-background-10/40 p-4 transition-all md:hidden backdrop-blur-xl",
             isMenuOpen ? "top-24 h-[calc(100vh-10rem)]" : "-top-96",
           )}
         >
@@ -119,7 +116,7 @@ export default function Navbar(
                 key={link}
                 className="font-mono capitalize hover:text-primary-0 dark:hover:text-primary-10 my-4"
               >
-                <span className={"text-primary-0 dark:text-primary-10"}>
+                <span className={"text-primary"}>
                   {index}.
                 </span>
                 <a href={`#${typedTranslation[index.toString()]?.hyperlink}`}>

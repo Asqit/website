@@ -43,10 +43,9 @@ export type LanguageState = {
 
 export type Themes =
   | "default"
-  | "cyberpunk"
+  | "light"
   | "dracula"
   | "black"
-  | "corporate"
   | "retro";
 
 export type AllValuesPresent<T extends string[]> = T[number] extends Themes
