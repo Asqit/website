@@ -1,22 +1,22 @@
 import { useCallback, useEffect, useState } from "preact/hooks";
 import { Brand, Hamburger } from "../components/index.ts";
 import { Signal } from "@preact/signals";
-import Language from "./Language.tsx";
 import { Translation } from "../routes/_middleware.tsx";
-import { LanguageState } from "../utils/type.index.ts";
-import HeaderModeButton from "./HeaderModeButton.tsx";
-import classNames from "npm:classnames";
+import { LanguageState, Themes } from "../utils/type.index.ts";
 import { asset } from "$fresh/runtime.ts";
 import { FaDev, FaEnvelope, FaGithub, FaPaperclip } from "react-icons/fa";
+import { constants } from "../utils/constants.ts";
+import classNames from "npm:classnames";
+import Language from "./Language.tsx";
 
 interface NavbarProps {
-  darkModeSignal: Signal<"light" | "dark">;
+  themeSignal: Signal<Themes>;
   lang: LanguageState["lang"];
   translation: Translation["navbar"];
 }
 
 export default function Navbar(
-  { darkModeSignal, lang, translation }: NavbarProps,
+  { lang, translation, themeSignal }: NavbarProps,
 ) {
   const sectionIds: string[] = ["about", "skills", "projects", "contact"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,19 +45,40 @@ export default function Navbar(
     };
   }, []);
 
+  const SelectTheme = () => (
+    <li>
+      <select
+        className="select bg-transparent w-full max-w-xs"
+        onChange={(e) => {
+          const val = e.currentTarget.value;
+
+          themeSignal.value = val as Themes;
+          document.querySelector("html")?.setAttribute(
+            "data-theme",
+            themeSignal.value,
+          );
+        }}
+      >
+        <option disabled selected>🎨 Theme</option>
+        {constants.themes.map((pl) => <option key={pl} value={pl}>{pl}
+        </option>)}
+      </select>
+    </li>
+  );
+
   return (
     <header
       className={`fixed w-screen top-0 left-0 z-[1200] transition-all will-change-scroll max-h-20 p-4 `}
     >
       <nav
         className={classNames(
-          "container mx-auto will-change-scroll transition-all rounded-2xl max-w-7xl backdrop-blur-xl flex items-center justify-between flex-wrap p-6",
+          "container mx-auto will-change-scroll transition-all rounded-box max-w-7xl backdrop-blur-xl flex items-center justify-between flex-wrap p-6",
           isScrolled || isMenuOpen
             ? "dark:bg-background-10/40 bg-accent-10/40"
             : "bg-transparent",
         )}
       >
-        <Brand className="dark:text-white text-black" />
+        <Brand />
         <div className="md:hidden relative z-50">
           <Hamburger isOpen={isMenuOpen} onClick={toggleIsVisible} />
         </div>
@@ -69,7 +90,7 @@ export default function Navbar(
               key={link}
               className="font-mono capitalize hover:text-primary-0 dark:hover:text-primary-10"
             >
-              <span className={"text-primary-0 dark:text-primary-10"}>
+              <span className={"text-primary"}>
                 {index}.
               </span>
               <a href={`#${typedTranslation[index.toString()]?.hyperlink}`}>
@@ -79,19 +100,14 @@ export default function Navbar(
           ))}
 
           {/* SPECIAL LIST ITEMS */}
-          <li>
-            <HeaderModeButton
-              darkModeSignal={darkModeSignal}
-              prev={"light"}
-            />
-          </li>
+          <SelectTheme />
           <li>
             <Language lang={lang} />
           </li>
         </ul>
         <div
           className={classNames(
-            "rounded-2xl fixed left-0 w-full z-40 bg-accent-10/40 dark:bg-background-10/40 p-4 transition-all md:hidden backdrop-blur-xl",
+            "rounded-box fixed left-0 w-full z-40 bg-accent-10/40 dark:bg-background-10/40 p-4 transition-all md:hidden backdrop-blur-xl",
             isMenuOpen ? "top-24 h-[calc(100vh-10rem)]" : "-top-96",
           )}
         >
@@ -113,11 +129,8 @@ export default function Navbar(
             ))}
           </ul>
           <div className={"flex gap-4 text-2xl"}>
-            <HeaderModeButton
-              darkModeSignal={darkModeSignal}
-              prev={"light"}
-            />
             <Language lang={lang} />
+            <SelectTheme />
           </div>
 
           <ul

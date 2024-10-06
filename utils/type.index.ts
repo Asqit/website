@@ -1,5 +1,6 @@
 import { JSX } from "preact/jsx-runtime";
 import { Translation } from "../routes/_middleware.tsx";
+import { constants } from "./constants.ts";
 
 // represents a skill or a development tool on Skills section
 export interface Skill {
@@ -39,3 +40,15 @@ export type LanguageState = {
   lang: "en" | "cs";
   translation: Translation;
 };
+
+export type Themes =
+  | "default"
+  | "cyberpunk"
+  | "dracula"
+  | "black"
+  | "corporate"
+  | "retro";
+
+export type AllValuesPresent<T extends string[]> = T[number] extends Themes
+  ? Exclude<Themes, T[number]> extends never ? T : never
+  : never;

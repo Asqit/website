@@ -1,4 +1,3 @@
-import { asset } from "$fresh/runtime.ts";
 import { Translation } from "../../../routes/_middleware.tsx";
 import { Shapes } from "../../index.ts";
 
@@ -26,7 +25,7 @@ export function Hero(props: { lang: Translation["hero"] }) {
             {props.lang.greetings} Ondřej.
           </h1>
           <h2
-            className={"font-semibold text-xl md:text-3xl text-primary-0 dark:text-primary-10 my-2 animate-fade-in-up [animation-duration:1300ms]"}
+            className={"font-semibold text-xl md:text-3xl text-primary my-2 animate-fade-in-up [animation-duration:1300ms]"}
           >
             Web Developer & computer enthusiast.
           </h2>

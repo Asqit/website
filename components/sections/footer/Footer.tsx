@@ -1,10 +1,4 @@
-import {
-  FaDev,
-  FaEnvelope,
-  FaGithub,
-  FaPaperclip,
-  FaToolbox,
-} from "react-icons/fa";
+import { FaDev, FaEnvelope, FaGithub, FaPaperclip } from "react-icons/fa";
 import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
 import { Brand } from "../../index.ts";
 import { Translation } from "../../../routes/_middleware.tsx";
@@ -12,7 +6,7 @@ import { Translation } from "../../../routes/_middleware.tsx";
 export function Footer({ lang }: { lang: Translation["hero"] }) {
   return (
     <footer className="p-8">
-      <div className="container mx-auto max-w-7xl bg-black text-white dark:text-black dark:bg-white rounded-2xl p-4 px-8">
+      <div className="container mx-auto max-w-7xl bg-black text-white dark:text-black dark:bg-white rounded-box p-4 px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div className="p-8">
             <Brand className="dark:text-black text-white" />
