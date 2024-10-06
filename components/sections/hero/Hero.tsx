@@ -8,7 +8,7 @@ export function Hero(props: { lang: Translation["hero"] }) {
       className={"h-[100vh] min-h-fit py-16 scroll-m-8 relative overflow-x-hidden"}
     >
       <img
-        src={asset("/images/pattern.png")}
+        src={asset("/images/pattern.webp")}
         alt="pattern"
         className={"hidden xl:block absolute z-10 bottom-0 left-0 animate-fade-in-left"}
         width={128}
