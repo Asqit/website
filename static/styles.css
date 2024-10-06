@@ -2,34 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-	.btn {
-		@apply py-3 px-6  bg-primary-10 hover:bg-primary-5 active:bg-primary-0 border-b-2 border-primary-0 text-[#112220] text-[18px] font-medium rounded-lg transition-all disabled:cursor-not-allowed;
-	}
-
-	.btn.outlined {
-		@apply bg-transparent border-2 border-primary-10
-	}
-
-	.link {
-		@apply cursor-pointer transition-colors text-slate-200 hover:text-primary-10 active:text-primary-5;
-	}
-
-	.link.dark {
-		@apply text-primary-10 hover:text-primary-5 active:text-primary-0;
-	}
-
-	.input {
-		@apply bg-accent-10 dark:bg-background-10 p-2 rounded-lg outline outline-transparent focus:outline-primary-0;
-	}
-}
-
 html {
 	scroll-behavior: smooth;
-}
-
-body {
-	@apply bg-accent-5 dark:bg-background-5 text-black dark:text-white
 }
 
 :root {
@@ -37,11 +11,9 @@ body {
 	--mouse-y: 100px;
 
 	--project-border: rgba(255, 255, 255, 0.74);
-	--project-sphere: rgba(255, 255, 255, 0.103);
-	--project-color: rgba(255, 255, 255, 0.163);
+	--project-sphere: rgba(255, 255, 255, 0.05);
+	--project-color: rgba(255, 255, 255, 0.02);
 }
-
-
 
 #simple-projects:hover > .project > .project-border {
 	opacity: 1;
