@@ -1,11 +1,19 @@
 import { Translation } from "../../../routes/_middleware.tsx";
 import { Shapes } from "../../index.ts";
+import { asset } from "$fresh/runtime.ts";
 
 export function Hero(props: { lang: Translation["hero"] }) {
   return (
     <section
       className={"h-[100vh] min-h-fit py-16 scroll-m-8 relative overflow-x-hidden"}
     >
+      <img
+        src={asset("/images/pattern.webp")}
+        alt="pattern"
+        className={"hidden xl:block absolute z-10 bottom-0 left-0 animate-fade-in-left"}
+        width={128}
+      />
+
       <div
         className={"container mx-auto max-w-7xl h-full grid grid-cols-5 items-center"}
       >

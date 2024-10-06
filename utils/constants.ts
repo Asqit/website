@@ -1,18 +1,8 @@
-import { AllValuesPresent } from "./type.index.ts";
+type Constants = {
+  isLookingForJob: "yes" | "no" | "maybe";
+};
 
-const data: AllValuesPresent<
-  ["default", "light", "dracula", "black", "retro"]
-> = [
-  "default",
-  "light",
-  "dracula",
-  "black",
-  "retro",
-];
-
-export const constants = {
+export const constants: Constants = {
   /** A toggle for JobBanner component indicating whenever I am interested in new jobs */
-  isLookingForJob: false,
-
-  themes: data,
+  isLookingForJob: "maybe",
 };
