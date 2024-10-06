@@ -11,7 +11,7 @@ import * as $HeaderModeButton from "./islands/HeaderModeButton.tsx";
 import * as $Language from "./islands/Language.tsx";
 import * as $Navbar from "./islands/Navbar.tsx";
 import * as $Projects from "./islands/Projects.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {

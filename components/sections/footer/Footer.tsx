@@ -110,7 +110,7 @@ export function Footer({ lang }: { lang: Translation["hero"] }) {
               <a href="https://fresh.deno.dev" target="_blank" rel="external">
                 <span className={"flex items-center gap-x-2"}>
                   <img
-                    src={asset("/images/logo.svg")}
+                    src={asset("images/logo.svg")}
                     alt={"Fresh framework logo"}
                     width={32}
                     height={32}

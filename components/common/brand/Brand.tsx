@@ -9,11 +9,11 @@ export function Brand(props: BrandProps) {
   return (
     <a
       href="/"
-      className={`text-2xl transition-[padding] ${
+      className={`text-2xl transition-[padding] font-mono ${
         isDark ? "text-white" : "text-black"
-      } font-semibold font-mono ${className ? className : ""}`}
+      } ${className ? className : ""}`}
     >
-      Asqit.<span className={"text-primary-5"}>dev</span>
+      Asqit.<span className={"text-primary-5 font-black"}>dev</span>
     </a>
   );
 }
