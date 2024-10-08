@@ -7,7 +7,7 @@
     "title": "O Mně",
     "paragraph_1": "Ahoj! Jsem Ondřej a těší mě, že tě poznávám! Jsem full-stack developer z České republiky, který má vášeň pro počítače, auta a Linux.",
     "paragraph_2": "Mé hlavní zaměření spočívá v programování webových aplikací, webových stránek a webových API pomocí JavaScriptu s využitím rychlých a moderních frameworků, jako je fresh.js.",
-    "paragraph_3": "Kromě znalosti web developmentu mám pevný základ v administraci Linuxu. Jako příklad mých dovedností v Linuxu může být mé 4 roky starý online rádio, který běží na Debianu 11, a jeho 6 klientů postavených z Raspberry Pi.",
+    "paragraph_3": "Kromě znalosti web developmentu mám pevný základ v administraci Linuxu. Jako příklad mých dovedností v Linuxu může být mé 4 roky staré (2019) online rádio, který běží na Debianu 11, a jeho 6 klientů postavených z Raspberry Pi.",
     "paragraph_5": "Kromě češtiny mluvím také anglicky na úrovni B2 a momentálně se učím německy pomocí Duolinga.",
     "cv_button": "Získat CV"
   },
@@ -42,22 +42,36 @@
       {
         "title": "Středoškolská stáž",
         "employer": "NexGen IT",
-        "description": "Moje první skutečná zkušenost s programováním a vývojem webu. Vytvořil jsem jednoduchou webovou stránku pro místní firmu pomocí HTML, CSS, Bootstrap 4 a JavaScriptu.",
-        "skills": ["BS4", "SASS", "HTML", "JS"],
+        "description": "Povinná středoškolská stáž, kde jsem poprvé otestoval své dovednosti ve světě webového vývoje. Konkrétně ve frontendové doméně, kde jsem dělal šablony s Bootstrap a Sass",
+        "skills": [
+          "html5",
+          "css3",
+          "sass (.scss)",
+          "bootstrap",
+          "javascript ES2016"
+        ],
         "time_span": "Září - Říjen 2019, 2018"
       },
       {
         "title": "IT Technik",
         "employer": "AnyTech s.r.o.",
-        "description": "Moje první práce v IT. Naučil jsem se hodně o GNU/Linuxu, síťování a bezpečnosti. Také jsem vytvořil jednoduchou webovou aplikaci pro zobrazování dat získaných z IoT zařízení.",
-        "skills": ["MERN", "Dahua", "MikroTik", "GNU/Linux"],
+        "description": "Pracoval jsem jako běžný IT technik, prováděl jsem opravy/upgrady/stavby počítačů, spravoval linuxové servery a pomáhal vytvářet mnoho počítačových sítí chráněných CCTV systémy s MikroTik a Dahua. Vyvinul jsem také aplikaci pro záznam dat z IoT zařízení s Arduinem a Webem.",
+        "skills": ["mern stack", "mikrotik", "gnu/linux"],
         "time_span": "2022-2023"
       },
       {
         "title": "IT Developer",
         "employer": "Raiffeisen BANK, Česká Republika",
-        "description": "Moje první práce ve velké korporaci. Pracoval jsem v malém, agilním týmu na vývoji webové aplikace pro interní použití. Naučil jsem se hodně o TypeScriptu, Reactu a Next.js.",
-        "skills": ["Typescript", "React", "Next.js", "DaisyUI", "Figma"],
+        "description": "Můj první vstup do korporátního světa. Zažil jsem agilní vývoj ve 14denních sprintech při vytváření interních aplikací s Next.js, Redux a FastAPI",
+        "skills": [
+          "Typescript",
+          "Next.js",
+          "RTK-Q",
+          "Python",
+          "FastAPI",
+          "Sqlalchemy",
+          "Figma"
+        ],
         "time_span": "2023-2024"
       }
     ]

@@ -37,11 +37,11 @@ export default function Projects(props: ProjectsProps) {
       <article className={"container mx-auto max-w-6xl md:p-8"}>
         <div className={"my-8 mt-16 text-center"}>
           <SectionTitle value={lang.title} />
-          <h3
+          <h2
             className={"text-slate-600 dark:text-slate-400 text-center text-lg"}
           >
             {lang.other_projects_subtitle}
-          </h3>
+          </h2>
         </div>
         <div
           id="simple-projects"

@@ -7,7 +7,6 @@ export function Shapes() {
       viewBox="0 0 512 512"
       width="512"
       height="512"
-      className={"animate-fade-in-up"}
     >
       <title>shapes</title>
       <defs>

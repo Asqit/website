@@ -91,7 +91,7 @@ export default function Navbar(
         </ul>
         <div
           className={classNames(
-            "rounded-2xl fixed left-0 w-full z-40 bg-accent-10/40 dark:bg-background-10/40 p-4 transition-all md:hidden backdrop-blur-xl",
+            "rounded-2xl fixed left-0 w-full z-40 bg-accent-10 dark:bg-background-10 p-4 transition-all md:hidden",
             isMenuOpen ? "top-24 h-[calc(100vh-10rem)]" : "-top-96",
           )}
         >

@@ -1,11 +1,4 @@
-import {
-  FaDev,
-  FaEnvelope,
-  FaGithub,
-  FaPaperclip,
-  FaToolbox,
-} from "react-icons/fa";
-import { asset } from "https://deno.land/x/fresh@1.1.5/runtime.ts";
+import { FaDev, FaEnvelope, FaGithub, FaPaperclip } from "react-icons/fa";
 import { Brand } from "../../index.ts";
 import { Translation } from "../../../routes/_middleware.tsx";
 
@@ -77,7 +70,7 @@ export function Footer({ lang }: { lang: Translation["hero"] }) {
                   target="blank"
                   className={"inline-flex gap-x-1 tex-xl items-center hover:text-primary-10"}
                   rel="author"
-                  href={asset("docs/cv.pdf")}
+                  href={"/docs/cv.pdf"}
                   aria-label={"CV"}
                 >
                   <FaPaperclip /> CV
@@ -110,7 +103,7 @@ export function Footer({ lang }: { lang: Translation["hero"] }) {
               <a href="https://fresh.deno.dev" target="_blank" rel="external">
                 <span className={"flex items-center gap-x-2"}>
                   <img
-                    src={asset("images/logo.svg")}
+                    src={"/images/logo.webp"}
                     alt={"Fresh framework logo"}
                     width={32}
                     height={32}

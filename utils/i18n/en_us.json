@@ -43,22 +43,36 @@
       {
         "title": "Highschool internship",
         "employer": "NexGen IT",
-        "description": "My first real world experience with programming and web development. I have created a simple website for a local company using HTML, CSS, Bootstrap 4, and JavaScript.",
-        "skills": ["BS4", "SASS", "HTML", "JS"],
+        "description": "Mandatory high-school internship, where I first battle-tested my skills in web development world. Specifically in  the frontend domain, where I was making templates with Bootstrap and Sass",
+        "skills": [
+          "html5",
+          "css3",
+          "sass (.scss)",
+          "bootstrap",
+          "javascript ES2016"
+        ],
         "time_span": "September - October 2019, 2018"
       },
       {
         "title": "IT Technik",
         "employer": "AnyTech s.r.o.",
-        "description": "My first job in IT. I have learned a lot about GNU/Linux, networking, and security. I have also created a simple web application for charting data collected from IoT devices.",
-        "skills": ["MERN", "Dahua", "MikroTik", "GNU/Linux"],
+        "description": "I worked as regular IT technician, did some computer repairs/upgrades/builds, managed linux servers and helped creating many computer networks procted with CCTV systems with MikroTik and Dahua. I have also developed an application for recording data from IoT devices with Arduino and Web.",
+        "skills": ["mern stack", "mikrotik", "gnu/linux"],
         "time_span": "2022-2023"
       },
       {
         "title": "IT Developer",
         "employer": "Raiffeisen BANK, Česká Republika",
-        "description": "My first job in a big corporation. I have worked on a small, agile team developing a web application for internal use. I have learned a lot about TypeScript, React, and Next.js.",
-        "skills": ["Typescript", "React", "Next.js", "DaisyUI", "Figma"],
+        "description": "My first entry into the corporate world. I have experienced a agile development in 14 days sprints, while making internal applications with Next.js, Redux and FastAPI",
+        "skills": [
+          "Typescript",
+          "Next.js",
+          "RTK-Q",
+          "Python",
+          "FastAPI",
+          "Sqlalchemy",
+          "Figma"
+        ],
         "time_span": "2023-2024"
       }
     ]

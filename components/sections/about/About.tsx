@@ -122,7 +122,7 @@ export function About({ about, skills, experiences }: AboutProps) {
                     <h3
                       className={"text-lg font-semibold text-gray-900 dark:text-white"}
                     >
-                      {experience.employer} - {experience.title}
+                      {experience.title} ⋅ {experience.employer}
                     </h3>
                     <p
                       className={"mb-2 text-base font-normal text-gray-600 dark:text-gray-400 max-w-3xl text-left"}

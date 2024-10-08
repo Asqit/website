@@ -10,7 +10,7 @@ export function Hero(props: { lang: Translation["hero"] }) {
       <img
         src={asset("/images/pattern.png")}
         alt="pattern"
-        className={"hidden xl:block absolute z-10 bottom-0 left-0 animate-fade-in-left"}
+        className={"hidden 2xl:block absolute z-10 bottom-0 left-0"}
         width={128}
       />
 
@@ -21,18 +21,18 @@ export function Hero(props: { lang: Translation["hero"] }) {
           className={"p-8 md:col-start-1 md:ml-16 col-span-full lg:col-span-3"}
         >
           <h1
-            className={"text-4xl font-black md:text-6xl lg:text-7xl dark:text-slate-100 animate-fade-in-up"}
+            className={"text-4xl font-black md:text-6xl lg:text-7xl dark:text-slate-100"}
           >
             {props.lang.greetings} Ondřej.
           </h1>
           <h2
-            className={"font-semibold text-xl md:text-3xl text-primary-0 dark:text-primary-10 my-2 animate-fade-in-up [animation-duration:1300ms]"}
+            className={"font-semibold text-xl md:text-3xl text-primary-0 dark:text-primary-10 my-2"}
           >
             Web Developer & computer enthusiast.
           </h2>
 
           <p
-            className={"max-w-lg md:text-lg mt-4 font-semibold animate-fade-in-up [animation-duration:1300ms]"}
+            className={"max-w-lg md:text-lg mt-4 font-semibold"}
           >
             {props.lang.subtitle}
           </p>

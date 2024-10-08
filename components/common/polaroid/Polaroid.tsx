@@ -1,5 +1,6 @@
 import { JSX } from "preact/jsx-runtime";
 import classNames from "npm:classnames";
+import { asset } from "$fresh/runtime.ts";
 
 interface Props extends JSX.HTMLAttributes<HTMLImageElement> {
   caption?: string;
@@ -17,7 +18,7 @@ export function Polaroid(props: Props) {
       )}
     >
       <img
-        src={rest.src}
+        src={asset(`${rest.src}`)}
         className={"w-full h-full object-cover sepia-70 contrast-[110%] saturate-[110%] hue-rotate-[342deg]"}
         {...rest}
       />

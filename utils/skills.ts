@@ -3,8 +3,10 @@ import {
   SiCss3,
   SiDeno,
   SiExpress,
+  SiFastapi,
   SiGit,
   SiGnubash,
+  SiGo,
   SiHtml5,
   SiInsomnia,
   SiIntellijidea,
@@ -38,6 +40,11 @@ const languages: Skill[] = [
     id: 1,
     value: "JavaScript",
     Icon: SiJavascript,
+  },
+  {
+    id: 4,
+    value: "Golang",
+    Icon: SiGo,
   },
   {
     id: 2,
@@ -110,6 +117,11 @@ const backEnd: Skill[] = [
     id: 0,
     value: "Node.js",
     Icon: SiNodedotjs,
+  },
+  {
+    id: 8,
+    value: "FastAPI",
+    Icon: SiFastapi,
   },
   {
     id: 1,

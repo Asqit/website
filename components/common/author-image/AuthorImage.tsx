@@ -8,13 +8,13 @@ export default function AuthorImage() {
         <Polaroid
           loading="lazy"
           alt={"Ondřej in forest"}
-          src={asset("images/andy.webp")}
-          className={`top-0 left-0 z-20 transition-all group-hover:z-10 group-hover:-rotate-2`}
+          src={asset("/images/andy.webp")}
+          className={`top-0 left-0 z-20 transition-all group-hover:z-10 lg:group-hover:-rotate-2`}
         />
         <Polaroid
           loading="lazy"
           alt={"Ondřej in Divoká Šárka"}
-          src={asset("images/andy-2.webp")}
+          src={asset("/images/andy-2.webp")}
           className={`hidden sm:block z-10 top-6 left-6 transition-all ease-in-out rotate-6 group-hover:-top-6 group-hover:left-0 group-hover:z-20 group-hover:rotate-2`}
         />
       </div>
